@@ -1,16 +1,16 @@
 body{
     margin: 0;
     padding: 0;
-    background:linear-gradient(215deg, #0066ff 30%,#000000 60%);
+    background:linear-gradient(120deg, #ff0000,#00b5fd, #ffee00);
 }
 .header{
     background-color: black;
     width: 100%;
 }
-.header a{
+a{
     text-decoration: none;
 }
-.header .titulo1{
+.titulo1{
     color: #fff;
     margin: 0;
     padding: 2%;
@@ -28,20 +28,10 @@ body{
 .caja1{
     margin: 5%;
     border-radius: 30px;
-    box-shadow: 0px 0px 20px 5px #fff; 
+    box-shadow: 0px 0px 20px 10px #fff; 
     background-color: #5e5e5e;
 }
 .caja1 img{
     height: 326px;
     width: 300px;
-}
-main .titulo1, .titulo2, .titulo3, .titulo4{
-    color: #ff2f2f;
-    font-family: 'Roboto', sans-serif;
-    margin-left: 50px;
-}
-p{
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    margin-left: 50px;
 }

@@ -1,0 +1,53 @@
+body{
+    background:linear-gradient(120deg, #ff0000, #000000);
+}
+.caja1{
+    background-color: #3a3a3a;
+}
+.caja1 .titulo2{
+    color: #ff0000;
+    margin: 0;
+    padding: 2%;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    text-align: center;
+}
+main .titulo1, .titulo2, .titulo3, .titulo4, p, li{
+    color: #ffffff;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    padding: 0% 2%;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+}
+.header2, .main2, .footer{
+    border: solid 5px #000000;
+}
+.header2{
+    margin: 2% 2% 0% 2%;
+    background-color: #3a3a3a;
+    text-align: center;
+}
+.main2{
+    margin: 0% 2%;
+    background-color: #e98e44;
+}
+.footer{
+    background-color: #3a3a3a;
+    margin: 0% 2% 2%;
+}
+.listaNav{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0%;
+}
+.section{
+    background-color: #44e952;
+}
+.article{
+    background-color: #4491e9;
+}
+.bloque{
+    border: solid 5px #fff;
+}
