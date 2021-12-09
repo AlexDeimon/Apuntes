@@ -3,18 +3,28 @@ body{
 }
 .caja1{
     background-color: #3a3a3a;
+    width: 290px;
 }
-.caja1 .titulo2{
+.caja1 .titulo1{
     color: #ff0000;
-    margin: 0;
-    padding: 2%;
     font-family: 'M PLUS 1 Code', sans-serif;
     text-align: center;
 }
-main .titulo1, .titulo2, .titulo3, .titulo4, p, li{
+.titulo2, p{
     color: #ffffff;
     font-family: 'M PLUS 1 Code', sans-serif;
     padding: 0% 2%;
+}
+.tsection, .tarticle{
+    display: inline;
+    padding: 0%;
+    margin: 0% 2%;
+}
+.tsection{
+    background-color: #44e952;
+}
+.tarticle{
+    background-color: #4491e9;
 }
 p{
     font-family: 'Roboto', sans-serif;
@@ -40,7 +50,16 @@ p{
     justify-content: space-around;
     flex-wrap: wrap;
     list-style-type: none;
-    padding-left: 0%;
+    color: #ffffff;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    padding: 0% 2%;
+}
+.lista{
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+.lista h3{
+    padding: 0%;
 }
 .section{
     background-color: #44e952;
@@ -50,4 +69,9 @@ p{
 }
 .bloque{
     border: solid 5px #fff;
+}
+.link{
+    color: #ffffff;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    text-decoration: underline;
 }

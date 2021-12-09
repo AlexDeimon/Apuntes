@@ -10,7 +10,7 @@ body{
 a{
     text-decoration: none;
 }
-.titulo1{
+.titulo{
     color: #fff;
     margin: 0;
     padding: 2%;
@@ -20,7 +20,7 @@ a{
     font-family: 'M PLUS 1 Code', sans-serif;
     color: #47ff2f;
 }
-.main{
+.main-section{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
