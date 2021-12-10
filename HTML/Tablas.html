@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/html.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Tablas &lt;table&gt;</h2>
+            <p>Las tablas en HTML sirven para mostrar contenido tabulado.</p>
+            <p>La estructura básica de una tabla se compone de: </p>
+            <ol class="lista">
+                <li>&lt;table&gt;: etiqueta que encierra una tabla.</li>
+                <li>table row &lt;tr&gt;: etiqueta que construye una fila.</li>
+                <li>table data &lt;td&gt;: etiqueta que construye una celda.</li>
+            </ol>
+            <p>Los titulos de las tablas se establecen con la etiqueta &lt;caption&gt;, es una etiqueta opcional, y según la especificación esa etiqueta se coloca justo despues de la etiqueta &lt;table&gt;</p>
+            <p>Las cabeceras de las tablas se establecen con la etiquera &lt;thead&gt;.</p>
+            <p>Dentro se tiene una etiqueta &lt;tr&gt; normal, pero en el caso de las celdas se establecen con &lt;th&gt; en lugar de &lt;td&gt;</p>
+            <p>El contenido de la tabla debe ir dentro de una etiqueta &lt;tbody&gt; para representar el cuerpo de la tabla.</p>
+            <p>De forma opcional se puede colocar una etiqueta &lt;tfoot&gt; a la tabla para establecer un pie de tabla.</p>
+            <p>Para hacer que las celdas ocupen más de una fila o más de una columna hay 2 atributos:</p>
+            <ul class="lista">
+                <li>rowspan: sirve para que una celda ocupe mas de una fila</li>
+                <li>colspan: sirve para que una celda ocupe mas de una columna</li>
+            </ul>
+            <p>Cuando se necesita seleccionar una columna, existe la etiqueta &lt;colgroup&gt;, que permite seleccionar una columna en concreto. Dentro se pone tantas etiquetas col como columnas se tengan, cada etiqueta col equivaldrá a una columna siguiendo el mismo orden que tienen en la tabla.</p>
+            <p>si se necesita que la etiqueta col agrupe mas de una columna, está el atributo span, que funciona igual que rowspan y colspan</p> 
+        </section>
+        <section>
+            <h2 class="titulo2"><span class="resaltado">Ejemplo:</span></h2>
+            <table class="tabla">
+                <caption class="tituloTabla">HORARIO DE CLASES UNIVERSIDAD 2021-2</caption>
+                <thead class="cabeceraTabla">
+                    <th></th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miercoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                    <th>Sábado</th>
+                </thead>
+                <tbody class="cuerpoTabla">
+                    <tr>
+                        <td>9:00 - 10:00</td>
+                        <td rowspan="3"></td>
+                        <td rowspan="4"></td>
+                        <td rowspan="2">Estadística inferencial</td>
+                        <td rowspan="4"></td>
+                        <td rowspan="2">Estadística inferencial</td>
+                        <td rowspan="3">Electiva admin</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 - 12:00</td>
+                        <td></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">6:00 - 7:00</td>
+                        <td rowspan="3">Investigacion 3</td>
+                        <td rowspan="3">Taller Lecto escritura</td>
+                        <td class="blank">q</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Arquitectura de tecnologías</td>
+                        <td rowspan="2">Arquitectura de tecnologías</td>
+                        <td rowspan="4">Ing de software</td>
+                        <td class="blank">w</td>
+                    </tr>
+                    <tr>
+                        <td>7:00 - 8:00</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>8:00 - 9:00</td>
+                        <td rowspan="2">Programación Avanzada</td>
+                        <td rowspan="3">Gestión ambiental</td>
+                        <td rowspan="3"></td>
+                        <td rowspan="2">Programación Avanzada</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">9:00 - 10:00</td>
+                        <td class="blank">e</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="blank">r</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">Total asignaturas</td>
+                        <td>8</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

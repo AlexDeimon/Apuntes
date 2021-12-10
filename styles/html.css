@@ -57,6 +57,7 @@ p{
 .lista{
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
+    padding: 0% 5%;
 }
 .lista h3{
     padding: 0%;
@@ -74,4 +75,33 @@ p{
     color: #ffffff;
     font-family: 'M PLUS 1 Code', sans-serif;
     text-decoration: underline;
+}
+.tabla{
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid #000;
+    text-align: center;
+    margin: 0% auto;
+}
+@media all and (max-width: 480px){
+    .tabla{
+        font-size: x-small;
+    }
+}
+.tituloTabla{
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.cuerpoTabla tr{
+    background-color: #ffffff;
+}
+th, tfoot{
+    background-color: #eeff00;
+}
+.blank{
+    color:#fff;
+}
+address, blockquote, pre, div{
+    color: #fff;
 }
