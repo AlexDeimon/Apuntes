@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/html.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Formularios &lt;form&gt;</h2>
+            <p>Los formularios son la parte fundamental de las paginas web para que los usuarios puedan enviar información a los servidores.</p>
+            <h3 class="titulo2">Estructura básica</h3>
+            <p>La estructura básica de un formulario se compone de 4 elementos:</p>
+            <ul class="lista">
+                <li>&lt;form&gt;: Es la etiqueta que engloba el formulario.</li>
+                <li>&lt;label&gt;: Sirve para escribir el nombre del campo a rellenar. Debe tener el atributo for al cual se le indica un id que lo que hará será emparejar el label con su input correspondiente.</li>
+                <li>&lt;input&gt;: Sirve para crear un campo que permitirá al usuario interactuar. El único atributo obligatorio del input es name.</li>
+                <li>&lt;button&gt;: Crea un botón que permitirá enviar el formulario.</li>
+            </ul>
+            <div class="main-section">
+                <h3 class="titulo2">Forma 1 asociar &lt;input&gt; con &lt;label&gt;:</h3>
+                <img src="../images/Formulario1.png" alt="Formulario1">
+            </div>
+            <div class="main-section">
+                <h3 class="titulo2">Forma 2 asociar &lt;input&gt; con &lt;label&gt;:</h3>
+                <img src="../images/Formulario2.png" alt="Formulario2">
+            </div>
+        </section>
+        <section>
+            <h2 class="titulo2"><span class="resaltado">Ejemplo:</span></h2>
+            <form class="formulario">
+                <label for="name">Nombre</label>
+                <input id="name">
+                <button>Enviar formulario</button>
+            </form>
+        </section>
+        <section>
+            <h3 class="titulo2">Tipos de &lt;input&gt;:</h3>
+            <ul class="lista">
+                <li>button: Visualmente es igual a un &lt;button&gt;, pero el formulario no se enviará. <input type="button" value="input button"></li>
+                <li>submit: Se utiliza para enviar el formulario. <input type="submit"></li>
+                <li>date: Se utiliza para introducir una fecha. <input type="date"></li>
+                <li>time: Se utiliza para introducir una hora <input type="time"></li>
+                <li>datetime-local: Fecha y hora, <small><b>no funciona en firefox.</b></small> <input type="datetime-local"></li>
+                <li>month: Se utiliza para introducir un mes. <input type="month"></li>
+                <li>week: Se utiliza pra introducir el número de semana del año. <input type="week"></li>
+                <li>search: Se utiliza para las barras de búsqueda. <input type="search"></li>
+                <li>tel: Se utiliza para introducir números telefónicos. <input type="tel"></li>
+                <li>email: Se utiliza para introducir un email. <input type="email"></li>
+                <li>password: Se utiliza para contraseñas. <input type="password"></li>
+                <li>url: Se utiliza para introducir URLs. <input type="url"></li>
+                <li>color: Se utiliza para especificar un color. <input type="color"></li>
+                <li>number: Se utiliza para valores numéricos. <input type="number"></li>
+                <li>range: Se utiliza para establecer un rango. <input type="range" step="10" min="0" max="100">
+                    <ul>
+                        <li>step: Atributo para determinar de cuanto en cuanto se mueve la barra.</li>
+                        <li>min: Valor minimo.</li>
+                        <li>max: Valor maximo.</li>
+                    </ul>
+                </li>
+                <li>reset: Se utiliza para resetear el formulario. <input type="reset"></li>
+                <li>text: Valor por defecto. <input type="text"></li>
+                <li>radio: Permite seleccionar una única opción de una lista de opciones relacionadas. Deben tener el mismo valor en el atributo name para que funcione correctamente. El atributo checked selecciona una opción por defecto.</li>
+                <label><input type="radio" name="developer" value="Backend">Backend </label>
+                <label><input type="radio" name="developer" value="Frontend" checked>Frontend </label>
+                <label><input type="radio" name="developer" value="FullStack">FullStack </label>
+                <li>checkbox: Permite seleccionar varias opciones de una lista de opciones relacionadas. Deben tener el mismo valor en el atributo name para que funcione correctamente. El atributo checked selecciona una o varias opciones por defecto.</li>
+                <label><input type="checkbox" name="languages" value="html" checked>HTML </label>
+                <label><input type="checkbox" name="languages" value="css" checked>CSS </label>
+                <label><input type="checkbox" name="languages" value="javascript">JavaScript </label>
+            </ul>
+            <h3 class="titulo2">&lt;Select&gt;:</h3>
+            <ul class="lista">
+                <li>Crea una lista de opciones donde podemos seleccionar una o varias opciones. Cada opción irá dentro de una etiqueta &lt;option&gt; &lt;option/&gt;. El atributo multiple permite seleccionar varias opciones con la tecla ctrl. Si hay muchas opciones se pueden ordenar por categorías a través de la etiqueta &lt;optgroup&gt; con el atributo label para nombrar la categoría.</li>
+            </ul>
+            <div class="main-section">
+                <p>Select normal:</p>
+                <select name="lenguajes">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                </select>
+                <p>Select con atributo multiple:</p>
+                <select name="lenguajes" multiple>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                </select>
+                <p>Select con categorías: </p>
+                <select name="herramientas" multiple>
+                    <optgroup label="Backend">
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="mysql">MySQL</option>
+                        <option value="postgresql">PostgreSQL</option>
+                        <option value="mongo">MongoDB</option>
+                    </optgroup>
+                    <optgroup label="Frontend">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="boostrap">Boostrap</option>
+                        <option value="Vue">Vue</option>
+                    </optgroup>
+                </select>
+            </div>
+        </section> 
+    </main>
+</body>
+</html>

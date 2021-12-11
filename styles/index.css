@@ -22,8 +22,10 @@ a{
 }
 .main-section{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 15px;
 }
 .caja1{
     margin: 5%;

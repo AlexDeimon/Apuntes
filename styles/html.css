@@ -57,7 +57,7 @@ p{
 .lista{
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
-    padding: 0% 5%;
+    padding: 0px 45px;
 }
 .lista h3{
     padding: 0%;
@@ -70,6 +70,7 @@ p{
 }
 .bloque{
     border: solid 5px #fff;
+    color: #fff;
 }
 .link{
     color: #ffffff;
@@ -102,6 +103,8 @@ th, tfoot{
 .blank{
     color:#fff;
 }
-address, blockquote, pre, div{
-    color: #fff;
+.formulario{
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    margin-left: 2%;
 }
