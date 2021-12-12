@@ -71,8 +71,8 @@
                 <li>range: Se utiliza para establecer un rango. <input type="range" step="10" min="0" max="100">
                     <ul>
                         <li>step: Atributo para determinar de cuanto en cuanto se mueve la barra.</li>
-                        <li>min: Valor minimo.</li>
-                        <li>max: Valor maximo.</li>
+                        <li>min: Valor mínimo.</li>
+                        <li>max: Valor máximo.</li>
                     </ul>
                 </li>
                 <li>reset: Se utiliza para resetear el formulario. <input type="reset"></li>
@@ -86,7 +86,7 @@
                 <label><input type="checkbox" name="languages" value="css" checked>CSS </label>
                 <label><input type="checkbox" name="languages" value="javascript">JavaScript </label>
             </ul>
-            <h3 class="titulo2">&lt;Select&gt;:</h3>
+            <h3 class="titulo2">&lt;select&gt;:</h3>
             <ul class="lista">
                 <li>Crea una lista de opciones donde podemos seleccionar una o varias opciones. Cada opción irá dentro de una etiqueta &lt;option&gt; &lt;option/&gt;. El atributo multiple permite seleccionar varias opciones con la tecla ctrl. Si hay muchas opciones se pueden ordenar por categorías a través de la etiqueta &lt;optgroup&gt; con el atributo label para nombrar la categoría.</li>
             </ul>
@@ -121,7 +121,109 @@
                     </optgroup>
                 </select>
             </div>
+            <h3 class="titulo2">&lt;datalist&gt;:</h3>
+            <ul class="lista">
+                <li>Funciona de forma similar al &lt;select&gt; solo que esta contiene un filtro para obtener más rapido las opciones disponibles. Está compuesto por un input de tipo list, el cual tiene un atributo tambien llamado list al que se le asigna el id del &lt;datalist&gt; al que se quiere acceder.</li>
+                <input type="list" list="tools">
+                <datalist id="tools">
+                    <option value="html"></option>
+                    <option value="css"></option>
+                    <option value="javascript"></option>
+                    <option value="boostrap"></option>
+                    <option value="Vue"></option>
+                    <option value="python"></option>
+                    <option value="java"></option>
+                    <option value="mysql"></option>
+                    <option value="postgresql"></option>
+                    <option value="mongo"></option>
+                </datalist>
+            </ul>
+            <h3 class="titulo2">Otros elementos:</h3>
+            <ul class="lista">
+                <li>&lt;fieldset&gt;: Se utiliza para agrupar elementos dentro de un formulario.</li>
+                <li>&lt;legend&gt;: Representa una etiqueta para el contenido del fieldset.</li>
+                <li>&lt;file&gt;: Este input se utiliza para cargar archivos y enviarlos desde un formulario.</li>
+                <li>&lt;meter&gt;: Representa un valor dentro de un rango conocido. Sus atributos son: 
+                    <ul>
+                        <li>min: Valor mínimo.</li>
+                        <li>max: Valor máximo.</li>
+                        <li>value: Valor actual.</li>
+                        <li>low: Hasta que valor son valores bajos.</li>
+                        <li>high: Hasta que valor son valores altos.</li>
+                        <li>optimum: Valor optimo.</li>
+                    </ul>
+                </li>
+                <li>&lt;progress&gt;: Representa el progreso de una tarea. Sus atributos son:
+                    <ul>
+                        <li>min: Valor mínimo.</li>
+                        <li>max: Valor máximo.</li>
+                        <li>value: Valor actual.</li>
+                    </ul>
+                </li>
+                <li>&lt;textarea&gt;: Se utiliza para introducir texto en un formulario. Sus atributos son:
+                    <ul>
+                        <li>col: Número de columnas.</li>
+                        <li>row: Número de filas.</li>
+                    </ul>
+                </li>
+            </ul>
         </section> 
+        <section>
+            <h2 class="titulo2"><span class="resaltado">Ejemplo:</span></h2>
+            <form class="formulario">
+                <fieldset>
+                    <legend>Otros elementos</legend>
+                    <input type="file"><br>
+                    <label for="fuel">Combustible</label>
+                    <meter id="fuel" min="0" max="100" value="60" low="30" high="75" optimum="50">
+                    </meter><br>
+                    <label for="task">Tarea 1</label>
+                    <progress id="task" max="100" value="30"></progress><br>
+                    <label for="message">Mensaje:</label><br>
+                    <textarea name="" id="message" cols="40" rows="10"></textarea>
+                </fieldset>
+            </form>
+        </section>
+        <section>
+            <h3 class="titulo2">Atributos: </h3>
+            <ul class="lista">
+                <li>action: Envia la información del formulario al servidor.</li>
+                <li>method: Establece el método http (GET o POST) para enviar el formulario.</li>
+                <li>placeholder: Da una pista o indicación de lo que el usuario tiene que introducir.</li>
+                <li>required: Hace que un campo sea obligatorio.</li>
+                <li>readonly: Hace que un campo sea de solo lectura.</li>
+                <li>disabled -> Desactiva el campo, no se podrá escribir en el.</li>
+                <li>min - max: Establecen el mínimo y máximo de un campo numérico.</li>
+                <li>minlenght - maxlenght: Establece el minimo y máximo de caracteres de un campo de texto.</li>
+                <li>selected: Equivale a checked en los select, sirve para establecer una opción por defecto</li>
+                <li>autofocus -> Para poner el foco por defecto al cargar el formulario.</li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="titulo2"><span class="resaltado">Ejemplo:</span></h2>
+            <form class="formulario">
+                <fieldset>
+                    <legend>Atributos</legend>
+                    <label>paceholder: </label>
+                    <input type="text" placeholder="Introduce tu nombre"><br>
+                    <label>readonly: </label>
+                    <input type="text" value="Hola" readonly><br>
+                    <label>disabled: </label>
+                    <input type="text" value="Hola" disabled><br>
+                    <label>selected: </label>
+                    <select name="numbers">
+                        <option value="one">One</option>
+                        <option value="Two" selected>Two</option>
+                    </select><br>
+                    <label>min - max:</label>
+                    <input type="number" min="5"><br>
+                    <label>minlenght - maxlenght:</label>
+                    <input type="text" minlength="3" maxlength="5"><br>
+                    <label>required:</label>
+                    <input type="text" placeholder="obligatorio"><br>
+                </fieldset>
+            </form>
+        </section>
     </main>
 </body>
 </html>
