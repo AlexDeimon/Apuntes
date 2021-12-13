@@ -24,80 +24,80 @@
     </header>
     <main>
         <section>
-            <h2 class="titulo2">Elementos en bloque</h2>
-            <p>Los elementos de bloque van a ocupar todo el ancho disponible aunque su contenido no lo haga, por lo que los elementos que pongamos a continuación saltarán a la siguiente línea</p>
-            <h2 class="titulo2">Otros elementos en bloque</h2>
-            <ul class="lista">
-                <li>&lt;address&gt;: Se utiliza para aportar información de contacto para el article más cercano o para todo el body</li>
-                <li>&lt;blockquote&gt;: Se utiliza para marcar las citas a otros autores o documentos. Se puede incluir el atributo cite para poner un enlace al documento original o fuente</li>
-                <li>&lt;pre&gt;: Se utiliza para tener código preformateado que necesita ser representado igual que se esribió</li>
-                <li>&lt;div&gt;: Se usa como división del documento, semánticamente no significa nada, es un contenedor genérico que se usa generalmente para dar estilos a través de css o para usar algo denominado "delegación de eventos" en javascript</li>
-                <li>&lt;hr&gt;: horizontal rule, se utiliza para decirle al navegador que se va a cambiar de tema</li>
-            </ul>
-        </section>
-        <hr>
-        <section>
-            <h2 class="titulo2">Elementos en linea</h2>
-            <p>Los elementos en linea ocupan solo el ancho de su contenido y no realizan salto de linea</p>
-            <ul class="lista">
-                <li>&lt;em&gt;: emphasis</li>
-                <li>&lt;strong&gt;: más enfasis</li>
-                <li>&lt;small&gt;: Menos enfasis que el texto normal</li>
-                <li>&lt;br&gt;: Forzar un salto de línea</li>
-                <li>&lt;wbr&gt;: Salto de linea si hiciera falta</li>
-                <li>&lt;time&gt;: Se usa para representar un contenido de hora/fecha</li>
-                <li>&lt;i&gt;: italic</li>
-                <li>&lt;b&gt;: bold</li>
-                <li>&lt;u&gt;: underlin</li>
-                <li>&lt;sup&gt;: Superíndice</li>
-                <li>&lt;sub&gt;: Subíndice</li>
-                <li>&lt;span&gt;: Es un contenedor de línea, equivalente a div, se suele usar para encerrar palabras o pequeños textos y darles estilo a través de CSS o localizarlos desde javascript. Semánticamente no significa nada</li>
-                <li>&lt;q&gt;: Es el equivalente a blockquote, significa quote, por eso el de bloque se llama block - quote. Sirve para poner citas pero en línea.</li>
-                <li>&lt;code&gt;: Sirve para encerrar código que se quiera representar visualmente, suele ir unido con la etiqueta pre.
-                </li>
-            </ul>
-        </section> 
-        <hr>
-        <section>
-            <h2 class="titulo2"><span class="resaltado">Ejemplo:</span></h2>
-            <h3 class="titulo2">Bloque:</h3>
-            <h1 class="titulo2 bloque">&lt;h1&gt; Soy un elemento de bloque &lt;/h1&gt;</h1>
-            <p class="bloque">&lt;p&gt;Soy otro elemento de bloque &lt;/p&gt;</p>
-            <address class="bloque">
-                Diego Sandoval <br>
-                Colombia, Bogotá <br>
-                Cra 66 # 76-26 
-            </address>
-            <blockquote cite="https://citas.in/frases/1981814-alan-moore-detras-de-esta-mascara-hay-algo-mas-que-carne-deb/" class="bloque">
-                Detras de esta mascara hay algo mas que carne, detras de esta mascara hay una idea, y las ideas son aprueba de balas.
-            </blockquote>
-            <pre class="bloque">
-                Hola mundo
-            </pre>
-            <div class="bloque">
-                <h2>Nombre</h2>
-                <p>Email</p>
-                <p>Descripcion</p>
-            </div>
-            <h3 class="titulo2">Linea:</h3>
-            <p>
-                <em>El dinero </em>es importante pero <strong> la salud </strong>es lo más importante.<small>Saludos!</small>
-            </p>
-            <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. Saepe velit nihil quis, perferendis voluptas tempora ipsam distinctio vero repellat nemo deserunt similique voluptates eveniet? Necessitatibus repudiandae neque officiis saepe itaque?</p>
-            <p>http://127.0.0.1:5500/<wbr>cursos/<wbr>html/<wbr>elementos/<wbr>elementos-de-linea.html</p>
-            <p><time>24/10/2020 10:35</time></p>
-            <p><i>Italic</i><b>Bold</b><u>Underline</u></p>
-            <p>4 elevado al cuadrado se representa así 4<sup>2</sup></p>
-            <p>Agua oxigenada tiene la fórmula H<sub>2</sub>O<sub>2</sub></p>
-            <p>Lorem, ipsum dolor sit amet <span class="resaltado"> consectetur adipisicing </span>elit. Soluta nam voluptatum neque omnis commodi molestiae vitae impedit id. Molestias laboriosam, ad nemo aliquam ullam vitae rerum deserunt dicta voluptatibus voluptate.</p>
-            <p><q cite="">Yo soy Iron Man</q></p>
-            <pre class="blank">
-                <code>
-                    span {
-                        color: red;
-                    }
-                </code>
-            </pre>
+            <article>
+                <h2 class="titulo2">Elementos en bloque</h2>
+                <p>Los elementos de bloque van a ocupar todo el ancho disponible aunque su contenido no lo haga, por lo que los elementos que pongamos a continuación saltarán a la siguiente línea</p>
+                <h3 class="titulo2">Otros elementos en bloque</h3>
+                <ul class="lista">
+                    <li>&lt;address&gt;: Se utiliza para aportar información de contacto para el article más cercano o para todo el body</li>
+                    <li>&lt;blockquote&gt;: Se utiliza para marcar las citas a otros autores o documentos. Se puede incluir el atributo cite para poner un enlace al documento original o fuente</li>
+                    <li>&lt;pre&gt;: Se utiliza para tener código preformateado que necesita ser representado igual que se esribió</li>
+                    <li>&lt;div&gt;: Se usa como división del documento, semánticamente no significa nada, es un contenedor genérico que se usa generalmente para dar estilos a través de css o para usar algo denominado "delegación de eventos" en javascript</li>
+                    <li>&lt;hr&gt;: horizontal rule, se utiliza para decirle al navegador que se va a cambiar de tema</li>
+                </ul>
+            </article><hr>
+            <article>
+                <h2 class="titulo2">Elementos en linea</h2>
+                <p>Los elementos en linea ocupan solo el ancho de su contenido y no realizan salto de linea</p>
+                <ul class="lista">
+                    <li>&lt;em&gt;: emphasis</li>
+                    <li>&lt;strong&gt;: más enfasis</li>
+                    <li>&lt;small&gt;: Menos enfasis que el texto normal</li>
+                    <li>&lt;br&gt;: Forzar un salto de línea</li>
+                    <li>&lt;wbr&gt;: Salto de linea si hiciera falta</li>
+                    <li>&lt;time&gt;: Se usa para representar un contenido de hora/fecha</li>
+                    <li>&lt;i&gt;: italic</li>
+                    <li>&lt;b&gt;: bold</li>
+                    <li>&lt;u&gt;: underlin</li>
+                    <li>&lt;sup&gt;: Superíndice</li>
+                    <li>&lt;sub&gt;: Subíndice</li>
+                    <li>&lt;span&gt;: Es un contenedor de línea, equivalente a div, se suele usar para encerrar palabras o pequeños textos y darles estilo a través de CSS o localizarlos desde javascript. Semánticamente no significa nada</li>
+                    <li>&lt;q&gt;: Es el equivalente a blockquote, significa quote, por eso el de bloque se llama block - quote. Sirve para poner citas pero en línea.</li>
+                    <li>&lt;code&gt;: Sirve para encerrar código que se quiera representar visualmente, suele ir unido con la etiqueta pre.
+                    </li>
+                </ul>
+            </article><hr>
+            <article>
+                <h2 class="titulo2"><span class="resaltado">Ejemplo:</span></h2>
+                <h3 class="titulo2">Bloque:</h3>
+                <h1 class="titulo2 bloque">&lt;h1&gt; Soy un elemento de bloque &lt;/h1&gt;</h1>
+                <p class="bloque">&lt;p&gt;Soy otro elemento de bloque &lt;/p&gt;</p>
+                <address class="bloque">
+                    Diego Sandoval <br>
+                    Colombia, Bogotá <br>
+                    Cra 66 # 76-26 
+                </address>
+                <blockquote cite="https://citas.in/frases/1981814-alan-moore-detras-de-esta-mascara-hay-algo-mas-que-carne-deb/" class="bloque">
+                    Detras de esta mascara hay algo mas que carne, detras de esta mascara hay una idea, y las ideas son aprueba de balas.
+                </blockquote>
+                <pre class="bloque">
+                    Hola mundo
+                </pre>
+                <div class="bloque">
+                    <h2>Nombre</h2>
+                    <p>Email</p>
+                    <p>Descripcion</p>
+                </div>
+                <h3 class="titulo2">Linea:</h3>
+                <p>
+                    <em>El dinero </em>es importante pero <strong> la salud </strong>es lo más importante.<small>Saludos!</small>
+                </p>
+                <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. Saepe velit nihil quis, perferendis voluptas tempora ipsam distinctio vero repellat nemo deserunt similique voluptates eveniet? Necessitatibus repudiandae neque officiis saepe itaque?</p>
+                <p>http://127.0.0.1:5500/<wbr>cursos/<wbr>html/<wbr>elementos/<wbr>elementos-de-linea.html</p>
+                <p><time>24/10/2020 10:35</time></p>
+                <p><i>Italic</i><b>Bold</b><u>Underline</u></p>
+                <p>4 elevado al cuadrado se representa así 4<sup>2</sup></p>
+                <p>Agua oxigenada tiene la fórmula H<sub>2</sub>O<sub>2</sub></p>
+                <p>Lorem, ipsum dolor sit amet <span class="resaltado"> consectetur adipisicing </span>elit. Soluta nam voluptatum neque omnis commodi molestiae vitae impedit id. Molestias laboriosam, ad nemo aliquam ullam vitae rerum deserunt dicta voluptatibus voluptate.</p>
+                <p><q cite="">Yo soy Iron Man</q></p>
+                <pre class="blank">
+                    <code>
+                        span {
+                            color: red;
+                        }
+                    </code>
+                </pre>
+            </article>
         </section>   
     </main>
 </body>

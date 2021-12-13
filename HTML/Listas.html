@@ -29,91 +29,96 @@
             <ul class="lista">
                 <li>unordered list &lt;ul&gt;: Se utilizan cuando el orden de los elementos no influye.</li>
                 <li>ordered list &lt;ol&gt;: Se utilizan cuando el orden de los elementos es importante.</li>
-                <li>definition list &lt;dl&gt;: Se utilizan para hacer una lista de definiciones.</li>
-                <ul>
-                    <li>Definition term &lt;df&gt;: El término que se va a definir.</li>
-                    <li>Definition description &lt;dd&gt;: La descripción del término.</li>
-                </ul>
+                <li>definition list &lt;dl&gt;: Se utilizan para hacer una lista de definiciones.
+                    <ul>
+                        <li>Definition term &lt;df&gt;: El término que se va a definir.</li>
+                        <li>Definition description &lt;dd&gt;: La descripción del término.</li>
+                    </ul>
+                </li>    
             </ul>
             <p>Cada elemento de la lista se representa con la etiqueta &lt;li&gt;, tanto en las ul como en las ol.</p>
-            <h3 class="titulo2">Atributos de las listas</h3>
-            <ul class="lista">
-                <li>&lt;ol&gt;</li>
-                <ul>
-                    <li>type: Estilo de numeración (1, A, a, I, i)</li>
-                    <li>start: Inicio de las secuencia (un número)</li>
-                </ul>
-                <li>&lt;ul&gt;</li>
-                <ul>
-                    <li>type: Estilo de los items (disc, square, circle)</li>
-                </ul>
-            </ul>
-        </section>
-        <section>
-            <h2 class="titulo2"><span class="resaltado">Ejemplo:</span></h2>
-            <h3 class="titulo2">Lenguajes de programación:</h3>
-            <ul class="lista">
-                <li>Python</li>
-                <li>Java</li>
-                <li>C#</li>
-                <li>C++</li>
-            </ul>
-            <h3 class="titulo2">Navegador:</h3>
-            <nav>
+            <article>
+                <h3 class="titulo2">Atributos de las listas</h3>
                 <ul class="lista">
-                    <li><a href="#post-1" class="link">Post 1</a></li>
-                    <li><a href="#post-2" class="link">Post 2</a></li>
-                    <li><a href="#post-3" class="link">Post 3</a></li>
-                    <li><a href="#post-4" class="link">Post 4</a></li>
-                    <li><a href="#post-5" class="link">Post 5</a></li>
+                    <li>&lt;ol&gt;
+                        <ul>
+                            <li>type: Estilo de numeración (1, A, a, I, i)</li>
+                            <li>start: Inicio de las secuencia (un número)</li>
+                        </ul>    
+                    </li>
+                    <li>&lt;ul&gt;
+                        <ul>
+                            <li>type: Estilo de los items (disc, square, circle)</li>
+                        </ul>
+                    </li>
                 </ul>
-            </nav>
-            <h3 class="titulo2">Orden de aprendizaje en el desarrollo web (lista anidada):</h3>
-            <ol class="lista">
-                <li>HTML 
-                    <ul>
-                        <li>Estructuras</li>
-                        <li>Sintaxis</li>
-                        <li>Etiquetas</li>
+            </article>
+            <article>
+                <h3 class="titulo2"><span class="resaltado">Ejemplo:</span></h3>
+                <h4 class="titulo2">Lenguajes de programación:</h4>
+                <ul class="lista">
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C#</li>
+                    <li>C++</li>
+                </ul>
+                <h4 class="titulo2">Navegador:</h4>
+                <nav>
+                    <ul class="lista">
+                        <li><a href="#post-1" class="link">Post 1</a></li>
+                        <li><a href="#post-2" class="link">Post 2</a></li>
+                        <li><a href="#post-3" class="link">Post 3</a></li>
+                        <li><a href="#post-4" class="link">Post 4</a></li>
+                        <li><a href="#post-5" class="link">Post 5</a></li>
                     </ul>
-                </li>
-                <li>CSS
-                    <ul>
-                        <li>Etiquetas</li>
-                        <li>Sintaxis</li>
-                        <li>caracteristicas</li>
-                    </ul>
-                </li>
-                <li>Javascript 
-                    <ul>
-                        <li>variables</li>
-                        <li>Sintaxis</li>
-                    </ul>
-                </li>
-            </ol>
-            <h3 class="titulo2">Lenguajes para el desarrollo web:</h3>
-            <dl class="lista">
-                <dt>HTML</dt>
-                <dd>HyperText Markup Language: Es un lenguaje de marcado que se usa para estructurar datos en una página web
-                </dd>
-                <dt>CSS</dt>
-                <dd>Cascade Style Sheets: Es un lenguaje de diseño que se utiliza para dar estilos al HTML</dd>
-                <dt>JavaScript</dt>
-                <dd>Es un lenguaje de programación para dar interactividad a un sitio web.</dd>
-            </dl>
-            <h3 class="titulo2">Atributos en las listas:</h3>
-            <h4 class="titulo2">Type:circle</h4>
-            <ul class="lista" type="circle">
-                <li>Item</li>
-                <li>Item</li>
-                <li>Item</li>
-            </ul>
-            <h4 class="titulo2">Type:1, Star:9</h4>
-            <ol class="lista" type="1" start="9">
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-            </ol>
+                </nav>
+                <h4 class="titulo2">Orden de aprendizaje en el desarrollo web (lista anidada):</h4>
+                <ol class="lista">
+                    <li>HTML 
+                        <ul>
+                            <li>Estructuras</li>
+                            <li>Sintaxis</li>
+                            <li>Etiquetas</li>
+                        </ul>
+                    </li>
+                    <li>CSS
+                        <ul>
+                            <li>Etiquetas</li>
+                            <li>Sintaxis</li>
+                            <li>caracteristicas</li>
+                        </ul>
+                    </li>
+                    <li>Javascript 
+                        <ul>
+                            <li>variables</li>
+                            <li>Sintaxis</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h4 class="titulo2">Lenguajes para el desarrollo web:</h4>
+                <dl class="lista">
+                    <dt>HTML</dt>
+                    <dd>HyperText Markup Language: Es un lenguaje de marcado que se usa para estructurar datos en una página web
+                    </dd>
+                    <dt>CSS</dt>
+                    <dd>Cascade Style Sheets: Es un lenguaje de diseño que se utiliza para dar estilos al HTML</dd>
+                    <dt>JavaScript</dt>
+                    <dd>Es un lenguaje de programación para dar interactividad a un sitio web.</dd>
+                </dl>
+                <h4 class="titulo2">Atributos en las listas:</h4>
+                <h4 class="titulo2">Type:circle</h4>
+                <ul class="lista" type="circle">
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                </ul>
+                <h4 class="titulo2">Type:1, Star:9</h4>
+                <ol class="lista" type="1" start="9">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ol> 
+            </article>
         </section>
     </main>
 </body>

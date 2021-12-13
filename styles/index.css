@@ -27,13 +27,52 @@ a{
     flex-wrap: wrap;
     margin-bottom: 15px;
 }
-.caja1{
+.caja, .caja1{
     margin: 5%;
     border-radius: 30px;
     box-shadow: 0px 0px 20px 10px #fff; 
     background-color: #5e5e5e;
 }
-.caja1 img{
+.caja img{
     height: 326px;
     width: 300px;
+}
+.caja1{
+    background-color: #3a3a3a;
+    width: 290px;
+}
+.caja1 .titulo1, .titulo2, .titulo3{
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+.titulo1{
+    color: #ff0000;
+    text-align: center;
+}
+.titulo2, p{
+    color: #ffffff;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    padding: 0% 2%;
+}
+.titulo3{
+    color:#00b5fd;
+    text-align: center;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+}
+.lista{
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    padding: 0px 45px;
+}
+.blank{
+    color:#fff;
+}
+.img, video{
+    margin: 15px auto;
+    display: block;
+    max-width: 90%;
+}
+figure{
+    width: 500px;
 }

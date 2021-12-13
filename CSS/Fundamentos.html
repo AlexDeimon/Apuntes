@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos CSS</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Fundamentos CSS</h2>
+            <article>
+                <h3 class="titulo2">Conectar HTML y CSS:</h3>
+                <p>Existen 4 formas de dar estilos a HTML mediante CSS:</p>
+                <div class="main-section">
+                    <h4 class="titulo2">Etiqueta &lt;link&gt;:</h4>
+                    <figure>
+                        <figcaption><p>Se tiene un archivo css externo, usualmente en otra carpeta, el cual se vincula al HTML mediante la etiqueta &lt;link&gt;.</p><p>Dicho archivo se puede vincular a varios archivos HTML.</p></figcaption>
+                        <img src="../assets/images/link1.png" alt="link1" class="img">
+                    </figure>
+                </div>
+                <div class="main-section">
+                    <h4 class="titulo2">Etiqueta &lt;style&gt; &lt;style/&gt;:</h4>
+                    <figure>
+                        <figcaption><p>Dentro del mismo archivo HTML dentro de la etiqueta &lt;head&gt; se agrega la etiqueta &lt;style&gt; en la cual se escribe directamente el código css.</p></figcaption>
+                        <img src="../assets/images/style1.png" alt="style1" class="img">
+                    </figure>
+                </div>
+                <div class="main-section">
+                    <h4 style="color: #ffffff; font-family: 'M PLUS 1 Code', sans-serif; padding: 0% 2%;">CSS en linea: </h4>
+                    <figure>
+                        <figcaption><p>Se agrega el atributo style a cualquier etiqueta y se agregan las propiedades y valores de estilo que se quieren agregar.</p><p><small><b>Mala practica.</b></small></p></figcaption>
+                        <img src="../assets/images/style2.png" alt="style2" class="img">
+                    </figure>
+                </div>
+                <div class="main-section">
+                    <h4 class="titulo2">Import: </h4>
+                    <figure>
+                        <figcaption><p>En la etiqueta &lt;style&gt; se importa la url del archivo css externo.</p><p><small><b>Mala practica debido a que primero carga todo el contenido del HTML y luego carga el CSS.</b></small></p></figcaption>
+                        <img src="../assets/images/style3.png" alt="style2" class="img">
+                    </figure>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo2">Sintaxis CSS:</h3>
+                <ol class="lista">
+                    <li>Selector: El elemento al que se le va a aplicar estilos.</li>
+                    <li>Propiedad: Lo que se va a cambiar.</li>
+                    <li>Valor: El nuevo valor que se le va a dar a la propiedad.</li>
+                    <li>Declaración: propiedad+valor, estas declaraciones se separan mediante ;</li>
+                    <li>Regla: Conjunto de selector+declaracion(es).</li>
+                </ol>
+            </article>
+            <article>
+                <h3 class="titulo2">Selectores en CSS:</h3>
+                <ul class="lista">
+                    <li>Selectores Simples
+                        <ul>
+                            <li>Selectores elementales
+                                <ul>
+                                    <li>Selector Universal: * se aplica a todos los elementos.</li>
+                                    <li>Selector de tipo o etiqueta: nombre de la etiqueta &lt;&gt;.</li>
+                                </ul>
+                            </li>
+                            <li>Selectores de atributo</li>
+                        </ul>
+                    </li>
+                    <li>Selectores Compuestos
+                        <ul>
+                            <li>Selectores Agrupados</li>
+                            <li>Selectores Combinadores</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

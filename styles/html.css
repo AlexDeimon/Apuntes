@@ -1,20 +1,6 @@
 body{
     background:linear-gradient(120deg, #ff0000, #000000);
 }
-.caja1{
-    background-color: #3a3a3a;
-    width: 290px;
-}
-.caja1 .titulo1{
-    color: #ff0000;
-    font-family: 'M PLUS 1 Code', sans-serif;
-    text-align: center;
-}
-.titulo2, p{
-    color: #ffffff;
-    font-family: 'M PLUS 1 Code', sans-serif;
-    padding: 0% 2%;
-}
 .tsection, .tarticle{
     display: inline;
     padding: 0%;
@@ -25,9 +11,6 @@ body{
 }
 .tarticle{
     background-color: #4491e9;
-}
-p{
-    font-family: 'Roboto', sans-serif;
 }
 .header2, .main2, .footer{
     border: solid 5px #000000;
@@ -53,11 +36,6 @@ p{
     color: #ffffff;
     font-family: 'M PLUS 1 Code', sans-serif;
     padding: 0% 2%;
-}
-.lista{
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    padding: 0px 45px;
 }
 .lista h3{
     padding: 0%;
@@ -100,18 +78,10 @@ p{
 th, tfoot{
     background-color: #eeff00;
 }
-.blank{
-    color:#fff;
-}
 .formulario{
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
     margin: 0% 2%;
-}
-.img, video{
-    margin: 15px auto;
-    display: block;
-    max-width: 90%;
 }
 .main-section img{
     max-width: 90%;
