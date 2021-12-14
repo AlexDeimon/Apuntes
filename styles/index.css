@@ -3,12 +3,18 @@ body{
     padding: 0;
     background:linear-gradient(120deg, #ff0000,#00b5fd, #ffee00);
 }
+p{
+    padding: 0% 2%;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+figure{
+    width: 500px;
+    margin-top: 0;
+}
 .header{
     background-color: black;
     width: 100%;
-}
-a{
-    text-decoration: none;
 }
 .titulo{
     color: #fff;
@@ -33,32 +39,21 @@ a{
     box-shadow: 0px 0px 20px 10px #fff; 
     background-color: #5e5e5e;
 }
-.caja img{
-    height: 326px;
-    width: 300px;
-}
 .caja1{
     background-color: #3a3a3a;
     width: 290px;
-}
-.caja1 .titulo1, .titulo3{
-    font-family: 'M PLUS 1 Code', sans-serif;
 }
 .titulo1{
     color: #ff0000;
     text-align: center;
 }
-.titulo2, p{
-    color: #ffffff;
-    font-family: 'M PLUS 1 Code', sans-serif;
+.titulo2{
+    color: #fff;
     padding: 0% 2%;
 }
 .titulo3{
     color:#00b5fd;
     text-align: center;
-}
-p{
-    font-family: 'Roboto', sans-serif;
 }
 .lista{
     color: #ffffff;
@@ -68,12 +63,26 @@ p{
 .blank{
     color:#fff;
 }
-.img, video{
+.link{
+    color: #ffffff;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    text-decoration: underline;
+}
+.img, .video{
     margin: 15px auto;
     display: block;
     max-width: 90%;
 }
-figure{
-    width: 500px;
-    margin-top: 0;
+.header a,
+.caja1 a{
+    text-decoration: none;
+}
+.caja img{
+    height: 326px;
+    width: 300px;
+}
+.titulo2,
+.caja1 .titulo1,
+.caja1 .titulo3{
+    font-family: 'M PLUS 1 Code', sans-serif;
 }

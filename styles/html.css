@@ -37,9 +37,6 @@ body{
     font-family: 'M PLUS 1 Code', sans-serif;
     padding: 0% 2%;
 }
-.lista h3{
-    padding: 0%;
-}
 .section{
     background-color: #44e952;
 }
@@ -49,11 +46,6 @@ body{
 .bloque{
     border: solid 5px #fff;
     color: #fff;
-}
-.link{
-    color: #ffffff;
-    font-family: 'M PLUS 1 Code', sans-serif;
-    text-decoration: underline;
 }
 .tabla{
     font-family: 'Roboto', sans-serif;
@@ -72,10 +64,7 @@ body{
     margin-bottom: 10px;
     color: #fff;
 }
-.cuerpoTabla tr{
-    background-color: #ffffff;
-}
-th, tfoot{
+.cabeceraTabla, .pieTabla{
     background-color: #eeff00;
 }
 .formulario{
@@ -83,16 +72,24 @@ th, tfoot{
     color: #ffffff;
     margin: 0% 2%;
 }
-.main-section img{
-    max-width: 90%;
-}
-audio{
+.audio{
     margin: 0% 2%;
 }
-iframe{
+.iframe{
     width:560px; 
     height:315px;
     margin: 0% auto;
     display: block;
+    max-width: 90%;
+}
+.lista h3,
+.lista h4{
+    padding: 0%;
+}
+.cuerpoTabla tr{
+    background-color: #ffffff;
+}
+
+.main-section img{
     max-width: 90%;
 }
