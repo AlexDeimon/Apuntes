@@ -74,20 +74,96 @@
                         <ul>
                             <li>Selectores elementales
                                 <ul>
-                                    <li>Selector Universal: * se aplica a todos los elementos.</li>
+                                    <li>Selector Universal *: se aplica a todos los elementos.</li>
                                     <li>Selector de tipo o etiqueta: nombre de la etiqueta &lt;&gt;.</li>
                                 </ul>
                             </li>
-                            <li>Selectores de atributo</li>
+                            <li>Selectores de atributo
+                                <ul>
+                                    <li>id: # + id del elemento. <small><b>No es recomendable.</b></small> </li>
+                                    <li>clase: . + clase del elemento.</li>
+                                    <li>otros atributos:
+                                        <ul>
+                                            <li>[atributo]: Selecciona los elementos con ese atributo</li>
+                                            <li>[atributo="valor"]: Selecciona los elementos que coincidan con el atributo=valor</li>
+                                            <li>[atributo^="valor"]: Selecciona los elementos cuyo atributo comience con valor</li>
+                                            <li>[atributo*="valor"]: Selecciona los elementos cuyo atributo contenga valor</li>
+                                            <li>[atributo$="valor"]: Selecciona los elementos cuyo atributo termine con valor</li>
+                                            <li>[atributo|="valor"]: Selecciona los elementos cuyo atributo comience con valor o "valor-"</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li>Selectores Compuestos
                         <ul>
-                            <li>Selectores Agrupados</li>
-                            <li>Selectores Combinadores</li>
+                            <li>Selectores Agrupados: Se agrupan los selectores separados por comas y se escribe el estilo una sola vez.</li>
+                            <li>Selectores Combinadores
+                                <ul>
+                                    <li>Selector descendente: Selecciona un elemento dentro de otro; se coloca el selector padre y separado por un espacio el selector hijo. <small><b>Recomendación: no utilizar mas de 1 nivel.</b></small></li>
+                                    <li>Selector de hermano siguiente +: Selecciona el elemento hermano inmediatamente siguiente.</li>
+                                    <li>Selector de hermanos siguientes ~: Selecciona  a todos los elementos hermanos siguientes.</li>
+                                    <li>Selector de hijo directo >: Selecciona solo a los hijos directos.</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                 </ul>
+            </article>
+            <article>
+                <h3 class="titulo2"><span class="resaltado">Ejemplo: </span></h3>
+                <h4 class="titulo2">Selector Universal *:</h4>
+                <div class="main-section">
+                    <img src="../assets/images/selector1.png" alt="ejemplo selector universal">
+                    <figure>
+                        <figcaption><p>Asi se veria la página con esa regla.</p></figcaption>
+                        <img src="../assets/images/selector2.png" alt="ejemplo selector universal" class="img">
+                    </figure>
+                </div>
+                <h4 class="titulo2">Selector de tipo o etiqueta:</h4>
+                <img src="../assets/images/selector3.png" alt="ejemplo selector etiqueta" class="img">
+                <h4 id="tituloid">Selector id: </h4>
+                <img src="../assets/images/selector4.png" alt="ejemplo selector id" class="img">
+                <h4 class="titulo2">Selector class: </h4>
+                <img src="../assets/images/selector5.png" alt="ejemplo selector class" class="img">
+                <h4 class="titulo2">Selectores agrupados: </h4>
+                <img src="../assets/images/selector6.png" alt="ejemplo selectores agrupados" class="img">
+                <h4 class="titulo2">Selector decendiente: </h4>
+                <img src="../assets/images/selector7.png" alt="ejemplo selector decendiente" class="img">
+                <h4 class="titulo2">Selector hermano siguiente & hermanos siguientes: </h4>
+                <img src="../assets/images/selector8.png" alt="ejemplo selector hermanos siguientes" class="img">
+                <div>
+                    <p id="Hermano1">Hermano 1</p>
+                    <p id="Hermano2">Hermano 2</p>
+                    <p id="Hermano3">Hermano 3</p>
+                    <p id="Hermano4">Hermano 4</p>
+                </div>
+                <h4 class="titulo2">Selector hijo directo: </h4>
+                <div class="main-section">
+                    <img src="../assets/images/selector9.png" alt="ejemplo selector hijo directo HTML" class="img">
+                    <img src="../assets/images/selector10.png" alt="ejemplo selector hijo directo HTML" class="img">
+                </div>
+                <div id="padre">
+                    <p class="Hijo">Hijo 1</p>
+                    <p class="Hijo">Hijo 2</p>
+                    <div class="divHijo">
+                        <p class="Hijo">Nieto</p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo2">Especificidad:</h3>
+                <p>Establece cómo de específico es un selector para saber qué estilo aplicar. El cálculo se realiza con la siguiente fórmula:</p>
+                <ul class="lista">
+                    <li>Etiquetas y pseudoelementos = 001</li>
+                    <li>Clases, atributos y pseudoclases = 010</li>
+                    <li>Ids = 100</li>
+                    <li>Estilos en línea = 1000</li>
+                    <li>!important = LE GANA A TODO Y NO SE USA NUNCA</li>
+                </ul>
+                <h3 class="titulo2">Cascada:</h3>
+                <p>Funciona siempre que la especificidad sobre el elemento sea la misma.</p> 
             </article>
         </section>
     </main>

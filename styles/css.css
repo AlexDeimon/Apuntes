@@ -1,3 +1,23 @@
 body{
     background:linear-gradient(120deg, #00b5fd, #000000);
 }
+#tituloid{
+    color: #00ff80;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    padding: 0% 2%;
+    text-decoration: underline;
+}
+#Hermano1 + p{
+    display: inline;
+    background-color: beige;
+    color: #000;
+}
+#Hermano2 ~ p{
+    display: block;
+    background-color: blue;
+    color: darkgoldenrod;
+}
+#padre > .Hijo{
+    display: inline;
+    background-color: darkorange;
+}

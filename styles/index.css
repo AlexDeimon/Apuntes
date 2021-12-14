@@ -41,7 +41,7 @@ a{
     background-color: #3a3a3a;
     width: 290px;
 }
-.caja1 .titulo1, .titulo2, .titulo3{
+.caja1 .titulo1, .titulo3{
     font-family: 'M PLUS 1 Code', sans-serif;
 }
 .titulo1{
@@ -75,4 +75,5 @@ p{
 }
 figure{
     width: 500px;
+    margin-top: 0;
 }

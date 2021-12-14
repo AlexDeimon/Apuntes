@@ -52,7 +52,16 @@
             <article>
                 <h3 class="titulo2">Navegación con anclas</h3>
                 <p>Permite mediante enlaces, navegar por diferentes partes de la página asignándoles id's a las etiquetas a las que se desea acceder. En el atributo href se coloca # seguido del id de la etiqueta. Es usado comúnmente en indíces y menús de navegación</p>
-            </article>   
+            </article> 
+            <article>
+                <h3 class="titulo2">Enlace para enviar un email</h3>
+                <p>Se puede definir un enlace para enviar un email de manera muy sencilla solo mediante el atributo href. Dentro de este debe estar lo siguiente: </p>
+                <ol class="lista">
+                    <li>mailto: La dirección de correo al que se desea enviar el mail.</li>
+                    <li>?subject= :El asunto del mail.</li>
+                    <li>&body= : Lo que tendrá escrito por defecto el mail.</li>
+                </ol>
+            </article>  
             <article>
                 <h3 class="titulo2"><span class="resaltado">Ejemplo:</span></h3>
                 <ul class="lista">
@@ -65,6 +74,10 @@
                         <li>download logo HTML: <a href="/assets/images/html5.png" download class="link">descargar</a></li>
                         <li>Navegación con anclas: <a href="Enlaces3.html" class="link">Ir a Ejemplo</a></li>
                     </ul>
+                    <li>Email: 
+                        <a href="mailto:diegoalejandro1999@gmail.com?subject=contacto&body=prueba email" class="link">Enviar email</a>
+                    </li>
+                    <img src="../../assets/images/mail.png" alt="mail HTML" class="img">
                 </ul>
             </article> 
         </section>
