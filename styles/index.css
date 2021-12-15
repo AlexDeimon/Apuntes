@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background:linear-gradient(120deg, #ff0000,#00b5fd, #ffee00);
+    background-color: #1d232f;
 }
 p{
     padding: 0% 2%;
@@ -16,15 +16,27 @@ figure{
     background-color: black;
     width: 100%;
 }
-.titulo{
+.titulo1{
     color: #fff;
     margin: 0;
     padding: 2%;
     font-family: 'Roboto', sans-serif;
 }
+.titulo3{
+    color: #ff9d47;
+}
+.titulo2{
+    color: #ff4747;
+}
+.titulo4{
+    color: #6ae96d;
+}
+.ejemplo{
+    color: #448cff;
+}
 .resaltado{
-    font-family: 'M PLUS 1 Code', sans-serif;
-    color: #47ff2f;
+    font-family: 'Exo 2', sans-serif;
+    color: #ff4747;
 }
 .main-section{
     display: flex;
@@ -35,25 +47,12 @@ figure{
 }
 .caja, .caja1{
     margin: 5%;
-    border-radius: 30px;
-    box-shadow: 0px 0px 20px 10px #fff; 
-    background-color: #5e5e5e;
+    border-radius: 30px; 
+    border: 1px solid #fff;
+    background-color: #181c27;
 }
 .caja1{
-    background-color: #3a3a3a;
     width: 290px;
-}
-.titulo1{
-    color: #ff0000;
-    text-align: center;
-}
-.titulo2{
-    color: #fff;
-    padding: 0% 2%;
-}
-.titulo3{
-    color:#00b5fd;
-    text-align: center;
 }
 .lista{
     color: #ffffff;
@@ -64,8 +63,8 @@ figure{
     color:#fff;
 }
 .link{
-    color: #ffffff;
-    font-family: 'M PLUS 1 Code', sans-serif;
+    color: #448cff;
+    font-family: 'Exo 2', sans-serif;
     text-decoration: underline;
 }
 .img, .video{
@@ -82,7 +81,19 @@ figure{
     width: 300px;
 }
 .titulo2,
-.caja1 .titulo1,
-.caja1 .titulo3{
-    font-family: 'M PLUS 1 Code', sans-serif;
+.ejemplo,
+.titulo3,
+.titulo4,
+.caja1 .titulohtml,
+.caja1 .titulocss{
+    font-family: 'Exo 2', sans-serif;
+}
+.titulo2,
+.ejemplo,
+.titulo3,
+.titulo4{
+    padding: 0% 2%;
+}
+.caja:hover, .caja1:hover{
+    box-shadow: 0px 0px 20px 10px #fff; ;
 }

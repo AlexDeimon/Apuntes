@@ -14,43 +14,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <a href="../index.html"><h1 class="titulo">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
     </header>
     <main>
         <section>
             <h2 class="titulo2">Fundamentos CSS</h2>
             <article>
-                <h3 class="titulo2">Conectar HTML y CSS:</h3>
+                <h3 class="titulo3">Conectar HTML y CSS:</h3>
                 <p>Existen 4 formas de dar estilos a HTML mediante CSS:</p>
                 <div class="main-section">
-                    <h4 class="titulo2">Etiqueta &lt;link&gt;:</h4>
+                    <h4 class="titulo4">Etiqueta &lt;link&gt;:</h4>
                     <figure>
                         <figcaption><p>Se tiene un archivo css externo, usualmente en otra carpeta, el cual se vincula al HTML mediante la etiqueta &lt;link&gt;.</p><p>Dicho archivo se puede vincular a varios archivos HTML.</p></figcaption>
                         <img src="../assets/images/link1.png" alt="link1" class="img">
                     </figure>
                 </div>
                 <div class="main-section">
-                    <h4 class="titulo2">Etiqueta &lt;style&gt; &lt;style/&gt;:</h4>
+                    <h4 class="titulo4">Etiqueta &lt;style&gt; &lt;style/&gt;:</h4>
                     <figure>
                         <figcaption><p>Dentro del mismo archivo HTML dentro de la etiqueta &lt;head&gt; se agrega la etiqueta &lt;style&gt; en la cual se escribe directamente el código css.</p></figcaption>
                         <img src="../assets/images/style1.png" alt="style1" class="img">
                     </figure>
                 </div>
                 <div class="main-section">
-                    <h4 style="color: #ffffff; font-family: 'M PLUS 1 Code', sans-serif; padding: 0% 2%;">CSS en linea: </h4>
+                    <h4 style="color: #6ae96d; font-family: 'Exo 2', sans-serif; padding: 0% 2%;">CSS en linea: </h4>
                     <figure>
                         <figcaption><p>Se agrega el atributo style a cualquier etiqueta y se agregan las propiedades y valores de estilo que se quieren agregar.</p><p><small><b>Mala practica.</b></small></p></figcaption>
                         <img src="../assets/images/style2.png" alt="style2" class="img">
                     </figure>
                 </div>
                 <div class="main-section">
-                    <h4 class="titulo2">Import: </h4>
+                    <h4 class="titulo4">Import: </h4>
                     <figure>
                         <figcaption><p>En la etiqueta &lt;style&gt; se importa la url del archivo css externo.</p><p><small><b>Mala practica debido a que primero carga todo el contenido del HTML y luego carga el CSS.</b></small></p></figcaption>
                         <img src="../assets/images/style3.png" alt="style2" class="img">
@@ -58,7 +56,7 @@
                 </div>
             </article>
             <article>
-                <h3 class="titulo2">Sintaxis CSS:</h3>
+                <h3 class="titulo3">Sintaxis CSS:</h3>
                 <ol class="lista">
                     <li>Selector: El elemento al que se le va a aplicar estilos.</li>
                     <li>Propiedad: Lo que se va a cambiar.</li>
@@ -68,7 +66,7 @@
                 </ol>
             </article>
             <article>
-                <h3 class="titulo2">Selectores en CSS:</h3>
+                <h3 class="titulo3">Selectores en CSS:</h3>
                 <ul class="lista">
                     <li>Selectores Simples
                         <ul>
@@ -112,8 +110,8 @@
                 </ul>
             </article>
             <article>
-                <h3 class="titulo2"><span class="resaltado">Ejemplo: </span></h3>
-                <h4 class="titulo2">Selector Universal *:</h4>
+                <h3 class="ejemplo">Ejemplo:</h3>
+                <h4 class="titulo4">Selector Universal *:</h4>
                 <div class="main-section">
                     <img src="../assets/images/selector1.png" alt="ejemplo selector universal">
                     <figure>
@@ -121,17 +119,17 @@
                         <img src="../assets/images/selector2.png" alt="ejemplo selector universal" class="img">
                     </figure>
                 </div>
-                <h4 class="titulo2">Selector de tipo o etiqueta:</h4>
+                <h4 class="titulo4">Selector de tipo o etiqueta:</h4>
                 <img src="../assets/images/selector3.png" alt="ejemplo selector etiqueta" class="img">
                 <h4 id="tituloid">Selector id: </h4>
                 <img src="../assets/images/selector4.png" alt="ejemplo selector id" class="img">
-                <h4 class="titulo2">Selector class: </h4>
+                <h4 class="titulo4">Selector class: </h4>
                 <img src="../assets/images/selector5.png" alt="ejemplo selector class" class="img">
-                <h4 class="titulo2">Selectores agrupados: </h4>
+                <h4 class="titulo4">Selectores agrupados: </h4>
                 <img src="../assets/images/selector6.png" alt="ejemplo selectores agrupados" class="img">
-                <h4 class="titulo2">Selector decendiente: </h4>
+                <h4 class="titulo4">Selector decendiente: </h4>
                 <img src="../assets/images/selector7.png" alt="ejemplo selector decendiente" class="img">
-                <h4 class="titulo2">Selector hermano siguiente & hermanos siguientes: </h4>
+                <h4 class="titulo4">Selector hermano siguiente & hermanos siguientes: </h4>
                 <img src="../assets/images/selector8.png" alt="ejemplo selector hermanos siguientes" class="img">
                 <div>
                     <p id="Hermano1">Hermano 1</p>
@@ -139,7 +137,7 @@
                     <p id="Hermano3">Hermano 3</p>
                     <p id="Hermano4">Hermano 4</p>
                 </div>
-                <h4 class="titulo2">Selector hijo directo: </h4>
+                <h4 class="titulo4">Selector hijo directo: </h4>
                 <div class="main-section">
                     <img src="../assets/images/selector9.png" alt="ejemplo selector hijo directo HTML" class="img">
                     <img src="../assets/images/selector10.png" alt="ejemplo selector hijo directo HTML" class="img">
@@ -153,7 +151,7 @@
                 </div>
             </article>
             <article>
-                <h3 class="titulo2">Especificidad:</h3>
+                <h3 class="titulo3">Especificidad:</h3>
                 <p>Establece cómo de específico es un selector para saber qué estilo aplicar. El cálculo se realiza con la siguiente fórmula:</p>
                 <ul class="lista">
                     <li>Etiquetas y pseudoelementos = 001</li>
@@ -163,7 +161,7 @@
                     <li>!important = LE GANA A TODO Y NO SE USA NUNCA</li>
                 </ul>
                 <p><a href="https://jonassebastianohlsson.com/specificity-graph/" class="link">Evaluador de CSS</a></p>
-                <h3 class="titulo2">Cascada:</h3>
+                <h3 class="titulo3">Cascada:</h3>
                 <p>Funciona siempre que la especificidad sobre el elemento sea la misma.</p> 
             </article>
         </section>

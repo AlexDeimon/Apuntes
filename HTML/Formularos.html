@@ -14,20 +14,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <a href="../index.html"><h1 class="titulo">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
     </header>
     <main>
         <section>
             <h2 class="titulo2">Formularios &lt;form&gt;</h2>
             <p>Los formularios son la parte fundamental de las paginas web para que los usuarios puedan enviar información a los servidores.</p>
             <article>
-                <h3 class="titulo2">Estructura básica</h3>
+                <h3 class="titulo3">Estructura básica</h3>
                 <p>La estructura básica de un formulario se compone de 4 elementos:</p>
                 <ul class="lista">
                     <li>&lt;form&gt;: Es la etiqueta que engloba el formulario.</li>
@@ -36,16 +34,16 @@
                     <li>&lt;button&gt;: Crea un botón que permitirá enviar el formulario.</li>
                 </ul>
                 <div class="main-section">
-                    <h3 class="titulo2">Forma 1 asociar &lt;input&gt; con &lt;label&gt;:</h3>
+                    <h3 class="titulo3">Forma 1 asociar &lt;input&gt; con &lt;label&gt;:</h3>
                     <img src="../assets/images/Formulario1.png" alt="Formulario1">
                 </div>
                 <div class="main-section">
-                    <h3 class="titulo2">Forma 2 asociar &lt;input&gt; con &lt;label&gt;:</h3>
+                    <h3 class="titulo3">Forma 2 asociar &lt;input&gt; con &lt;label&gt;:</h3>
                     <img src="../assets/images/Formulario2.png" alt="Formulario2">
                 </div>
             </article>
             <article>
-                <h3 class="titulo2"><span class="resaltado">Ejemplo:</span></h3>
+                <h3 class="ejemplo">Ejemplo:</h3>
                 <form class="formulario">
                     <label for="name">Nombre</label>
                     <input id="name">
@@ -53,7 +51,7 @@
                 </form>    
             </article>
             <article>
-                <h3 class="titulo2">Tipos de &lt;input&gt;:</h3>
+                <h3 class="titulo3">Tipos de &lt;input&gt;:</h3>
                 <ul class="lista">
                     <li>button: Visualmente es igual a un &lt;button&gt;, pero el formulario no se enviará. <input type="button" value="input button"></li>
                     <li>submit: Se utiliza para enviar el formulario. <input type="submit"></li>
@@ -89,7 +87,7 @@
                 </ul>
             </article>
             <article>
-                <h3 class="titulo2">&lt;select&gt;:</h3>
+                <h3 class="titulo3">&lt;select&gt;:</h3>
                 <ul class="lista">
                     <li>Crea una lista de opciones donde podemos seleccionar una o varias opciones. Cada opción irá dentro de una etiqueta &lt;option&gt; &lt;option/&gt;. El atributo multiple permite seleccionar varias opciones con la tecla ctrl. Si hay muchas opciones se pueden ordenar por categorías a través de la etiqueta &lt;optgroup&gt; con el atributo label para nombrar la categoría.</li>
                 </ul>
@@ -126,7 +124,7 @@
                 </div>    
             </article>
             <article>
-                <h3 class="titulo2">&lt;datalist&gt;:</h3>
+                <h3 class="titulo3">&lt;datalist&gt;:</h3>
                 <ul class="lista">
                     <li>Funciona de forma similar al &lt;select&gt; solo que esta contiene un filtro para obtener más rapido las opciones disponibles. Está compuesto por un input de tipo list, el cual tiene un atributo tambien llamado list al que se le asigna el id del &lt;datalist&gt; al que se quiere acceder.</li>
                     <input type="list" list="tools">
@@ -145,7 +143,7 @@
                 </ul>    
             </article>
             <article>
-                <h3 class="titulo2">Otros elementos:</h3>
+                <h3 class="titulo3">Otros elementos:</h3>
                 <ul class="lista">
                     <li>&lt;fieldset&gt;: Se utiliza para agrupar elementos dentro de un formulario.</li>
                     <li>&lt;legend&gt;: Representa una etiqueta para el contenido del fieldset.</li>
@@ -176,7 +174,7 @@
                 </ul>    
             </article>
             <article>
-                <h3 class="titulo2"><span class="resaltado">Ejemplo:</span></h3>
+                <h3 class="ejemplo">Ejemplo:</h3>
                 <form class="formulario">
                     <fieldset>
                         <legend>Otros elementos</legend>
@@ -192,7 +190,7 @@
                 </form>    
             </article>
             <article>
-                <h3 class="titulo2">Atributos: </h3>
+                <h3 class="titulo3">Atributos: </h3>
                 <ul class="lista">
                     <li>action: Envia la información del formulario al servidor.</li>
                     <li>method: Establece el método http (GET o POST) para enviar el formulario.</li>
@@ -207,7 +205,7 @@
                 </ul>    
             </article>
             <article>
-                <h3 class="titulo2"><span class="resaltado">Ejemplo:</span></h3>
+                <h3 class="ejemplo">Ejemplo:</h3>
                 <form class="formulario">
                     <fieldset>
                         <legend>Atributos</legend>

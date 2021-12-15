@@ -1,9 +1,10 @@
-body{
-    background:linear-gradient(120deg, #00b5fd, #000000);
+.titulocss{
+    color:#00b5fd;
+    text-align: center;
 }
 #tituloid{
     color: #00ff80;
-    font-family: 'M PLUS 1 Code', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     padding: 0% 2%;
     text-decoration: underline;
 }

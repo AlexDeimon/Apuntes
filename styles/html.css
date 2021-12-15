@@ -1,5 +1,6 @@
-body{
-    background:linear-gradient(120deg, #ff0000, #000000);
+.titulohtml{
+    color: #f33d00;
+    text-align: center;
 }
 .tsection, .tarticle{
     display: inline;
@@ -7,41 +8,41 @@ body{
     margin: 0% 2%;
 }
 .tsection{
-    background-color: #44e952;
+    background-color: #0151ff;
 }
 .tarticle{
-    background-color: #4491e9;
+    background-color: #8c00ff;
 }
 .header2, .main2, .footer{
     border: solid 5px #000000;
 }
 .header2{
-    margin: 2% 2% 0% 2%;
     background-color: #3a3a3a;
     text-align: center;
 }
 .main2{
-    margin: 0% 2%;
-    background-color: #e98e44;
+    background-color: #00adb9;
 }
 .footer{
     background-color: #3a3a3a;
-    margin: 0% 2% 2%;
+    text-align: center;
 }
 .listaNav{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     list-style-type: none;
-    color: #ffffff;
-    font-family: 'M PLUS 1 Code', sans-serif;
+    color: #448cff;
+    font-family: 'Exo 2', sans-serif;
     padding: 0% 2%;
 }
 .section{
-    background-color: #44e952;
+    background-color: #0151ff;
+    margin: 1%;
 }
 .article{
-    background-color: #4491e9;
+    background-color: #8c00ff;
+    margin: 1%;
 }
 .bloque{
     border: solid 5px #fff;
