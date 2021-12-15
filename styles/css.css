@@ -22,3 +22,13 @@
     display: inline;
     background-color: darkorange;
 }
+#pEjemplo{
+    background-color: #00b5fd;
+    margin: 0% 2%;
+}
+#aEjemplo{
+    color: inherit;
+}
+#spanEjemplo{
+    color: initial;
+}

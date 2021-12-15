@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos CSS</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/css.css">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
@@ -160,9 +161,29 @@
                     <li>Estilos en línea = 1000</li>
                     <li>!important = LE GANA A TODO Y NO SE USA NUNCA</li>
                 </ul>
-                <p><a href="https://jonassebastianohlsson.com/specificity-graph/" class="link">Evaluador de CSS</a></p>
+                <p><a href="https://jonassebastianohlsson.com/specificity-graph/" class="link" target="_blank">Evaluador de CSS</a></p>
                 <h3 class="titulo3">Cascada:</h3>
-                <p>Funciona siempre que la especificidad sobre el elemento sea la misma.</p> 
+                <p>Funciona siempre que la especificidad sobre el elemento sea la misma.</p>
+                <h3 class="titulo3">Herencia:</h3> 
+                <p>Es la capacidad que tienen algunos elementos de heredar algunas propiedades de sus elementos contenedores (padres, abuelos, etc).</p>
+                <ul class="lista">
+                    <li>Valor inherit en propiedades: Fuerza al elemento a tomar el valor de la propiedad del elemento padre.</li>
+                    <li>Valor initial en propiedades: Evita que el elemento herede el valor de la propiedad del elemento padre, dejando el valor por defecto de la propiedad.</li>
+                </ul>
+            </article>
+            <article>
+                <h3 class="ejemplo">Ejemplo Herencia:</h3>
+                <p>El siguiente párrafo tiene color blanco y contiene 2 span y un enlace; el primer span hereda ese mismo color pero el segundo no lo hereda debido a la propiedad initial y el enlace por defecto tiene un color azul pero se esta forzando a tener el color blanco del párrafo con la propiedad inherit.</p>
+                <div class="main-section">
+                    <img src="../assets/images/herencia1.png" alt="Ejemplo herencia HTML" class="img">
+                    <img src="../assets/images/herencia2.png" alt="Ejemplo herencia CSS" class="img">
+                </div>
+                <p id="pEjemplo">Lorem ipsum dolor <span>sit amet consectetur , </span><span id="spanEjemplo">adipisicing elit.</span>  Velit voluptatum molestiae veritatis sequi doloremque, voluptatibus suscipit ducimus eaque, atque doloribus quia amet praesentium autem esse eius debitis maxime voluptate omnis? <a href="#" id="aEjemplo">enlace ejemplo</a></p>
+            </article>
+            <article>
+                <h3 class="titulo3">Normalizar estilos en el navegador:</h3>
+                <p>En todos los navegadores existen estilos por defecto y algunos pueden ser diferentes lo que suele causar que al momento de aplicar estilos propios a las páginas web, estos se vean afectados por los estilos por defecto de los navegadores y no resulten como se esperaba, por lo que es recomendable realizar una normalizacion de estilos en cada proyecto que se realice para que sin importar el navegador donde se visualice, siempre se vea igual.</p>
+                <p><a href="https://necolas.github.io/normalize.css/" class="link" target="_blank">Página para descargar archivo css normalizado.</a></p>
             </article>
         </section>
     </main>
