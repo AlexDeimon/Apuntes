@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Estilos visuales</h2>
+            <article>
+                <h3 class="titulo3">border:</h3>
+                <h4 class="titulo4">border-style:</h4>
+                <p>Listado de valores para border-style:</p>
+                <ol class="lista">
+                    <li style="border: 10px none #448cff; margin-top: 10px; ">none</li>
+                    <li style="border: 10px hidden #448cff; margin-top: 10px;">hidden</li>
+                    <li style="border: 10px dotted #448cff; margin-top: 10px;">dotted</li>
+                    <li style="border: 10px dashed #448cff; margin-top: 10px;">dashed</li>
+                    <li style="border: 10px solid #448cff; margin-top: 10px;">solid</li>
+                    <li style="border: 10px double #448cff; margin-top: 10px;">double</li>
+                    <li style="border: 10px groove #448cff; margin-top: 10px;">groove</li>
+                    <li style="border: 10px ridge #448cff; margin-top: 10px;">ridge</li>
+                    <li style="border: 10px inset #448cff; margin-top: 10px;">;inset</li>
+                    <li style="border: 10px outset #448cff; margin-top: 10px;">outset</li>
+                </ol>
+                <h4 class="titulo4">border-radius:</h4>
+                <p>Es la propiedad que permite redondear vértices de forma independiente. Es un shorthand que engloba 4 propiedades:</p>
+                <ol class="lista">
+                    <li>border-top-left-radius: Radio del borde superior izquierdo.</li>
+                    <li>border-top-right-radius: Radio del borde superior derecho.</li>
+                    <li>border-bottom-right-radius: Radio del borde inferior derecho.</li>
+                    <li>border-bottom-left-radius: Radio del borde inferior izquierdo.</li>
+                </ol>
+                <p>Si sólo recibe un valor dibujará un círculo en el vértice que se especifique, si recibe dos valores dibujará una elipse.
+                </p>
+                <p>Si se utiliza el border-radius como shorthand hay diferencias entre si se va dar un valor a cada lado (círculo) o dos (elipse):</p>
+                <ul class="lista">
+                    <li><h4 class="titulo4">Un valor: </h4>
+                    <ol>
+                        <li>border-radius: 50px; = Círculo de 50px a cada vértice.</li>
+                        <li>border-radius: 50px 100px; = Círculo de 50px en el vértice superior izquierdo y en el inferior derecho y de 100px en el superior derecho y el inferior izquierdo</li>
+                        <li>border-radius: 50px 100px 200px; = Círculo de 50px en el vértice superior izquierdo, de 100px en el superior derecho y el inferior izquierdo y de 200px en el inferior derecho.</li>
+                        <li>border-radius: 50px 100px 200px 300px; = Círculo de 50px en el vértice superior izquierdo, de 100px en el superior derecho, de 200px en el inferior derecho y de 300px en el inferior izquierdo.</li>
+                    </ol></li>
+                    <li><h4 class="titulo4">2 valores (Al tener dos radios se deben agrupar los radios y separarlos por una barra) :</h4>
+                        <ol>
+                            <li>border-radius: 25px / 50px; = Elipse de 25px en Y y 50px en X a cada vértice.</li>
+                            <li>border-radius: 25px 50px / 50px 100px; = Elipse de 25px en Y y 50px en X a los vértices superior izquierdo e inferior derecho y una elipse de 50px en Y y 100px en X en los vértices superior derecho e inferior izquierdo.</li>
+                            <li>border-radius: 25px 50px 75px / 50px 100px 150px; = Elipse de 25px en Y y 50px en X al vértice superior izquierdo, una elipse de 50px en Y y 100px en X en los vértices superior derecho e inferior izquierdo y una elipse de 75px en Y y de 150px en X al vértice inferior derecho.</li>
+                            <li>border-radius: 25px 50px 75px 100px / 50px 100px 150px 200px; = Elipse de 25px en Y y 50px en X al vértice superior izquierdo, una elipse de 50px en Y y 100px en X en el vértice superior derecho, una elipse de 75px en Y y de 150px en X al vértice inferior derecho y una elipse de 100px en X y 200px en Y en el vértice inferior izquierdo.</li>
+                        </ol>
+                    </li>
+                </ul>
+            </article>
+            <article id="ejemploBorder">
+                <h3 class="ejemplo">Ejemplo border:</h3>
+                <div class="main-section">
+                    <img src="../assets/images/border1.png" alt="ejemplo border">
+                    <div>
+                        <p id="block6">Bloque 6</p>
+                        <p id="block7">Bloque 7</p>
+                        <p id="block8">Bloque 8</p>
+                    </div>
+                </div>
+                <h3 class="ejemplo">Ejemplo border-radius:</h3>
+                <div class="main-section">
+                    <img src="../assets/images/border2.png" alt="ejemplo border-radius">
+                    <div>
+                        <p id="block9">Bloque 9</p>
+                        <p id="block10">Bloque 10</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

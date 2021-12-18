@@ -1,10 +1,12 @@
+*{
+    box-sizing: border-box;
+}
 body{
-    margin: 0;
-    padding: 0;
     background-color: #1d232f;
 }
 p{
-    padding: 0% 2%;
+    margin-left: 2%;
+    margin-right: 2%;
     font-family: 'Roboto', sans-serif;
     color: #fff;
 }
@@ -14,7 +16,6 @@ figure{
 }
 .header{
     background-color: black;
-    width: 100%;
 }
 .titulo1{
     color: #fff;
@@ -22,11 +23,11 @@ figure{
     padding: 2%;
     font-family: 'Roboto', sans-serif;
 }
-.titulo3{
-    color: #ff9d47;
-}
 .titulo2{
     color: #ff4747;
+}
+.titulo3{
+    color: #ff9d47;
 }
 .titulo4{
     color: #6ae96d;
@@ -43,9 +44,9 @@ figure{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 15px;
 }
-.caja, .caja1{
+.caja, 
+.caja1{
     margin: 5%;
     border-radius: 30px; 
     border: 1px solid #fff;
@@ -53,11 +54,11 @@ figure{
 }
 .caja1{
     width: 290px;
+    padding-top: 2%;
 }
 .lista{
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
-    padding: 0px 45px;
 }
 .blank{
     color:#fff;
@@ -67,10 +68,19 @@ figure{
     font-family: 'Exo 2', sans-serif;
     text-decoration: underline;
 }
-.img, .video{
-    margin: 15px auto;
+.img, 
+.video{
+    margin-left: auto;
+    margin-right: auto;
     display: block;
     max-width: 90%;
+}
+.titulo2,
+.ejemplo,
+.titulo3,
+.titulo4{
+    margin-left: 2%;
+    margin-right: 2%;
 }
 .header a,
 .caja1 a{
@@ -80,6 +90,10 @@ figure{
     height: 326px;
     width: 300px;
 }
+.lista h3,
+.lista h4{
+    margin-left: 0%;
+}
 .titulo2,
 .ejemplo,
 .titulo3,
@@ -87,12 +101,6 @@ figure{
 .caja1 .titulohtml,
 .caja1 .titulocss{
     font-family: 'Exo 2', sans-serif;
-}
-.titulo2,
-.ejemplo,
-.titulo3,
-.titulo4{
-    padding: 0% 2%;
 }
 .caja:hover, .caja1:hover{
     box-shadow: 0px 0px 20px 10px #fff; ;

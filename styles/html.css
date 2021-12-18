@@ -2,10 +2,11 @@
     color: #f33d00;
     text-align: center;
 }
-.tsection, .tarticle{
+.tsection, 
+.tarticle{
     display: inline;
     padding: 0%;
-    margin: 0% 2%;
+    margin-left:2%;
 }
 .tsection{
     background-color: #0151ff;
@@ -13,19 +14,18 @@
 .tarticle{
     background-color: #8c00ff;
 }
-.header2, .main2, .footer{
+.header2, 
+.main2, 
+.footer{
     border: solid 5px #000000;
 }
-.header2{
+.header2,
+.footer{
     background-color: #3a3a3a;
     text-align: center;
 }
 .main2{
     background-color: #00adb9;
-}
-.footer{
-    background-color: #3a3a3a;
-    text-align: center;
 }
 .listaNav{
     display: flex;
@@ -34,15 +34,17 @@
     list-style-type: none;
     color: #448cff;
     font-family: 'Exo 2', sans-serif;
-    padding: 0% 2%;
+    padding-left: 0%;
+}
+.section,
+.article{
+    margin: 1%;
 }
 .section{
     background-color: #0151ff;
-    margin: 1%;
 }
 .article{
     background-color: #8c00ff;
-    margin: 1%;
 }
 .bloque{
     border: solid 5px #fff;
@@ -52,7 +54,8 @@
     font-family: 'Roboto', sans-serif;
     border: 2px solid #000;
     text-align: center;
-    margin: 0% auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 @media all and (max-width: 480px){
     .tabla{
@@ -62,7 +65,6 @@
 .tituloTabla{
     font-size: larger;
     font-weight: bold;
-    margin-bottom: 10px;
     color: #fff;
 }
 .cabeceraTabla, .pieTabla{
@@ -71,26 +73,23 @@
 .formulario{
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
-    margin: 0% 2%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 .audio{
-    margin: 0% 2%;
+    margin-left: 2%;
 }
 .iframe{
     width:560px; 
     height:315px;
-    margin: 0% auto;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
     max-width: 90%;
-}
-.lista h3,
-.lista h4{
-    padding: 0%;
 }
 .cuerpoTabla tr{
     background-color: #ffffff;
 }
-
 .main-section img{
     max-width: 90%;
 }
