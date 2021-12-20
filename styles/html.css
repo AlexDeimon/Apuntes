@@ -2,18 +2,6 @@
     color: #f33d00;
     text-align: center;
 }
-.tsection, 
-.tarticle{
-    display: inline;
-    padding: 0%;
-    margin-left:2%;
-}
-.tsection{
-    background-color: #0151ff;
-}
-.tarticle{
-    background-color: #8c00ff;
-}
 .header2, 
 .main2, 
 .footer{
@@ -35,6 +23,18 @@
     color: #448cff;
     font-family: 'Exo 2', sans-serif;
     padding-left: 0%;
+}
+.tsection, 
+.tarticle{
+    display: inline;
+    padding: 0%;
+    margin-left:2%;
+}
+.tsection{
+    background-color: #0151ff;
+}
+.tarticle{
+    background-color: #8c00ff;
 }
 .section,
 .article{
@@ -89,7 +89,4 @@
 }
 .cuerpoTabla tr{
     background-color: #ffffff;
-}
-.main-section img{
-    max-width: 90%;
 }

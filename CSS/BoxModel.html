@@ -30,6 +30,14 @@
             <article>
                 <h3 class="titulo3">Width & Height: </h3>
                 <p>El ancho y el alto son las propiedades que definen el tamaño de todos los elementos <span class="resaltado">DE BLOQUE.</span> En los elementos de linea tanto el alto como el ancho ocupan solo lo que ocupe el contenido.</p>
+                <h4 class="ejemplo">Ejemplo:</h4>
+                <div class="main-section">
+                    <img src="../assets/images/width&height.png" alt="ejemplo ancho y alto">
+                    <div>
+                        <p id="block1">Elemento de bloque de 80*50</p>
+                        <a href="#" class="link" id="inline1">Elemento en linea</a>
+                    </div>  
+                </div>
             </article>
             <article>
                 <h3 class="titulo3">Margin: </h3>
@@ -49,6 +57,20 @@
                 </ul>
                 <p>Los elementos <span class="resaltado">en bloque</span> toman las 4 márgenes y los elementos <span class="resaltado">en línea</span> toman solo los valores de derecha e izquierda.</p>
                 <p>Los elementos en bloque, si tienen un ancho declarado, se pueden alinear hacia la izquierda (por defecto), hacia a la derecha o en el centro de la página mediante el valor auto en la propiedad de margin. <span class="resaltado">Ojo, se alinea o se centra EL ELEMENTO, NO EL CONTENIDO.</span></p>
+                <h4 class="titulo4">Colapsado de márgenes:</h4>
+                <p>En css las márgenes verticales para cualquier elemento colapsan. Esto quiere decir que por ejemplo, teniendo 2 elementos, uno encima del otro, el margin-bottom del primer elemento <span class="resaltado">no se suma </span>con el margin-top del segundo elemento. En márgenes horizontales si se suman pero las verticales no.</p>
+                <p>Tambien, algo que sucede siempre con las márgenes cuando se utilizan elementos hijos, es que las márgenes de dichos elementos afectan al elemento padre, pero <a href="https://www.youtube.com/watch?v=t53-d5wMwFc" class="link" target="_blank">hay formas de evitar eso.</a></p>
+                <h4 class="ejemplo">Ejemplo:</h4>
+                <div class="main-section">
+                    <img src="../assets/images/margin.png" alt="ejemplo margin">
+                    <div>
+                        <p id="block2">Elemento de bloque 2</p>
+                        <p id="block3">Elemento de bloque 3</p>
+                        <a href="#" class="link" id="inline2">Elemento en linea 2</a>
+                        <a href="#" class="link" id="inline3">Elemento en linea 3</a>
+                    </div>
+                </div>
+                <p>Entre el bloque 2 y el bloque 3 solo hay 60px de margin, los cuales son del bloque 3, sin tomarse en cuenta el margin-bottom de 10px del bloque 2 debido al colapsado de márgenes.</p>
             </article>
             <article>
                 <h3 class="titulo3">Padding: </h3>
@@ -67,6 +89,16 @@
                     <li>1 valor: padding: top/right/bottom/left</li>
                 </ul>
                 <p>A diferencia de margin, padding si aplica por los 4 lados a los elementos tanto en bloque como en línea.</p>
+                <h4 class="ejemplo">Ejemplo:</h4>
+                <div class="main-section">
+                    <img src="../assets/images/padding.png" alt="ejemplo padding">
+                    <div>
+                        <p id="block4">Elemento de bloque 4</p>
+                        <p id="block5">Elemento de bloque 5</p>
+                        <a href="#" class="link" id="inline4">Elemento en linea 4</a>
+                        <a href="#" class="link" id="inline5">Elemento en linea 5</a>
+                    </div>
+                </div>
             </article>
             <article>
                 <h3 class="titulo3">Border: </h3>
@@ -97,7 +129,8 @@
                         </ul>
                     </li>
                 </ol>
-                <p>De igual forma que en padding y margin, las 3 propiedades de border admiten de 1 a 3 valores que van en el orden de las agujas del reloj.</p>
+                <p>De igual forma que en padding y margin, las 3 propiedades de border admiten de 1 a 4 valores que van en el orden de las agujas del reloj.</p>
+                <h4 class="ejemplo"><a href="Visual.html#ejemploBorder" class="link">Ejemplo border</a></h4>
             </article>
             <article>
                 <h3 class="titulo3">Box-sizing:</h3>
@@ -108,38 +141,28 @@
                 </ul>
             </article>
             <article>
-                <h3 class="ejemplo">Ejemplo Width & Height:</h3>
+                <h3 class="titulo3">Display</h3>
+                <p>La propiedad display sirve para cambiar el contexto de los elementos dentro del navegador, Admite varios valores: </p>
+                <ul class="lista">
+                    <li>none: Hace que el elemento no se muestre, pero sigue cargándose.</li>
+                    <li>block: Hace que el elemento sea de bloque.</li>
+                    <li>inline: Hace que el elemento sea de línea.</li>
+                    <li>inline-block: Hace que el elemento sea de línea pero admite medidas y márgenes verticales.</li>
+                </ul>
+                <h4 class="ejemplo">Ejemplo:</h4>
                 <div class="main-section">
-                    <img src="../assets/images/width&height.png" alt="ejemplo ancho y alto">
+                    <img src="../assets/images/display1.png" alt="ejemplo display 1">
+                    <img src="../assets/images/display2.png" alt="ejemplo display 2">
+                    <img src="../assets/images/display3.png" alt="ejemplo display 3">
                     <div>
-                        <p id="block1">Elemento de bloque de 80*50</p>
-                        <a href="#" class="link" id="inline1">Elemento en linea</a>
-                    </div>  
-                </div>
-                <h3 class="ejemplo">Ejemplo margin:</h3>
-                <div class="main-section">
-                    <img src="../assets/images/margin.png" alt="ejemplo margin">
-                    <div>
-                        <p id="block2">Elemento de bloque 2</p>
-                        <p id="block3">Elemento de bloque 3</p>
-                        <a href="#" class="link" id="inline2">Elemento en linea 2</a>
-                        <a href="#" class="link" id="inline3">Elemento en linea 3</a>
+                        <p id="block11">Elemento de bloque 11</p>
+                        <p id="block12">Elemento de bloque 12</p>
+                        <a href="#" class="link" id="inline11">Elemento en linea 11</a>
+                        <a href="#" class="link" id="inline12">Elemento en linea 12</a>
+                        <a href="#" class="link" id="inline13">Elemento en linea 13</a>
                     </div>
                 </div>
             </article>
-            <article>
-                <h3 class="ejemplo">Ejemplo padding:</h3>
-                <div class="main-section">
-                    <img src="../assets/images/padding.png" alt="ejemplo padding">
-                    <div>
-                        <p id="block4">Elemento de bloque 2</p>
-                        <p id="block5">Elemento de bloque 3</p>
-                        <a href="#" class="link" id="inline4">Elemento en linea 2</a>
-                        <a href="#" class="link" id="inline5">Elemento en linea 3</a>
-                    </div>
-                </div>
-            </article>
-            <h3 class="ejemplo"><a href="Visual.html#ejemploBorder" class="link">Ejemplo border</a></h3>
         </section>
     </main>
 </body>

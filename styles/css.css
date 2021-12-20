@@ -149,3 +149,125 @@
     border: 2px solid tan;
     border-radius: 20px / 21px;
 }
+#box1,
+#box2,
+#box3,
+#box4{
+    width: 200px;
+    height: 70px;
+}
+#box1{
+    margin-bottom: 160px;
+    background-color: teal;
+    overflow: visible; /*se desborda el contenido del párrafo*/
+}
+#box2{
+    overflow: hidden; /*se oculta el contenido del párrafo que se desborda*/
+    background-color: yellowgreen;
+}
+#box3{
+    overflow: scroll; /*se crea una sola barra de scroll*/
+    background-color: aqua;
+}
+#box4{
+    overflow: auto; /*se crean 2 barras de scroll ya que el párrafo se desborda en los 2 ejes*/
+    background-color: black;
+}
+#box4 > p{
+    width: 250px;
+}
+#block11{
+    display: block;
+    width: 100px;
+    height: 90px;
+    margin: 20px;
+    background-color: blueviolet;
+    color: burlywood;
+}
+#block12{
+    display: inline;
+    width: 200px;
+    height: 210px; /*no se aplican al ser un elemento inline*/
+    margin: 10px; /*solo se aplican las márgenes horizontales*/
+    background-color: cornflowerblue;
+    color: darkorchid;
+}
+#inline11{
+    display: inline;
+    width: 210px;
+    height: 100px; /*no se aplican al ser un elemento inline*/
+    margin: 10px; /*solo se aplican las márgenes horizontales*/
+    background-color: darkslategray;
+    color: forestgreen;
+}
+#inline12{
+    display: block;
+    width: 120px;
+    height: 200px;
+    margin: 10px;
+    background-color: gold;
+    color: green;
+}
+#inline13{
+    display: inline-block;
+    width: 120px;
+    height: 200px;
+    margin: 20px; /*se aplican las 3 propiedades gracias a inline-block*/
+    background-color: greenyellow;
+    color: indianred;
+}
+#border{
+    width: 100px;
+    height: 100px;
+    margin: 40px;
+    background-color: lightcoral;
+    color: lightgreen;
+    border: 10px solid lightseagreen;
+}
+#outline{
+    width: 100px;
+    height: 100px;
+    margin: 40px;
+    background-color: limegreen;
+    color:maroon;
+    outline: 10px solid mediumblue;
+    outline-offset: 10px;
+}
+#text1{
+    text-align: right;
+}
+#text2{
+    text-align: center;
+    display: block;
+    background-color: #2a3242;
+}
+#boxshadow1,
+#boxshadow2,
+#boxshadow3,
+#boxshadow4{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    margin: 20px;
+    text-align: center;
+}
+#boxshadow1{
+    background-color: mediumslateblue;
+    color: palegreen;
+    box-shadow: 10px 10px 10px; /*eje x, eje y y desenfoque*/
+}
+#boxshadow2{
+    background-color: palevioletred;
+    color: purple;
+    box-shadow: -10px -10px 10px saddlebrown; /*eje x, eje y, desenfoque y color*/
+}
+#boxshadow3{
+    background-color: springgreen;
+    color: violet;
+    box-shadow: 0px 0px 10px 10px yellowgreen; /*eje x, eje y, desenfoque, expanción y color*/
+}
+#boxshadow4{
+    background-color: aquamarine;
+    color: blueviolet;
+    box-shadow: 0px 0px 10px 10px darkgoldenrod inset; /*eje x, eje y, desenfoque, expanción, color e inset*/
+}

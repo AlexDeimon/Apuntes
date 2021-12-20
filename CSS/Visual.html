@@ -68,24 +68,89 @@
                         </ol>
                     </li>
                 </ul>
-            </article>
-            <article id="ejemploBorder">
-                <h3 class="ejemplo">Ejemplo border:</h3>
+                <h4 class="ejemplo" id="ejemploBorder">Ejemplo border:</h4>
                 <div class="main-section">
                     <img src="../assets/images/border1.png" alt="ejemplo border">
-                    <div>
-                        <p id="block6">Bloque 6</p>
-                        <p id="block7">Bloque 7</p>
-                        <p id="block8">Bloque 8</p>
-                    </div>
+                    <p id="block6">Bloque 6</p>
+                    <p id="block7">Bloque 7</p>
+                    <p id="block8">Bloque 8</p>            
                 </div>
-                <h3 class="ejemplo">Ejemplo border-radius:</h3>
+                <h4 class="ejemplo">Ejemplo border-radius:</h4>
                 <div class="main-section">
                     <img src="../assets/images/border2.png" alt="ejemplo border-radius">
                     <div>
                         <p id="block9">Bloque 9</p>
                         <p id="block10">Bloque 10</p>
                     </div>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo3">overflow:</h3>
+                <p>Es la propiedad que controla qué debe hacer la caja cuando su contenido se desborda del contenedor. Es un shorthand que engloba overflow-x y overflow-y. Tiene cuatro posibles valores:</p>
+                <ul class="lista">
+                    <li>visible: Es el valor por defecto.</li>
+                    <li>hidden: El contenido que se desborde no se verá. Si se aplica esta propiedad en un solo eje, el otro se pondrá automáticamente en el valor scroll.</li>
+                    <li>scroll: Aparecerán barras de scroll en el eje asignado (x, y o ambos)</li>
+                    <li>auto: Aparecerán barras de scroll en el caso de que hicieran falta.</li>
+                </ul>
+                <h4 class="ejemplo">Ejemplo overflow:</h4>
+                <img src="../assets/images/overflow1.png" alt="ejemplo overflow" class="img">
+                <div class="main-section">
+                    <div id="box1">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur est, nihil iusto et neque similique sint molestias dignissimos vel accusantium perferendis aliquam ipsam quibusdam reiciendis esse necessitatibus cumque magnam.</p>
+                    </div>
+                    <div id="box2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur est, nihil iusto et neque similique sint molestias dignissimos vel accusantium perferendis aliquam ipsam quibusdam reiciendis esse necessitatibus cumque magnam.</p>
+                    </div>
+                    <div id="box3">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur est, nihil iusto et neque similique sint molestias dignissimos vel accusantium perferendis aliquam ipsam quibusdam reiciendis esse necessitatibus cumque magnam.</p>
+                    </div>        
+                    <div id="box4">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur est, nihil iusto et neque similique sint molestias dignissimos vel accusantium perferendis aliquam ipsam quibusdam reiciendis esse necessitatibus cumque magnam.</p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo3">Outline: </h3>
+                <p> Outline es la propiedad que permite dibujar un borde por fuera del modelo de caja. Es un shorthand que engloba: </p>
+                <ol class="lista">
+                    <li>outline-width: Controla el ancho del ouline.</li>
+                    <li>outline-style: Controla el estilo del outline.</li>
+                    <li>outline-color: Controla el color del outline.</li>
+                </ol>
+                <p>Tiene las mísmas propiedades y sintaxis que border, pero con algunas diferencias:</p>
+                <ul class="lista">
+                    <li>No ocupa sitio, ya que no forma parte del box-model.</li>
+                    <li>No se puede redondear.</li>
+                    <li>No se pueden controlar los lados de forma independiente.</li>
+                </ul>
+                <p>También cuenta con la propiedad outline-offset, que permite aumentar o disminuir la distancia del outline respecto a la caja a la que pertence.</p>
+                <h4 class="ejemplo">Ejemplo outline:</h4>
+                <div class="main-section">
+                    <img src="../assets/images/outline.png" alt="ejemplo outline">    
+                    <p id="border">Border</p>
+                    <p id="outline">Outline</p>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo3">Box-shadow: </h3>
+                <p>La propiedad box-shadow se creó para añadir efectos de sombra a las cajas. En esencia lo que hace es crear un clon de la caja respetando la forma de su box-model (ancho, alto, redondez).  La sintaxis de box-shadow se puede escribir de distintas formas según lo que se quiera conseguir.Sus posibles valores son:</p>
+                <ol class="lista">
+                    <li>offset-x: Desplazamiento en x (obligatorio).</li>
+                    <li>offset-y: Desplazamiento en y (obligatorio).</li>
+                    <li>blur-radius: Desenfoque de la sombra.</li>
+                    <li>spread-radius: Expansión de la sombra.</li>
+                    <li>color: El color de la sombra, si no se especifica lo heredará del elemento al que pertenece.</li>
+                    <li>inset: Determina si la sombra será interior o exterior.</li>
+                </ol>
+                <p>Se pueden poner varias sombras separando por , sus respectivos valores.</p>
+                <h4 class="ejemplo">Ejemplo box-shadow:</h4>
+                <img src="../assets/images/box-shadow.png" alt="ejemplo box-shadow" class="img">
+                <div class="main-section">
+                    <p id="boxshadow1">box-shadow 1</p>
+                    <p id="boxshadow2">box-shadow 2</p>
+                    <p id="boxshadow3">box-shadow 3</p>
+                    <p id="boxshadow4">box-shadow 4</p>
                 </div>
             </article>
         </section>

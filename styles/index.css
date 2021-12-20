@@ -23,6 +23,13 @@ figure{
     padding: 2%;
     font-family: 'Roboto', sans-serif;
 }
+.titulo2,
+.titulo3,
+.titulo4,
+.ejemplo{
+    margin-left: 2%;
+    margin-right: 2%;
+}
 .titulo2{
     color: #ff4747;
 }
@@ -38,6 +45,9 @@ figure{
 .resaltado{
     font-family: 'Exo 2', sans-serif;
     color: #ff4747;
+}
+.blank{
+    color:#fff;
 }
 .main-section{
     display: flex;
@@ -56,17 +66,14 @@ figure{
     width: 290px;
     padding-top: 2%;
 }
-.lista{
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-}
-.blank{
-    color:#fff;
-}
 .link{
     color: #448cff;
     font-family: 'Exo 2', sans-serif;
     text-decoration: underline;
+}
+.lista{
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
 }
 .img, 
 .video{
@@ -75,12 +82,8 @@ figure{
     display: block;
     max-width: 90%;
 }
-.titulo2,
-.ejemplo,
-.titulo3,
-.titulo4{
-    margin-left: 2%;
-    margin-right: 2%;
+.main-section > img{
+    max-width: 90%;
 }
 .header a,
 .caja1 a{
