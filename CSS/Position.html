@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Pocisionamiento</h2>
+            <p>La propiedad position permite posicionar los elementos.</p>
+            <h3 class="titulo3">Flujo de renderizado:</h3>
+            <p>Por norma general los elementos se dibujan de izquierda a derecha y de arriba abajo. El punto 0,0 de los elementos, por norma general, es la esquina superior izquierda.</p>
+            <h3 class="titulo3">Espacio reservado:</h3>
+            <p>Es el espacio que tiene un elemento asignado en el navegador.</p>
+            <h3 class="titulo3">Elemento posicionado:</h3>
+            <p>Esto significa que el elemento tiene la propiedad position con un valor distinto de "static", que es el valor que tiene esta propiedad por defecto.</p>
+            <h3 class="titulo3">Stackin context:</h3>
+            <p>Contexto de apilamiento. Es el orden en el que se apilarán las cajas que se superponen, dentro del mismo contenedor.</p>
+            <h3 class="titulo3">Propiedades:</h3>
+            <ul class="lista">
+                <li>top: El elemento se moverá desde la parte superior la distancia que se le haya indicado.
+                </li>
+                <li>right: El elemento se moverá desde la parte derecha la distancia que se le haya indicado.</li>
+                <li>bottom: El elemento se moverá desde la parte inferior la distancia que se le haya indicado.</li>
+                <li>left: El elemento se moverá desde la parte izquierda la distancia que se le haya indicado.</li>
+                <li>z-index: Permite mover el elemento en el contexto de apilamiento (eje z). Es la propiedad que permite ordenar los elementos superpuestos para controlar cual se coloca por delante y cual por detrás.</li>
+            </ul>
+            <p><span class="resaltado">Si a un elemento se le declara la propiedad top y/o left, las propiedades bottom y/o right no funcionarán. </span></p>
+            <h3 class="titulo3">Valores para position:</h3>
+            <h4 class="titulo4">Static:</h4>
+            <p>Es el valor que tiene por defecto un elemento, con este valor el elemento NO ESTÁ POSICIONADO y por lo cual no puede moverse.</p>
+            <h4 class="titulo4">Relative:</h4> 
+            <p>El elemento mantendrá su posición y medidas en el flujo de renderizado y mantendrá su espacio reservado. Si se mueve lo hará usando su posición original en el html como punto de referencia (esquina superior izquierda).</p>
+            <h4 class="ejemplo">Ejemplo 1: </h4>
+            <img src="../assets/images/relative.png" alt="ejemplo relative" class="img">
+            <div class="main-section">
+                <div>
+                    <p>Position static:</p>
+                    <div class="box" id="box5">Caja 5</div>
+                    <div class="box" id="box6">Caja 6</div>
+                </div>
+                <div>
+                    <p>Position relative:</p>
+                    <div class="box" id="box7">Caja 7</div>
+                    <div class="box" id="box8">Caja 8</div>
+                </div>
+            </div>  
+            <h4 class="ejemplo">Ejemplo 2: </h4>
+            <img src="../assets/images/relative2.png" alt="ejemplo relative 2" class="img">
+            <div class="main-section">
+                <div>
+                    <p>Position static:</p>
+                    <div class="box" id="box9">Caja 9</div>
+                    <div class="box" id="box10">Caja 10</div>
+                </div>
+                <div>
+                    <p>Position relative:</p>
+                    <div class="box" id="box11">Caja 11</div>
+                    <div class="box" id="box12">Caja 12</div>
+                </div>
+            </div> 
+            <p>En este ejemplo se aplica el contexto de apilamiento, ya que la caja 12 ocupa parte del espacio de la caja 11. Aparece la 12 encima de la 11 porque en el HTML primero se encuentra la 11 antes que la 12.</p> 
+            <h4 class="titulo4">Absolute:</h4>
+            <p>El elemento perderá sus medidas y su espacio reservado. Si se mueve usará el elemento posicionado contenedor como referencia. Si no tiene ninguno, usará el elemento html de referencia.</p>
+            <p>Si se utliza position absolute en un elemento en linea, este pasará a ser de bloque, por lo que no es necesario utilizar display block.</p>
+            <h4 class="ejemplo">Ejemplo 1: </h4>
+            <img src="../assets/images/absolute1.png" alt="ejemplo absolute" class="img">
+            <div class="main-section">
+                <div>
+                    <p>Position static:</p>
+                    <div class="box" id="box13">Caja 13</div>
+                    <div class="box" id="box14">Caja 14</div>
+                </div>
+                <div class="boxcontainer">
+                    <p>Position absolute:</p>
+                    <div class="box" id="box15">Caja 15</div>
+                    <div class="box" id="box16">Caja 16</div>
+                </div>
+            </div>  
+            <h4 class="ejemplo">Ejemplo 2: </h4>
+            <img src="../assets/images/absolute2.png" alt="ejemplo absolute 2" class="img">
+            <div class="main-section">
+                <div>
+                    <p>Position static:</p>
+                    <div class="box" id="box17">Caja 17</div>
+                    <div class="box" id="box18">Caja 18</div>
+                </div>
+                <div class="boxcontainer">
+                    <p>Position absolute:</p>
+                    <div class="box" id="box19">Caja 19</div>
+                    <div class="box" id="box20">Caja 20</div>
+                </div>
+            </div> 
+            <p>En este ejemplo, al ser position absolute, la caja 19 pierde su espacio reservado por lo que ahora lo esta ocupando la caja 20.</p>
+            <h4 class="titulo4">Fixed:</h4>
+            <p>El elemento perderá sus medidas y su espacio reservado. Si se mueve usará el elemento html de referencia, y además se quedará fijo en esa posición aunque se haga scroll.</p>
+            <h4 class="ejemplo"><a href="EjemploFixed.html" class="link">Ejemplo Fixed</a></h4>
+            <h4 class="titulo4">Sticky:</h4>
+            <p>Es una mezcla de position relative y "fixed". Con este tipo de posicionamiento los valores top, left, bottom y right no sirven para mover el elemento, si no para indicarle en qué punto pasará a tener un comportamiento de posicionamiento similar a fixed, hasta llegar a ese punto se comportará como si no tuviera posicionamiento, aunque sí contará como posicionado si se necesita colocar otro elemento respecto a él (absolute).</p> 
+            <h4 class="ejemplo"><a href="EjemploSticky.html" class="link">Ejemplo Sticky</a></h4>
+        </section>
+    </main>
+</body>
+</html>
