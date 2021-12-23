@@ -1,6 +1,6 @@
 .titulohtml{
-    color: #f33d00;
     text-align: center;
+    color: #f33d00;
 }
 .header2, 
 .main2, 
@@ -9,8 +9,8 @@
 }
 .header2,
 .footer{
-    background-color: #3a3a3a;
     text-align: center;
+    background-color: #3a3a3a;
 }
 .main2{
     background-color: #00adb9;
@@ -19,10 +19,10 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    list-style-type: none;
-    color: #448cff;
-    font-family: 'Exo 2', sans-serif;
     padding-left: 0%;
+    font-family: 'Exo 2', sans-serif;
+    color: #448cff;
+    list-style-type: none;
 }
 .tsection, 
 .tarticle{
@@ -51,11 +51,11 @@
     color: #fff;
 }
 .tabla{
-    font-family: 'Roboto', sans-serif;
-    border: 2px solid #000;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    border: 2px solid #000;
 }
 @media all and (max-width: 480px){
     .tabla{
@@ -71,10 +71,10 @@
     background-color: #eeff00;
 }
 .formulario{
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
     margin-left: 2%;
     margin-right: 2%;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
 }
 .audio{
     margin-left: 2%;
@@ -84,8 +84,8 @@
     height:315px;
     margin-left: auto;
     margin-right: auto;
-    display: block;
     max-width: 90%;
+    display: block;
 }
 .cuerpoTabla tr{
     background-color: #ffffff;

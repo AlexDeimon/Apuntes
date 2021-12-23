@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidas</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Medidas en CSS</h2>
+            <article>
+                <h3 class="titulo3">Medidas absolutas</h3>
+                <p>Las medidas absolutas NO CAMBIAN y siempre mantendrán su tamaño independientemente del dispositivo o la interacción del usuario. La más usada es px (píxeles) cuya medida es 1/96 de 1in, pero existen otras como:</p>
+                <ul class="lista">
+                    <li>cm (centímetros): 1cm = 96px/2,54.</li>
+                    <li>mm (milímetros): 1mm = 1/10 de 1cm.</li>
+                    <li>Q (cuarto de de milímetro): 1Q = 1/40 de 1cm.</li>
+                    <li>in (inches, pulgadas): 1in = 2,54cm = 96px.</li>
+                    <li>pc (picas): 1pc = 1/16 de 1in.</li>
+                    <li>pt (puntos): 1pt = 1/72 de 1in.</li>
+                </ul>
+            </article>
+            <article>
+                <h3 class="titulo3">Medidas relativas</h3>
+                <p>Las medidas relativas SIEMPRE dependen de un contexto. Son las que se recomienda utilizar en la gran mayoría de ocasiones porque permiten que todos los elementos escalen proporcionalemnte. Las más usadas son em, rem, %, vw, vh, vmin y vmax aunque tenemos otras como:</p>
+                <ul class="lista">
+                    <li>ex: Altura x de la fuente del elemento.</li>
+                    <li>ch: La medida del ancho del glifo "0" de la letra del elemento.</li>
+                    <li>lh: Altura de la línea del elemento.</li>
+                </ul>
+                <h4 class="titulo4">Medidas EM y REM</h4>
+                <p>rem: Corresponde a la medida de la "m" de la raiz del documento (html).</p>
+                <p>ejemplo: 16px = 1rem</p>
+                <p>em: Corresponde a la medida de la "m" del contexto donde nos encontremos.</p>
+                <p><span class="resaltado"> El estandar del tamaño de fuente por defecto en la raiz del documento es 16px, y NO ES RECOMENDABLE MODIFICARLO.</span></p>
+                <p>Tanto "em" como "rem" se calcula en base a la propiedad font-size (tamaño de fuente)</p>
+                <p><span class="resaltado">Utilizar solo en tamaños de fuente.</span></p>
+                <h4 class="titulo4">Uso de % vs auto en width y height:</h4>
+                <h4 class="titulo4">Width:</h4>
+                <ul class="lista">
+                    <li>%: Cuando se usa porcentaje se usa de referencia el tamaño del contenedor y el navegador calcula ese porcentaje. Esto no ocurre cuando se usa transform.</li>
+                    <li>auto: Cuando se usa auto se le pide al navegador que calcule el ancho en función del espacio disponible.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

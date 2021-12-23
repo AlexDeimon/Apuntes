@@ -18,10 +18,10 @@ figure{
     background-color: black;
 }
 .titulo1{
-    color: #fff;
-    margin: 0;
     padding: 2%;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
+    color: #fff;
 }
 .titulo2,
 .titulo3,
@@ -59,28 +59,33 @@ figure{
 .caja1{
     margin: 5%;
     border-radius: 30px; 
-    border: 1px solid #fff;
     background-color: #181c27;
 }
 .caja1{
     width: 290px;
     padding-top: 2%;
 }
+.cajaHTML{
+    border: 1px solid #f33d00;
+}
+.cajaCSS{
+    border: 1px solid #00b5fd;
+}
 .link{
-    color: #448cff;
     font-family: 'Exo 2', sans-serif;
+    color: #448cff;
     text-decoration: underline;
 }
 .lista{
-    color: #ffffff;
     font-family: 'Roboto', sans-serif;
+    color: #ffffff;
 }
 .img, 
 .video{
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    max-width: 90%;
 }
 .main-section > img{
     max-width: 90%;
@@ -105,6 +110,9 @@ figure{
 .caja1 .titulocss{
     font-family: 'Exo 2', sans-serif;
 }
-.caja:hover, .caja1:hover{
-    box-shadow: 0px 0px 20px 10px #fff; ;
+.cajaHTML:hover{
+    box-shadow: 0px 0px 20px 10px #f33d00;
+}
+.cajaCSS:hover{
+    box-shadow: 0px 0px 20px 10px #00b5fd;
 }

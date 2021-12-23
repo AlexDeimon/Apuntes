@@ -33,6 +33,13 @@
             <p>Esto significa que el elemento tiene la propiedad position con un valor distinto de "static", que es el valor que tiene esta propiedad por defecto.</p>
             <h3 class="titulo3">Stackin context:</h3>
             <p>Contexto de apilamiento. Es el orden en el que se apilarán las cajas que se superponen, dentro del mismo contenedor.</p>
+            <p>El orden del stacking context es: (de delante a atrás):</p>
+            <ol class="lista">
+                <li>Elementos posicionados con un z-index de 1 ó más.</li>
+                <li>Elementos posicionados sin z-index declarado (o z-index:auto).</li>
+                <li>Elementos no posicionados.</li>
+                <li>Elementos con z-index negativo.</li>
+            </ol>
             <h3 class="titulo3">Propiedades:</h3>
             <ul class="lista">
                 <li>top: El elemento se moverá desde la parte superior la distancia que se le haya indicado.
@@ -43,6 +50,43 @@
                 <li>z-index: Permite mover el elemento en el contexto de apilamiento (eje z). Es la propiedad que permite ordenar los elementos superpuestos para controlar cual se coloca por delante y cual por detrás.</li>
             </ul>
             <p><span class="resaltado">Si a un elemento se le declara la propiedad top y/o left, las propiedades bottom y/o right no funcionarán. </span></p>
+            <h3 class="titulo3">Z-index: </h3>
+            <ul class="lista">
+                <li>sin z-index es el orden del html el que prevalece.</li>
+                <li>Con z-index el numero mayor es el que prevalece.</li>
+                <li>No utilizar números consecutivos.</li>
+                <li>Un elemento padre jamas se colocará por delante del hijo, pero si es posible poner al hijo detrás del padre con valores de z-index negativos y es importante que el padre no tenga z-index. </li>
+            </ul>
+            <h4 class="ejemplo">Ejemplo: </h4>
+            <div class="main-section">
+                <img src="../assets/images/z-index1.png" alt="ejemplo z-index 1">
+                <img src="../assets/images/z-index2.png" alt="ejemplo z-index 2">
+            </div>
+            <div class="main-section">
+                <div class="div2">
+                    <h4 class="titulo4">Sin z-index: </h4>
+                    <div class="boxcontainer">
+                        <div class="box" id="box21">Caja 21</div>
+                        <div id="box22" class="box">caja 22</div>
+                    </div>
+                    <div>
+                        <div id="box23" class="box">caja 23</div>
+                        <div class="box" id="box24">Caja 24</div>
+                    </div> 
+                </div>
+                <div class="div2">
+                    <h4 class="titulo4">Con z-index: </h4>
+                    <div class="boxcontainer">
+                        <div id="box25" class="box">caja 25</div>
+                        <div id="box26" class="box">caja 26</div>
+                    </div>
+                    <div>
+                        <div id="box27" class="box">caja 27</div>
+                        <div id="box28" class="box">caja 28</div>
+                    </div> 
+                </div>
+            </div>
+            
             <h3 class="titulo3">Valores para position:</h3>
             <h4 class="titulo4">Static:</h4>
             <p>Es el valor que tiene por defecto un elemento, con este valor el elemento NO ESTÁ POSICIONADO y por lo cual no puede moverse.</p>
@@ -76,7 +120,7 @@
                     <div class="box" id="box12">Caja 12</div>
                 </div>
             </div> 
-            <p>En este ejemplo se aplica el contexto de apilamiento, ya que la caja 12 ocupa parte del espacio de la caja 11. Aparece la 12 encima de la 11 porque en el HTML primero se encuentra la 11 antes que la 12.</p> 
+            <p>En este ejemplo se aplica el contexto de apilamiento, ya que la caja 12 ocupa parte del espacio de la caja 11.</p> 
             <h4 class="titulo4">Absolute:</h4>
             <p>El elemento perderá sus medidas y su espacio reservado. Si se mueve usará el elemento posicionado contenedor como referencia. Si no tiene ninguno, usará el elemento html de referencia.</p>
             <p>Si se utliza position absolute en un elemento en linea, este pasará a ser de bloque, por lo que no es necesario utilizar display block.</p>
