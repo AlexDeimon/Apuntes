@@ -57,6 +57,61 @@
                 <h4 class="titulo4">Fuentes desde un servidor remoto:</h4>
                 <p>Son fuentes que se encuentran en un servidor y que se descargan para su uso, la más famosa es <a href="https://fonts.google.com/" class="link">Google Fonts.</a> Siempre que se usen fuentes no genéricas, se deben poner fuentes genéricas de fallback (respaldo).</p>
             </article>
+            <article>
+                <h3 class="titulo3">Transformaciones de texto: </h3>
+                <p>Text-transform: Esta propiedad permite hacer transformaciones ESTÉTICAS en el texto. Admite los valores:</p>
+                <ul class="lista">
+                    <li>none: No se aplicará ninguna transformación.</li>
+                    <li id="text3">uppercase: El texto se pondrá en mayúsculas.</li>
+                    <li id="text4">lowercase: El texto se pondrá en minúsculas.</li>
+                    <li id="text5">capitalize: Transforma la primera letra de cada palabra en mayúscula.</li>
+                </ul>
+            </article>
+            <article>
+                <h3 class="titulo3">Adornos en el texto:</h3>
+                <h4 class="titulo4">text-decoration:</h4>
+                <p>Text-decoration: Esta propiedad permite controlar la línea que se puede poner en los textos. Admite los valores:</p>
+                <ul class="lista">
+                    <li>none: Elimina cualquier línea.</li>
+                    <li id="overline">overline: Coloca una linea sobre el texto.</li>
+                    <li id="underline">underline: Coloca una linea bajo el texto.</li>
+                    <li id="line-through">line-through: Coloca una linea tachando el texto.</li>
+                </ul>
+                <h4 class="titulo4">text-shadow:</h4>
+                <p>Text-shadow: Funciona exáctamente igual que box-shadow, con la única diferencia de que no admite el valor inset ni la expansión de la sombra. Los valores son: </p>
+                <ul class="lista">
+                    <li>offsetX: desplazamiento horizontal.</li>
+                    <li>offsetY: desplazamiento vertical.</li>
+                    <li>blur: desenfoque.</li>
+                    <li>color: color, por defecto coge el del texto.</li>   
+                </ul>
+                <h2 class="ejemplo" id="text-shadow">Texto con sombra</h2>
+            </article>
+            <article>
+                <h3 class="titulo3">Espaciado en fuentes y textos:</h3>
+                <ul class="lista">
+                    <li id="letter-spacing">letter-spacing: Establece la separación entre caracteres, se puede establecer en cualquier medida válida para CSS.</li>
+                    <li id="word-spacing">word-spacing: Establece la separación entre palabras, se puede establecer en cualquier medida válida para CSS.</li>
+                    <li>line-height: Establece el alto de cada línea, se puede dar una medida concreta o se puede poner un número que se multipliará por el font size del texto al que se lo estemos aplicando.</li>
+                </ul>
+                <h4 class="ejemplo">Ejemplos line-height: </h4>
+                <p id="line-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum facilis, sed dolorum voluptates exercitationem voluptatum iure unde consequatur vel distinctio blanditiis iusto quas dolore a. Quos facere a fugiat ut? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut veniam iste labore saepe sequi fuga beatae nihil eligendi odio vero impedit reprehenderit optio, quia rerum dolor itaque illo nam corrupti!</p>
+                <p>Centrar UNA LINEA en un Box:</p>
+                <div class="box" id="box29">texto centrado</div>
+            </article>
+            <article>
+                <h3 class="titulo3">Orientación del texto.</h3>
+                <p>writing-mode:  define si los renglones de texto se disponen horizontal o verticalmente y la dirección en que avanzan los bloques. Admite los valores:</p>
+                <ul class="lista">
+                    <li>horizontal-tb: El contenido fluye horizontalmente de izquierda a derecha y verticalmente de arriba hacia abajo. El próximo renglón horizontal se posiciona debajo del renglón anterior.</li>
+                    <li>vertical-rl: El contenido fluye verticalmente de arriba hacia abajo y horizontalmente de derecha a izquierda. El próximo renglón vertical se posiciona a la izquierda del renglón anterior.</li>
+                    <li>vertical-lr: El contenido fluye verticalmente de arriba hacia abajo y horizontalmente de izquierda a derecha. El próximo renglón vertical se posiciona a la derecha del renglón anterior.</li>
+                </ul>
+                <h4 class="ejemplo">Ejemplo:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad dignissimos ipsam praesentium inventore cumque, autem aspernatur, molestias reiciendis dolorem laborum assumenda. Illo ratione doloribus neque perferendis iste facilis asperiores id?</p>
+                <p id="vertical-rl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad dignissimos ipsam praesentium inventore cumque, autem aspernatur, molestias reiciendis dolorem laborum assumenda. Illo ratione doloribus neque perferendis iste facilis asperiores id?</p>
+                <p id="vertical-lr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad dignissimos ipsam praesentium inventore cumque, autem aspernatur, molestias reiciendis dolorem laborum assumenda. Illo ratione doloribus neque perferendis iste facilis asperiores id?</p>
+            </article>
         </section>
     </main>
 </body>

@@ -405,3 +405,51 @@
     font-family: fantasy;
     margin-left: 0;
 }
+#text3{
+    text-transform: uppercase;
+}
+#text4{
+    text-transform: lowercase;
+}
+#text5{
+    text-transform: capitalize;
+}
+#underline{
+    text-decoration: underline;
+}
+#overline{
+    text-decoration: overline;
+}
+#line-through{
+    text-decoration: line-through;
+}
+#text-shadow{
+    text-shadow: 2px 2px 2px honeydew;
+}
+#letter-spacing{
+    letter-spacing: 2px;
+}
+#word-spacing{
+    word-spacing: 10px;
+}
+#line-height{
+    line-height: 2;
+}
+#box29{
+    width: 200px;
+    height: 100px;
+    margin-left: 2%;
+    background-color: lightsalmon;
+}
+#vertical-rl{
+    display: inline;
+    writing-mode: vertical-rl;
+    height: 657px;
+}
+#vertical-lr{
+    position: absolute;
+    right: 0px;
+    height: 657px;
+    display: inline;
+    writing-mode: vertical-lr;
+}
