@@ -57,6 +57,36 @@
                     <li>%: Cuando se usa porcentaje se usa de referencia el tamaño del contenedor y el navegador calcula ese porcentaje. Esto no ocurre cuando se usa transform.</li>
                     <li>auto: Cuando se usa auto se le pide al navegador que calcule el ancho en función del espacio disponible.</li>
                 </ul>
+                <h4 class="titulo4">Height</h4>
+                <ul class="lista">
+                    <li>%: Cuando se está dentro de un contenedor, este tiene que tener un alto declarado, si no no podrá calcular el porcentaje. Si se le aplica una medida con porcentaje se sustituirá automaticamente por auto.</li>
+                    <li>auto: Cuando se utiliza auto el alto lo calculará el navegador en base al contenido del elemento.</li>
+                </ul>
+                <p><span class="resaltado">Height es una propiedad que se debe usar con mucho cuidado. Si no es necesario establecer un alto, es mejor dejar que el contenido sea el que decida el alto del elemento.</span></p>
+                <p><span class="resaltado">Con alto en % si se tiene un position absolute y fixed el % se calculará tomando en cuenta el viewport, no tomará en cuenta ni el elemento contenedor, ni el body, ni html, solo el viewport.</span></p>
+                <h3 class="titulo3">Viewport</h3>
+                <p>El viewport es el área útil donde se mostrará la página web. Es el area visible sin hacer scroll. Se puede usar el viewport como medida de varias formas:</p>
+                <ul class="lista">
+                    <li>vw: Viewport Width, hace referencia al ancho del viewport.</li>
+                    <li>vh: Viewport Height, hace referencia al alto del viewport.</li>
+                    <li>vmax: Utiliza el valor más grande entre el ancho y el alto del viewport.</li>
+                    <li>vmin: Utiliza el valor más pequeño entre el ancho y el alto del viewport.</li>          
+                </ul>
+                <ul class="lista">
+                    <li>1vw = 1% del ancho del viewport.</li>
+                    <li>1vh = 1% del alto del viewport.</li>
+                    <li>1vmin = 1% del valor que sea más pequeño del viewport (ancho o alto).</li>
+                    <li>1vmax = 1% del valor que sea más grande del viewport (ancho o alto).</li>  
+                </ul>
+                <p><span class="resaltado">Las medidas del viewport son utiles en fuentes y en diseño responsive.</span></p>
+                <h3 class="titulo3">Limitadores al ancho y alto</h3>
+                <p>Cuando se establece un width y/o un height con una medida que es relativa, es posible que no se desee que se respete esa medida en todos los casos. Para ello existen propiedades que limitan esas medidas:</p>
+                <ul class="lista">
+                    <li>min-width: Indica el ancho minimo que puede alcanzar el elemento.</li>
+                    <li>max-width: Indica el ancho máximo que puede alcanzar el elemento.</li>
+                    <li>min-height: Indica el alto minimo que puede alcanzar el elemento.</li>
+                    <li>max-height: Indica el alto máximo que puede alcanzar el elemento.</li>
+                </ul>
             </article>
         </section>
     </main>

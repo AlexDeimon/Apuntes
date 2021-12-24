@@ -25,7 +25,7 @@
         <section>
             <h2 class="titulo2">Estilos visuales</h2>
             <article>
-                <h3 class="titulo3">border:</h3>
+                <h3 class="titulo3">Border:</h3>
                 <h4 class="titulo4">border-style:</h4>
                 <p>Listado de valores para border-style:</p>
                 <ol class="lista">
@@ -85,7 +85,7 @@
                 </div>
             </article>
             <article>
-                <h3 class="titulo3">overflow:</h3>
+                <h3 class="titulo3">Overflow:</h3>
                 <p>Es la propiedad que controla qué debe hacer la caja cuando su contenido se desborda del contenedor. Es un shorthand que engloba overflow-x y overflow-y. Tiene cuatro posibles valores:</p>
                 <ul class="lista">
                     <li>visible: Es el valor por defecto.</li>
@@ -152,6 +152,75 @@
                     <p id="boxshadow3">box-shadow 3</p>
                     <p id="boxshadow4">box-shadow 4</p>
                 </div>
+            </article>
+            <article>
+                <h3 class="titulo3">Colores:</h3>
+                <p>Existen varias formas de dar colores en css:</p>
+                <h4 class="titulo4">Keywords:</h4>
+                <p><a href="https://www.w3.org/wiki/CSS/Properties/color/keywords" class="link" target="_blank">Palabras clave que representan colores</a></p>
+                <p class="resaltado">Tambien existe el color transparent.</p>
+                <p><span class="resaltado">CurrentColor:</span> Es una palabra clave que se puede usar en lugar de cualquier valor de color y usará el valor ya sea establecido o heredado en la propiedad <span class="resaltado">color, no background-color.</span> Aunque al dia de hoy no es muy usada gracias a las variables de CSS.</p>
+                <h4 class="titulo4">RGB/RGBA:</h4>
+                <p>En el modo RGB hay tres canales (Red, Green, Blue) y se tiene 8 bits de color por canal, (cada bit tiene dos posibles valores 0 ó 1) lo que significa que se tiene 2<sup>8</sup> posibles valores, que van desde 0 hasta 255. Esto da un total de 255 * 255 * 255 = 16.581.375 colores.</p>
+                <p>Su sintaxis es rgb(R,G,B)</p>
+                <p>Si todos los canales se definen a 0 da un negro puro y si se definen a 255 da un blanco.</p>
+                <p>Para obtener gama de grises se definen los 3 canales con el mismo valor, si se definen los 3 canales a 128 se obtiene el gris puro.</p>
+                <p>El modo RGB da la opción de utilizar un cuarto canal que correspondería al canal alpha (la transparencia), y su valor va desde 0 a 1. Hay dos sintaxis para utilizar el canal aplha:</p>
+                <ul class="lista">
+                    <li>rgba(R,G,B,A)</li>
+                    <li>rgb(R G B / A)</li>
+                </ul>
+                <h4 class="titulo4">Hexadecimal:</h4>
+                <p>La notación hexadecimal es la más común en desarrollo web, se basa en los mismos principios que el RGB pero escrito en notación hexadecimal. El sistema hexadecimal es un sistema basado en 16 valores del 0 al 15.</p>
+                <p>Utiliza los dígitos del 0 al 9 y las letras de la A a la F.</p>
+                <p>En este tipo de notacíon también necesitamos 256 valores. Se compone de 16 caracteres en parejas. 16*16 = 256</p>
+                <p>Para indicar que vamos a usar notación hexadecimal debemos usar el símbolo de hash/almohadilla # y a continuación usaremos esta notación por parejas: #RRGGBB</p>
+                <p>Cuando una pareja usa el mismo valor se puede omitir el segundo valor, siempre que se haga en las 3 parejas.</p>
+                <p>También hay la opción de usar transparencias en hexadecimal añadiendo un cuarto canal que sigue las mismas normas.</p>
+                <ul class="lista">
+                    <li>rgb(255,255,255) = #FFFFFF = #FFF</li>
+                    <li>rgb(0,0,0) = #000000 = #000</li>
+                    <li>rgb(0 0 0 / .5) = #00000080 = #0007</li>
+                </ul>
+                <h4 class="titulo4">HSL / HSLA:</h4>
+                <P>El modo de color HSL es el más intuitivo para los humanos. Su nombre viene de las siglas Hue (tono) Saturation (saturación) y Lightness (luminancia).</P>
+                <div class="main-section">
+                    <div>
+                    <P>El primer valor es el ángulo en el círculo cromático donde 0 y 360 será el color rojo. Hay ciertos valores que pueden servir como referencia para relacionar mejor los colores con sus ángulos.</P>
+                    <ul class="lista">
+                        <li>0: rojo.</li>
+                        <li>60: amarillo.</li>
+                        <li>120: verde.</li>
+                        <li>180: cyan.</li>
+                        <li>240: azul.</li>
+                        <li>300: magenta.</li>
+                    </ul>
+                    </div>
+                    <img src="../assets/images/hsl-matiz.jpg" alt="matriz hsl">
+                </div>
+                <p>El segundo valor es la saturación o intensidad del color.</p>
+                <ul class="lista">
+                    <li>0%: gris.</li>
+                    <li>100%: color puro.</li>
+                </ul>
+                <p>El tercer valor es la luminosidad del color.</p>
+                <ul class="lista">
+                    <li>0%: negro, nada de luz.</li>
+                    <li>100%: blanco, luz máxima.</li>
+                </ul>
+                <p class="resaltado">Es importante que aunque el valor de saturación o luminancia sea 0 hay que poner 0% si no, no funcionará</p>
+                <p>El modo HSL también admite transparencia y su sintaxis es la misma que la del modo RGB. Hay dos sintaxis disponibles, en ambos casos el valor alpha va de 0 a 1: </p>
+                <ul class="lista">
+                    <li>hsla(h,s,l,a)</li>
+                    <li>hsl(h s l / a)</li>
+                </ul>
+                <h4 class="titulo4">Páginas para colores:</h4>
+                <ul class="lista">
+                    <li><a href="https://brandcolors.net/" class="link" target="_blank" >https://brandcolors.net/</a></li>
+                    <li><a href="https://htmlcolorcodes.com/" class="link" target="_blank">https://htmlcolorcodes.com/</a></li>
+                    <li><a href="https://colorhunt.co/" class="link" target="_blank">https://colorhunt.co/</a></li>
+                    <li><a href="https://color.adobe.com/es/create/color-wheel" class="link" target="_blank">https://color.adobe.com/</a></li>
+                </ul>
             </article>
         </section>
     </main>

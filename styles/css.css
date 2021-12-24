@@ -385,3 +385,23 @@
 #box27{
     z-index: 10;
 }
+#serif{
+    font-family: serif;
+    margin-left: 0;
+}
+#sans-serif{
+    font-family: sans-serif;
+    margin-left: 0;
+}
+#monospace{
+    font-family: monospace;
+    margin-left: 0;
+}
+#cursive{
+    font-family: cursive;
+    margin-left: 0;
+}
+#fantasy{
+    font-family: fantasy;
+    margin-left: 0;
+}
