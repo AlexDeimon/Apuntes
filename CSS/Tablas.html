@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Estilos para las tablas</h2>
+            <h3 class="titulo3">Tabla de ejemplo (sin estilos):</h3>
+            <div class="overflow">
+                <table style="color: #fff;">
+                    <caption>COLEGIO HOGWARTS DE MAGIA Y HECHICERÍA</caption>
+                    <thead>
+                        <th>HORA</th>
+                        <th>LUNES</th>
+                        <th>MARTES</th>
+                        <th>MIERCOLES</th>
+                        <th>JUEVES</th>
+                        <th>VIERNES</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8:00 - 9:00 AM</td>
+                            <td colspan="5">DESAYUNO</td>
+                        </tr>
+                        <tr>
+                            <td>9:20 - 10:20 AM</td>
+                            <td>HERBOLOGÍA</td>
+                            <td>TRANSFORMACIONES</td>
+                            <td>HISTORIA DE LA MAGIA</td>
+                            <td>POCIONES</td>
+                            <td>D.C.A.O</td>
+                        </tr>
+                        <tr>
+                            <td>10:30 - 11:30 AM</td>
+                            <td>ASTRONOMÍA</td>
+                            <td>D.C.A.O</td>
+                            <td>ASTRONOMÍA</td>
+                            <td>ESTUDIOS MUGGLES</td>
+                            <td>HERBOLOGÍA</td>
+                        </tr>
+                        <tr>
+                            <td>11:40 - 12:40 PM</td>
+                            <td>HISTORIA DE LA MAGIA</td>
+                            <td>VUELO</td>
+                            <td>ENCANTAMIENTOS</td>
+                            <td>TRANSFORMACIONES</td>
+                            <td>ENCANTAMIENTOS</td>
+                        </tr>
+                        <tr>
+                            <td>12:50 - 1:50 PM</td>
+                            <td>ENCANTAMIENTOS</td>
+                            <td>POCIONES</td>
+                            <td>HERBOLOGÍA</td>
+                            <td>HISTORIA DE LA MAGIA</td>
+                            <td>ASTRONOMÍA</td>
+                        </tr>
+                        <tr>
+                            <td>2:00 - 3:00 PM</td>
+                            <td>POCIONES</td>
+                            <td>ESTUDIOS MUGGLES</td>
+                            <td>D.C.A.O</td>
+                            <td>VUELO</td>
+                            <td>TRANSFORMACIONES</td>
+                        </tr>
+                    </tbody>
+                </table>    
+            </div>
+            <h3 class="titulo3">Tabla de ejemplo (con estilos): </h3>
+            <div class="overflow">
+                <table id="tabla">
+                    <caption>COLEGIO HOGWARTS DE MAGIA Y HECHICERÍA</caption>
+                    <thead>
+                        <th>HORA</th>
+                        <th>LUNES</th>
+                        <th>MARTES</th>
+                        <th>MIERCOLES</th>
+                        <th>JUEVES</th>
+                        <th>VIERNES</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8:00 - 9:00 AM</td>
+                            <td colspan="5">DESAYUNO</td>
+                        </tr>
+                        <tr>
+                            <td>9:20 - 10:20 AM</td>
+                            <td>HERBOLOGÍA</td>
+                            <td>TRANSFORMACIONES</td>
+                            <td>HISTORIA DE LA MAGIA</td>
+                            <td>POCIONES</td>
+                            <td>D.C.A.O</td>
+                        </tr>
+                        <tr>
+                            <td>10:30 - 11:30 AM</td>
+                            <td>ASTRONOMÍA</td>
+                            <td>D.C.A.O</td>
+                            <td>ASTRONOMÍA</td>
+                            <td>ESTUDIOS MUGGLES</td>
+                            <td>HERBOLOGÍA</td>
+                        </tr>
+                        <tr>
+                            <td>11:40 - 12:40 PM</td>
+                            <td>HISTORIA DE LA MAGIA</td>
+                            <td>VUELO</td>
+                            <td>ENCANTAMIENTOS</td>
+                            <td>TRANSFORMACIONES</td>
+                            <td>ENCANTAMIENTOS</td>
+                        </tr>
+                        <tr>
+                            <td>12:50 - 1:50 PM</td>
+                            <td>ENCANTAMIENTOS</td>
+                            <td>POCIONES</td>
+                            <td>HERBOLOGÍA</td>
+                            <td>HISTORIA DE LA MAGIA</td>
+                            <td>ASTRONOMÍA</td>
+                        </tr>
+                        <tr>
+                            <td>2:00 - 3:00 PM</td>
+                            <td>POCIONES</td>
+                            <td>ESTUDIOS MUGGLES</td>
+                            <td>D.C.A.O</td>
+                            <td>VUELO</td>
+                            <td>TRANSFORMACIONES</td>
+                        </tr>
+                    </tbody>
+                </table>    
+            </div>
+            <img src="../assets/images/tabla.png" alt="estilos tabla ejemplo" class="img">
+            <ul class="lista">
+                <li>#tabla: 
+                    <ol>
+                        <li>Márgenes verticales automáticas para centrar la tabla.</li>
+                        <li>Todo el texto centrado.</li>
+                        <li>border-collapse: Los bordes de cada celda se reducen a uno para eliminar el espacio por defecto entre bordes de las celdas.</li>
+                    </ol>
+                </li>
+                <li>caption, th y td: 
+                    <ol>
+                        <li>Un padding para dejar respirar el contenido de las celdas.</li>
+                        <li>Borde para cada una de las celdas.</li>
+                        <li>Color de las celdas.</li>
+                    </ol>
+                </li>
+                <li>th y td: Un ancho minímo de 90px: Para que en movil no se vea tan apretado.</li>
+                <li>caption: colores de fondo y fuente.</li>
+                <li>Por ultimo tenemos el thead junto con los tr con la pseudo-clase :nth-child, la cual sirve para seleccionar varios elementos en función de su posición entre un grupo de elementos hermanos; en este caso, la primer regla toma el thead y las filas pares (even) del tbody, y la segunda regla toma las filas impares (odd) del tbody.</li>
+            </ul>
+            <p class="resaltado">Ok lo admito, aún no soy muy bueno para dar estilos a tablas y que se vean bien responsivamente.</p>
+        </section>
+    </main>
+</body>
+</html>

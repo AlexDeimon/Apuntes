@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Estilos para las listas</h2>
+            <article>
+                <h3 class="titulo3">Tipo de estilo de listas:</h3>
+                <p>La propiedad list-style-type establece el marcador (como un disco, carácter o estilo de contador personalizado) de un elemento de elemento de lista. Admite los siguientes valores: </p>
+                <ul class="lista">
+                    <li>none: No se muestra ningún marcador de artículo.
+                        <ul type="none">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                    </li>
+                    <li>disc: Un círculo relleno (valor predeterminado).
+                        <ul type="disc">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                    </li>
+                    <li>circle: Un círculo hueco.
+                        <ul type="circle">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                    </li>
+                    <li>square: Un cuadrado lleno.
+                        <ul type="square">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                    </li>
+                    <li>decimal: Números decimales, comenzando con 1.
+                        <ol type="decimal">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ol>
+                    </li>
+                    <li>decimal-leading-zero: Números decimales, rellenados con ceros iniciales.
+                        <ol style="list-style-type: decimal-leading-zero;">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ol>
+                    </li>
+                    <li>lower-roman: Números romanos en minúscula.
+                        <ol style="list-style-type: lower-roman;">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ol>
+                    </li>
+                    <li>upper-roman: Números romanos en mayúsculas.
+                        <ol style="list-style-type: upper-roman;">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ol>
+                    </li>
+                    <li>lower-alpha, lower-latin: Letras ASCII minúsculas.
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ol>
+                    </li>
+                    <li>upper-alpha, upper-latin: Letras ASCII mayúsculas.
+                        <ol style="list-style-type: upper-alpha;">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ol>
+                    </li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type" class="link">Muchos otros</a></li>
+                </ul>    
+            </article>
+            <article>
+                <h3 class="titulo3">Posición del marco:</h3>
+                <p>La propiedad list-style-position establece si los marcos aparecen dentro de los elementos de la lista o fuera de ellos antes del inicio de cada elemento. Sus valores son: </p>
+                <ul class="lista">
+                    <li>inside: Los marcos se ubican a dentro de los elementos de la lista.
+                        <ul style="list-style-position: inside;">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                    </li>
+                    <li>outside: Los marcos se ubican fuera de los elementos de la lista.
+                        <ul style="list-style-position: outside;">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                    </li>
+                </ul>    
+            </article>
+            <article>
+                <h3 class="titulo3">Usar una imagen como marco:</h3>
+                <p>La propiedad list-style-image permite usar una imagen personalizada para el marco de los elementos de lista.</p>
+                <img src="../assets/images/lista1.png" alt="lista con imagen para marco" class="img">
+                <ul class="lista" id="listaImg1">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+                <p>Sin embargo, esta propiedad está un poco limitada en términos de controlar la posición, tamaño, etc. de los marcos, por lo que es mejor: </p>
+                <ol class="lista">
+                    <li>Establer el padding-left a 20px tanto en la lista como en los elementos de la lista. Sin esto, las imágenes de fondo se superpondrían con el texto del elemento de la lista, lo que se vería desordenado.</li>
+                    <li>list-style-type: none. Para que no aparezca ningun marco de forma predeterminada.</li>
+                    <li>En los elementos de la lista: 
+                        <ol>
+                            <li>background-image: Hacer referencia a la url de imagen que desea utilizar como marco.</li>
+                            <li>background-position: Esto define en qué parte del fondo del elemento seleccionado aparecerá la imagen; al definirlo como: 0 0, la imagen aparecerá en la parte superior izquierda de cada elemento de la lista.</li>
+                            <li>background-size: Establece el tamaño de la imagen de fondo. Lo ideal es que los marcos tengan el mismo tamaño que los elementos de la lista (o que sean un poco más pequeñas o más grandes).</li>
+                            <li>background-repeat: De forma predeterminada, las imágenes de fondo se repiten hasta que ocupan el espacio de fondo disponible. Solo se quiere insertar una copia de la imagen en cada caso, por lo que se establece esto en un valor de no-repeat.</li>
+                        </ol>
+                    </li>
+                </ol>
+                <img src="../assets/images/lista2.png" alt="lista con imagen para marco" class="img">
+                <ul class="lista" id="listaImg2">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>    
+            </article>
+        </section>
+    </main>
+</body>
+</html>

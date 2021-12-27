@@ -18,6 +18,33 @@
 .div2{
     margin: auto;
 }
+.listaNav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    font-family: 'Exo 2', sans-serif;
+}
+.listaNav li{
+    display: inline;
+    padding: 20px 0px;
+    background-color: #00b5fd;
+}
+.listaNav a{
+    text-decoration: none;
+    color: #e7e7e7;
+    padding: 20px;
+}
+.listaNav li:hover{
+    background-color: #448cff;
+}
+.overflow{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    overflow: auto;
+}
 #tituloid{
     padding-left: 2%;
     font-family: 'Exo 2', sans-serif;
@@ -414,6 +441,51 @@
 #text5{
     text-transform: capitalize;
 }
+#italic{
+    font-style: italic;
+}
+#oblique{
+    font-style: oblique;
+}
+#text6{
+    font-size: 20px;
+}
+#text7{
+    font-size: xx-small;
+}
+#text8{
+    font-size: x-small;
+}
+#text9{
+    font-size: small;
+}
+#text10{
+    font-size: medium;
+}
+#text11{
+    font-size: large;
+}
+#text12{
+    font-size: x-large;
+}
+#text13{
+    font-size: xx-large;
+}
+#text14{
+    font-size: larger;
+}
+#text15{
+    font-size: smaller;
+}
+#text16{
+    font-weight: bold;
+}
+#text17{
+    font-weight: lighter;
+}
+#text18{
+    font-weight: bolder;
+}
 #underline{
     text-decoration: underline;
 }
@@ -452,4 +524,74 @@
     height: 657px;
     display: inline;
     writing-mode: vertical-lr;
+}
+#textIndent{
+    text-indent: 30px;
+}
+#link,
+#link2{
+    margin-left: 2%;
+    font-family: 'Exo 2', sans-serif;
+    color: #448cff;
+}
+#link:visited{
+    color: #2f5a9e;
+}
+#link:hover{
+    color: #e7e7e7;
+    background-color: #00b5fd;
+}
+#link:focus{
+    color: #ffee00;
+}
+#link:active{
+    color: #ff4747;
+}
+#link2{
+    background: url('https://img.icons8.com/color/16/000000/link--v2.png') no-repeat 100% 0;
+    background-size: 16px 16px;
+    padding-right: 19px;
+}
+#listaImg1{
+    list-style-image: url("https://img.icons8.com/emoji/20/000000/check-box-with-check-emoji.png");
+}
+#listaImg2{
+    padding-left: 20px;
+    list-style-type: none;
+}
+#listaImg2 li{
+    padding-left: 20px;
+    background-image: url("https://img.icons8.com/emoji/20/000000/check-box-with-check-emoji.png");
+    background-position: 0 0;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+#tabla{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    border-collapse: collapse;
+}
+#tabla caption,
+#tabla th,
+#tabla td{
+    padding: 10px 10px;
+    border: 1px solid #5d5d5d;
+    color: #fff;
+}
+#tabla th,
+#tabla td{
+    min-width: 90px;
+}
+#tabla caption{
+    background-color: navajowhite;
+    color: #222f5b;
+}
+#tabla thead,
+#tabla tbody tr:nth-child(even){
+    background-color: #222f5b;
+}
+#tabla tbody tr:nth-child(odd){
+    background-color: #946b2d;
 }

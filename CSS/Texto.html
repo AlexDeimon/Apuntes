@@ -59,13 +59,49 @@
             </article>
             <article>
                 <h3 class="titulo3">Transformaciones de texto: </h3>
-                <p>Text-transform: Esta propiedad permite hacer transformaciones ESTÉTICAS en el texto. Admite los valores:</p>
+                <h4 class="titulo4">Text-transform:</h4>
+                <p>Esta propiedad permite hacer transformaciones ESTÉTICAS en el texto. Admite los valores:</p>
                 <ul class="lista">
                     <li>none: No se aplicará ninguna transformación.</li>
                     <li id="text3">uppercase: El texto se pondrá en mayúsculas.</li>
                     <li id="text4">lowercase: El texto se pondrá en minúsculas.</li>
                     <li id="text5">capitalize: Transforma la primera letra de cada palabra en mayúscula.</li>
                 </ul>
+                <h4 class="titulo4">Font-style:</h4>
+                <p>Esta propiedad permite definir el aspecto de una familia tipográfica. Admite los valores: </p>
+                <ul class="lista">
+                    <li>normal: Escoge un tipo de letra clasificado como normal dentro de una familia de fuente.</li>
+                    <li id="italic">italic: Escoge un tipo de letra etiquetado como italic, o, si una versión cursiva del tipo de letra no esté disponible, escoge un tipo de letra etiquetado como oblique en lugar de eso.</li>
+                    <li id="oblique">oblique: Escoge un tipo de letra etiquetado como oblique, o, si una versión oblique del tipo de letra no esté disponible, escoge un tipo de letra etiquetado como italic en lugar de eso.</li>
+                </ul>
+                <h4 class="titulo4">Font-size:</h4>
+                <p>Especifica la dimensión de la letra. Este tamaño puede, a su vez, alterar el aspecto de alguna otra cosa, ya que se usa para calcular la longitud de las unidades em y ex.</p>
+                <p>Admite medidas de px y em pero tambien los valores: </p>
+                <ul class="lista">
+                    <li>xx-small, x-small, small, medium, large, x-large, xx-large: Un grupo de palabras clave de dimensión absoluta en relación al que determina el usuario como tamaño por defecto (que es medium). De forma parecida a las sentencias HTML &lt;font size="1"&gt; hasta &lt;font size="7"&gt; donde el tamaño por defecto es &lt;font size="3"&gt;.</li>
+                    <li>larger, smaller: Más grande o más pequeño que el tamaño de letra del elemento padre, con aproximadamente el mismo ratio que el mencionado anteriormente.</li>
+                </ul>
+                <h4 class="ejemplo">Ejemplo font-size:</h4>
+                <p id="text6">Texto de 20px</p>
+                <p id="text7">Texto xx-small</p>
+                <p id="text8">Texto x-small</p>
+                <p id="text9">Texto small</p>
+                <p id="text10">Texto medium</p>
+                <p id="text11">Texto large</p>
+                <p id="text12">Texto x-large</p>
+                <p id="text13">Texto xx-large</p>
+                <p id="text14">Texto larger</p>
+                <p id="text15">Texto smaller</p>
+                <h4 class="titulo4">Font-weight:</h4>
+                <p>Especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en normal y bold. Tambien Admite los siguientes valores: </p>
+                <ul class="lista">
+                    <li>normal : Peso/grueso normal de la fuente. Igual que 400.</li>
+                    <li id="text16">bold: Grueso ancho (negrita). Igual que 700.</li>
+                    <li id="text17">lighter: Corresponde a un tipo de fuente menos grueso que el tipo del elemento padre (dentro de los valores disponibles).</li>
+                    <li id="text18">bolder: Corresponde a un tipo de fuente más grueso que el tipo del elemento padre (dentro de los valores disponibles).</li>
+                    <li>100, 200, 300, 400, 500, 600, 700, 800, 900: Pesos numéricos para los tipos de fuente que nos permiten más flexibilidad que normal - bold. Si el peso especificado no existe en el tipo de fuente escogido, un valor entre 600 y 900 se presentará con el valor más próximo disponible para dar una letra más oscura. De igual forma, un valor entre 100 y 500 se presentará con el valor más próximo disponible para dar una letra más clara. Esto significa que para los tipos de letra que sólo dispongan de normal y bold, cualquier valor entre 100 y 500 será normal y entre 600 y 900, será bold.</li>
+                </ul>
+
             </article>
             <article>
                 <h3 class="titulo3">Adornos en el texto:</h3>
@@ -100,7 +136,7 @@
                 <div class="box" id="box29">texto centrado</div>
             </article>
             <article>
-                <h3 class="titulo3">Orientación del texto.</h3>
+                <h3 class="titulo3">Orientación del texto:</h3>
                 <p>writing-mode:  define si los renglones de texto se disponen horizontal o verticalmente y la dirección en que avanzan los bloques. Admite los valores:</p>
                 <ul class="lista">
                     <li>horizontal-tb: El contenido fluye horizontalmente de izquierda a derecha y verticalmente de arriba hacia abajo. El próximo renglón horizontal se posiciona debajo del renglón anterior.</li>
@@ -111,6 +147,12 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad dignissimos ipsam praesentium inventore cumque, autem aspernatur, molestias reiciendis dolorem laborum assumenda. Illo ratione doloribus neque perferendis iste facilis asperiores id?</p>
                 <p id="vertical-rl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad dignissimos ipsam praesentium inventore cumque, autem aspernatur, molestias reiciendis dolorem laborum assumenda. Illo ratione doloribus neque perferendis iste facilis asperiores id?</p>
                 <p id="vertical-lr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad dignissimos ipsam praesentium inventore cumque, autem aspernatur, molestias reiciendis dolorem laborum assumenda. Illo ratione doloribus neque perferendis iste facilis asperiores id?</p>
+            </article>
+            <article>
+                <h3 class="titulo3">Identación del texto:</h3>
+                <p>text-indent: Genera una identación en la primer linea del texto.</p>
+                <h4 class="ejemplo">Ejemplo:</h4>
+                <p id="textIndent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ex vero, minus tempora dolorem debitis deserunt. Sed nesciunt ipsum, labore harum omnis quod esse amet, debitis molestias quidem ab exercitationem!</p>
             </article>
         </section>
     </main>

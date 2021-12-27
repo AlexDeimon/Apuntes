@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Estilos para los Enlaces</h2>
+            <p>Es importante comprender cómo hacer uso de pseudoclases para agregar estilos a los diferentes estados de los enlaces de manera efectiva.</p>
+            <article>
+                <h3 class="titulo3">Estados (pseudoclases) de enlaces:</h3>
+                <ul class="lista">
+                    <li>link: un enlace que tiene un destino (es decir, no solo un ancla con nombre).</li>
+                    <li>visited: un enlace que ya ha sido visitado (existe en el historial del navegador).</li>
+                    <li>hover: un enlace sobre el que se desplaza el puntero del mouse de un usuario.</li>
+                    <li>focus: un enlace que está enfocado (p. Ej., Movido por un usuario del teclado usando la Tab tecla o algo similar, o enfocado programáticamente usando HTMLElement.focus()).</li>
+                    <li>active: un enlace que se activa (por ejemplo, se hace clic en él).</li>
+                </ul>
+                <a href="../HTML/Enlaces/Enlaces.html" id="link" title="Página de conceptos básicos sobre los enlaces en HTML">Apuntes HTML de Enlaces</a>
+            </article>
+            <article>
+                <h3 class="titulo3">Incluir iconos en enlaces:</h3>
+                <p>Para incluir iconos en los enlaces se establece como un background de la siguiente manera:</p>
+                <ol class="lista">
+                    <li>La ruta a la imagen del icono que se quiere insertar.</li>
+                    <li>Especificar no-repeat para que solo obtener una copia insertada.</li>
+                    <li>Especificamos la posición como 100% del camino a la derecha del contenido del texto y 0 píxeles desde la parte superior.</li>
+                    <li>background-size: Para especificar el tamaño de la imagen de fondo. Debe ser igual al tamaño de la fuente del enlace.</li>
+                    <li>padding-right: Deja un espacio para que aparezca la imagen de fondo, de modo que no se superponga con el texto.</li>
+                </ol>
+                <div class="main-section">
+                    <img src="../assets/images/link2.png" alt="">
+                    <a href="../HTML/Enlaces/Enlaces.html" id="link2" title="Página de conceptos básicos sobre los enlaces en HTML">Apuntes HTML de Enlaces</a>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo3">Aplicar estilo a los enlaces como botones: </h3>
+                <img src="../assets/images/nav.png" alt="estilos enlaces como botones" class="img">
+                <ul class="listaNav">
+                    <li><a href="../CSS.HTML">Apuntes CSS</a></li>
+                    <li><a href="Fundamentos.html">Fundamentos CSS</a></li>
+                    <li><a href="Position.html">Position</a></li>
+                    <li><a href="BoxModel.html">Box model</a></li>
+                    <li><a href="Texto.html">Texto</a></li>
+                    <li><a href="Visual.html">Visual</a></li>
+                    <li><a href="Medidas.html">Medidas</a></li>
+                  </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

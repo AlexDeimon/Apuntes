@@ -45,6 +45,7 @@
                 <li>href: atributo obligatorio donde se especifica la ruta del recurso o sitio que se quiere obtener.</li>
                 <li>target: define donde se abrirá el recurso solicitado. Por norma general siempre que se usen rutas absolutas se pone como valor "_blank" (se abre una nueva pestaña). El valor por defecto es "_self"</li>
                 <li>download: Atributo booleano, sirve para descargar el recurso solicitado.</li>
+                <li>title: Contiene información adicional sobre el enlace, como qué tipo de información contiene la página o cosas para tener en cuenta en el sitio web.</li>
             </ul>
             <h3 class="titulo3">Navegación con anclas</h3>
             <p>Permite mediante enlaces, navegar por diferentes partes de la página asignándoles id's a las etiquetas a las que se desea acceder. En el atributo href se coloca # seguido del id de la etiqueta. Es usado comúnmente en indíces y menús de navegación</p>
@@ -55,20 +56,21 @@
                 <li>?subject= :El asunto del mail.</li>
                 <li>&body= : Lo que tendrá escrito por defecto el mail.</li>
             </ol> 
+            <p>La dirección de correo electrónico es opcional. Si se omite aparecerá una nueva ventana de correo saliente en el gestor de correo sin la dirección del destinatario.</p>
             <article>
                 <h3 class="ejemplo">Ejemplo:</h3>
                 <ul class="lista">
-                    <li>Ruta absoluta (target="_blank"): <a href="https://www.google.es/?pli=1" class="link" target="_blank">Ir a google</a></li>
+                    <li>Ruta absoluta (target="_blank"): <a href="https://www.google.es/?pli=1" class="link" target="_blank" title="Página oficial de Google">Ir a google</a></li>
                     <li>Rutas relativas: </li>
                     <ul>
-                        <li>Mismo nivel: <a href="Enlaces2.html" class="link">Link 1</a></li>
-                        <li>Un nivel menos (../): <a href="../Elementos_bloque_&_linea.html" class="link">ir a elementos en bloque & linea</a></li>
-                        <li>Ruta relativa a la raiz del proyecto (/): <a href="/index.html" class="link">Ir a index.html</a> <small> <b>En el github pages no funciona</b> </small></li>
-                        <li>download logo HTML: <a href="/assets/images/html5.png" download class="link">descargar</a></li>
-                        <li>Navegación con anclas: <a href="Enlaces3.html" class="link">Ir a Ejemplo</a></li>
+                        <li>Mismo nivel: <a href="Enlaces2.html" class="link" title="Página solo de ejemplo">Link 1</a></li>
+                        <li>Un nivel menos (../): <a href="../Elementos_bloque_&_linea.html" class="link" title="Apuntes sobre elementos en bloque y elementos en línea en HTML">ir a elementos en bloque & linea</a></li>
+                        <li>Ruta relativa a la raiz del proyecto (/): <a href="/index.html" class="link" title="Página de inicio de Apuntes">Ir a index.html</a> <small> <b>En el github pages no funciona</b> </small></li>
+                        <li>download logo HTML: <a href="/assets/images/html5.png" download class="link" title="Descargar logo de HTML">descargar</a></li>
+                        <li>Navegación con anclas: <a href="Enlaces3.html" class="link" title="Ejemplo de navegación con anclas">Ir a Ejemplo</a></li>
                     </ul>
                     <li>Email: 
-                        <a href="mailto:diegoalejandro1999@gmail.com?subject=contacto&body=prueba email" class="link">Enviar email</a>
+                        <a href="mailto:diegoalejandro1999@gmail.com?subject=contacto&body=prueba email" class="link" title="Enviar email al creador del sitio Apuntes">Enviar email</a>
                     </li>
                     <img src="../../assets/images/mail.png" alt="mail HTML" class="img">
                 </ul>

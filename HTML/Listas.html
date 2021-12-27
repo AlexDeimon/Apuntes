@@ -42,6 +42,8 @@
                     <ul>
                         <li>type: Estilo de numeración (1, A, a, I, i)</li>
                         <li>start: Inicio de las secuencia (un número)</li>
+                        <li>reversed: Iniciará la lista contando hacia atrás en lugar de hacia arriba.</li>
+                        <li>value: Permite configurar los elementos de la lista en valores ordenados específicos.</li>
                     </ul>    
                 </li>
                 <li><h4 class="titulo4">&lt;ul&gt;</h4>
@@ -102,18 +104,30 @@
                 <dd>Es un lenguaje de programación para dar interactividad a un sitio web.</dd>
             </dl>
             <h4 class="titulo4">Atributos en las listas:</h4>
-            <h4 class="titulo4">Type:circle</h4>
+            <h4 class="titulo4">Type: circle</h4>
             <ul class="lista" type="circle">
                 <li>Item</li>
                 <li>Item</li>
                 <li>Item</li>
             </ul>
-            <h4 class="titulo4">Type:1, Star:9</h4>
+            <h4 class="titulo4">Type: 1, Star: 9</h4>
             <ol class="lista" type="1" start="9">
                 <li>Item 1</li>
                 <li>Item 2</li>
                 <li>Item 3</li>
             </ol> 
+            <h4 class="titulo4">Type: 1, Star: 9, reversed</h4>
+            <ol class="lista" type="1" start="9" reversed>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ol> 
+            <h4 class="titulo4">Type: 1, value</h4>
+            <ol class="lista" type="1">
+                <li value="4">Item 1</li>
+                <li value="1">Item 2</li>
+                <li value="6">Item 3</li>
+            </ol>
         </section>
     </main>
 </body>

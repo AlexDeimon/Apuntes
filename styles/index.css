@@ -74,11 +74,11 @@ figure{
 .link{
     font-family: 'Exo 2', sans-serif;
     color: #448cff;
-    text-decoration: underline;
 }
 .lista{
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
+    margin-left: 1%;
 }
 .img, 
 .video{
@@ -101,6 +101,10 @@ figure{
 .lista h3,
 .lista h4{
     margin-left: 0%;
+}
+.lista li,
+.lista dt{
+    line-height: 1.5;
 }
 .titulo2,
 .ejemplo,
