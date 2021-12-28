@@ -45,6 +45,28 @@
     margin-bottom: 20px;
     overflow: auto;
 }
+.div3,
+.div4,
+.div5{
+    height: 300px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: x-large;
+    color: #fff;
+}
+.div3{
+    line-height: 300px;
+}
+.div5{
+    padding: 20px;
+    line-height: 260px;
+    font-family: fantasy;
+    font-size: xx-large;
+}
 #tituloid{
     padding-left: 2%;
     font-family: 'Exo 2', sans-serif;
@@ -595,3 +617,162 @@
 #tabla tbody tr:nth-child(odd){
     background-color: #946b2d;
 }
+#floatLeft{
+    float: left;
+}
+#floatRight{
+    float: right;
+}
+#opacity:hover{
+    opacity: 0.3;
+}
+#bg-color{
+    background-color: olivedrab;
+}
+#bg-img1{
+    background-image: url("../assets/images/css3.png"), url("../assets/images/portada-small.webp");
+}
+#bg-img2{
+    background: url("../assets/images/css3.png"), royalblue;
+}
+#bg-repeat1{
+    background: url("../assets/images/css3.png"), saddlebrown;
+    background-repeat: repeat-x;
+}
+#bg-repeat2{
+    background: url("../assets/images/css3.png"), sandybrown;
+    background-repeat: repeat-y;
+}
+#bg-repeat3{
+    background: url("https://img.icons8.com/fluency/80/000000/wallpaper.png"), seashell;
+    background-repeat: repeat;
+}
+#bg-repeat4{
+    background: url("https://img.icons8.com/fluency/80/000000/wallpaper.png"), slategray;
+    background-repeat: space;
+}
+#bg-repeat5{
+    background: url("https://img.icons8.com/fluency/80/000000/wallpaper.png"), thistle;
+    background-repeat: round;
+    margin-top: 10px;
+}
+#bg-repeat6{
+    background: url("../assets/images/css3.png"), turquoise;
+    background-repeat: no-repeat;
+}
+#bg-position1{
+    background: url("../assets/images/css3.png"), aqua;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+#bg-position2{
+    background: url("../assets/images/css3.png"), blue;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+#bg-position3{
+    background: url("../assets/images/css3.png"), blueviolet;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#bg-position4{
+    background: url("../assets/images/css3.png"), burlywood;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+#bg-position5{
+    background: url("../assets/images/css3.png"), chocolate;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#bg-position6{
+    background: url("https://img.icons8.com/fluency/80/000000/wallpaper.png"), coral;
+    background-repeat: no-repeat;
+    background-position: 60% 20%;
+}
+#bg-position7{
+    background: url("https://img.icons8.com/fluency/80/000000/wallpaper.png"), darkgoldenrod;
+    background-repeat: no-repeat;
+    background-position: 30px 70px;
+}
+#bg-position8{
+    background: url("https://img.icons8.com/fluency/80/000000/wallpaper.png"), darkgray;
+    background-repeat: no-repeat;
+    background-position: bottom 10px right 20px;
+}
+#bg-position9{
+    background: url("https://img.icons8.com/fluency/80/000000/wallpaper.png"), darkmagenta;
+    background-repeat: no-repeat;
+    background-position: bottom 10px right;
+}
+#bg-position10{
+    background: url("https://img.icons8.com/fluency/80/000000/wallpaper.png"), darkorange;
+    background-repeat: no-repeat;
+    background-position: top right 10px;
+}
+#bg-size1{
+    background: url("../assets/images/portada-medium.webp");
+    background-size: cover;
+}
+#bg-size2{
+    background: url("../assets/images/portada-medium.webp");
+    background-size: contain;
+}
+#bg-size3{
+    background: url("../assets/images/portada-medium.webp");
+    background-size: auto;
+}
+#bg-size4{
+    background: url("../assets/images/portada-medium.webp");
+    background-size: 250px;
+}
+#bg-size5{
+    background: url("../assets/images/portada-medium.webp");
+    background-size: 70%;
+}
+#bg-attachement1{
+    overflow: auto;
+    background: url("../assets/images/portada-medium.webp");
+    background-attachment: fixed;
+    background-size: contain;
+}
+#bg-attachement2{
+    overflow: auto;
+    background: url("../assets/images/portada-medium.webp");
+    background-attachment: local;
+    background-size: contain;
+}
+#bg-attachement3{
+    overflow: auto;
+    background: url("../assets/images/portada-medium.webp");
+    background-attachment: scroll;
+    background-size: contain;
+}
+#bg-clip1{
+    background-color: darkred;
+    border: 10px dashed dodgerblue;
+    background-clip: border-box;
+}
+#bg-clip2{
+    background-color:firebrick ; 
+    border: 10px dashed forestgreen;
+    background-clip: padding-box;
+}
+#bg-clip3{
+    background-color:gray;
+    border: 10px dashed green;
+    background-clip: content-box;
+}
+#bg-clip4{
+    background: linear-gradient(to right, #00f260, #0575e6);
+    border: 10px dashed khaki;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#bg-gradient{
+    background: #8e0e00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(31, 28, 24, 0.603), rgba(142, 14, 0, 0.61)), url("../assets/images/portada.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(31, 28, 24, 0.603), rgba(142, 14, 0, 0.61)), url("../assets/images/portada.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+} 
