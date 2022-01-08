@@ -2,7 +2,11 @@
     text-align: center;
     color:#00b5fd;
 }
-.box{
+.div{
+    margin: auto;
+}
+.box,
+.boxtransitions{
     width: 100px;
     height: 100px;
     line-height: 100px;
@@ -14,9 +18,64 @@
     width: 240px;
     height: 268px;
     background-color: #2a3242;
+    margin-left: 2%;
 }
-.div2{
-    margin: auto;
+.box1{
+    background-color: dodgerblue;
+    position: relative;
+    left: 200px;
+}
+.box2{
+    background-color: chartreuse;
+    position: relative;
+    left: 200px;
+    top: -30px
+}
+.box3{
+    background-color: cornflowerblue;
+    position: relative;
+}
+.box4{
+    background-color: crimson;
+    position: relative;
+    top: -30px;
+}
+.box5{
+    background-color: darkgreen;
+}
+.box6{
+    background-color: darkorange;
+}
+.box7{
+    background-color: darkred;
+}
+.box8{
+    background-color: darksalmon;
+}
+.box9{
+    background-color: darkseagreen;
+}
+.box10{
+    background-color: darkslategray;
+}
+.box11{
+    background-color: darkturquoise;
+}
+.box12{
+    background-color: deeppink;
+}
+.floatLeft{
+    float: left;
+}
+.floatRight{
+    float: right;
+}
+.box14-17{
+    width: 200px;
+    height: 70px;
+}
+.box14-17 p{
+    margin: 0;
 }
 .listaNav{
     display: flex;
@@ -67,6 +126,18 @@
     font-family: fantasy;
     font-size: xx-large;
 }
+.boxtransforms{
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+.boxtransitions{
+    box-sizing: content-box;
+    margin: auto;
+    transition: all 2s;
+}
 #tituloid{
     padding-left: 2%;
     font-family: 'Exo 2', sans-serif;
@@ -97,9 +168,51 @@
 #spanEjemplo{
     color: initial;
 }
+#box1{
+    z-index: -10;
+}
+#box2{
+    z-index: -20;
+}
+#box3{
+    z-index: 10;
+}
+#box5{
+    position: relative;
+    left: 100px;
+    top: 100px;
+}
+#box8{
+    position: relative;
+    bottom: 50px;
+}
+#box10{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+#box11{
+    position: absolute;
+    left: 110px;
+}
+#headerFixed{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+#sectionFixed{
+    padding-top: 100px;
+}
+#imgSticky{
+    background-color: #000;
+}
+#headerSticky{
+    position: sticky;
+    top: 0px;
+}
 #block1{
-    width: 80px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     background-color: aqua;
     color: #000;
 }
@@ -214,33 +327,6 @@
     border: 2px solid tan;
     border-radius: 20px / 21px;
 }
-#box1,
-#box2,
-#box3,
-#box4{
-    width: 200px;
-    height: 70px;
-}
-#box1{
-    margin-bottom: 160px; 
-    overflow: visible; /*se desborda el contenido del párrafo*/
-    background-color: teal;
-}
-#box2{
-    overflow: hidden; /*se oculta el contenido del párrafo que se desborda*/
-    background-color: yellowgreen;
-}
-#box3{
-    overflow: scroll; /*se crea una sola barra de scroll*/
-    background-color: aqua;
-}
-#box4{
-    overflow: auto; /*se crean 2 barras de scroll ya que el párrafo se desborda en los 2 ejes*/
-    background-color: black;
-}
-#box4 > p{
-    width: 250px;
-}
 #block11{
     display: block;
     width: 100px;
@@ -281,23 +367,6 @@
     background-color: greenyellow;
     color: indianred;
 }
-#border{
-    width: 100px;
-    height: 100px;
-    margin: 40px;
-    background-color: lightcoral;
-    color: lightgreen;
-    border: 10px solid lightseagreen;
-}
-#outline{
-    width: 100px;
-    height: 100px;
-    margin: 40px;
-    background-color: limegreen;
-    color:maroon;
-    outline: 10px solid mediumblue;
-    outline-offset: 10px;
-}
 #text1{
     text-align: right;
 }
@@ -305,134 +374,6 @@
     display: block;
     text-align: center;
     background-color: #2a3242;
-}
-#boxshadow1,
-#boxshadow2,
-#boxshadow3,
-#boxshadow4{
-    width: 150px;
-    height: 150px;
-    line-height: 150px;
-    margin: 20px;
-    text-align: center;
-}
-#boxshadow1{
-    background-color: mediumslateblue;
-    color: palegreen;
-    box-shadow: 10px 10px 10px; /*eje x, eje y y desenfoque*/
-}
-#boxshadow2{
-    background-color: palevioletred;
-    color: purple;
-    box-shadow: -10px -10px 10px saddlebrown; /*eje x, eje y, desenfoque y color*/
-}
-#boxshadow3{
-    background-color: springgreen;
-    color: violet;
-    box-shadow: 0px 0px 10px 10px yellowgreen; /*eje x, eje y, desenfoque, expanción y color*/
-}
-#boxshadow4{
-    background-color: aquamarine;
-    color: blueviolet;
-    box-shadow: 0px 0px 10px 10px darkgoldenrod inset; /*eje x, eje y, desenfoque, expanción, color e inset*/
-}
-#box5,
-#box7{
-    background-color: darkgreen;
-}
-#box6,
-#box8{
-    background-color: darkorange;
-}
-#box7{
-    position: relative;
-    left: 100px;
-    top: 100px;
-}
-#box9,
-#box11{
-    background-color: darkred;
-}
-#box10,
-#box12{
-    background-color: darksalmon;
-}
-#box12{
-    position: relative;
-    bottom: 50px;
-}
-#box13,
-#box15{
-    background-color: darkseagreen;
-}
-#box14,
-#box16{
-    background-color: darkslategray;
-}
-#box16{
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-}
-#box17,
-#box19{
-    background-color: darkturquoise;
-}
-#box18,
-#box20{
-    background-color: deeppink;
-}
-#box19{
-    position: absolute;
-    left: 110px;
-}
-#headerFixed{
-    position: fixed;
-    width: 100%;
-    top: 0px;
-}
-#sectionFixed{
-    padding-top: 100px;
-}
-#imgSticky{
-    background-color: #000;
-}
-#headerSticky{
-    position: sticky;
-    top: 0px;
-}
-#box21,
-#box25{
-    background-color: dodgerblue;
-    position: relative;
-    left: 200px;
-}
-#box22,
-#box26{
-    background-color: chartreuse;
-    position: relative;
-    left: 200px;
-    top: -30px
-}
-#box23,
-#box27{
-    background-color: cornflowerblue;
-    position: relative;
-}
-#box24,
-#box28{
-    background-color: crimson;
-    position: relative;
-    top: -30px;
-}
-#box25{
-    z-index: -10;
-}
-#box26{
-    z-index: -20;
-}
-#box27{
-    z-index: 10;
 }
 #serif{
     font-family: serif;
@@ -529,7 +470,7 @@
 #line-height{
     line-height: 2;
 }
-#box29{
+#box13{
     width: 200px;
     height: 100px;
     margin-left: 2%;
@@ -549,6 +490,63 @@
 }
 #textIndent{
     text-indent: 30px;
+}
+#box14{
+    margin-bottom: 160px; 
+    overflow: visible; /*se desborda el contenido del párrafo*/
+    background-color: teal;
+}
+#box15{
+    overflow: hidden; /*se oculta el contenido del párrafo que se desborda*/
+    background-color: yellowgreen;
+}
+#box16{
+    overflow: scroll; /*se crea una sola barra de scroll*/
+    background-color: aqua;
+}
+#box17{
+    overflow: auto; /*se crean 2 barras de scroll ya que el párrafo se desborda en los 2 ejes*/
+    background-color: black;
+}
+#box17 > p{
+    width: 250px;
+}
+#border{
+    box-sizing: content-box;
+    margin: 40px;
+    background-color: lightcoral;
+    color: lightgreen;
+    border: 10px solid lightseagreen;
+}
+#outline{
+    margin: 40px;
+    background-color: limegreen;
+    color:maroon;
+    outline: 10px solid mediumblue;
+    outline-offset: 10px;
+}
+#boxshadow1{
+    background-color: mediumslateblue;
+    color: palegreen;
+    box-shadow: 10px 10px 10px; /*eje x, eje y y desenfoque*/
+}
+#boxshadow2{
+    background-color: palevioletred;
+    color: purple;
+    box-shadow: -10px -10px 10px saddlebrown; /*eje x, eje y, desenfoque y color*/
+}
+#boxshadow3{
+    background-color: springgreen;
+    color: violet;
+    box-shadow: 0px 0px 10px 10px yellowgreen; /*eje x, eje y, desenfoque, expanción y color*/
+}
+#boxshadow4{
+    background-color: aquamarine;
+    color: blueviolet;
+    box-shadow: 0px 0px 10px 10px darkgoldenrod inset; /*eje x, eje y, desenfoque, expanción, color e inset*/
+}
+#opacity:hover{
+    opacity: 0.3;
 }
 #link,
 #link2{
@@ -616,15 +614,6 @@
 }
 #tabla tbody tr:nth-child(odd){
     background-color: #946b2d;
-}
-#floatLeft{
-    float: left;
-}
-#floatRight{
-    float: right;
-}
-#opacity:hover{
-    opacity: 0.3;
 }
 #bg-color{
     background-color: olivedrab;
@@ -776,3 +765,122 @@
     background: linear-gradient(to right, rgba(31, 28, 24, 0.603), rgba(142, 14, 0, 0.61)), url("../assets/images/portada.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
 } 
+#traslate{
+    color: lightcyan;
+    background-color: lightsalmon;
+    transform: translate(70px, 10px);
+}
+#traslateX{
+    color: lightskyblue;
+    background-color: mediumblue;
+    transform: translateX(16%);
+}
+#traslateY{
+    color: mediumvioletred;
+    background-color: midnightblue;
+    transform: translateY(20px);
+}
+#scale{
+    color: paleturquoise;
+    background-color: peru;
+    transform: scale(0.93,0.97);
+}
+#scaleX{
+    color: rosybrown;
+    background-color: royalblue;
+    transform: scaleX(1.2);
+}
+#scaleY{
+    color: salmon;
+    background-color: seagreen;
+    transform: scaleY(0.7);
+}
+#rotate{
+    color: skyblue;
+    background-color: crimson;
+    transform: rotate(10deg);
+}
+#skew{
+    color: darkblue;
+    background-color: darkgoldenrod;
+    transform: skew(2deg, 7deg);
+}
+#skewX{
+    color: darkorange;
+    background-color: darkslateblue;
+    transform: skewX(20deg);
+}
+#skewY{
+    color: firebrick;
+    background-color: goldenrod;
+    transform: skewY(10deg);
+}
+#box18{
+    color: greenyellow;
+    background-color: indianred;
+}
+#box18:hover{
+    color: ivory;
+    background-color: lime;
+}
+#box19{
+    color: maroon;
+    background-color: mediumblue;
+}
+#box19:hover{
+    color: mediumvioletred;
+    background-color: palevioletred;
+    border: 10px dashed sienna;
+}
+#box20{
+    color: slateblue;
+    background-color: tan;
+}
+#box20:hover{
+    color: white;
+    background-color: aqua;
+    border: 1px solid azure;
+    border-radius: 50px;
+}
+#box21{
+    color: bisque;
+    background-color: chocolate;
+}
+#box21:hover{
+    color: cyan;
+    background-color: darkmagenta;
+    box-shadow: 0px 0px 20px darkturquoise;
+}
+#box22{
+    color: deeppink;
+    background-color: forestgreen;
+}
+#box22:hover{
+    color: green;
+    background-color: greenyellow;
+    transform: scale(1.2,1.2);
+}
+#box23{
+    color: honeydew;
+    background-color: mediumpurple;
+}
+#box23:hover{
+    color: mediumseagreen;
+    background-color: mediumvioletred;
+    transform: rotate(360deg);
+}
+#box24{
+    color: olive;
+    background-color: paleturquoise;
+}
+#box24:hover{
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    color: papayawhip;
+    background-color: red;
+    border: 1px solid seashell;
+    border-radius: 100px;
+    box-shadow: 0px 0px 30px sienna;
+    transform: rotate(360deg);
+}

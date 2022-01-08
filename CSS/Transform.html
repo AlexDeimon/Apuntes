@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Transformaciones</h2>
+            <p>La propiedad CSS transform permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.</p>
+            <h3 class="titulo3">Valores Transformaciones 2D:</h3>
+            <article>
+                <h4 class="titulo4">traslate:</h4>
+                <p>Especifica una translación 2D dada por coordenadas (x, y). Cada valor puede ser un valor de longuitud o un valor de  porcentaje.</p>
+                <div class="main-section">
+                    <div class="boxcontainer">
+                        <div class="boxtransforms" id="traslate">traslate(70px, 10px)</div>
+                    </div>
+                    <div class="boxcontainer">
+                        <div class="boxtransforms" id="traslateX">traslateX(16%)</div>
+                    </div>
+                    <div class="boxcontainer">
+                        <div class="boxtransforms" id="traslateY">traslateY(20px)</div>  
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h4 class="titulo4">scale:</h4>
+                <p>Especifica una operación de escalado 2D descrita (%x, %y) donde 1 = 100% original del elemento, si se desea aumentar el % es 1. seguido del valor, y si se desea disminuir es 0. seguido del valor.</p>
+                <div class="main-section">
+                    <div class="boxcontainer">
+                        <div class="boxtransforms" id="scale">scale(0.93, 0.97)</div>
+                    </div>
+                    <div class="boxcontainer">
+                        <div class="boxtransforms" id="scaleX">scaleX(1.2)</div>
+                    </div>
+                    <div class="boxcontainer">
+                        <div class="boxtransforms" id="scaleY">scaleY(0.7)</div>  
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h4 class="titulo4">rotate:</h4>
+                <p>Define una operación de rotación 2D de un elemento específico, haciendo la cantidad de grados (deg) que este rotará en sentido de las macecillas del reloj. </p>
+                <div class="boxtransforms" id="rotate">rotate(10deg)</div>  
+            </article>
+            <article>
+                <h4 class="titulo4">skew:</h4>
+                <p>Sesga el elemento a lo largo del eje X y Y por los ángulos (x, y) especificados.</p>
+                <div class="main-section">
+                    <div class="boxtransforms" id="skew">skew(2deg, 7deg)</div> 
+                    <div class="boxtransforms" id="skewX">skewX(20deg)</div> 
+                    <div class="boxtransforms" id="skewY">skewY(10deg)</div> 
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

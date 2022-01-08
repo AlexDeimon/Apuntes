@@ -59,30 +59,29 @@
             </ul>
             <h4 class="ejemplo">Ejemplo: </h4>
             <div class="main-section">
-                <img src="../assets/images/z-index1.png" alt="ejemplo z-index 1">
-                <img src="../assets/images/z-index2.png" alt="ejemplo z-index 2">
+                <img src="../assets/images/z-index.png" alt="ejemplo z-index">
             </div>
             <div class="main-section">
-                <div class="div2">
+                <div class="div">
                     <h4 class="titulo4">Sin z-index: </h4>
                     <div class="boxcontainer">
-                        <div class="box" id="box21">Caja 21</div>
-                        <div id="box22" class="box">caja 22</div>
+                        <div class="box box1">Caja 1</div>
+                        <div class="box box2">caja 2</div>
                     </div>
                     <div>
-                        <div id="box23" class="box">caja 23</div>
-                        <div class="box" id="box24">Caja 24</div>
+                        <div class="box box3">caja 3</div>
+                        <div class="box box4">Caja 4</div>
                     </div> 
                 </div>
-                <div class="div2">
+                <div class="div">
                     <h4 class="titulo4">Con z-index: </h4>
                     <div class="boxcontainer">
-                        <div id="box25" class="box">caja 25</div>
-                        <div id="box26" class="box">caja 26</div>
+                        <div id="box1" class="box box1">caja 1</div>
+                        <div id="box2" class="box box2">caja 2</div>
                     </div>
                     <div>
-                        <div id="box27" class="box">caja 27</div>
-                        <div id="box28" class="box">caja 28</div>
+                        <div id="box3" class="box box3">caja 3</div>
+                        <div class="box box4">caja 4</div>
                     </div> 
                 </div>
             </div>
@@ -96,13 +95,13 @@
             <div class="main-section">
                 <div>
                     <p>Position static:</p>
-                    <div class="box" id="box5">Caja 5</div>
-                    <div class="box" id="box6">Caja 6</div>
+                    <div class="box box5">Caja 5</div>
+                    <div class="box box6">Caja 6</div>
                 </div>
                 <div>
                     <p>Position relative:</p>
-                    <div class="box" id="box7">Caja 7</div>
-                    <div class="box" id="box8">Caja 8</div>
+                    <div class="box box5" id="box5">Caja 5</div>
+                    <div class="box box6">Caja 6</div>
                 </div>
             </div>  
             <h4 class="ejemplo">Ejemplo 2: </h4>
@@ -110,16 +109,16 @@
             <div class="main-section">
                 <div>
                     <p>Position static:</p>
-                    <div class="box" id="box9">Caja 9</div>
-                    <div class="box" id="box10">Caja 10</div>
+                    <div class="box box7">Caja 7</div>
+                    <div class="box box8">Caja 8</div>
                 </div>
                 <div>
                     <p>Position relative:</p>
-                    <div class="box" id="box11">Caja 11</div>
-                    <div class="box" id="box12">Caja 12</div>
+                    <div class="box box7">Caja 7</div>
+                    <div class="box box8" id="box8">Caja 8</div>
                 </div>
             </div> 
-            <p>En este ejemplo se aplica el contexto de apilamiento, ya que la caja 12 ocupa parte del espacio de la caja 11.</p> 
+            <p>En este ejemplo se aplica el contexto de apilamiento, ya que la caja 8 ocupa parte del espacio de la caja 7.</p> 
             <h4 class="titulo4">Absolute:</h4>
             <p>El elemento perderá sus medidas y su espacio reservado. Si se mueve usará el elemento posicionado contenedor como referencia. Si no tiene ninguno, usará el elemento html de referencia.</p>
             <p>Si se utliza position absolute en un elemento en linea, este pasará a ser de bloque, por lo que no es necesario utilizar display block.</p>
@@ -128,13 +127,13 @@
             <div class="main-section">
                 <div>
                     <p>Position static:</p>
-                    <div class="box" id="box13">Caja 13</div>
-                    <div class="box" id="box14">Caja 14</div>
+                    <div class="box box9">Caja 9</div>
+                    <div class="box box10">Caja 10</div>
                 </div>
                 <div class="boxcontainer">
                     <p>Position absolute:</p>
-                    <div class="box" id="box15">Caja 15</div>
-                    <div class="box" id="box16">Caja 16</div>
+                    <div class="box box9">Caja 9</div>
+                    <div class="box box10" id="box10">Caja 10</div>
                 </div>
             </div>  
             <h4 class="ejemplo">Ejemplo 2: </h4>
@@ -142,16 +141,16 @@
             <div class="main-section">
                 <div>
                     <p>Position static:</p>
-                    <div class="box" id="box17">Caja 17</div>
-                    <div class="box" id="box18">Caja 18</div>
+                    <div class="box box11">Caja 11</div>
+                    <div class="box box12">Caja 12</div>
                 </div>
                 <div class="boxcontainer">
                     <p>Position absolute:</p>
-                    <div class="box" id="box19">Caja 19</div>
-                    <div class="box" id="box20">Caja 20</div>
+                    <div class="box box11" id="box11">Caja 11</div>
+                    <div class="box box12">Caja 12</div>
                 </div>
             </div> 
-            <p>En este ejemplo, al ser position absolute, la caja 19 pierde su espacio reservado por lo que ahora lo esta ocupando la caja 20.</p>
+            <p>En este ejemplo, al ser position absolute, la caja 11 pierde su espacio reservado por lo que ahora lo esta ocupando la caja 12.</p>
             <h4 class="titulo4">Fixed:</h4>
             <p>El elemento perderá sus medidas y su espacio reservado. Si se mueve usará el elemento html de referencia, y además se quedará fijo en esa posición aunque se haga scroll.</p>
             <h4 class="ejemplo"><a href="EjemploFixed.html" class="link">Ejemplo Fixed</a></h4>
@@ -166,12 +165,12 @@
                 <li>none: El elemento no flota.</li>
             </ul>
             <h4 class="ejemplo">Ejemplo:</h4>
-            <figure id="floatLeft">
+            <figure class="floatLeft">
                 <figcaption><h4 class="titulo4">Float: left</h4></figcaption>
                 <img src="../assets/images/css3.png" alt="logo CSS" >
             </figure>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci corporis aut fugit libero doloribus aliquam totam eius maxime explicabo voluptas, nobis iusto nostrum reprehenderit illo unde quae consectetur tenetur magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sapiente, odit neque porro odio quas nesciunt atque quaerat voluptates veritatis aperiam sunt delectus doloribus dicta, dolore nobis praesentium, laborum exercitationem?</p>
-            <figure id="floatRight">
+            <figure class="floatRight">
                 <figcaption><h4 class="titulo4">Float: right</h4></figcaption>
                 <img src="../assets/images/css3.png" alt="logo CSS" >
             </figure>
