@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Grid</h2>
+            <p>CSS Grid Layout es un sistema de diseño bidimensional para la web. Le permite distribuir el contenido en filas y columnas. Tiene muchas características que facilitan la creación de diseños complejos.</p>
+            <p>Para definir una cuadricula se usa el valor grid en la propiedad display. Esto habilita el diseño de cuadrícula; todos los elementos secundarios directos del contenedor se convierten en elementos de cuadrícula.</p>
+            <div class="grid">
+                <div>fila 1</div>
+                <div>fila 2</div>
+                <div>fila 3</div>
+                <div>fila 4</div>
+                <div>fila 5</div>
+                <div>fila 6</div>
+                <div>fila 7</div>
+            </div>
+            <p>Los elementos no se verán inmediatamente diferentes. La declaración display: grid brinda una cuadrícula de una columna, por lo que los elementos continuarán mostrándose uno debajo del otro como lo hacen en el flujo normal.</p>
+            <p>Para ver algo que se parece más a una cuadrícula, se agregan algunas columnas mediante la propiedad grid-template-columns. Esta puede usar cualquier unidad de longitud o porcentaje para crear las columnas mediande la definición de su ancho, así el número de columnas se agregará dependiendo del numero de valores en la propiedad.</p>
+            <img src="../assets/images/grid1.png" alt="ejemplo columnas grid" class="img">
+            <div class="grid grid2">
+                <div>fila 1 columna 1</div>
+                <div>fila 1 columna 2</div>
+                <div>fila 1 columna 3</div>
+                <div>fila 2 columna 1</div>
+                <div>fila 2 columna 2</div>
+                <div>fila 2 columna 3</div>
+                <div>fila 3 columna 1</div>
+            </div>
+            <p>Tambien se puede dar un alto a las filas mediante la propiedad grid-template-rows, e igual que con la propiedad anterior, según el número de valores que tenga la propiedad se aplicarán a ese número de filas. si no se define el valor, la altura de dicha fila sera automática.</p>
+            <img src="../assets/images/grid2.png" alt="ejemplo altura filas grid" class="img">
+            <div class="grid grid2 grid3">
+                <div>fila 1 columna 1</div>
+                <div>fila 1 columna 2</div>
+                <div>fila 1 columna 3</div>
+                <div>fila 2 columna 1</div>
+                <div>fila 2 columna 2</div>
+                <div>fila 2 columna 3</div>
+                <div>fila 3 columna 1</div>
+            </div>
+            <h3 class="titulo3">Unidad fracción fr:</h3>
+            <p>Además de crear cuadrículas usando longitudes y porcentajes, se puede usar la unidad fr para cambiar el tamaño de las filas y columnas de la cuadrícula de manera flexible. Esta unidad representa una fracción del espacio disponible en el contenedor de cuadrícula.</p>
+            <img src="../assets/images/grid3.png" alt="ejemplo unidad fr" class="img">
+            <div class="grid grid4">
+                <div>fila 1 columna 1</div>
+                <div>fila 1 columna 2</div>
+                <div>fila 1 columna 3</div>
+                <div>fila 2 columna 1</div>
+                <div>fila 2 columna 2</div>
+                <div>fila 2 columna 3</div>
+                <div>fila 3 columna 1</div>
+            </div>
+            <h3 class="titulo3">Espacios entre elementos: </h3>
+            <p>Para crear espacios entre elementos, se usan las propiedades column-gap para espacios entre columnas, row-gap espacios entre filas y gap como abreviatura de ambos. Estos espacios pueden ser cualquier unidad de longitud o porcentaje, pero no una frunidad.</p>
+            <img src="../assets/images/grid4.png" alt="ejemplo espacios entre elementos" class="img">
+            <div class="grid grid2 grid5">
+                <div>fila 1 columna 1</div>
+                <div>fila 1 columna 2</div>
+                <div>fila 1 columna 3</div>
+                <div>fila 2 columna 1</div>
+                <div>fila 2 columna 2</div>
+                <div>fila 2 columna 3</div>
+                <div>fila 3 columna 1</div>
+            </div>
+            <h3 class="titulo3">Repetición de valores:</h3>
+            <p>Se puede repetir los valores de las propedades de alto y ancho anteriores usando la función repeat(). Esta función tiene 2 argumentos, el número de repeticiones y el valor de la propiedad a repetir.</p>
+            <img src="../assets/images/grid5.png" alt="ejemplo repeat()" class="img">
+            <h3 class="titulo3">Propiedades grid-auto: </h3>
+            <p>De forma predeterminada, los elementos creados en la cuadrícula, de manera implícita tienen un tamaño auto, lo que en general significa que son lo suficientemente grandes para acomodar su contenido. Si desea dar un tamaño a los elementos de cuadrícula implícitas, se puede usar las propiedades grid-auto-rows y grid-auto-columns.</p>
+            <img src="../assets/images/grid6.png" alt="ejemplo grid-auto" class="img">
+            <div class="grid grid2 grid6">
+                <div>fila 1 columna 1</div>
+                <div>fila 1 columna 2</div>
+                <div>fila 1 columna 3</div>
+                <div>fila 2 columna 1</div>
+                <div>fila 2 columna 2</div>
+                <div>fila 2 columna 3</div>
+                <div>fila 3 columna 1</div>
+            </div>
+            <p>De este modo todas las filas de la cuadrícula tienen 100px de alto.</p>
+            <h3 class="titulo3">La función minmax()</h3>
+            <p>Aveces altura definida de los elementos no es muy útil si se agrega contenido que es más alto que el elemento, en cuyo caso se produciría un desbordamiento.</p>
+            <p>La función minmax() permite establecer un tamaño mínimo y máximo para un elemento, por ejemplo, minmax(50px, auto). El tamaño mínimo es de 50 píxeles, pero el máximo es auto, que se expandirá para acomodar más contenido.</p>
+            <h3 class="titulo3">Tantas columnas como quepan:</h3>
+            <p>A veces es útil poder pedirle a grid que cree tantas columnas como quepan en el contenedor. Esto se realiza estableciendo el valor de grid-template-columns la función repeat(), pero en lugar de pasar un número, pasar la palabra clave auto-fill. Para el segundo parámetro de la función se usa minmax() con un valor mínimo igual al tamaño mínimo de pista que se gustaría tener y un máximo de 1fr.</p>
+            <img src="../assets/images/grid7.png" alt="ejemplo columnas automaticas" class="img">
+            <div class="grid grid7">
+                <div>fila 1 columna 1</div>
+                <div>fila 1 columna 2</div>
+                <div>fila 1 columna 3</div>
+                <div>fila 1 columna 4</div>
+                <div>fila 2 columna 1</div>
+                <div>fila 2 columna 2</div>
+                <div>fila 2 columna 3</div>
+            </div>
+            <p>Esto funciona porque la cuadrícula crea tantas columnas de 300px como quepan en el contenedor y luego comparte el espacio sobrante entre todas las columnas.<p>
+            <h3 class="titulo3">Colocación basada en líneas: </h3>
+            <p>La cuadrícula siempre tiene líneas; estas están numeradas comenzando con 1 y se relacionan con el modo de escritura del documento. Por ejemplo, la línea de columna 1 en inglés (escrita de izquierda a derecha) estaría en el lado izquierdo de la cuadrícula y la línea de fila 1 en la parte superior.</p>
+            <p>Los elementos de la cuadrícula pueden expandirse especificando la línea inicial y final usando las siguientes propiedades:</p>
+            <ul class="lista">
+                <li>grid-column-start</li>
+                <li>grid-column-end</li>
+                <li>grid-row-start</li>
+                <li>grid-row-end</li>
+            </ul>
+            <p>Todas estas propiedades pueden tener un número de línea como valor. También se pueden utilizar las propiedades abreviadas:</p>
+            <ul class="lista">
+                <li>grid-column</li>
+                <li>grid-row</li>
+            </ul>
+            <p>Estos permiten especificar las líneas de inicio y finalización a la vez, separadas por una barra inclinada /.</p>
+            <img src="../assets/images/grid8.png" alt="ejemplo Colocación basada en lineas" class="img">
+            <div class="grid grid2">
+                <div id="headerGrid">header</div>
+                <div  id="divGrid">fila 1-2 columna 1</div>
+                <div>fila 1 columna 2</div>
+                <div>fila 1 columna 3</div>
+                <div>fila 2 columna 2</div>
+                <div>fila 2 columna 3</div>
+                <div id="footerGrid">footer</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
