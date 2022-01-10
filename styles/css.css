@@ -145,7 +145,7 @@
     font-family: 'Roboto', sans-serif;
 }
 .grid2{
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(3, 33%);
 }
 .grid3{
     grid-template-rows: 60px 80px;
@@ -163,11 +163,39 @@
 .grid7{
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
+.grid8{
+    grid-template-areas:
+    "header header header"
+    "c1 . ."
+    "c1 . ."
+    "footer footer footer";
+}
 .grid div{
     padding: 10px;
     border-radius: 5px;
     background-color: skyblue;
     border: 2px solid steelblue;
+}
+.flex{
+    display: flex;
+}
+.flex2{
+    flex-direction: column;
+}
+.flex3{
+    flex-direction: row-reverse;
+}
+.flex4{
+    flex-direction: column-reverse;
+}
+.flex5{
+    flex-flow: row wrap;
+}
+.sinFlex div,
+.flex div{
+    padding: 10px;
+    background-color: dodgerblue;
+    border: 2px solid darkorchid;
 }
 #tituloid{
     padding-left: 2%;
@@ -925,6 +953,19 @@
 }
 #footerGrid{
     grid-column: 1 / 4;
+    color: cornsilk;
+    background-color: darkviolet;
+}
+#headerGrid2{
+    grid-area: header;
+    color: cornflowerblue;
+    background-color: blue;
+}
+#divGrid2{
+    grid-area: c1;
+}
+#footerGrid2{
+    grid-area: footer;
     color: cornsilk;
     background-color: darkviolet;
 }

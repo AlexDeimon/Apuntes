@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Flexbox</h2>
+            <p>Flexbox es un método de diseño unidimensional para organizar elementos en filas o columnas. Los elementos se flexionan (expanden) para llenar espacio adicional o se encogen para caber en espacios más pequeños.</p>
+            <p>Para especificar qué elementos distribuir como cajas flexibles se usa el valor flex en la propiedad display. Esto hace que el elemento se convierta en un contenedor flexible y sus elementos secundarios se conviertan en elementos flexibles.</p>
+            <h3 class="ejemplo">Sin Flexbox: </h3>
+            <div class="sinFlex">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, minus deserunt, magni et ratione repudiandae totam provident mollitia corporis voluptas itaque possimus repellendus suscipit reiciendis, aut molestiae error nulla. Nobis.</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora autem sequi perspiciatis ratione animi nostrum laboriosam dolore eaque voluptates, voluptatum illum unde aperiam asperiores doloremque fuga, labore ad, ipsam blanditiis.</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quis, enim sapiente sint deserunt dicta magnam autem corrupti officia illo ipsa. Dolorem velit soluta laudantium minus sunt, ipsa saepe similique.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum sit, vero aut, adipisci ex minus quas non est voluptate incidunt dolorem deleniti accusantium maxime tempora. Possimus quod quae consequuntur at!</p>
+                </div>
+            </div>
+            <h3 class="ejemplo">Con Flexbox: </h3>
+            <div class="flex">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, minus deserunt, magni et ratione repudiandae totam provident mollitia corporis voluptas itaque possimus repellendus suscipit reiciendis, aut molestiae error nulla. Nobis.</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora autem sequi perspiciatis ratione animi nostrum laboriosam dolore eaque voluptates, voluptatum illum unde aperiam asperiores doloremque fuga, labore ad, ipsam blanditiis.</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quis, enim sapiente sint deserunt dicta magnam autem corrupti officia illo ipsa. Dolorem velit soluta laudantium minus sunt, ipsa saepe similique.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum sit, vero aut, adipisci ex minus quas non est voluptate incidunt dolorem deleniti accusantium maxime tempora. Possimus quod quae consequuntur at!</p>
+                </div>
+            </div>
+            <p>El elemento al que se le ha dado un display flex actúa como un elemento de nivel de bloque en términos de cómo interactúa con el resto de la página, pero sus elementos secundarios se presentan como elementos flexibles.</p>
+            <h3 class="titulo3">Modelo flexible:</h3>
+            <p>Cuando los elementos se disponen como elementos flexibles, se disponen a lo largo de dos ejes:</p>
+            <figure>
+                <img src="https://creatuweb.espaciolatino.com/imgs/flex-elementos.jpg" alt="modelo Flexbox" class="img">
+                <figcaption class="blank">Imagen tomada de: <a href="https://creatuweb.espaciolatino.com/tutorcss3/flex-detalles.htm" class="link">Crea tu web</a></figcaption>
+            </figure>
+            <ul class="lista">
+                <li>El eje principal es el eje que se ejecuta en la dirección en la que se disponen los elementos flexibles (por ejemplo, como filas en la página o columnas en la página). El inicio y el final de este eje se denominan main start y main end.</li>
+                <li>El eje secundaio es el eje que corre perpendicular a la dirección en la que se colocan los elementos flexibles. El inicio y el final de este eje se denominan cross start y cross end.</li>
+                <li>El elemento principal que se ha establecido display: flex en él se llama contenedor flex.</li>
+                <li>Los elementos hijos dispuestos como cajas flexibles dentro del contenedor flex se denominan elementos flexibles.</li>
+            </ul>
+            <h3 class="titulo3">flex-direction: </h3>
+            <p>La propiedad de flex-direction especifica en qué dirección corre el eje principal (en qué dirección se disponen los hijos de flexbox). Sus valores son: </p>
+            <ul class="lista">
+                <li>row: Valor predeterminado que hace que los elementos flexibles se coloquen en una fila.</li>
+                <li>column: Este valor vuelve a colocar los elementos en un diseño de columna.</li>
+                <li>row-reverse: Se colocan los valores en fila en dirección inversa.</li>
+                <li>column-reverse: Se colocan los valores en columna en dirección inversa.</li>
+            </ul>
+            <div class="flex">
+                <div>
+                    <p>Elemento 1</p>
+                </div>
+                <div>
+                    <p>Elemento 2</p>
+                </div>
+                <div>
+                    <p>Elemento 3</p>
+                </div>
+            </div>  
+            <div class="flex flex2">
+                <div>
+                    <p>Elemento 1</p>
+                </div>
+                <div>
+                    <p>Elemento 2</p>
+                </div>
+                <div>
+                    <p>Elemento 3</p>
+                </div>
+            </div>  
+            <div class="flex flex3">
+                <div>
+                    <p>Elemento 1</p>
+                </div>
+                <div>
+                    <p>Elemento 2</p>
+                </div>
+                <div>
+                    <p>Elemento 3</p>
+                </div>
+            </div> 
+            <div class="flex flex4">
+                <div>
+                    <p>Elemento 1</p>
+                </div>
+                <div>
+                    <p>Elemento 2</p>
+                </div>
+                <div>
+                    <p>Elemento 3</p>
+                </div>
+            </div>  
+            <h3 class="titulo3">flex-wrap: </h3>
+            <p>Un problema que surge cuando se tiene un ancho o una altura fijos en el diseño es que, eventualmente, los elementos secundarios flexbox desbordarán su contenedor, rompiendo el diseño.</p>
+            <div class="overflow">
+                <div class="flex">
+                    <div>
+                        <p>Elemento 1</p>
+                    </div>
+                    <div>
+                        <p>Elemento 2</p>
+                    </div>
+                    <div>
+                        <p>Elemento 3</p>
+                    </div>
+                    <div>
+                        <p>Elemento 4</p>
+                    </div>
+                    <div>
+                        <p>Elemento 5</p>
+                    </div>
+                    <div>
+                        <p>Elemento 6</p>
+                    </div>
+                    <div>
+                        <p>Elemento 7</p>
+                    </div>
+                    <div>
+                        <p>Elemento 8</p>
+                    </div>
+                    <div>
+                        <p>Elemento 9</p>
+                    </div>
+                    <div>
+                        <p>Elemento 10</p>
+                    </div>
+                    <div>
+                        <p>Elemento 11</p>
+                    </div>
+                    <div>
+                        <p>Elemento 12</p>
+                    </div>
+                    <div>
+                        <p>Elemento 13</p>
+                    </div>
+                    <div>
+                        <p>Elemento 14</p>
+                    </div>
+                </div>
+            </div>
+            <p>Una forma de solucionar tal problema es mediante la propiedad flex-wrap. Esta propiedad  establece si los elementos flexibles se fuerzan en una línea o se pueden ajustar en varias líneas. Si se permite el ajuste, establece la dirección en que se apilan las líneas.</p>
+            <div class="overflow">
+                <div class="flex flex5">
+                    <div>
+                        <p>Elemento 1</p>
+                    </div>
+                    <div>
+                        <p>Elemento 2</p>
+                    </div>
+                    <div>
+                        <p>Elemento 3</p>
+                    </div>
+                    <div>
+                        <p>Elemento 4</p>
+                    </div>
+                    <div>
+                        <p>Elemento 5</p>
+                    </div>
+                    <div>
+                        <p>Elemento 6</p>
+                    </div>
+                    <div>
+                        <p>Elemento 7</p>
+                    </div>
+                    <div>
+                        <p>Elemento 8</p>
+                    </div>
+                    <div>
+                        <p>Elemento 9</p>
+                    </div>
+                    <div>
+                        <p>Elemento 10</p>
+                    </div>
+                    <div>
+                        <p>Elemento 11</p>
+                    </div>
+                    <div>
+                        <p>Elemento 12</p>
+                    </div>
+                    <div>
+                        <p>Elemento 13</p>
+                    </div>
+                    <div>
+                        <p>Elemento 14</p>
+                    </div>
+                </div>
+            </div>
+            <h4 class="titulo4">Valores de flex-wrap: </h4>
+            <ul class="lista">
+                <li>nowrap: Los elementos flexibles se disponen en una sola línea, lo que puede hacer que el contenedor flexible se desborde. El inicio cruzado es equivalente a inicio o antes, según el valor de flex-direction. Este es el valor predeterminado.</li>
+                <li>wrap: Los elementos flexibles se dividen en varias líneas. El inicio cruzado es equivalente al inicio o antes del valor flex-direction dependiente y el final cruzado es lo opuesto al inicio cruzado especificado .</li>
+                <li>wrap-reverse:Se comporta igual que wrap pero cruzada de inicio y de fin de cruz se permutan.</li>
+            </ul>
+            <h3 class="titulo3">flex-flow shorthand: </h3>
+            <p>Existe una forma abreviada de flex-direction y flex-wrap: flex-flow. Por lo que por ejemplo, este flex:</p>
+            <img src="../assets/images/flex1.png" alt="flex-direction y flex-wrap" class="img">
+            <p>Se puede reemplazar por: </p>
+            <img src="../assets/images/flex2.png" alt="flex-direction y flex-wrap" class="img">
+        </section>
+    </main>
+</body>
+</html>

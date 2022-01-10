@@ -85,10 +85,12 @@
             <h3 class="titulo3">Repetición de valores:</h3>
             <p>Se puede repetir los valores de las propedades de alto y ancho anteriores usando la función repeat(). Esta función tiene 2 argumentos, el número de repeticiones y el valor de la propiedad a repetir.</p>
             <img src="../assets/images/grid5.png" alt="ejemplo repeat()" class="img">
-            <h3 class="titulo3">Propiedades grid-auto: </h3>
-            <p>De forma predeterminada, los elementos creados en la cuadrícula, de manera implícita tienen un tamaño auto, lo que en general significa que son lo suficientemente grandes para acomodar su contenido. Si desea dar un tamaño a los elementos de cuadrícula implícitas, se puede usar las propiedades grid-auto-rows y grid-auto-columns.</p>
+            <h3 class="titulo3">Grid implícita vs Grid explícita: </h3>
+            <p>La grilla explícita es la que se crea usando grid-template-columns o grid-template-rows. La grilla implícita se crea cuando el contenido se coloca fuera de esa cuadrícula. Tomando como ejemplo el grid3 se puede ver que de las 3 filas, solo se definió altura para las primeras 2, por lo que la ultima fila quedó con una altura automática.</p>
+            <img src="../assets/images/grid2.png" alt="ejemplo altura filas grid" class="img">
+            <p>Esa 3er fila y todas las que no se definan en la grilla explícita por defecto su alto será automático, pero se puede corregir esto mediante la propiedad grid-auto-rows.</p>
             <img src="../assets/images/grid6.png" alt="ejemplo grid-auto" class="img">
-            <div class="grid grid2 grid6">
+            <div class="grid grid2 grid3 grid6">
                 <div>fila 1 columna 1</div>
                 <div>fila 1 columna 2</div>
                 <div>fila 1 columna 3</div>
@@ -97,7 +99,7 @@
                 <div>fila 2 columna 3</div>
                 <div>fila 3 columna 1</div>
             </div>
-            <p>De este modo todas las filas de la cuadrícula tienen 100px de alto.</p>
+            <p>De este modo todas las filas de la cuadrícula implícita tienen 100px de alto.</p>
             <h3 class="titulo3">La función minmax()</h3>
             <p>Aveces altura definida de los elementos no es muy útil si se agrega contenido que es más alto que el elemento, en cuyo caso se produciría un desbordamiento.</p>
             <p>La función minmax() permite establecer un tamaño mínimo y máximo para un elemento, por ejemplo, minmax(50px, auto). El tamaño mínimo es de 50 píxeles, pero el máximo es auto, que se expandirá para acomodar más contenido.</p>
@@ -132,12 +134,31 @@
             <img src="../assets/images/grid8.png" alt="ejemplo Colocación basada en lineas" class="img">
             <div class="grid grid2">
                 <div id="headerGrid">header</div>
-                <div  id="divGrid">fila 1-2 columna 1</div>
+                <div id="divGrid">columna 1</div>
                 <div>fila 1 columna 2</div>
                 <div>fila 1 columna 3</div>
                 <div>fila 2 columna 2</div>
                 <div>fila 2 columna 3</div>
                 <div id="footerGrid">footer</div>
+            </div>
+            <h3 class="titulo3">Posicionamiento con grid-template-areas: </h3>
+            <p>Una forma alternativa de organizar los elementos en la cuadrícula es usar grid-template-areas y dar un nombre a los diversos elementos del diseño. Las reglas para grid-template-areasson las siguientes:</p>
+            <ul class="lista">
+                <li>Todas las celdas de la grilla deben estar llenas.</li>
+                <li>Para abarcar dos celdas, se repite el nombre del elemento.</li>
+                <li>Para dejar una celda vacía, se usa un . (punto).</li>
+                <li>Las áreas deben ser rectangulares; por ejemplo, no puede tener un área en forma de L.</li>
+                <li>Las áreas no se pueden repetir en diferentes ubicaciones.</li>    
+            </ul>
+            <img src="../assets/images/grid9.png" alt="ejemplo grid areas" class="img">
+            <div class="grid grid2 grid8">
+                <div id="headerGrid2">header</div>
+                <div  id="divGrid2">columna 1</div>
+                <div>fila 1 columna 2</div>
+                <div>fila 1 columna 3</div>
+                <div>fila 2 columna 2</div>
+                <div>fila 2 columna 3</div>
+                <div id="footerGrid2">footer</div>
             </div>
         </section>
     </main>
