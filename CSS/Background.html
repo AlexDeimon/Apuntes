@@ -31,6 +31,65 @@
                 <div class="div3" id="bg-color"></div>
             </article>
             <article>
+                <h3 class="titulo3">Background: gradient:</h3>
+                <p>Los gradientes consisten en una transición progresiva entre dos o más colores.</p>
+                <h4 class="titulo4">Gradiente lineal: </h4>
+                <p>Los degradados lineales cambian de color progresivamente a lo largo de una línea imaginaria. Se generan con la función linear-gradient(). Sus argumentos son: </p>
+                <ol class="lista">
+                    <li>Dirección de la linea de degradado: 
+                        <ul>
+                            <li>Palabras clave: Consta de la palabra to y hasta dos palabras clave: una indica el lado horizontal (left o right), y la otra el lado vertical (top o bottom). El orden de las palabras clave secundarias no importa. Si no se especifica, el valor predeterminado es to bottom.</li>
+                            <li>Angulos: El ángulo de dirección de la línea de degradado. Los valores to top, to bottom, to left, y to right son equivalentes a los ángulos 0deg, 180deg, 270deg, y 90deg, respectivamente. Los otros valores giran en sentido de las agujas del relog desde 0deg.</li>
+                        </ul>
+                    </li>
+                    <li>Color y longitud: El color seguido de una o dos posiciones de parada opcionales (cada una de las cuales es al % o a una medida de longitud largo del eje del degradado).</li>
+                </ol>
+                <div class="main-section">
+                    <div class="div3" id="bg-gradient1"></div>
+                    <div class="div3" id="bg-gradient2">to left</div>
+                    <div class="div3" id="bg-gradient3">to top right</div>
+                    <div class="div3" id="bg-gradient4">60deg</div>
+                </div>
+                <h4 class="titulo4">Gradiente radial: </h4>
+                <p>Los degradados radiales cambian los colores progresivamente desde un punto central (origen). Se generan con la función radial-gradient(). Sus argumentos son: </p>
+                <ol class="lista">
+                    <li>Forma del degradado: El valor puede ser circle o ellipse.</li>
+                    <li>Posición del gradiente: interpretada de la misma manera que background-positiono transform-origin. Si no se especifica, el valor predeterminado es center.</li>
+                    <li>Tamaño: Si se omite, el valor predeterminado es la esquina más lejana. Se puede dar de forma explícita o por palabra clave. 
+                        <ul>
+                            <li>closest-side: La forma final del degradado se encuentra con el lado del cuadro más cercano a su centro (para círculos) o con los lados vertical y horizontal más cercanos al centro (para elipses).</li>
+                            <li>closest-corner: El tamaño de la forma final del degradado se ajusta de manera que coincida exactamente con la esquina más cercana del cuadro desde su centro.</li>
+                            <li>farthest-side: Similar a closest-side, excepto que el tamaño de la forma final se ajusta al lado de la caja más alejado de su centro (o los lados vertical y horizontal).</li>
+                            <li>farthest-corner: El valor predeterminado, la forma final del degradado tiene un tamaño tal que coincida exactamente con la esquina más alejada del cuadro desde su centro.</li>
+                        </ul>
+                    </li>
+                    <li>Color y longitud.</li>
+                </ol>
+                <div class="main-section">
+                    <div class="div3" id="bg-gradient5">closest-side</div>
+                    <div class="div3" id="bg-gradient6">closest-corner</div>
+                    <div class="div3" id="bg-gradient7">farthest-side</div>
+                    <div class="div3" id="bg-gradient8">farthest-corner</div>
+                </div>
+                <h4 class="titulo4">Gradiente repetitivo: </h4>
+                <p>La repetición de degradados duplica un degradado tanto como sea necesario para rellenar un área determinada. Se generan con las funciones repeating-linear-gradient()y repeating-radial-gradient().</p>
+                <div class="main-section">
+                    <div class="div3" id="bg-gradient9"></div>
+                    <div class="div3" id="bg-gradient10"></div>
+                </div>
+                <h4 class="titulo4">Gradiente cónico: </h4>
+                <p>Los degradados cónicos cambian de color progresivamente alrededor de un círculo. Se generan con la función conic-gradient(). Sus argumentos son: </p>
+                <ol class="lista">
+                    <li>Ángulo: Precedido por from, y tomando un ángulo como su valor, define la rotación del gradiente en el sentido de las agujas del reloj.</li>
+                    <li>posición: Con los mismos valores que la propiedad background-position, la posición define el centro del degradado. Si se omite, el valor predeterminado es center, lo que significa que el degradado estará centrado.</li>
+                    <li>Color y longitud.</li>
+                </ol>
+                <div class="main-section">
+                    <div class="div3" id="bg-gradient11"></div>
+                    <div class="div3" id="bg-gradient12"></div>
+                </div>
+            </article>
+            <article>
                 <h3 class="titulo3">Background-image: </h3>
                 <p>La propiedad Background-image establece una o más imágenes de fondo en un elemento separadas por comas.</p>
                 <p>Las imágenes de fondo se dibujan apilando capas de contexto una encima de la otra. La primera capa especificada se dibuja como si fuera la más cercana al usuario.</p>

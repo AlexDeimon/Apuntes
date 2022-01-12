@@ -122,7 +122,7 @@
 }
 .div5{
     padding: 20px;
-    line-height: 260px;
+    line-height: 240px;
     font-family: fantasy;
     font-size: xx-large;
 }
@@ -190,6 +190,19 @@
 }
 .flex5{
     flex-flow: row wrap;
+}
+.flex6 div{
+    flex: 1;
+    margin: 10px;
+}
+.flex6 div:nth-of-type(3){
+    flex: 2;
+}
+.order1{
+    order: 1;
+}
+.order2{
+    order: 2;
 }
 .sinFlex div,
 .flex div{
@@ -823,6 +836,42 @@
     background: -webkit-linear-gradient(to right, rgba(31, 28, 24, 0.603), rgba(142, 14, 0, 0.61)), url("../assets/images/portada.jpg");  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, rgba(31, 28, 24, 0.603), rgba(142, 14, 0, 0.61)), url("../assets/images/portada.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
+} 
+#bg-gradient1{
+    background: linear-gradient(coral, darkblue);
+} 
+#bg-gradient2{
+    background: linear-gradient(to left, darkgoldenrod, darkgreen);
+} 
+#bg-gradient3{
+    background: linear-gradient(to top right, darkmagenta, darkorange, darkred);
+} 
+#bg-gradient4{
+    background: linear-gradient(60deg, dodgerblue, firebrick);
+} 
+#bg-gradient5{
+    background: radial-gradient(circle closest-side, forestgreen, gold);
+} 
+#bg-gradient6{
+    background: radial-gradient(ellipse closest-corner, forestgreen, gold);
+} 
+#bg-gradient7{
+    background: radial-gradient(ellipse farthest-side, forestgreen, gold);
+} 
+#bg-gradient8{
+    background: radial-gradient(ellipse farthest-corner, forestgreen, gold);
+} 
+#bg-gradient9{
+    background: repeating-linear-gradient(to top left, indigo, indigo 20px, lightskyblue 20px, lightskyblue 40px);
+} 
+#bg-gradient10{
+    background: repeating-radial-gradient(lightcoral, lightcoral 20px, lightgreen 20px, lightgreen 40px);
+} 
+#bg-gradient11{
+    background: conic-gradient(from 20deg, mediumslateblue, mediumseagreen);
+} 
+#bg-gradient12{
+    background: conic-gradient(from 10deg, midnightblue, peru, rebeccapurple);
 } 
 #traslate{
     color: lightcyan;

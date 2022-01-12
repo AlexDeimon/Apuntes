@@ -223,6 +223,56 @@
             <img src="../assets/images/flex1.png" alt="flex-direction y flex-wrap" class="img">
             <p>Se puede reemplazar por: </p>
             <img src="../assets/images/flex2.png" alt="flex-direction y flex-wrap" class="img">
+            <h3 class="titulo3">Tamaño flexible de elementos flexibles (propiedad flex): </h3>
+            <p><span class="resaltado">Por lo que entiendo...</span> flex es una propiedad similar al uso de unidades fr en Grid. Es un valor de proporción sin unidades que dicta cuánto espacio disponible a lo largo del eje principal ocupará cada elemento flexible en comparación con otros elementos flexibles.</p>
+            <img src="../assets/images/flex3.png" alt="ejemplo flex" class="img">
+            <p>En este caso, estamos dando a cada elemento div el mismo valor (un valor de 1), lo que significa que todos ocuparán la misma cantidad de espacio libre que queda después de que se hayan establecido propiedades como padding y margin.</p>
+            <img src="../assets/images/flex4.png" alt="ejemplo flex 2" class="img"> 
+            <p>Ahora hay cuatro unidades de proporción disponibles en total. Los dos primeros elementos flexibles tienen una unidad cada uno, por lo que cada uno ocupa 1/4 del espacio disponible. El tercero tiene dos unidades, por lo que ocupa 2/4 del espacio disponible.</p>
+            <div class="flex flex6 flex5">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, minus deserunt, magni et ratione repudiandae totam provident mollitia corporis voluptas itaque possimus repellendus suscipit reiciendis, aut molestiae error nulla. Nobis.</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora autem sequi perspiciatis ratione animi nostrum laboriosam dolore eaque voluptates, voluptatum illum unde aperiam asperiores doloremque fuga, labore ad, ipsam blanditiis.</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quis, enim sapiente sint deserunt dicta magnam autem corrupti officia illo ipsa. Dolorem velit soluta laudantium minus sunt, ipsa saepe similique.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum sit, vero aut, adipisci ex minus quas non est voluptate incidunt dolorem deleniti accusantium maxime tempora. Possimus quod quae consequuntur at!</p>
+                </div>
+            </div>
+            <p>También se puede especificar un valor de tamaño mínimo dentro del valor flexible, lo cual permite que cada elemento flexible reciba primero un tamaño mínimo del espacio disponible. Después de eso, el resto del espacio disponible se compartirá de acuerdo con las unidades de proporción.</p>
+            <h3 class="titulo3">Orden de elementos flexibles (propiedad order): </h3>
+            <p>Flexbox también tiene una función para cambiar el orden de diseño de los elementos flexibles sin afectar el orden de origen.</p>
+            <ul class="lista">
+                <li>De forma predeterminada, todos los elementos flexibles tienen un valor order de 0.</li>
+                <li>Los elementos flexibles con valores de order especificados más altos aparecerán más tarde en el orden de visualización que los artículos con valores de order más bajos.</li>
+                <li>Los elementos flexibles con el mismo valor de order aparecerán en su orden de origen. Entonces, si hay cinco elementos cuyos valores de orden se han establecido como 1, 0, 2, 2 y 0 respectivamente, su orden de visualización sería 2, 5, 1, 3 y 4.</li>
+                <li>El tercer elemento aparece después del segundo porque tiene el mismo valor de order y está después en el orden de origen.</li>
+            </ul>
+            <div class="flex flex5">
+                <div class="order1">
+                    <p>Elemento 1</p>
+                    <p>order 1</p>
+                </div>
+                <div>
+                    <p>Elemento 2</p>
+                    <p>order 0</p>
+                </div>
+                <div class="order2">
+                    <p>Elemento 3</p>
+                    <p>order 2</p>
+                </div>
+                <div class="order2">
+                    <p>Elemento 4</p>
+                    <p>order 2</p>
+                </div>
+                <div>
+                    <p>Elemento 5</p>
+                    <p>order 0</p>
+                </div>
+            </div>
+            <p><span class="resaltado">En los elementos flexibles no tienen efecto las propiedades float, clear y vertical-align.</span></p>
         </section>
     </main>
 </body>
