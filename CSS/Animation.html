@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Animaciones</h2>
+            <p>Las animaciones CSS permiten animar transiciones de una configuración de estilo CSS a otra. Las animaciones constan de dos componentes, un estilo que describe la animación CSS y un conjunto de fotogramas clave que indican los estados inicial y final del estilo de la animación, así como los posibles puntos intermedios.</p>
+            <p>Para crear una secuencia de animación CSS, se aplica el estilo al elemento que se desea animar con la propiedad animation y sus sub-propiedades. Con ellas es posible no solo configurar el ritmo y la duración de la animación sino otros detalles sobre la secuencia de la animación. Con ellas no se configura la apariencia actual de la animación, para ello esta la regla @keyframes.</p>
+            <h3 class="titulo3">Sub-propiedades: </h3>
+            <ul class="lista">
+                <li>animation-name: Especifica el nombre de la regla @keyframes que describe los fotogramas de la animación.
+                    <ul>
+                        <li>@keyframes: Se definen como una regla independiente, primero @keyframes seguido de un espacio y el nombre de la animación que sera el valor de animation-name. Dentro se definen los keyframes que controlaran el flujo de la animación, esto mediante % para indicar en qué momento de la secuencia de la animación tiene lugar. 0% es el principio, 100% es el estado final de la animación. Es importante especificar estos dos momentos para que el navegador sepa dónde debe comenzar y finalizar; debido a su importancias, estos dos momentos tienen palabras clave: from y to.</li>
+                    </ul>
+                </li>
+                <li>animation-duration: Indica la cantidad de tiempo que la animación consume en completar su ciclo.</li>
+                <li>animation-iteration-count: Por defecto, la animación se ejecuta una sola vez al cargar la página, pero con esta propiedad se puede especificar el número de veces que se repite. Tambien se puede indicar infinite para repetir la animación indefinidamente.</li>
+                <li>animation-direction: Indica si la animación debe retroceder hasta el keyframe de inicio al finalizar la secuencia o si debe comenzar desde el principio al llegar al final.
+                    <ul>
+                        <li>normal: Valor por defecto, inicia en el 0% y termina en el 100%, esto hace que si se repite la animación, esta empiece de golpe.</li>
+                        <li>reverse: Cada ciclo de la animación se reproduce al revés. Cada vez que comienza un ciclo de animación, ésta se posiciona en el estado final y comienza desde ahí.</li>
+                        <li>alternate: La animación, al terminar un ciclo, invierte su dirección. Es decir, los pasos de la animación se ejecutan al revés. Además, las funciones de tiempo también se invierten; por ejemplo una animación ease-in se convierte en una animación con ease-out cuando se reproduce al revés.</li>
+                        <li>alternate-reverse: Es similar a alternate pero la animación se reproduce al revés. Es decir la animación se posiciona en el estado final, comienza a reproducirse al reves y, cuando llega al inicio vuelve a reproducirse de forma normal hasta llegar al final de la secuencia. </li>
+                    </ul>
+                </li>
+                <li>animation-fill-mode: Especifica qué valores tendrán las propiedades después de finalizar la animación (los de antes de ejecutarla, los del último keyframe de la animación o ambos).
+                    <ul>
+                        <li>none: Valor por defecto.La animación no aplicará los estilos antes ni después de su ejecución.</li>
+                        <li>forwards: El objeto sobre el que se aplica la animación quedará con los valores y estilos que le aplique el último keyframe de la ejecución de la animación. El último valor dependerá del valor de animation-direction y animation-iteration-count.</li>
+                        <li>backwards: La animación aplicará los valores definidos en el primer keyframe tan pronto como se aplique al objeto, y los retendrá durante el tiempo de animation-delay. El primer keyframe dependerá del valor de animation-direction.</li>
+                        <li>both: La animación seguirá las reglas de las opciones forwards y backwards, extendiendo las propiedades de la animación en ambas direcciones.</li>
+                    </ul>
+                </li>
+                <li>animation-delay: Tiempo de retardo entre el momento en que el elemento se carga y el comienzo de la secuencia de la animación.</li>
+                <li>animation-timing-function: Indica el ritmo de la animación, es decir, como se muestran los keyframes de la animación, estableciendo curvas de aceleración.
+                    <ul>
+                        <li>linear: Se realiza a una tasa constante de principio a fin.</li>
+                        <li>ease: Comienza lentamente, acelera bruscamente y luego se ralentiza gradualmente hacia el final. Es similar a ease-in-out, aunque acelera más bruscamente al principio. Es el valor por defecto.</li>
+                        <li>ease-in: Comienza lentamente y luego se acelera progresivamente hasta el final, momento en el que se detiene abruptamente.</li>
+                        <li>ease-in-out: Comienza lentamente, se acelera y luego se ralentiza hacia el final.  Al principio, se comporta como la función ease-in; al final, es como la función ease-out.</li>
+                        <li>ease-out: Comienza abruptamente y luego se ralentiza progresivamente hacia el final.</li>
+                    </ul>
+                </li>
+                <li>animation-play-state: Permite pausar y reanudar la secuencia de la animación.
+                    <ul>
+                        <li>running: La animación se está ejecutando.</li>
+                        <li>paused: La animación está pausada.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3 class="ejemplo">Ejemplos: </h3>
+            <div class="main-section">
+                <img src="../assets/images/animation1.png" alt="ejemplo animacion corazon">
+                <img src="../assets/images/animation2.png" alt="ejemplo animacion sharingan">
+                <img src="../assets/images/animation3.png" alt="ejemplo animacion login">
+            </div>
+            <div class="main-section">
+                <div id="animation1"><img src="https://img.icons8.com/office/80/000000/hearts.png"/></div>
+            </div>
+            <div class="main-section">
+                <div id="animation2"></div><div id="animation2"></div>
+            </div>
+            <div id="progress"><div id="animation3"></div></div>
+        </section>
+    </main>
+</body>
+</html>
