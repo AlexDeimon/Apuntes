@@ -210,6 +210,53 @@
     background-color: dodgerblue;
     border: 2px solid darkorchid;
 }
+input:checked + label {
+    color: darkcyan;
+}
+option:checked {
+    color: darkturquoise;
+}
+input:default + label {
+    color: firebrick;
+}
+li:empty{
+    background-color: forestgreen;
+}
+.ejem-child p:nth-child(odd){
+    color: purple;
+    background-color: red;
+}
+.ejem-child p:nth-child(even){
+    color: teal;
+    background-color: turquoise;
+}
+.ejem-child p:first-child{
+    color: lightcoral;
+    background-color: lightgreen;
+}
+.ejem-child p:last-child{
+    color: maroon;
+    background-color: mediumaquamarine;
+}
+.ejem-type li:nth-of-type(odd){
+    color: yellowgreen;
+    background-color: black;
+}
+.ejem-type li:nth-of-type(even){
+    color: cornflowerblue;
+    background-color: darkblue;
+}
+.ejem-type li:first-of-type{
+    color: goldenrod;
+    background-color: indigo;
+}
+.ejem-type li:last-of-type{
+    color: mediumvioletred;
+    background-color: powderblue;
+}
+.ejem-focus:focus{
+    box-shadow: 0px 0px 10px 5px limegreen;
+}
 #tituloid{
     padding-left: 2%;
     font-family: 'Exo 2', sans-serif;
@@ -1065,4 +1112,19 @@
 @keyframes progres{
     from{ width: 0%; }
     to{ width: 100%; }
+}
+#a-active{
+    color: tomato;
+}
+#a-active:active{
+    color: cadetblue;
+}
+#button-active{
+    background-color: yellow;
+    color: blueviolet;
+    border-radius: 10px;
+}
+#button-active:active{
+    color: cadetblue;
+    background-color: cyan;
 }
