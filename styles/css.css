@@ -1128,3 +1128,30 @@ li:empty{
     color: cadetblue;
     background-color: cyan;
 }
+#after::after{
+    content: "  <-- Soy un pseudoelemento after -->";
+    color: coral;
+    text-decoration: underline;
+}
+#before::before{
+    content: "<-- Soy un pseudoelemento before -->  ";
+    color: cornflowerblue;
+    text-decoration: underline;
+}
+#first-letter::first-letter{
+    color: gold;
+    font-family: 'Exo 2', sans-serif;
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: bolder;
+}
+#first-line::first-line{
+    color: greenyellow;
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: bolder;
+}
+#selection::selection{
+    color: khaki;
+    background-color: lightseagreen;
+}
