@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Estilos para formularios</h2>
+            <p>Mediante pseudoclases es posible agregar estilos a los elementos input de los formularios segun el estado en el que se encuentren.</p>
+            <h3 class="titulo3">pseudoclases para formularios: </h3>
+            <ul class="lista">
+                <li>:checked representa cualquier radio, checkbox u option que está marcado o conmutado a un estado on.</li>
+                <li>:default representa cualquier elemento de formulario que sea el predeterminado entre un grupo de elementos relacionados. Este selector se puede usar en los elementos button, checkbox, radio y option.</li>
+                <li>:disabled representa a cualquier elemento deshabilitado. Un elemento se encuentra deshabilitado si no puede ser activado ni aceptar el foco.</li>
+                <li>:enabled representa cualquier elemento habilitado. Un elemento está habilitado si puede ser activado o si accepta el foco.</li>
+                <li>:focus: representa un elemento que ha recibido el foco. Generalmente se activa cuando el usuario hace clic, toca un elemento o lo selecciona con la tecla "Tab" del teclado.</li>
+                <li>:indeterminate representa cualquier elemento de formulario cuyo estado sea indeterminado.</li>
+                <li>:in-range representa un elemento input cuyo valor actual se encuentra dentro de los límites de rango especificados por los atributos min y max.</li>
+                <li>:out-of-range representa un elemento input cuyo valor actual está fuera de los límites de rango especificados por los atributos min y max.</li>
+                <li>:invalid representa cualquier elemento input u otro elemento form cuyos contenidos no se puedan validar.</li>
+                <li>:valid representa cualquier elemento input u otro elemento form cuyo contenido se valide satisfactoriamente. Esto permite que los campos válidos adopten fácilmente una apariencia que ayuda al usuario a confirmar que sus datos están formateados correctamente.</li>
+                <li>:optional representa cualquier elemento input, select, o textarea que no tenga el atributo required establecido en él.</li>
+                <li>:required de CSS representa cualquier elemento input, select, o textarea que tenga el atributo required establecido en él.</li>
+                <li>:read-only representa un elemento que ya no es editable por el usuario.</li>
+                <li>:read-write representa un elemento que es editable por el usuario.</li>
+            </ul>
+            <h3 class="ejemplo">Ejemplos: </h3>
+            <div class="main-section">
+                <img src="../assets/images/formstyles.png" alt="ejemplo estilos formulario">
+                <img src="../assets/images/formstyles2.png" alt="ejemplo 2 estilos formulario">
+            </div>
+            <form>
+                <input type="radio" name="my-input">
+                <label>HTML</label> 
+                <input type="radio" name="my-input" checked>
+                <label>CSS</label>
+                <input type="radio" name="my-input">
+                <label>JavaScript</label> <br>
+                <input type="text" placeholder="desabilitado" disabled>
+                <input type="text" placeholder="habilitado">
+                <input type="text" placeholder="clic aqui (focus)" class="ejem-focus"><br>
+                <input class="ejem-range" type="number" placeholder="1 a 10" min="1" max="10" value="12">
+                <label for="value1"> </label><br>
+                <input class="ejem-valid" type="email" placeholder="Escribe un email">
+                <label for="value1"> </label><br>
+                <input type="text" readonly placeholder="solo lectura">
+            </form>
+        </section>
+    </main>
+</body>
+</html>

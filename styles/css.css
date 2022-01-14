@@ -210,6 +210,11 @@
     background-color: dodgerblue;
     border: 2px solid darkorchid;
 }
+form{
+    margin-left: 2%;
+    color: white;
+    font-family:  'Roboto', sans-serif;
+}
 input:checked + label {
     color: darkcyan;
 }
@@ -218,6 +223,12 @@ option:checked {
 }
 input:default + label {
     color: firebrick;
+}
+input:disabled{
+    background-color: lightslategrey;
+}
+input:enabled{
+    border: 1px solid mediumblue;
 }
 li:empty{
     background-color: forestgreen;
@@ -256,6 +267,37 @@ li:empty{
 }
 .ejem-focus:focus{
     box-shadow: 0px 0px 10px 5px limegreen;
+}
+.ejem-range:in-range{
+    background-color: mediumseagreen;
+}
+.ejem-range:out-of-range{
+    background-color: orangered;
+}
+.ejem-range:in-range + label::after {
+    content: 'Dentro del rango';
+    color: mediumseagreen;
+}
+.ejem-range:out-of-range + label::after {
+    content: 'Fuera del rango';
+    color: orangered;
+}
+.ejem-valid:valid{
+    background-color: mediumseagreen;
+}
+.ejem-valid:invalid{
+    background-color: orangered;
+}
+.ejem-valid:valid + label::after {
+    content: 'email valido';
+    color: mediumseagreen;
+}
+.ejem-valid:invalid + label::after {
+    content: 'email no valido';
+    color: orangered;
+}
+input:read-only::placeholder{
+    color: red;
 }
 #tituloid{
     padding-left: 2%;
