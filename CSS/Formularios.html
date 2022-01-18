@@ -24,7 +24,6 @@
     <main>
         <section>
             <h2 class="titulo2">Estilos para formularios</h2>
-            <p>Mediante pseudoclases es posible agregar estilos a los elementos input de los formularios segun el estado en el que se encuentren.</p>
             <h3 class="titulo3">pseudoclases para formularios: </h3>
             <ul class="lista">
                 <li>:checked representa cualquier radio, checkbox u option que está marcado o conmutado a un estado on.</li>
@@ -42,6 +41,20 @@
                 <li>:read-only representa un elemento que ya no es editable por el usuario.</li>
                 <li>:read-write representa un elemento que es editable por el usuario.</li>
             </ul>
+            <h3 class="titulo3">Pseudoelemento & pseudoclase de placeholder: </h3>
+            <ul class="lista">
+                <li>::placeholder representa el texto de marcador de posición en un elemento input o textarea. </li>
+                <li>:placeholder-shown: le da estilo a un texto de marcador de un elemento input o textarea que tiene un marcador de posición activo.</li>
+            </ul>
+            <h3 class="titulo3">propiedad resize: </h3>
+            <p>establece si un elemento es redimensionable y, de ser así, en qué direcciones. Admite los valores: </p>
+            <ul class="lista">
+                <li>none: El elemento no ofrece ningún método controlable por el usuario para cambiar su tamaño.</li>
+                <li>both: El elemento muestra un mecanismo para permitir que el usuario cambie su tamaño, que se puede cambiar de tamaño tanto horizontal como verticalmente.</li> 
+                <li>horizontal: El elemento muestra un mecanismo que permite al usuario cambiar su tamaño en la dirección horizontal.</li>
+                <li>vertical: El elemento muestra un mecanismo que permite al usuario cambiar su tamaño en dirección vertical</li>
+            </ul>
+            <p>Un textarea tiene esta propiedad cuyo valor por defecto es both.</p>
             <h3 class="ejemplo">Ejemplos: </h3>
             <div class="main-section">
                 <img src="../assets/images/formstyles.png" alt="ejemplo estilos formulario">
@@ -61,7 +74,8 @@
                 <label for="value1"> </label><br>
                 <input class="ejem-valid" type="email" placeholder="Escribe un email">
                 <label for="value1"> </label><br>
-                <input type="text" readonly placeholder="solo lectura">
+                <input type="text" readonly placeholder="solo lectura"><br>
+                <textarea cols="30" rows="10"></textarea>
             </form>
         </section>
     </main>
