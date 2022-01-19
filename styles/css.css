@@ -1243,3 +1243,36 @@ input:read-only::placeholder{
     color: khaki;
     background-color: lightseagreen;
 }
+#blur{
+    filter: blur(3px);
+}
+#brightness1{
+    filter: brightness(0.5);
+}
+#brightness2{
+    filter: brightness(1.5);
+}
+#contrast{
+    filter: contrast(0.5);
+}
+#drop-shadow{
+    filter: drop-shadow(10px 5px 5px lightskyblue);
+}
+#grayscale{
+    filter: grayscale(0.8);
+}
+#hue-rotate{
+    filter: hue-rotate(120deg);
+}
+#invert{
+    filter: invert(1);
+}
+#opacity2{
+    filter: opacity(0.5);
+}
+#saturate{
+    filter: saturate(2.5);
+}
+#sepia{
+    filter: sepia(1);
+}
