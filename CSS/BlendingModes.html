@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blending modes</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Modos de fusión</h2>
+            <h3 class="titulo3">background-blend-mode: </h3>
+            <p>La propiedad background-blend-mode establece cómo las imágenes de fondo de un elemento deben combinarse entre sí con el color de fondo del elemento.</p>
+            <h3 class="titulo3">mix-blend-mode: </h3>
+            <p>Los modos de fusión describen cómo deben aparecer los colores cuando los elementos se superponen. </p>
+            <h3 class="titulo3">Valores: </h3>
+            <ul class="lista">
+                <li>normal: El color final es el color superior, independientemente del color inferior. El efecto es como dos trozos de papel opaco superpuestos.</li>
+                <li>multiply: El color final es el resultado de multiplicar los colores superior e inferior. Una capa negra conduce a una capa final negra y una capa blanca no produce ningún cambio. El efecto es como dos imágenes superpuestas impresas en una película transparente.</li>
+                <li>screen: El color final es el resultado de invertir los colores, multiplicarlos e invertir ese valor. Una capa negra conduce a ningún cambio y una capa blanca conduce a una capa final blanca. El efecto es como dos imágenes proyectadas en una pantalla de proyección.</li>
+                <li>overlay: El color final es el resultado de multiply si el color de fondo es más oscuro o screen si el color de fondo es más claro. Este modo de fusión es equivalente a hard-light pero con las capas intercambiadas.</li>
+                <li>darken: El color final se compone de los valores más oscuros de cada canal de color.</li>
+                <li>lighten: El color final se compone de los valores más claros de cada canal de color.</li>
+                <li>color-dodge: El color final es el resultado de dividir el color de abajo por el inverso del color de arriba. Un primer plano negro no conduce a ningún cambio. Un primer plano con el color inverso del fondo conduce a un color completamente iluminado. Este modo de fusión es similar a screen, pero el primer plano solo necesita ser tan claro como el inverso del fondo para crear un color totalmente iluminado.</li>
+                <li>color-burn: El color final es el resultado de invertir el color inferior, dividir el valor por el color superior e invertir ese valor. Un primer plano blanco no conduce a ningún cambio. Un primer plano con el color inverso del fondo conduce a una imagen final en negro. Este modo de fusión es similar a multiply, pero el primer plano solo necesita ser tan oscuro como el inverso del fondo para que la imagen final sea negra.</li>
+                <li>hard-light: El color final es el resultado de multiplysi el color superior es más oscuro o screensi el color superior es más claro. Este modo de fusión es equivalente a overlaypero con las capas intercambiadas. El efecto es similar a iluminar con un foco duro el telón de fondo.</li>
+                <li>soft-light: El color final es similar al hard-light, pero más suave. El efecto es similar al de una luz difusa sobre el fondo.</li>
+                <li>difference: El color final es el resultado de restar el más oscuro de los dos colores al más claro. Una capa negra no tiene ningún efecto, mientras que una capa blanca invierte el color de la otra capa.</li>
+                <li>exclusion: El color final es similar a difference, pero con menos contraste. Al igual que con difference, una capa negra no tiene ningún efecto, mientras que una capa blanca invierte el color de la otra capa.</li>
+                <li>hue: El color final tiene la tonalidad del color superior, mientras que utiliza la saturación y la luminosidad del color inferior.</li>
+                <li>saturation: El color final tiene la saturación del color superior, mientras usa el matiz y la luminosidad del color inferior. Un fondo gris puro, sin saturación, no tendrá ningún efecto.</li>
+                <li>color: El color final tiene el matiz y la saturación del color superior, mientras usa la luminosidad del color inferior. El efecto conserva los niveles de gris y se puede utilizar para colorear el primer plano.</li>
+                <li>luminosity: El color final tiene la luminosidad del color superior, mientras usa el tono y la saturación del color inferior. Este modo de fusión es equivalente a color, pero con las capas intercambiadas.</li>
+            </ul>
+            <h3 class="ejemplo">Ejemplos:</h3>
+            <div class="main-section">
+                <div class="div3 bm">normal</div>
+                <div class="div3 bm" id="bm2">multiply</div>
+                <div class="div3 bm" id="bm3">screen</div>
+                <div class="div3 bm" id="bm4">overlay</div>
+                <div class="div3 bm" id="bm5">darken</div>
+                <div class="div3 bm" id="bm6">lighten</div>
+                <div class="div3 bm" id="bm7">color-dodge</div>
+                <div class="div3 bm" id="bm8">color-burn</div>
+                <div class="div3 bm" id="bm9">hard-light</div>
+                <div class="div3 bm" id="bm10">soft-light</div>
+                <div class="div3 bm" id="bm11">difference</div>
+                <div class="div3 bm" id="bm12">exclusion</div>
+                <div class="div3 bm" id="bm13">hue</div>
+                <div class="div3 bm" id="bm14">saturation</div>
+                <div class="div3 bm" id="bm15">color</div>
+                <div class="div3 bm" id="bm16">luminosity</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

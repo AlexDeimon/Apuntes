@@ -299,6 +299,14 @@ li:empty{
 input:read-only::placeholder{
     color: red;
 }
+.bm{
+    background: url('../assets/images/portada.jpg'), springgreen;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    font-weight: bold;
+}
 #tituloid{
     padding-left: 2%;
     font-family: 'Exo 2', sans-serif;
@@ -1275,4 +1283,49 @@ input:read-only::placeholder{
 }
 #sepia{
     filter: sepia(1);
+}
+#bm2{
+    background-blend-mode: multiply;
+}
+#bm3{
+    background-blend-mode: screen;
+}
+#bm4{
+    background-blend-mode: overlay;
+}
+#bm5{
+    background-blend-mode: darken;
+}
+#bm6{
+    background-blend-mode: lighten;
+}
+#bm7{
+    background-blend-mode: color-dodge;
+}
+#bm8{
+    background-blend-mode: color-burn;
+}
+#bm9{
+    background-blend-mode: hard-light;
+}
+#bm10{
+    background-blend-mode: soft-light;
+}
+#bm11{
+    background-blend-mode: difference;
+}
+#bm12{
+    background-blend-mode: exclusion;
+}
+#bm13{
+    background-blend-mode: hue;
+}
+#bm14{
+    background-blend-mode: saturation;
+}
+#bm15{
+    background-blend-mode: color;
+}
+#bm16{
+    background-blend-mode: luminosity;
 }
