@@ -299,7 +299,8 @@ li:empty{
 input:read-only::placeholder{
     color: red;
 }
-.bm{
+.bm,
+.cp{
     background: url('../assets/images/portada.jpg'), springgreen;
     background-position: center;
     background-repeat: no-repeat;
@@ -1328,4 +1329,16 @@ input:read-only::placeholder{
 }
 #bm16{
     background-blend-mode: luminosity;
+}
+#cp2{
+    clip-path: inset(10% 20% 10% 20%);
+}
+#cp3{
+    clip-path: circle(40% at 50% 50%);
+}
+#cp4{
+    clip-path: ellipse(40% 20% at 50% 50%);
+}
+#cp5{
+    clip-path: polygon(0 20%, 10% 0, 90% 0, 100% 20%, 50% 100%);
 }

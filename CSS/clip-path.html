@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip-path</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Clip-path</h2>
+            <p>La propiedad Clip-path crea una región de recorte que establece qué parte de un elemento debe mostrarse. Se muestran las partes que están dentro de la región, mientras que las que están fuera están ocultas.</p>
+            <h3 class="titulo3">Valores:</h3>
+            <ul class="lista">
+                <li>clip-source: Una url()referencia a un elemento SVG clipPath.</li>
+                <li>basic-shape: Una forma cuyo tamaño y posición están definidos por el valor geometry-box. Si no se especifica ningún geometry-box, border-box se utilizará como cuadro de referencia. Uno de:
+                    <ul>
+                        <li>inset(): Define un rectángulo insertado.</li>
+                        <li>circle(): Define un círculo utilizando un radio y una posición.</li>
+                        <li>ellipse(): Define una elipse utilizando dos radios y una posición.</li>
+                        <li>polygon(): Define un polígono usando una regla de relleno SVG y un conjunto de vértices.</li>
+                        <li>path(): Define una forma usando una regla de relleno SVG y una definición de ruta SVG.</li> 
+                    </ul>
+                </li>
+                <li>geometry-box: Si se especifica en combinación con basic-shape, este valor define el cuadro de referencia para la forma básica. Si se especifica por sí mismo, hace que los bordes del cuadro especificado, incluida cualquier forma de esquina (como un border-radius), sean la ruta de recorte. El cuadro de geometría puede tener uno de los siguientes valores:
+                    <ul>
+                        <li>margin-box: Utiliza el cuadro de margen como cuadro de referencia.</li>
+                        <li>border-box: Utiliza el cuadro de borde como cuadro de referencia.</li>
+                        <li>padding-box: Utiliza el cuadro de relleno como cuadro de referencia.</li>
+                        <li>content-box: Utiliza el cuadro de contenido como cuadro de referencia.</li>
+                        <li>fill-box: Utiliza el cuadro delimitador del objeto como cuadro de referencia.</li>
+                        <li>stroke-box: Utiliza el cuadro delimitador del trazo como cuadro de referencia.</li>
+                        <li>view-box: Utiliza la ventana gráfica SVG más cercana como cuadro de referencia. Si viewBox se especifica un atributo para el elemento que crea la ventana gráfica SVG, el cuadro de referencia se coloca en el origen del sistema de coordenadas establecido por el atributo viewBox y la dimensión del tamaño del cuadro de referencia se establece en los valores de ancho y alto del atributo viewBox.</li>
+                    </ul>
+                </li>
+                <li>none: No se crea ninguna ruta de recorte.</li>
+            </ul>
+            <h3 class="ejemplo">Ejemplos: </h3>
+            <img src="../assets/images/clip-path.png" alt="ejemplos clip-path" class="img">
+            <div class="main-section">
+                <div class="div3 bm">none</div>
+                <div class="div3 cp" id="cp2">inset</div>
+                <div class="div3 cp" id="cp3">circle</div>
+                <div class="div3 cp" id="cp4">ellipse</div>
+                <div class="div3 cp" id="cp5">polygon</div>
+            </div>                
+        </section>
+    </main>
+</body>
+</html>
