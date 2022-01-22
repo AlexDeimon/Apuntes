@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables CSS</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Variables CSS</h2>
+            <p>Las propiedades personalizadas (a veces denominadas variables CSS o variables en cascada) son entidades definidas por los autores de CSS que contienen valores específicos para reutilizar en un documento.</p>    
+            <p>Los nombres de propiedad que tienen el prefijo --, como --example-name, representan propiedades personalizadas que contienen un valor que se puede usar en otras declaraciones usando la función var().</p>      
+            <p>Los sitios web complejos tienen una gran cantidad de CSS, a menudo con muchos valores repetidos. Por ejemplo, el mismo color puede usarse en cientos de lugares diferentes, lo que requiere una búsqueda global y reemplazo si ese color necesita cambiar. Las propiedades personalizadas permiten que un valor se almacene en un lugar y luego se haga referencia en muchos otros lugares. Un beneficio adicional son los identificadores semánticos. Por ejemplo, --main-text-colores más fácil de entender que #00ff00, especialmente si este mismo color también se usa en otros contextos.</p>
+            <h3 class="titulo3">Uso básico: </h3>
+            <p>La declaración de una propiedad personalizada se realiza mediante un nombre de propiedad personalizada que comienza con un guión doble ( --) y un valor de propiedad que puede ser cualquier valor CSS válido.  Una práctica recomendada común es definir propiedades personalizadas en la pseudoclase :root, de modo que se pueda aplicar globalmente en el documento HTML. Para utilizar el valor de la propiedad personalizada se especifica el nombre de esta dentro de la función var(), en lugar de un valor de propiedad normal.</p>
+            <div class="main-section">
+                <img src="../assets/images/variables1.png" alt="ejemplo variables css 1">
+                <img src="../assets/images/variables2.png" alt="ejemplo variables css 2">
+            </div>
+            <h3 class="titulo3">Valores alternativos:</h3>
+            <p>Usando la función var(), puede definir múltiples valores de respaldo cuando la variable dada aún no está definida.</p>
+            <p>El primer argumento de la función es el nombre del propiedad personalizada. El segundo argumento de la función, si se proporciona, es un valor alternativo, que se utiliza como valor de sustitución cuando se hace referencia a un valor de propiedad personalizada no valido. La función solo acepta dos parámetros, asignando todo lo que sigue a la primera coma como segundo parámetro.</p>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,141 +1,177 @@
-*{
-    box-sizing: border-box;
+/*ESTILOS GENERALES PARA TODO EL SITIO WEB*/
+:root{
+    --max-width: 90%;
+    --margin-padding_0: 0;
+    --margin_padding_1: 3%;
+    --margin_padding_auto: auto;
+    --justify-aling-center: center;
+    --font-normal: 'Roboto', sans-serif;
+    --font-title: 'Exo 2', sans-serif;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-blue-1: #448cff;
+    --color-blue-2: #00b5fd;
+    --border-radius: 30px;
 }
+
 body{
     background-color: #1d232f;
 }
-p{
-    margin-left: 2%;
-    margin-right: 2%;
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
-}
+
 figure{
-    margin: 0 0 0 2%;
+    margin: var(--margin-padding_0) var(--margin-padding_0) var(--margin-padding_0) var(--margin_padding_1);
 }
+
+p,
+.titulo1,
+.lista{
+    margin-left: var(--margin_padding_1);
+    margin-right: var(--margin_padding_1);
+    font-family: var(--font-normal);
+    color: var(--color-white);
+}
+
 .header{
-    background-color: black;
+    background-color: var(--color-black);
 }
+
 .titulo1{
-    padding: 2%;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
+    display: inline-block;
 }
+
 .titulo2,
 .titulo3,
 .titulo4,
 .ejemplo{
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: var(--margin_padding_1);
+    margin-right: var(--margin_padding_1);
 }
+
 .titulo2{
     color: #ff4747;
 }
+
 .titulo3{
     color: #ff9d47;
 }
+
 .titulo4{
     color: #6ae96d;
 }
+
 .ejemplo{
-    color: #448cff;
+    color: var(--color-blue-1);
 }
+
 .resaltado{
-    font-family: 'Exo 2', sans-serif;
+    font-family: var(--font-title);
     color: #ff4747;
 }
+
 .blank{
-    color:#fff;
+    color:var(--color-white);
 }
+
 .main-section{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: var(--justify-aling-center);
+    align-items: var(--justify-aling-center);
     flex-wrap: wrap;
 }
+
 .caja, 
 .caja1{
-    margin: 5%;
-    border-radius: 30px; 
+    margin: 5% 5% var(--margin-padding_0);
+    border-radius: var(--border-radius); 
     background-color: #181c27;
 }
+
 .caja1{
     width: 290px;
     padding-top: 2%;
 }
+
 .cajaHTML{
     border: 1px solid #f33d00;
 }
+
 .cajaCSS{
-    border: 1px solid #00b5fd;
+    border: 1px solid var(--color-blue-2);
 }
+
 .link{
-    font-family: 'Exo 2', sans-serif;
-    color: #448cff;
+    font-family: var(--font-title);
+    color: var(--color-blue-1);
 }
-.lista{
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    margin-left: 1%;
-}
+
 .img, 
 .video{
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: var(--max-width);
+    margin-left: var(--margin_padding_auto);
+    margin-right: var(--margin_padding_auto);
     display: block;
 }
+
 figure .titulo4{
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: var(--margin-padding_0);
+    margin-bottom: var(--margin-padding_0);
 }
+
 .main-section > img{
-    max-width: 90%;
+    max-width: var(--max-width);
 }
+
 .header a,
 .caja1 a{
     text-decoration: none;
 }
+
 .caja img{
     height: 326px;
     width: 300px;
 }
+
 .lista h3,
 .lista h4{
-    margin-left: 0%;
+    margin-left: var(--margin-padding_0);
 }
+
 .lista li,
 .lista dt{
     line-height: 1.5;
 }
+
 .titulo2,
 .ejemplo,
 .titulo3,
 .titulo4,
 .caja1 .titulohtml,
 .caja1 .titulocss{
-    font-family: 'Exo 2', sans-serif;
+    font-family: var(--font-title);
 }
+
 .cajaHTML:hover{
     box-shadow: 0px 0px 20px 10px #f33d00;
 }
+
 .cajaCSS:hover{
-    box-shadow: 0px 0px 20px 10px #00b5fd;
+    box-shadow: 0px 0px 20px 10px var(--color-blue-2);
 }
+
 #linkA{
-    width: 250px;
+    width: 210px;
     display: block;
-    margin: 30px auto 0px;
-    padding: 20px 20px 0;
-    background-color: #000;
-    text-align: center;
+    margin: 30px var(--margin_padding_auto) var(--margin-padding_0);
+    padding: 20px 20px var(--margin-padding_0);
+    background-color: var(--color-black);
+    text-align: var(--justify-aling-center);
     text-decoration: none;
-    font-family: 'Exo 2', sans-serif;
-    color: #e7e7e7;
-    border-radius: 30px;
+    font-family: var(--font-title);
+    color: var(--color-white);
+    border-radius: var(--border-radius);
 }
+
 #linkA:hover{
-    box-shadow: 0px 0px 20px 10px #00b5fd;
-    color: #00b5fd;
+    box-shadow: 0px 0px 20px 10px var(--color-blue-2);
+    color: var(--color-blue-2);
 }
