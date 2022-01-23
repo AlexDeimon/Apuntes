@@ -25,81 +25,117 @@
         <section>
             <article>
                 <h2 class="titulo2">Elementos en bloque</h2>
-                <p>Los elementos de bloque van a ocupar todo el ancho disponible aunque su contenido no lo haga, por lo que los elementos que pongamos a continuación saltarán a la siguiente línea</p>
-                <h3 class="titulo3">Otros elementos en bloque</h3>
-                <ul class="lista">
-                    <li>&lt;address&gt;: Se utiliza para aportar información de contacto para el article más cercano o para todo el body</li>
-                    <li>&lt;blockquote&gt;: Se utiliza para marcar las citas a otros autores o documentos. Se puede incluir el atributo cite para poner un enlace al documento original o fuente</li>
-                    <li>&lt;pre&gt;: Se utiliza para tener código preformateado que necesita ser representado igual que se esribió</li>
-                    <li>&lt;div&gt;: Se usa como división del documento, semánticamente no significa nada, es un contenedor genérico que se usa generalmente para dar estilos a través de css o para usar algo denominado "delegación de eventos" en javascript</li>
-                    <li>&lt;hr&gt;: horizontal rule, se utiliza para decirle al navegador que se va a cambiar de tema</li>
-                </ul>
-            </article><hr>
-            <article>
-                <h2 class="titulo2">Elementos en linea</h2>
-                <p>Los elementos en linea ocupan solo el ancho de su contenido y no realizan salto de linea</p>
-                <ul class="lista">
-                    <li>&lt;em&gt;: emphasis</li>
-                    <li>&lt;strong&gt;: más enfasis</li>
-                    <li>&lt;small&gt;: Menos enfasis que el texto normal</li>
-                    <li>&lt;br&gt;: Forzar un salto de línea</li>
-                    <li>&lt;wbr&gt;: Salto de linea si hiciera falta</li>
-                    <li>&lt;time&gt;: Se usa para representar un contenido de hora/fecha</li>
-                    <li>&lt;i&gt;: italic</li>
-                    <li>&lt;b&gt;: bold</li>
-                    <li>&lt;u&gt;: underlin</li>
-                    <li>&lt;sup&gt;: Superíndice</li>
-                    <li>&lt;sub&gt;: Subíndice</li>
-                    <li>&lt;span&gt;: Es un contenedor de línea, equivalente a div, se suele usar para encerrar palabras o pequeños textos y darles estilo a través de CSS o localizarlos desde javascript. Semánticamente no significa nada</li>
-                    <li>&lt;q&gt;: Es el equivalente a blockquote, significa quote, por eso el de bloque se llama block - quote. Sirve para poner citas pero en línea.</li>
-                    <li>&lt;code&gt;: Sirve para encerrar código que se quiera representar visualmente, suele ir unido con la etiqueta pre.
-                    </li>
-                    <li>&lt;del&gt;: Tachar el texto.</li>
-                    <li>&lt;ins&gt;: Un texto adicional que se ha insertado al archivo.</li>
-                </ul>
-            </article><hr>
-            <article>
-                <h2 class="ejemplo">Ejemplo:</h2>
-                <h3 class="titulo3">Bloque:</h3>
+                <p>Los elementos de bloque van a ocupar todo el ancho disponible aunque su contenido no lo haga, por lo que los elementos que se pongan a continuación saltarán a la siguiente línea.</p>
+                <h3 class="titulo3">Elementos de bloque principales: </h3>
+                <dl class="lista">
+                    <dt>Títulos &lt;h1&gt; hasta &lt;h6&gt;</dt>
+                    <dt>Párrafos &lt;p&gt;</dt>
+                    <dt>&lt;Header&gt;:</dt>
+                    <dd>Contenedor para la cabecera visual de la página.</dd> 
+                    <dt>&lt;Main&gt;:</dt>
+                    <dd>Contenedor para englobar el contenido principal de la página.</dd>
+                    <dt>&lt;Section&gt;:</dt>
+                    <dd>Contenedor genérico que agrupa contenido que está relacionado.</dd>
+                    <dt>&lt;Article&gt;:</dt>
+                    <dd>Contenedor que respresenta contenido independiente.</dd>
+                    <dt>&lt;Aside&gt;:</dt>
+                    <dd>Agrupación de contenido indirectamente relacionado pero que no forma parte del contenido principal.</dd>
+                    <dt>&lt;Address&gt;:</dt>
+                    <dd>Se utiliza para aportar información de contacto para el article más cercano o para todo el body.</dd>
+                    <dt>&lt;Footer&gt;:</dt>
+                    <dd>Pie de página del documento o de una sección de este.</dd>
+                    <dt>&lt;div&gt;:</dt>
+                    <dd>Se usa como división del documento, semánticamente no significa nada, es un contenedor genérico que se usa generalmente para dar estilos a través de css o para usar algo denominado "delegación de eventos" en javascript.</dd>
+                    <dt>Listas:</dt>
+                    <dd>Elementos: &lt;ol&gt;, &lt;ul&gt; &lt;li&gt;, &lt;dl&gt; &lt;dt&gt; & &lt;dd&gt;</dd>
+                    <dt>Tablas:</dt>
+                    <dd>Elementos: &lt;table&gt;, &lt;tr&gt;,  &lt;caption&gt;, &lt;thead&gt;, &lt;th&gt;,  &lt;tbody&gt; & &lt;tfoot&gt;</dd>
+                    <dt>Formularios:</dt>
+                    <dd>Elemento &lt;form&gt;, &lt;fieldset&gt; & &lt;legend&gt;</dd>
+                    <dt>Figuras: </dt>
+                    <dd>Elementos &lt;figure&gt; & &lt;figcaption&gt;</dd>
+                </dl>
+                <h3 class="titulo3">Otros elementos en bloque:</h3>
+                <dl class="lista">
+                    <dt>&lt;blockquote&gt;:</dt>
+                    <dd>Se utiliza para marcar las citas a otros autores o documentos. Se puede incluir el atributo cite para poner un enlace al documento original o fuente.</dd>
+                    <dt>&lt;pre&gt;:</dt>
+                    <dd>Se utiliza para tener código preformateado que necesita ser representado igual que se esribió.</dd>
+                    <dt>&lt;hr&gt;:</dt>
+                    <dd>horizontal rule, se utiliza para decirle al navegador que se va a cambiar de tema.</dd>
+                </dl>
+                <h3 class="ejemplo">Ejemplos:</h3>
                 <h1 class="titulo2 bloque">&lt;h1&gt; Soy un elemento de bloque &lt;/h1&gt;</h1>
                 <p class="bloque">&lt;p&gt;Soy otro elemento de bloque &lt;/p&gt;</p>
                 <address class="bloque">
                     Diego Sandoval <br>
                     Colombia, Bogotá <br>
                     Cra 66 # 76-26 
-                </address>
+                </address><br>
+                <div class="bloque">Soy un &lt;div&gt;</div>
                 <blockquote cite="https://citas.in/frases/1981814-alan-moore-detras-de-esta-mascara-hay-algo-mas-que-carne-deb/" class="bloque">
                     Detras de esta mascara hay algo mas que carne, detras de esta mascara hay una idea, y las ideas son aprueba de balas.
                 </blockquote>
                 <pre class="bloque">
                     Hola mundo
                 </pre>
-                <div class="bloque">
-                    <h2>Nombre</h2>
-                    <p>Email</p>
-                    <p>Descripcion</p>
-                </div>
-                <h3 class="titulo3">Linea:</h3>
-                <p>
-                    <em>El dinero </em>es importante pero <strong> la salud </strong>es lo más importante.<small>Saludos!</small>
-                </p>
-                <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. Saepe velit nihil quis, perferendis voluptas tempora ipsam distinctio vero repellat nemo deserunt similique voluptates eveniet? Necessitatibus repudiandae neque officiis saepe itaque?</p>
-                <p>http://127.0.0.1:5500/<wbr>cursos/<wbr>html/<wbr>elementos/<wbr>elementos-de-linea.html</p>
-                <p><time>24/10/2020 10:35</time></p>
-                <p><i>Italic</i><b>Bold</b><u>Underline</u></p>
-                <p>4 elevado al cuadrado se representa así 4<sup>2</sup></p>
-                <p>Agua oxigenada tiene la fórmula H<sub>2</sub>O<sub>2</sub></p>
-                <p>Lorem, ipsum dolor sit amet <span class="resaltado"> consectetur adipisicing </span>elit. Soluta nam voluptatum neque omnis commodi molestiae vitae impedit id. Molestias laboriosam, ad nemo aliquam ullam vitae rerum deserunt dicta voluptatibus voluptate.</p>
-                <p><q cite="">Yo soy Iron Man</q></p>
-                <pre class="blank">
-                    <code>
-                        span {
-                            color: red;
-                        }
-                    </code>
-                </pre>
-                <p><del>Eliminado</del></p>
-                <p><ins>texto insertado</ins></p>
+            </article>
+            <article>
+                <h2 class="titulo2">Elementos en linea</h2>
+                <p>Los elementos en linea ocupan solo el ancho de su contenido y no realizan salto de linea</p>
+                <h3 class="titulo3">Elementos en linea principales: </h3>
+                <dl class="lista">
+                    <dt>Enlaces &lt;a&gt;</dt>
+                    <dt>Contenido embebido:</dt>
+                    <dd>Imágenes, videos, audios e iframes.</dd>
+                    <dt>&lt;span&gt;:</dt>
+                    <dd> Es un contenedor de línea, equivalente a div, se suele usar para <span class="resaltado">encerrar palabras o pequeños textos y darles estilo a través de CSS</span> o localizarlos desde javascript. Semánticamente no significa nada.</dd> 
+                </dl>
+                <h3 class="titulo3">Otros elementos en linea: </h3>
+                <dl class="lista">
+                    <dt>&lt;em&gt;:</dt>
+                    <dd><em>Enfasis.</em></dd> 
+                    <dt>&lt;strong&gt;:</dt>
+                    <dd> <strong>Texto importante o palabras clave.</strong></dd>
+                    <dt>&lt;i&gt;:</dt>
+                    <dd><i>italic.</i></dd>
+                    <dt>&lt;b&gt;:</dt>
+                    <dd><b>bold.</b></dd>  
+                    <dt>&lt;u&gt;:</dt>
+                    <dd><u>underline.</u></dd> 
+                    <dt>&lt;mark&gt;:</dt>
+                    <dd><mark>Fragmento de texto resaltado.</mark></dd>
+                    <dt>&lt;s&gt;:</dt>
+                    <dd><s>Fragmento de texto inexacto o que ya no es relevante.</s></dd>
+                    <dt>&lt;cite&gt;:</dt>
+                    <dd><cite>Fragmento de texto con el título de un trabajo creativo.</cite></dd>
+                    <dt>&lt;small&gt;:</dt>
+                    <dd>Anotaciones <small>menores.</small></dd>
+                    <dt>&lt;sup&gt;:</dt>
+                    <dd>Superíndice. 2 <sup>2</sup> = 4</dd>
+                    <dt>&lt;sub&gt;:</dt>
+                    <dd>Subíndice. H<sub>2</sub>O</dd>
+                    <dt>&lt;q&gt;:</dt>
+                    <dd><q>Es el equivalente a blockquote, significa quote, por eso el de bloque se llama block - quote. Sirve para poner citas pero en línea.</q></dd>   
+                    <dt>&lt;dfn&gt;:</dt>
+                    <dd>Término que posteriormente será definido.</dd> 
+                    <dt>&lt;abbr&gt;:</dt>
+                    <dd>Abreviatura o acrónimo. <abbr title="kilometros">Km</abbr></dd> 
+                    <dt>&lt;br&gt;:</dt>
+                    <dd>Forzar un salto de línea.</dd> 
+                    <dt>&lt;wbr&gt;:</dt>
+                    <dd>Salto de linea si hiciera falta.</dd>
+                    <dt>&lt;time&gt;:</dt>
+                    <dd>Se usa para representar un contenido de hora/fecha. <time datetime="2022-01-22">Hoy es 22 de enero</time></dd> 
+                    <dt>&lt;code&gt;:</dt>
+                    <dd>Sirve para encerrar código que se quiera representar visualmente, suele ir unido con la etiqueta pre.</dd>
+                    <dt>&lt;var&gt;:</dt>
+                    <dd>Variable. <var>X</var> = 5.</dd>
+                    <dt>&lt;del&gt;:</dt>
+                    <dd><del>Tachar el texto. Representa fragmento de texto o información eliminada.</del></dd> 
+                    <dt>&lt;ins&gt;:</dt>
+                    <dd><ins>Un texto adicional que se ha insertado al archivo.</ins></dd> 
+                </dl>
             </article>
         </section>   
     </main>

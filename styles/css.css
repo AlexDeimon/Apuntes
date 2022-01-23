@@ -97,13 +97,6 @@
 .listaNav li:hover{
     background-color: #448cff;
 }
-.overflow{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    overflow: auto;
-}
 .div3,
 .div4,
 .div5{

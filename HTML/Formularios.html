@@ -25,20 +25,24 @@
         <section>
             <h2 class="titulo2">Formularios &lt;form&gt;</h2>
             <p>Los formularios son la parte fundamental de las paginas web para que los usuarios puedan enviar información a los servidores.</p>
-            <h3 class="titulo3">Estructura básica</h3>
+            <h3 class="titulo3">Estructura básica: </h3>
             <p>La estructura básica de un formulario se compone de 4 elementos:</p>
-            <ul class="lista">
-                <li>&lt;form&gt;: Es la etiqueta que engloba el formulario.</li>
-                <li>&lt;label&gt;: Sirve para escribir el nombre del campo a rellenar. Debe tener el atributo for al cual se le indica un id que lo que hará será emparejar el label con su input correspondiente.</li>
-                <li>&lt;input&gt;: Sirve para crear un campo que permitirá al usuario interactuar. El único atributo obligatorio del input es name.</li>
-                <li>&lt;button&gt;: Crea un botón que permitirá enviar el formulario.</li>
-            </ul>
+            <dl class="lista">
+                <dt>&lt;form&gt;:</dt>
+                <dd>Es la etiqueta que engloba el formulario.</dd> 
+                <dt>&lt;label&gt;:</dt>
+                <dd>Sirve para escribir el nombre del campo a rellenar. Debe tener el atributo for al cual se le indica un id que lo que hará será emparejar el label con su input correspondiente.</dd> 
+                <dt>&lt;input&gt;:</dt>
+                <dd>Sirve para crear un campo que permitirá al usuario interactuar. El único atributo obligatorio del input es name.</dd> 
+                <dt>&lt;button&gt;:</dt>
+                <dd>Crea un botón que permitirá enviar el formulario.</dd> 
+            </dl>
             <div class="main-section">
-                <h3 class="titulo3">Forma 1 asociar &lt;input&gt; con &lt;label&gt;:</h3>
+                <h4 class="titulo4">Forma 1 asociar &lt;input&gt; con &lt;label&gt;:</h4>
                 <img src="../assets/images/Formulario1.png" alt="Formulario1">
             </div>
             <div class="main-section">
-                <h3 class="titulo3">Forma 2 asociar &lt;input&gt; con &lt;label&gt;:</h3>
+                <h4 class="titulo4">Forma 2 asociar &lt;input&gt; con &lt;label&gt;:</h4>
                 <img src="../assets/images/Formulario2.png" alt="Formulario2">
             </div>
             <h4 class="ejemplo">Ejemplo:</h4>
@@ -49,82 +53,206 @@
             </form>    
             <article>
                 <h3 class="titulo3">Tipos de &lt;input&gt;:</h3>
-                <ul class="lista">
-                    <li>button: Visualmente es igual a un &lt;button&gt;, pero el formulario no se enviará. <input type="button" value="input button"></li>
-                    <li>submit: Se utiliza para enviar el formulario. <input type="submit"></li>
-                    <li>date: Se utiliza para introducir una fecha. <input type="date"></li>
-                    <li>time: Se utiliza para introducir una hora <input type="time"></li>
-                    <li>datetime-local: Fecha y hora, <small><b>no funciona en firefox.</b></small> <input type="datetime-local"></li>
-                    <li>month: Se utiliza para introducir un mes. <input type="month"></li>
-                    <li>week: Se utiliza pra introducir el número de semana del año. <input type="week"></li>
-                    <li>search: Se utiliza para las barras de búsqueda. <input type="search"></li>
-                    <li>tel: Se utiliza para introducir números telefónicos. <input type="tel"></li>
-                    <li>email: Se utiliza para introducir un email. <input type="email"></li>
-                    <li>password: Se utiliza para contraseñas. <input type="password"></li>
-                    <li>url: Se utiliza para introducir URLs. <input type="url"></li>
-                    <li>color: Se utiliza para especificar un color. <input type="color"></li>
-                    <li>number: Se utiliza para valores numéricos. <input type="number"></li>
-                    <li>range: Se utiliza para establecer un rango. <input type="range" step="10" min="0" max="100">
-                        <ul>
-                            <li>step: Atributo para determinar de cuanto en cuanto se mueve la barra.</li>
-                            <li>min: Valor mínimo.</li>
-                            <li>max: Valor máximo.</li>
-                        </ul>
-                    </li>
-                    <li>reset: Se utiliza para resetear el formulario. <input type="reset"></li>
-                    <li>text: Valor por defecto. <input type="text"></li>
-                    <li>radio: Permite seleccionar una única opción de una lista de opciones relacionadas. Deben tener el mismo valor en el atributo name para que funcione correctamente. El atributo checked selecciona una opción por defecto.</li>
-                    <label><input type="radio" name="developer" value="Backend">Backend </label>
-                    <label><input type="radio" name="developer" value="Frontend" checked>Frontend </label>
-                    <label><input type="radio" name="developer" value="FullStack">FullStack </label>
-                    <li>checkbox: Permite seleccionar varias opciones de una lista de opciones relacionadas. Deben tener el mismo valor en el atributo name para que funcione correctamente. El atributo checked selecciona una o varias opciones por defecto.</li>
-                    <label><input type="checkbox" name="languages" value="html" checked>HTML </label>
-                    <label><input type="checkbox" name="languages" value="css" checked>CSS </label>
-                    <label><input type="checkbox" name="languages" value="javascript">JavaScript </label>
-                </ul>
+                <div class="overflow">
+                    <table class="tabla">
+                        <thead>
+                            <tr>
+                                <th>Input</th>
+                                <th>Descripción</th>
+                                <th>Ejemplo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>button</td>
+                                <td>Visualmente es igual a un &lt;button&gt;, pero el formulario no se enviará.</td>
+                                <td><input type="button" value="input button"></td>
+                            </tr>
+                            <tr>
+                                <td>submit</td>
+                                <td>Se utiliza para enviar el formulario.</td>
+                                <td><input type="submit"></td>
+                            </tr>
+                            <tr>
+                                <td>date:</td>
+                                <td>Se utiliza para introducir una fecha.</td>
+                                <td><input type="date"></td>
+                            </tr>
+                            <tr>
+                                <td>time</td>
+                                <td>Se utiliza para introducir una hora.</td>
+                                <td><input type="time"></td>
+                            </tr>
+                            <tr>
+                                <td>datetime-local</td>
+                                <td>Fecha y hora, <small><strong>no funciona en firefox.</strong></small></td>
+                                <td><input type="datetime-local"></td>
+                            </tr>
+                            <tr>
+                                <td>month</td>
+                                <td>Se utiliza para introducir un mes.</td>
+                                <td><input type="month"></td>
+                            </tr>
+                            <tr>
+                                <td>week</td>
+                                <td>Se utiliza pra introducir el número de semana del año.</td>
+                                <td><input type="week"></td>
+                            </tr>
+                            <tr>
+                                <td>search</td>
+                                <td>Se utiliza para las barras de búsqueda.</td>
+                                <td><input type="search"></td>
+                            </tr>
+                            <tr>
+                                <td>tel</td>
+                                <td>Se utiliza para introducir números telefónicos.</td>
+                                <td><input type="tel"></td>
+                            </tr>
+                            <tr>
+                                <td>email</td>
+                                <td>Se utiliza para introducir un email.</td>
+                                <td><input type="email"></td>
+                            </tr>
+                            <tr>
+                                <td>password</td>
+                                <td>Se utiliza para contraseñas.</td>
+                                <td><input type="password"></td>
+                            </tr>
+                            <tr>
+                                <td>url</td>
+                                <td>Se utiliza para introducir URLs.</td>
+                                <td><input type="url"></td>
+                            </tr>
+                            <tr>
+                                <td>color</td>
+                                <td>Se utiliza para especificar un color.</td>
+                                <td><input type="color"></td>
+                            </tr>
+                            <tr>
+                                <td>number</td>
+                                <td>Se utiliza para valores numéricos.</td>
+                                <td><input type="number"></td>
+                            </tr>
+                            <tr>
+                                <td>range</td>
+                                <td>Se utiliza para establecer un rango.
+                                    <table class="tabla">
+                                        <thead>
+                                            <tr>
+                                                <th>Atributo</th>
+                                                <th>Descripción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>step</td>
+                                                <td>Atributo para determinar de cuanto en cuanto se mueve la barra.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>min</td>
+                                                <td>Valor mínimo.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>max</td>
+                                                <td>Valor máximo.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td><input type="range" step="10" min="0" max="100"></td>
+                            </tr>
+                            <tr>
+                                <td>reset</td>
+                                <td>Se utiliza para resetear el formulario.</td>
+                                <td><input type="reset"></td>
+                            </tr>
+                            <tr>
+                                <td>text</td>
+                                <td>Valor por defecto.</td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td>radio</td>
+                                <td>Permite seleccionar una única opción de una lista de opciones relacionadas. Deben tener el mismo valor en el atributo name para que funcione correctamente. El atributo checked selecciona una opción por defecto.</td>
+                                <td>
+                                    <label><input type="radio" name="developer" value="Backend">Backend </label>
+                                    <label><input type="radio" name="developer" value="Frontend" checked>Frontend </label>
+                                    <label><input type="radio" name="developer" value="FullStack">FullStack </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>checkbox</td>
+                                <td>Permite seleccionar varias opciones de una lista de opciones relacionadas. Deben tener el mismo valor en el atributo name para que funcione correctamente. El atributo checked selecciona una o varias opciones por defecto.</td>
+                                <td>
+                                    <label><input type="checkbox" name="languages" value="html" checked>HTML </label>
+                                    <label><input type="checkbox" name="languages" value="css" checked>CSS </label>
+                                    <label><input type="checkbox" name="languages" value="javascript">JavaScript </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>    
+                </div>
             </article>
             <article>
                 <h3 class="titulo3">&lt;select&gt;:</h3>
-                <ul class="lista">
-                    <li>Crea una lista de opciones donde podemos seleccionar una o varias opciones. Cada opción irá dentro de una etiqueta &lt;option&gt; &lt;option/&gt;. El atributo multiple permite seleccionar varias opciones con la tecla ctrl. Si hay muchas opciones se pueden ordenar por categorías a través de la etiqueta &lt;optgroup&gt; con el atributo label para nombrar la categoría.</li>
-                </ul>
-                <div class="main-section">
-                    <p>Select normal:</p>
-                    <select name="lenguajes">
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                        <option value="javascript">JavaScript</option>
-                    </select>
-                    <p>Select con atributo multiple:</p>
-                    <select name="lenguajes" multiple>
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                        <option value="javascript">JavaScript</option>
-                    </select>
-                    <p>Select con categorías: </p>
-                    <select name="herramientas" multiple>
-                        <optgroup label="Backend">
-                            <option value="python">Python</option>
-                            <option value="java">Java</option>
-                            <option value="mysql">MySQL</option>
-                            <option value="postgresql">PostgreSQL</option>
-                            <option value="mongo">MongoDB</option>
-                        </optgroup>
-                        <optgroup label="Frontend">
-                            <option value="html">HTML</option>
-                            <option value="css">CSS</option>
-                            <option value="javascript">JavaScript</option>
-                            <option value="boostrap">Boostrap</option>
-                            <option value="Vue">Vue</option>
-                        </optgroup>
-                    </select>
-                </div>    
+                <p>Crea una lista de opciones donde podemos seleccionar una o varias opciones. Cada opción irá dentro de una etiqueta &lt;option&gt; &lt;option/&gt;. El atributo multiple permite seleccionar varias opciones con la tecla ctrl. Si hay muchas opciones se pueden ordenar por categorías a través de la etiqueta &lt;optgroup&gt; con el atributo label para nombrar la categoría.</p>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Select</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Select normal</td>
+                            <td>
+                               <select name="lenguajes">
+                                <option value="html">HTML</option>
+                                <option value="css">CSS</option>
+                                <option value="javascript">JavaScript</option>
+                            </select> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Select con atributo multiple</td>
+                            <td>
+                                <select name="lenguajes" multiple>
+                                    <option value="html">HTML</option>
+                                    <option value="css">CSS</option>
+                                    <option value="javascript">JavaScript</option>
+                                </select>    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Select con categorías</td>
+                            <td>
+                                <select name="herramientas" multiple>
+                                    <optgroup label="Backend">
+                                        <option value="python">Python</option>
+                                        <option value="java">Java</option>
+                                        <option value="mysql">MySQL</option>
+                                        <option value="postgresql">PostgreSQL</option>
+                                        <option value="mongo">MongoDB</option>
+                                    </optgroup>
+                                    <optgroup label="Frontend">
+                                        <option value="html">HTML</option>
+                                        <option value="css">CSS</option>
+                                        <option value="javascript">JavaScript</option>
+                                        <option value="boostrap">Boostrap</option>
+                                        <option value="Vue">Vue</option>
+                                    </optgroup>
+                                </select> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </article>
             <article>
                 <h3 class="titulo3">&lt;datalist&gt;:</h3>
-                <ul class="lista">
-                    <li>Funciona de forma similar al &lt;select&gt; solo que esta contiene un filtro para obtener más rapido las opciones disponibles. Está compuesto por un input de tipo list, el cual tiene un atributo tambien llamado list al que se le asigna el id del &lt;datalist&gt; al que se quiere acceder.</li>
-                    <input type="list" list="tools">
+                <p>Funciona de forma similar al &lt;select&gt; solo que esta contiene un filtro para obtener más rapido las opciones disponibles. Está compuesto por un input el cual tiene un atributo llamado list al que se le asigna el id del &lt;datalist&gt; al que se quiere acceder.</p>
+                <form class="formulario">
+                    <input type="text" list="tools">
                     <datalist id="tools">
                         <option value="html"></option>
                         <option value="css"></option>
@@ -137,38 +265,62 @@
                         <option value="postgresql"></option>
                         <option value="mongo"></option>
                     </datalist>
-                </ul>    
+                </form>
             </article>
             <article>
                 <h3 class="titulo3">Otros elementos:</h3>
-                <ul class="lista">
-                    <li>&lt;fieldset&gt;: Se utiliza para agrupar elementos dentro de un formulario.</li>
-                    <li>&lt;legend&gt;: Representa una etiqueta para el contenido del fieldset.</li>
-                    <li>&lt;file&gt;: Este input se utiliza para cargar archivos y enviarlos desde un formulario.</li>
-                    <li>&lt;meter&gt;: Representa un valor dentro de un rango conocido. Sus atributos son: 
-                        <ul>
-                            <li>min: Valor mínimo.</li>
-                            <li>max: Valor máximo.</li>
-                            <li>value: Valor actual.</li>
-                            <li>low: Hasta que valor son valores bajos.</li>
-                            <li>high: Hasta que valor son valores altos.</li>
-                            <li>optimum: Valor optimo.</li>
-                        </ul>
-                    </li>
-                    <li>&lt;progress&gt;: Representa el progreso de una tarea. Sus atributos son:
-                        <ul>
-                            <li>min: Valor mínimo.</li>
-                            <li>max: Valor máximo.</li>
-                            <li>value: Valor actual.</li>
-                        </ul>
-                    </li>
-                    <li>&lt;textarea&gt;: Se utiliza para introducir texto en un formulario. Sus atributos son:
-                        <ul>
-                            <li>col: Número de columnas.</li>
-                            <li>row: Número de filas.</li>
-                        </ul>
-                    </li>
-                </ul>    
+                <dl class="lista">
+                    <dt>&lt;fieldset&gt;:</dt>
+                    <dd>Se utiliza para agrupar elementos dentro de un formulario.</dd> 
+                    <dt>&lt;legend&gt;:</dt>
+                    <dd>Representa una etiqueta para el contenido del fieldset.</dd> 
+                    <dt>&lt;file&gt;:</dt>
+                    <dd>Este input se utiliza para cargar archivos y enviarlos desde un formulario. Es necesario indicar en la etiqueta &lt;form&gt; el atributo <span class="resaltado">enctype="multipart/form-data".</span> Con esto se asegura que las cabeceras del formulario indican que se está enviando archivos adjuntos.
+                        <dl>
+                            <dt>multiple;</dt>
+                            <dd>Atributo booleano el cual da la opción al usuario de pulsar la tecla CTRL para adjuntar varios archivos a la vez, y no uno solo.</dd>
+                        </dl>
+                    </dd> 
+                    <dt>&lt;meter&gt;:</dt>
+                    <dd>Representa un valor dentro de un rango conocido. Sus atributos son: 
+                        <dl>
+                            <dt>min:</dt>
+                            <dd>Valor mínimo.</dd> 
+                            <dt>max:</dt>
+                            <dd>Valor máximo.</dd> 
+                            <dt>value:</dt>
+                            <dd>Valor actual.</dd> 
+                            <dt>low:</dt>
+                            <dd>Hasta que valor son valores bajos.</dd> 
+                            <dt>high:</dt>
+                            <dd>Hasta que valor son valores altos.</dd> 
+                            <dt>optimum:</dt>
+                            <dd>Valor óptimo.</dd> 
+                        </dl>
+                    </dd> 
+                    <dt>&lt;progress&gt;:</dt>
+                    <dd>Representa el progreso de una tarea. Sus atributos son:
+                        <dl>
+                            <dt>min:</dt>
+                            <dd>Valor mínimo.</dd> 
+                            <dt>max:</dt>
+                            <dd>Valor máximo.</dd> 
+                            <dt>value:</dt>
+                            <dd>Valor actual.</dd> 
+                        </dl>
+                    </dd> 
+                    <dt>&lt;textarea&gt;:</dt>
+                    <dd>Se utiliza para introducir texto en un formulario. Sus atributos son:
+                        <dl>
+                            <dt>col:</dt>
+                            <dd>Número de columnas.</dd> 
+                            <dt>row:</dt>
+                            <dd>Número de filas.</dd> 
+                            <dt>wrap:</dt>
+                            <dd>Indica si el texto debe enviarse recolocado o como se ve visualmente.</dd>
+                        </dl>
+                    </dd> 
+                </dl>    
                 <h4 class="ejemplo">Ejemplo:</h4>
                 <form class="formulario">
                     <fieldset>
@@ -180,24 +332,50 @@
                         <label for="task">Tarea 1</label>
                         <progress id="task" max="100" value="30"></progress><br>
                         <label for="message">Mensaje:</label><br>
-                        <textarea name="" id="message" cols="40" rows="10"></textarea>
+                        <textarea id="message" cols="30" rows="10"></textarea>
                     </fieldset>
                 </form>    
             </article>
             <article>
                 <h3 class="titulo3">Atributos: </h3>
-                <ul class="lista">
-                    <li>action: Define la ubicación (URL) donde se deben enviar los datos recopilados del formulario cuando se envía.</li>
-                    <li>method: Establece el método http (GET o POST) para enviar el formulario.</li>
-                    <li>placeholder: Da una pista o indicación de lo que el usuario tiene que introducir.</li>
-                    <li>required: Hace que un campo sea obligatorio.</li>
-                    <li>readonly: Hace que un campo sea de solo lectura.</li>
-                    <li>disabled: Desactiva el campo, no se podrá escribir en el.</li>
-                    <li>min - max: Establecen el mínimo y máximo de un campo numérico.</li>
-                    <li>minlenght - maxlenght: Establece el minimo y máximo de caracteres de un campo de texto.</li>
-                    <li>selected: Equivale a checked en los select, sirve para establecer una opción por defecto</li>
-                    <li>autofocus -> Para poner el foco por defecto al cargar el formulario.</li>
-                </ul>    
+                <dl class="lista">
+                    <dt>action:</dt>
+                    <dd>Define la ubicación (URL) donde se deben enviar los datos recopilados del formulario cuando se envía.</dd> 
+                    <dt>method:</dt>
+                    <dd>Establece el método http (GET o POST) para enviar el formulario.</dd> 
+                    <dt>name:</dt>
+                    <dd>Nombre del formulario y los input. Sirve para el posterior procesamiento de los datos.</dd>
+                    <dt>target:</dt>
+                    <dd>Url de la página donde se abrirá el formulario tras ser enviado.</dd>
+                    <dt>enctype</dt>
+                    <dd>Codificación para el envío del formulario. Importante para envío de archivos.</dd>
+                    <dt>autocomplete:</dt>
+                    <dd>Activa o desactiva (on o off) el autocompletado para los campos del formulario.</dd>
+                    <dt>novalidate:</dt>
+                    <dd>Atributo booleano. El formulario obvia la validación HTML5.</dd>
+                    <dt>value:</dt>
+                    <dd>Valor por inicial del input.</dd>
+                    <dt>placeholder:</dt>
+                    <dd>Da una pista o indicación de lo que el usuario tiene que introducir.</dd> 
+                    <dt>size:</dt>
+                    <dd>Tamaño visual (número de carácteres) del campo de datos.</dd>
+                    <dt>required:</dt>
+                    <dd>Hace que un campo sea obligatorio.</dd> 
+                    <dt>readonly:</dt>
+                    <dd>Hace que un campo sea de solo lectura.</dd> 
+                    <dt>disabled:</dt>
+                    <dd>Desactiva el campo, no se podrá escribir en el.</dd> 
+                    <dt>min - max:</dt>
+                    <dd>Establecen el mínimo y máximo de un campo numérico.</dd> 
+                    <dt>minlenght - maxlenght:</dt>
+                    <dd>Establece el minimo y máximo de caracteres de un campo de texto.</dd> 
+                    <dt>selected:</dt>
+                    <dd>Equivale a checked en los select, sirve para establecer una opción por defecto.</dd> 
+                    <dt>autofocus:</dt>
+                    <dd>Para poner el foco por defecto al cargar el formulario.</dd> 
+                    <dt>spellcheck:</dt>
+                    <dd>Atributo booleano mediante el cuál se indica al navegador si debe revisar la ortografía del texto escrito en dicho elemento.</dd>
+                </dl>    
                 <h4 class="ejemplo">Ejemplo:</h4>
                 <form class="formulario">
                     <fieldset>

@@ -26,39 +26,127 @@
         <section>
             <h2 class="titulo2">Metadatos</h2>
             <p>El elemento head de un documento HTML es la parte que no se muestra en el navegador cuando se carga la página. Contiene información como el título (&lt;title&gt;) de la página, enlaces al CSS (si quieres aplicar estilo a tu contenido HTML con CSS), enlaces para personalizar favicon, y otros metadatos (datos sobre el HTML, como quién lo escribió y palabras claves importantes que describen el documento).</p>
-            <ul class="lista">
-                <li>&lt;title&gt;: Se usa para poner un título al documento.</li>
-                <li>&lt;meta&gt;
-                    <ul>
-                        <li>charset: Este elemento especifica la codificación de caracteres del documento. utf-8 es un conjunto de caracteres universal que incluye casi todos los caracteres de casi cualquier idioma humano.</li>
-                        <li>name: especifica el tipo de metadato del que se trata; es decir, qué tipo de información contiene.
-                            <ul>
-                                <li>author: Autor de la página o sitio web.</li>
-                                <li>description: Descripción de esta (la cual usualmente es la que es visible debajo del link de acceso al buscar páginas en Google o otros motores de búsqueda).</li>
-                            </ul>
-                        </li> 
-                        <li>content: especifica el contenido del metadato en sí.</li>
-                        <li>Open Graph Data: es un protocolo que permite que cualquier página web se convierta en un objeto enriquecido en un gráfico social.
-                            <ul>
-                                <li>og:title: El título de objeto como debería aparecer dentro del gráfico.</li>
-                                <li>og:type: El tipo de objeto, por ejemplo, "video.movie". Dependiendo del tipo que se especifique, es posible que también se requieran otras propiedades.</li>
-                                <li>og:image: Una URL de imagen que debe representar el objeto dentro del gráfico.</li>
-                                <li>og:url: La URL canónica del objeto que se utilizará como su ID permanente en el gráfico.</li>
-                                <li>og:description: Una descripción de una o dos frases del objeto.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>&lt;link&gt;: Especifica la relación entre el documento actual y un recurso externo, usualemte son archivos CSS y favicons. <a href="https://www.favicon-generator.org/" class="link" target="_blank">Generador favicons</a></li>
-                <li>&lt;script&gt;: Especifica la relación entre el documento actual y un recurso de JavaScript.</li>
-                <li>&lt;html lang="es"&gt;: El atributo lang en la etiqueta de apertura &lt;html&gt; sirve para especificar el idioma de la página (en este caso español).</li>
-            </ul>
+            <div class="overflow">
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Etiqueta</th>
+                            <th>Atributo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&lt;title&gt;</td>
+                            <td></td>
+                            <td>Se usa para poner un título al documento.</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;meta&gt;</td>
+                            <td>charset</td>
+                            <td>Este elemento especifica la codificación de caracteres del documento. utf-8 es un conjunto de caracteres universal que incluye casi todos los caracteres de casi cualquier idioma humano.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>name</td>
+                            <td>Especifica el tipo de metadato del que se trata; es decir, qué tipo de información contiene.
+                                <table class="tabla">
+                                    <thead>
+                                        <tr>
+                                            <th>Tipo</th>
+                                            <th>Descripción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>author</td>
+                                            <td>Autor de la página o sitio web.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>description</td>
+                                            <td>Descripción de esta (la cual usualmente es la que es visible debajo del link de acceso al buscar páginas en Google o otros motores de búsqueda).</td>
+                                        </tr>
+                                        <tr>
+                                            <td>keywords</td>
+                                            <td>Lista de palabras clave separadas por comas. Google no la tiene en cuenta.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>theme-color</td>
+                                            <td>Color en formato hexadecimal de la barra de navegación del navegador.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>viewport</td>
+                                            <td>Comportamiento de la región visible del navegador.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>content</td>
+                            <td>Especifica el contenido del metadato en sí.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Open Graph Data</td>
+                            <td>Protocolo que permite que cualquier página web se convierta en un objeto enriquecido en un gráfico social.
+                                <table class="tabla">
+                                    <thead>
+                                        <tr>
+                                            <th>Tipo</th>
+                                            <th>Descripción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>og:title</td>
+                                            <td>El título de objeto como debería aparecer dentro del gráfico.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>og:type</td>
+                                            <td>El tipo de objeto, por ejemplo, "video.movie". Dependiendo del tipo que se especifique, es posible que también se requieran otras propiedades.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>og:image</td>
+                                            <td>Una URL de imagen que debe representar el objeto dentro del gráfico.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>og:url</td>
+                                            <td>La URL canónica del objeto que se utilizará como su ID permanente en el gráfico.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>og:description</td>
+                                            <td>Una descripción de una o dos frases del objeto.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&lt;link&gt;</td>
+                            <td></td>
+                            <td>Especifica la relación entre el documento actual y un recurso externo, usualemte son archivos CSS y favicons. <a href="https://www.favicon-generator.org/" class="link" target="_blank">Generador favicons</a></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;script&gt;</td>
+                            <td></td>
+                            <td>Especifica la relación entre el documento actual y un recurso de JavaScript.</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;html&gt;</td>
+                            <td>lang="es"</td>
+                            <td>El atributo lang en la etiqueta de apertura &lt;html&gt; sirve para especificar el idioma de la página (en este caso español).</td>
+                        </tr>
+                    </tbody>
+                </table>    
+            </div>
         </section>
         <section>
             <h2 class="titulo2">Iconos</h2>
             <ul class="lista">
                 <li><a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2" class="link" target="_blank">Para acceder a los iconos fontAwesome</a><i class="fab fa-html5"></i></li>
-                <li><a href="https://iconos8.es/" class="link" target="_blank">Para acceder a los iconos icons8</a><img src="https://img.icons8.com/color/50/000000/html-5--v1.png"/></li>
+                <li><a href="https://iconos8.es/" class="link" target="_blank">Para acceder a los iconos icons8</a><img src="https://img.icons8.com/color/50/000000/html-5--v1.png" alt="icono HTML"/></li>
             </ul>
         </section>
     </main>

@@ -26,36 +26,51 @@
             <h2 class="titulo2">Tablas &lt;table&gt;</h2>
             <p>Las tablas en HTML sirven para mostrar contenido tabulado.</p>
             <p>La estructura básica de una tabla se compone de: </p>
-            <ol class="lista">
-                <li>&lt;table&gt;: etiqueta que encierra una tabla.</li>
-                <li>table row &lt;tr&gt;: etiqueta que construye una fila.</li>
-                <li>table data &lt;td&gt;: etiqueta que construye una celda.</li>
-            </ol>
-            <p>Los titulos de las tablas se establecen con la etiqueta &lt;caption&gt;, es una etiqueta opcional, y según la especificación esa etiqueta se coloca justo despues de la etiqueta &lt;table&gt;</p>
-            <p>Las cabeceras de las tablas se establecen con la etiquera &lt;thead&gt;.</p>
-            <p>Dentro se tiene una etiqueta &lt;tr&gt; normal, pero en el caso de las celdas se establecen con &lt;th&gt; en lugar de &lt;td&gt;</p>
-            <p>El contenido de la tabla debe ir dentro de una etiqueta &lt;tbody&gt; para representar el cuerpo de la tabla.</p>
-            <p>De forma opcional se puede colocar una etiqueta &lt;tfoot&gt; a la tabla para establecer un pie de tabla.</p>
+            <dl class="lista">
+                <dt>&lt;table&gt;:</dt>
+                <dd>Etiqueta que encierra una tabla.</dd> 
+                <dt>table header &lt;th&gt;:</dt>
+                <dd>Etiqueta que contruye las celdas de la cabecera de la tabla.</dd>
+                <dt>table row &lt;tr&gt;:</dt>
+                <dd>Etiqueta que construye una fila.</dd> 
+                <dt>table data &lt;td&gt;:</dt>
+                <dd>Etiqueta que construye una celda.</dd> 
+            </dl>
+            <p>Hay un grupo de etiquetas para organizar el contenido de la tabla, estas son: </p>
+            <dl class="lista">
+                <dt>&lt;caption&gt;:</dt>
+                <dd>Establece el título de la tabla.</dd>
+                <dt>&lt;thead&gt;:</dt>
+                <dd>Establece la cabecera de la tabla.</dd> 
+                <dt>&lt;tbody&gt;:</dt>
+                <dd>Establece el cuerpo de la tabla.</dd> 
+                <dt>&lt;tfoot&gt;:</dt>
+                <dd>Establece el pie de la tabla.</dd> 
+            </dl>
             <p>Para hacer que las celdas ocupen más de una fila o más de una columna hay 2 atributos:</p>
-            <ul class="lista">
-                <li>rowspan: sirve para que una celda ocupe mas de una fila</li>
-                <li>colspan: sirve para que una celda ocupe mas de una columna</li>
-            </ul>
-            <p>Cuando se necesita seleccionar una columna, existe la etiqueta &lt;colgroup&gt;, que permite seleccionar una columna en concreto. Dentro se pone tantas etiquetas col como columnas se tengan, cada etiqueta col equivaldrá a una columna siguiendo el mismo orden que tienen en la tabla.</p>
-            <p>si se necesita que la etiqueta col agrupe mas de una columna, está el atributo span, que funciona igual que rowspan y colspan</p> 
+            <dl class="lista">
+                <dt>rowspan:</dt>
+                <dd>Sirve para que una celda ocupe mas de una fila.</dd> 
+                <dt>colspan:</dt>
+                <dd>Sirve para que una celda ocupe mas de una columna.</dd> 
+            </dl>
+            <p>Cuando se necesita seleccionar una columna, existe la etiqueta &lt;colgroup&gt;, que permite seleccionar una columna en concreto. Dentro se pone tantas etiquetas &lt;col&gt; como columnas se tengan, cada etiqueta col equivaldrá a una columna siguiendo el mismo orden que tienen en la tabla.</p>
+            <p>Si se necesita que la etiqueta &lt;col&gt; agrupe más de una columna, está el atributo span, que funciona igual que rowspan y colspan.</p> 
             <h3 class="ejemplo">Ejemplo:</h3>
-            <table class="tabla">
-                <caption class="tituloTabla">HORARIO DE CLASES UNIVERSIDAD 2022-1</caption>
-                <thead class="cabeceraTabla">
-                    <th></th>
-                    <th>Lunes</th>
-                    <th>Martes</th>
-                    <th>Miercoles</th>
-                    <th>Jueves</th>
-                    <th>Viernes</th>
-                    <th>Sábado</th>
+            <table id="tabla1">
+                <caption>HORARIO DE CLASES UNIVERSIDAD 2022-1</caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miercoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th>Sábado</th>    
+                    </tr>
                 </thead>
-                <tbody class="cuerpoTabla">
+                <tbody>
                     <tr>
                         <td>7:00 - 8:00</td>
                         <td rowspan="7"></td>
@@ -120,7 +135,7 @@
                         <td class="blank">r</td>
                     </tr>
                 </tbody>
-                <tfoot class="pieTabla">
+                <tfoot>
                     <tr>
                         <td colspan="6">Total asignaturas</td>
                         <td>8</td>

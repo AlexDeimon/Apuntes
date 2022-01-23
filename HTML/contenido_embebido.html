@@ -53,21 +53,24 @@
             <article>
                 <h3 class="titulo3" id="imagenes">Imágenes &lt;img&gt;:</h3>
                 <p>Las imágenes se insertan mediante la etiqueta &lt;img&gt;, la cual tiene los siguientes atributos:</p>
-                <ul class="lista">
-                    <li>src: Dirección (URL) relativa o absoluta de la imágen que se quiere insertar.</li>
-                    <li>alt: Define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un formato no soportado o si la imagen aún no se ha descargado.</li>
-                    <li>srcset: Una lista de una o más cadenas separadas por comas indicando las posibles fuentes para usar. Cada cadena está compuesta por:
+                <dl class="lista">
+                    <dt>src:</dt>
+                    <dd>Dirección (URL) relativa o absoluta de la imágen que se quiere insertar.</dd> 
+                    <dt>alt:</dt>
+                    <dd>Define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un formato no soportado o si la imagen aún no se ha descargado.</dd>
+                    <dt>srcset:</dt>
+                    <dd>Una lista de una o más cadenas separadas por comas indicando las posibles fuentes para usar. Cada cadena está compuesta por:
                         <ol>
                             <li>URL de la imagen.</li>
-                            <li>Opcionalmente, espacios en blanco seguidos de:</li>
+                            <li>Opcionalmente, espacios en blanco seguidos de:
                             <ul>
                                 <li>Un ancho, que es un entero positivo seguido directamente por 'w'. El ancho está dividido por el tamaño de la fuente dada en el atributo sizes para calcular la densidad del píxel.</li>
                                 <li>Densidad del píxel, un positivo decimal seguido directamente de 'x'.</li>
                                 <li><small>Si no hay descriptores especificados, la fuente es asignada por defecto a 1x.</small></li>
-                            </ul>
+                            </ul></li>
                         </ol>
-                    </li>
-                </ul>
+                    </dd> 
+                </dl>
                 <div class="main-section">
                     <h4 class="titulo4">Imágen normal (src):</h4> 
                     <img src="../assets/images/img1.png" alt="img src">
@@ -81,27 +84,43 @@
                 <img src="../assets/images/GZ01.webp" alt="pacman" class="img">
                 <h4 class="titulo4">Imágen adaptable según el Device pixel ratio (srcset):</h4> 
                 <img srcset="../assets/images/portada-medium.webp, 
-                ../assets/images/portada-small.webp 3x" alt="portada" class="img">
+                ../assets/images/portada-small.webp 3x" src="../assets/images/portada-medium.webp" alt="portada" class="img">
             </article>
             <article>
                 <h3 class="titulo3" id="audios">Audios &lt;audio&gt;:</h3>
                 <p>Los audios se insertan mediante la etiqueta &lt;audio&gt;, la cual tiene los siguientes atributos:</p>
-                <ul class="lista">
-                    <li>controls: Si está presente este atributo, el navegador ofrecerá controles para permitir que el usuario controle la reproducción de audio, incluyendo volumen, búsqueda y pausar/reanudar reproducción.</li>
-                    <li>autoplay: si se especifica, el sonido comenzará a reproducirse automáticamente en cuanto sea posible, sin detenerse para terminar de cargar los datos.</li>
-                </ul>    
+                <dl class="lista">
+                    <dt>src:</dt>
+                    <dd>Dirección (URL) relativa o absoluta del audio que se quiere insertar.</dd>
+                    <dt>controls:</dt>
+                    <dd>Si está presente este atributo, el navegador ofrecerá controles para permitir que el usuario controle la reproducción de audio, incluyendo volumen, búsqueda y pausar/reanudar reproducción.</dd> 
+                    <dt>autoplay:</dt>
+                    <dd>Si se especifica, el sonido comenzará a reproducirse automáticamente en cuanto sea posible, sin detenerse para terminar de cargar los datos.</dd> 
+                    <dt>loop:</dt>
+                    <dd>Si se especifica, al alcanzar el final del audio, se reiniciará automáticamente.</dd>
+                    <dt>muted:</dt>
+                    <dd>Establece el audio sin sonido (silenciado).</dd>
+                </dl>    
                 <h4 class="ejemplo">Ejemplo:</h4>
-                <audio src="../assets/audios/deaf-kev-invincible-ncs-release.mp3" controls class="audio"></audio>    
+                <audio src="../assets/audios/deaf-kev-invincible-ncs-release.mp3" controls id="audio"></audio>    
             </article>
             <article>
                 <h3 class="titulo3" id="videos">Videos &lt;video&gt;:</h3>
                 <p>Los videos se insertan mediante la etiqueta &lt;video&gt;, la cual tiene los siguientes atributos:</p>
-                <ul class="lista">
-                    <li>controls: Si está presente este atributo, el navegador ofrecerá controles para permitir que el usuario controle la reproducción del video, incluyendo volumen, búsqueda y pausar/reanudar reproducción.</li>
-                    <li>autoplay: Si se especifica, el video comenzará a reproducirse automáticamente en cuanto sea posible, sin detenerse para terminar de cargar los datos.</li>
-                    <li>loop: Si se especifica, al alcanzar el final del video, buscaremos automáticamente hasta el principio.</li>
-                    <li>poster: Una URL que indica un marco de póster para mostrar el resultado hasta que el usuario reproduzca o busque. Si este atributo no se especifica, no se muestra nada hasta que el primer cuadro está disponible, entonces se muestra el primer marco como el marco de póster.</li>
-                </ul>    
+                <dl class="lista">
+                    <dt>src:</dt>
+                    <dd>Dirección (URL) relativa o absoluta del video que se quiere insertar.</dd>
+                    <dt>controls:</dt>
+                    <dd>Si está presente este atributo, el navegador ofrecerá controles para permitir que el usuario controle la reproducción del video, incluyendo volumen, búsqueda y pausar/reanudar reproducción.</dd> 
+                    <dt>autoplay:</dt>
+                    <dd>Si se especifica, el video comenzará a reproducirse automáticamente en cuanto sea posible, sin detenerse para terminar de cargar los datos.</dd> 
+                    <dt>loop:</dt>
+                    <dd>Si se especifica, al alcanzar el final del video, se reiniciará automáticamente.</dd> 
+                    <dt>poster:</dt>
+                    <dd>Una URL que indica un marco de póster para mostrar el resultado hasta que el usuario reproduzca o busque. Si este atributo no se especifica, no se muestra nada hasta que el primer cuadro está disponible, entonces se muestra el primer marco como el marco de póster.</dd> 
+                    <dt>muted:</dt>
+                    <dd>Establece el video sin sonido (silenciado).</dd>
+                </dl>    
                 <h4 class="ejemplo">Ejemplo:</h4>
                 <video src="../assets/videos/pentakill.mp4" controls poster="../assets/images/poster.png" class="video"></video>    
             </article>
@@ -110,7 +129,7 @@
                 <p>Este elemento representa un contexto de navegación anidado, el cual permite incrustrar otra página HTML en la página actual.</p>
                 <p><small><b>No utilizar mucho debido a que disminuyen el rendimiento de la página.</b></small></p>    
                 <h4 class="ejemplo">Ejemplo:</h4>
-                <iframe src="https://www.youtube.com/embed/JTDQzLc4fxM" class="iframe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/JTDQzLc4fxM" id="iframe" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </article>
             <article>
                 <h3 class="titulo3" id="figure">Figura &lt;figure&gt;:</h3>

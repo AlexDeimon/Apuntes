@@ -25,40 +25,44 @@
         <section>
             <h2 class="titulo2">Listas</h2>
             <p>Las listas en HTML sirven para listar contenido. En función del tipo de contenido de la lista hay tres tipos de listas:</p>
-            <ul class="lista">
-                <li>unordered list &lt;ul&gt;: Se utilizan cuando el orden de los elementos no influye.</li>
-                <li>ordered list &lt;ol&gt;: Se utilizan cuando el orden de los elementos es importante.</li>
-                <li>definition list &lt;dl&gt;: Se utilizan para hacer una lista de definiciones.
-                    <ul>
-                        <li>Definition term &lt;df&gt;: El término que se va a definir.</li>
-                        <li>Definition description &lt;dd&gt;: La descripción del término.</li>
-                    </ul>
-                </li>    
-            </ul>
+            <dl class="lista">
+                <dt>unordered list &lt;ul&gt;:</dt>
+                <dd>Se utilizan cuando el orden de los elementos no influye.</dd>
+                <dt>ordered list &lt;ol&gt;:</dt>
+                <dd>Se utilizan cuando el orden de los elementos es importante.</dd> 
+                <dt>definition list &lt;dl&gt;:</dt>
+                <dd>Se utilizan para hacer una lista de definiciones.
+                    <dl>
+                        <dt>Definition term &lt;dt&gt;:</dt>
+                        <dd>El término que se va a definir.</dd>
+                        <dt>Definition description &lt;dd&gt;:</dt>
+                        <dd>La descripción del término.</dd> 
+                    </dl>
+                </dd> 
+            </dl>
             <p>Cada elemento de la lista se representa con la etiqueta &lt;li&gt;, tanto en las ul como en las ol.</p>
-            <h3 class="titulo3">Atributos de las listas</h3>
-            <ul class="lista">
-                <li><h4 class="titulo4">&lt;ol&gt;</h4>
-                    <ul>
-                        <li>type: Estilo de numeración (1, A, a, I, i)</li>
-                        <li>start: Inicio de las secuencia (un número)</li>
-                        <li>reversed: Iniciará la lista contando hacia atrás en lugar de hacia arriba.</li>
-                        <li>value: Permite configurar los elementos de la lista en valores ordenados específicos.</li>
-                    </ul>    
-                </li>
-                <li><h4 class="titulo4">&lt;ul&gt;</h4>
-                    <ul>
-                        <li>type: Estilo de los items (disc, square, circle)</li>
-                    </ul>
-                </li>
-            </ul>
+            <h3 class="titulo3">Atributos de las listas:</h3>
+            <h4 class="titulo4">&lt;ol&gt;:</h4>
+            <dl class="lista">
+                <dt>start:</dt>
+                <dd>Inicio de las secuencia (un número).</dd>
+                <dt>reversed:</dt>
+                <dd>Iniciará la lista contando hacia atrás en lugar de hacia arriba.</dd> 
+                <dt>value:</dt>
+                <dd>Permite configurar los elementos de la lista en valores ordenados específicos.</dd> 
+            </dl>   
+            <h4 class="titulo4">&lt;ul&gt;:</h4>
+            <dl class="lista">
+                <dt>type:</dt>
+                <dd>Estilo de los items (disc, square, circle).</dd>
+            </dl>  
             <h3 class="ejemplo">Ejemplo:</h3>
             <h4 class="titulo4">Lenguajes de programación:</h4>
             <ul class="lista">
-                <li>Python</li>
-                <li>Java</li>
-                <li>C#</li>
-                <li>C++</li>
+                <li>Python.</li>
+                <li>Java.</li>
+                <li>C#.</li>
+                <li>C++.</li>
             </ul>
             <h4 class="titulo4">Navegador:</h4>
             <nav>
@@ -74,38 +78,37 @@
             <ol class="lista">
                 <li>HTML 
                     <ul>
-                        <li>Estructuras</li>
-                        <li>Sintaxis</li>
-                        <li>Etiquetas</li>
+                        <li>Estructuras.</li>
+                        <li>Sintaxis.</li>
+                        <li>Etiquetas.</li>
                     </ul>
                 </li>
                 <li>CSS
                     <ul>
-                        <li>Etiquetas</li>
-                        <li>Sintaxis</li>
-                        <li>caracteristicas</li>
+                        <li>Etiquetas.</li>
+                        <li>Sintaxis.</li>
+                        <li>Caracteristicas.</li>
                     </ul>
                 </li>
                 <li>Javascript 
                     <ul>
-                        <li>variables</li>
-                        <li>Sintaxis</li>
+                        <li>Variables.</li>
+                        <li>Sintaxis.</li>
                     </ul>
                 </li>
             </ol>
             <h4 class="titulo4">Lenguajes para el desarrollo web:</h4>
             <dl class="lista">
-                <dt>HTML</dt>
-                <dd>HyperText Markup Language: Es un lenguaje de marcado que se usa para estructurar datos en una página web
-                </dd>
-                <dt>CSS</dt>
-                <dd>Cascade Style Sheets: Es un lenguaje de diseño que se utiliza para dar estilos al HTML</dd>
-                <dt>JavaScript</dt>
+                <dt>HTML:</dt>
+                <dd>HyperText Markup Language: Es un lenguaje de marcado que se usa para estructurar datos en una página web.</dd>
+                <dt>CSS:</dt>
+                <dd>Cascade Style Sheets: Es un lenguaje de diseño que se utiliza para dar estilos al HTML.</dd>
+                <dt>JavaScript:</dt>
                 <dd>Es un lenguaje de programación para dar interactividad a un sitio web.</dd>
             </dl>
             <h4 class="titulo4">Atributos en las listas:</h4>
             <h4 class="titulo4">Type: circle</h4>
-            <ul class="lista" type="circle">
+            <ul class="lista" id="listaCircle">
                 <li>Item</li>
                 <li>Item</li>
                 <li>Item</li>

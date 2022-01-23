@@ -1,92 +1,124 @@
+/*ESTILOS HTML.html*/
 .titulohtml{
-    text-align: center;
+    text-align: var(--justify-aling-center);
     color: #f33d00;
 }
+
+/*ESTILOS CLASES Seccion_contenido.html*/
 .header2, 
 .main2, 
 .footer{
-    border: solid 5px #000000;
+    border: solid 5px var(--color-black);
 }
+
 .header2,
 .footer{
-    text-align: center;
+    text-align: var(--justify-aling-center);
     background-color: #3a3a3a;
 }
+
 .main2{
     background-color: #00adb9;
 }
+
 .listaNav{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding-left: 0%;
-    font-family: 'Exo 2', sans-serif;
-    color: #448cff;
+    padding-left: var(--margin-padding-0);
+    font-family: var(--font-title);
+    color: var(--color-blue-1);
     list-style-type: none;
 }
-.tsection, 
-.tarticle{
-    display: inline;
-    padding: 0%;
-    margin-left:2%;
-}
-.tsection{
-    background-color: #0151ff;
-}
-.tarticle{
-    background-color: #8c00ff;
-}
+
 .section,
 .article{
     margin: 1%;
 }
+
 .section{
     background-color: #0151ff;
 }
+
 .article{
     background-color: #8c00ff;
 }
+
+/*ESTILOS Elementos_bloque_&_linea.html*/
 .bloque{
-    border: solid 5px #fff;
-    color: #fff;
+    border: solid 5px var(--color-white);
+    color: var(--color-white);
 }
-.tabla{
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    border: 2px solid #000;
+
+/*ESTILOS formularios.html*/
+.formulario{
+    margin-left: var(--margin-padding-1);
+    margin-right: var(--margin-padding-1);
+    font-family: var(--font-normal);
+    color: var(--color-white);
 }
+
+/*ESTILOS ID Seccion_contenido.html*/
+#tsection, 
+#tarticle{
+    display: inline;
+    padding: var(--margin-padding-0);
+    margin-left: var(--margin-padding-1);
+}
+
+#tsection{
+    background-color: #0151ff;
+}
+
+#tarticle{
+    background-color: #8c00ff;
+}
+
+/*ESTILOS listas.html*/
+#listaCircle{
+    list-style-type: circle;
+}
+
+/*ESTILOS tablas.html*/
+#tabla1{
+    margin-left: var(--margin-padding-auto);
+    margin-right: var(--margin-padding-auto);
+    font-family: var(--font-normal);
+    text-align: var(--justify-aling-center);
+    border: 2px solid var(--color-black);
+}
+
 @media all and (max-width: 480px){
-    .tabla{
+    #tabla1{
         font-size: x-small;
     }
 }
-.tituloTabla{
+
+#tabla1 caption{
     font-size: larger;
     font-weight: bold;
-    color: #fff;
+    color: var(--color-white);
 }
-.cabeceraTabla, .pieTabla{
+
+#tabla1 thead,
+#tabla1 tfoot{
     background-color: #eeff00;
 }
-.formulario{
-    margin-left: 2%;
-    margin-right: 2%;
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
+
+#tabla1 tbody tr{
+    background-color: var(--color-white);
 }
-.audio{
-    margin-left: 2%;
+
+/*ESTILOS contenido_embebido.html*/
+#audio{
+    margin-left: var(--margin-padding-1);
 }
-.iframe{
+
+#iframe{
     width:560px; 
     height:315px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 90%;
+    margin-left: var(--margin-padding-auto);
+    margin-right: var(--margin-padding-auto);
+    max-width: var(--max-width);
     display: block;
-}
-.cuerpoTabla tr{
-    background-color: #ffffff;
 }
