@@ -41,14 +41,18 @@
                 <li>Elementos con z-index negativo.</li>
             </ol>
             <h3 class="titulo3">Propiedades:</h3>
-            <ul class="lista">
-                <li>top: El elemento se moverá desde la parte superior la distancia que se le haya indicado.
-                </li>
-                <li>right: El elemento se moverá desde la parte derecha la distancia que se le haya indicado.</li>
-                <li>bottom: El elemento se moverá desde la parte inferior la distancia que se le haya indicado.</li>
-                <li>left: El elemento se moverá desde la parte izquierda la distancia que se le haya indicado.</li>
-                <li>z-index: Permite mover el elemento en el contexto de apilamiento (eje z). Es la propiedad que permite ordenar los elementos superpuestos para controlar cual se coloca por delante y cual por detrás.</li>
-            </ul>
+            <dl class="lista">
+                <dt>top:</dt>
+                <dd>El elemento se moverá desde la parte superior la distancia que se le haya indicado.</dd> 
+                <dt>right:</dt>
+                <dd>El elemento se moverá desde la parte derecha la distancia que se le haya indicado.</dd>
+                <dt>bottom:</dt>
+                <dd>El elemento se moverá desde la parte inferior la distancia que se le haya indicado.</dd> 
+                <dt>left:</dt>
+                <dd>El elemento se moverá desde la parte izquierda la distancia que se le haya indicado.</dd> 
+                <dt>z-index:</dt>
+                <dd>Permite mover el elemento en el contexto de apilamiento (eje z). Es la propiedad que permite ordenar los elementos superpuestos para controlar cual se coloca por delante y cual por detrás.</dd> 
+            </dl>
             <p><span class="resaltado">Si a un elemento se le declara la propiedad top y/o left, las propiedades bottom y/o right no funcionarán. </span></p>
             <h3 class="titulo3">Z-index: </h3>
             <ul class="lista">
@@ -159,22 +163,31 @@
             <h4 class="ejemplo"><a href="EjemploSticky.html" class="link">Ejemplo Sticky</a></h4>
             <h3 class="titulo3">Float:</h3>
             <p>La propiedad float ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido de su flujo normal de renderizado, aunque aún sigue siendo parte del flujo (a diferencia del  posicionamiento absoluto). Admite los siguientes valores: </p>
-            <ul class="lista">
-                <li>left: El elemento flota a la izquierda de su bloque contenedor.</li>
-                <li>right: El elemento flota a la derecha de su bloque contenedor.</li>
-                <li>none: El elemento no flota.</li>
-            </ul>
+            <dl class="lista">
+                <dt>left:</dt>
+                <dd>El elemento flota a la izquierda de su bloque contenedor.</dd> 
+                <dt>right:</dt>
+                <dd>El elemento flota a la derecha de su bloque contenedor.</dd> 
+                <dt>none:</dt>
+                <dd>El elemento no flota.</dd> 
+            </dl>
+            <h3 class="titulo3">Clear: </h3>
+            <p>La propiedad clear se encarga de impedir elementos flotantes en la zona indicada, a la izquierda del elemento (left), a la derecha (right) o en ambos lados (both).</p>
             <h4 class="ejemplo">Ejemplo:</h4>
             <figure class="floatLeft">
                 <figcaption><h4 class="titulo4">Float: left</h4></figcaption>
                 <img src="../assets/images/css3.png" alt="logo CSS" >
             </figure>
+            
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci corporis aut fugit libero doloribus aliquam totam eius maxime explicabo voluptas, nobis iusto nostrum reprehenderit illo unde quae consectetur tenetur magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sapiente, odit neque porro odio quas nesciunt atque quaerat voluptates veritatis aperiam sunt delectus doloribus dicta, dolore nobis praesentium, laborum exercitationem?</p>
             <figure class="floatRight">
                 <figcaption><h4 class="titulo4">Float: right</h4></figcaption>
                 <img src="../assets/images/css3.png" alt="logo CSS" >
             </figure>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci corporis aut fugit libero doloribus aliquam totam eius maxime explicabo voluptas, nobis iusto nostrum reprehenderit illo unde quae consectetur tenetur magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt at atque, quibusdam, nisi rerum quis sed ut iusto pariatur recusandae eligendi saepe quas error adipisci? Dolores impedit eos modi incidunt.</p>
+            <div class="clearLeft">
+                <h4 class="titulo4">Div Clear Left</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ipsa praesentium dolore pariatur commodi vel quasi aliquam obcaecati maxime nobis. Itaque, cumque blanditiis odio explicabo molestias aliquam repellat culpa veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi praesentium aliquid eos, dolor nihil minus beatae nobis similique maiores temporibus repellendus exercitationem non molestias deleniti pariatur voluptatem, rerum deserunt vitae!</p>
+            </div>
         </section>
     </main>
 </body>

@@ -28,7 +28,9 @@
             <article>
                 <h3 class="titulo3">Background-color: </h3>
                 <p>La propiedad Background-color establece el color de fondo de un elemento.</p>
-                <div class="div3" id="bg-color"></div>
+                <div class="main-section">
+                    <div class="boxcontainer3" id="bg-color"></div>
+                </div>
             </article>
             <article>
                 <h3 class="titulo3">Background: gradient:</h3>
@@ -44,17 +46,17 @@
                     </li>
                     <li>Color y longitud: El color seguido de una o dos posiciones de parada opcionales (cada una de las cuales es al % o a una medida de longitud largo del eje del degradado).</li>
                 </ol>
-                <div class="main-section">
-                    <div class="div3" id="bg-gradient1"></div>
-                    <div class="div3" id="bg-gradient2">to left</div>
-                    <div class="div3" id="bg-gradient3">to top right</div>
-                    <div class="div3" id="bg-gradient4">60deg</div>
+                <div class="main-section2">
+                    <div class="boxcontainer3" id="bg-gradient1"></div>
+                    <div class="boxcontainer3" id="bg-gradient2">to left</div>
+                    <div class="boxcontainer3" id="bg-gradient3">to top right</div>
+                    <div class="boxcontainer3" id="bg-gradient4">60deg</div>
                 </div>
                 <h4 class="titulo4">Gradiente radial: </h4>
                 <p>Los degradados radiales cambian los colores progresivamente desde un punto central (origen). Se generan con la función radial-gradient(). Sus argumentos son: </p>
                 <ol class="lista">
                     <li>Forma del degradado: El valor puede ser circle o ellipse.</li>
-                    <li>Posición del gradiente: interpretada de la misma manera que background-positiono transform-origin. Si no se especifica, el valor predeterminado es center.</li>
+                    <li>Posición del gradiente: interpretada de la misma manera que background-position o transform-origin. Si no se especifica, el valor predeterminado es center.</li>
                     <li>Tamaño: Si se omite, el valor predeterminado es la esquina más lejana. Se puede dar de forma explícita o por palabra clave. 
                         <ul>
                             <li>closest-side: La forma final del degradado se encuentra con el lado del cuadro más cercano a su centro (para círculos) o con los lados vertical y horizontal más cercanos al centro (para elipses).</li>
@@ -65,17 +67,17 @@
                     </li>
                     <li>Color y longitud.</li>
                 </ol>
-                <div class="main-section">
-                    <div class="div3" id="bg-gradient5">closest-side</div>
-                    <div class="div3" id="bg-gradient6">closest-corner</div>
-                    <div class="div3" id="bg-gradient7">farthest-side</div>
-                    <div class="div3" id="bg-gradient8">farthest-corner</div>
+                <div class="main-section2">
+                    <div class="boxcontainer3" id="bg-gradient5">closest-side</div>
+                    <div class="boxcontainer3" id="bg-gradient6">closest-corner</div>
+                    <div class="boxcontainer3" id="bg-gradient7">farthest-side</div>
+                    <div class="boxcontainer3" id="bg-gradient8">farthest-corner</div>
                 </div>
                 <h4 class="titulo4">Gradiente repetitivo: </h4>
                 <p>La repetición de degradados duplica un degradado tanto como sea necesario para rellenar un área determinada. Se generan con las funciones repeating-linear-gradient()y repeating-radial-gradient().</p>
-                <div class="main-section">
-                    <div class="div3" id="bg-gradient9"></div>
-                    <div class="div3" id="bg-gradient10"></div>
+                <div class="main-section2">
+                    <div class="boxcontainer3" id="bg-gradient9"></div>
+                    <div class="boxcontainer3" id="bg-gradient10"></div>
                 </div>
                 <h4 class="titulo4">Gradiente cónico: </h4>
                 <p>Los degradados cónicos cambian de color progresivamente alrededor de un círculo. Se generan con la función conic-gradient(). Sus argumentos son: </p>
@@ -84,128 +86,143 @@
                     <li>posición: Con los mismos valores que la propiedad background-position, la posición define el centro del degradado. Si se omite, el valor predeterminado es center, lo que significa que el degradado estará centrado.</li>
                     <li>Color y longitud.</li>
                 </ol>
-                <div class="main-section">
-                    <div class="div3" id="bg-gradient11"></div>
-                    <div class="div3" id="bg-gradient12"></div>
+                <div class="main-section2">
+                    <div class="boxcontainer3" id="bg-gradient11">20deg</div>
+                    <div class="boxcontainer3" id="bg-gradient12">10deg</div>
                 </div>
             </article>
             <article>
                 <h3 class="titulo3">Background-image: </h3>
                 <p>La propiedad Background-image establece una o más imágenes de fondo en un elemento separadas por comas.</p>
                 <p>Las imágenes de fondo se dibujan apilando capas de contexto una encima de la otra. La primera capa especificada se dibuja como si fuera la más cercana al usuario.</p>
-                <img src="../assets/images/background1.png" alt="estilo bg-img1" class="img"> 
-                <div class="div3" id="bg-img1"></div>
+                <div class="main-section2">
+                    <div class="boxcontainer3" id="bg-img1"></div>
+                    <img src="../assets/images/background1.png" alt="estilo bg-img1"> 
+                </div>
                 <p>Si no se puede dibujar una imagen especificada (por ejemplo, cuando el archivo indicado por el URI especificado no se puede cargar), los navegadores la manejan como lo harían con un valor none. Por eso es importante que exista un Background-color de respaldo. Este se mostrará en caso de que la imagen no carge o tambien si esta está opaca o posee transparencia.</p>
-                <img src="../assets/images/background2.png" alt="estilo bg-2" class="img">
-                <div class="div3" id="bg-img2"></div>
+                <div class="main-section2">
+                    <div class="boxcontainer3" id="bg-img2"></div>
+                    <img src="../assets/images/background2.png" alt="estilo bg-2">
+                </div>
             </article>
             <article>
                 <h3 class="titulo3">Background-repeat: </h3>
                 <p>La propiedad Background-repeat establece cómo se repiten las imágenes de fondo. Una imagen de fondo puede repetirse a lo largo de los ejes horizontal y vertical, o no repetirse en absoluto. Por defecto como se ve en los ejemplos anteriores las imagenes se repitenten tanto en x como en y (repeat) </p>
-                <h4 class="titulo4">repeat-x:</h4>
-                <div class="div3" id="bg-repeat1"></div>
-                <h4 class="titulo4">repeat-y:</h4>
-                <div class="div3" id="bg-repeat2"></div>
+                <div class="main-section2">
+                    <div class="boxcontainer3" id="bg-repeat1">repeat-x</div>
+                    <div class="boxcontainer3" id="bg-repeat2">repeat-y</div>
+                </div>
                 <h4 class="titulo4">repeat vs space vs round:</h4>
                 <ul class="lista">
                     <li>En el caso de repeat la imagen se repite tanto como sea necesario para cubrir toda el área de pintura de la imagen de fondo y la última imagen se recortará si no encaja.</li>
                     <li>En el caso de space la imagen se repite tanto como sea posible sin recortar. La primera y la última imagen se fijan a ambos lados del elemento y los espacios en blanco se distribuyen uniformemente entre las imágenes.</li>
                     <li>En el caso de round a medida que el espacio permitido aumenta de tamaño, las imágenes repetidas se estirarán (sin dejar espacios) hasta que haya espacio para agregar otra. Cuando se agrega la siguiente imagen, todas las actuales se comprimen para dejar espacio.</li>
                 </ul>
-                <div class="main-section">
-                    <div class="div3" id="bg-repeat3"></div>
-                    <div class="div3" id="bg-repeat4"></div>
-                    <div class="div3" id="bg-repeat5"></div>
+                <div class="main-section2">
+                    <div class="boxcontainer3" id="bg-repeat3">repeat</div>
+                    <div class="boxcontainer3" id="bg-repeat4">space</div>
+                    <div class="boxcontainer3" id="bg-repeat5">around</div>
+                    <div class="boxcontainer3" id="bg-repeat6">no-repeat</div>
                 </div>
-                <h4 class="titulo4">no-repeat:</h4>
-                <div class="div3" id="bg-repeat6"></div>
             </article>
             <article>
                 <h3 class="titulo3">Background-position: </h3>
                 <p>La propiedad Background-position establece la posición inicial para cada imagen de fondo.</p>
                 <h4 class="titulo4">Valores con palabras clave:</h4>
-                <div class="main-section">
-                    <div class="div3" id="bg-position1">Top</div>
-                    <div class="div3" id="bg-position2">Right</div>
-                    <div class="div3" id="bg-position3">Bottom</div>
-                    <div class="div3" id="bg-position4">Left</div>
-                    <div class="div3" id="bg-position5">Center</div>
+                <div class="main-section2">
+                    <div class="boxcontainer3" id="bg-position1">Top</div>
+                    <div class="boxcontainer3" id="bg-position2">Right</div>
+                    <div class="boxcontainer3" id="bg-position3">Bottom</div>
+                    <div class="boxcontainer3" id="bg-position4">Left</div>
+                    <div class="boxcontainer3" id="bg-position5">Center</div>
                 </div>
                 <h4 class="titulo4">Valores con medidas horizontal y vertical: </h4>
-                <div class="main-section">
-                    <div class="div3" id="bg-position6">X = 60% Y = 20% </div>
-                    <div class="div3" id="bg-position7">X = 30px Y = 70px </div>
+                <div class="main-section2">
+                    <div class="boxcontainer3" id="bg-position6">X = 60% Y = 20% </div>
+                    <div class="boxcontainer3" id="bg-position7">X = 30px Y = 70px </div>
                 </div>
                 <h4 class="titulo4">Valores con medidas de coordenadas: </h4>
-                <div class="main-section">
-                    <div class="div3" id="bg-position8">bottom 10px right 20px</div>
-                    <div class="div3" id="bg-position9">bottom 10px right</div>
-                    <div class="div3" id="bg-position10">top right 10px</div>
+                <div class="main-section2">
+                    <div class="boxcontainer3" id="bg-position8">bottom 10px right 20px</div>
+                    <div class="boxcontainer3" id="bg-position9">bottom 10px right</div>
+                    <div class="boxcontainer3" id="bg-position10">top right 10px</div>
                 </div>    
             </article>
             <article>
-                <h3 class="titulo3">Background-size: </h3>
+                <h3 class="titulo3">Background-size:</h3>
                 <p>La propiedad Background-size establece el tamaño de la imagen de fondo del elemento. La imagen se puede dejar en su tamaño natural, estirar o restringir para que se ajuste al espacio disponible.</p>
                 <h4 class="titulo4">Valores con palabras clave:</h4>
-                <ul class="lista">
-                    <li>contain: Escala la imagen lo más grande posible dentro de su contenedor sin recortar ni estirar la imagen. Si el contenedor es más grande que la imagen, esto dará como resultado un mosaico de la imagen, a menos que el background-repeat esté establecido en no-repeat.</li>
-                    <li>cover: Escala la imagen lo más grande posible para llenar el contenedor, estirando la imagen si es necesario. Si las proporciones de la imagen difieren del elemento, se recorta vertical u horizontalmente para que no quede ningún espacio vacío.</li>
-                    <li>auto: Escala la imagen de fondo en la dirección correspondiente de modo que se mantengan sus proporciones intrínsecas.</li>
-                </ul>
-                <div class="main-section">
-                    <div class="div3" id="bg-size1">cover</div>
-                    <div class="div3" id="bg-size2">contain</div>
-                    <div class="div3" id="bg-size3">auto</div>
+                <dl class="lista">
+                    <dt>contain:</dt>
+                    <dd>Escala la imagen lo más grande posible dentro de su contenedor sin recortar ni estirar la imagen. Si el contenedor es más grande que la imagen, esto dará como resultado un mosaico de la imagen, a menos que el background-repeat esté establecido en no-repeat.</dd>
+                    <dt>cover:</dt>
+                    <dd>Escala la imagen lo más grande posible para llenar el contenedor, estirando la imagen si es necesario. Si las proporciones de la imagen difieren del elemento, se recorta vertical u horizontalmente para que no quede ningún espacio vacío.</dd>
+                    <dt>auto:</dt>
+                    <dd>Escala la imagen de fondo en la dirección correspondiente de modo que se mantengan sus proporciones intrínsecas.</dd>
+                </dl>
+                <div class="main-section2">
+                    <div class="boxcontainer3" id="bg-size1">cover</div>
+                    <div class="boxcontainer3" id="bg-size2">contain</div>
+                    <div class="boxcontainer3" id="bg-size3">auto</div>
                 </div>
                 <h4 class="titulo4">valores con medidas y %:</h4>
-                <div class="main-section">
-                    <div class="div3" id="bg-size4">250px</div>
-                    <div class="div3" id="bg-size5">70%</div>
+                <div class="main-section2">
+                    <div class="boxcontainer3" id="bg-size4">250px</div>
+                    <div class="boxcontainer3" id="bg-size5">70%</div>
                 </div>
             </article>
             <article>
-                <h3 class="titulo3">Background-attachment: </h3>
+                <h3 class="titulo3">Background-attachment:</h3>
                 <p>La propiedad Background-attachment establece si la posición de una imagen de fondo se fija dentro de la ventana gráfica o se desplaza con su bloque contenedor. Admite los siguientes valores: </p>
-                <ul class="lista">
-                    <li>fixed: El fondo está fijo en relación con la ventana gráfica. Incluso si un elemento tiene un mecanismo de desplazamiento, el fondo no se mueve con el elemento.</li>
-                    <li>local: El fondo se fija en relación con el contenido del elemento. Si el elemento tiene un mecanismo de desplazamiento, el fondo se desplaza con el contenido del elemento, y el área de pintura de fondo y el área de posicionamiento del fondo son relativas al área de desplazamiento del elemento en lugar de al borde que los enmarca.</li>
-                    <li>scroll: El fondo se fija en relación con el elemento en sí y no se desplaza con su contenido.</li>
-                </ul>
-                <div class="main-section">
-                    <div class="div4" id="bg-attachement1">
+                <dl class="lista">
+                    <dt>fixed:</dt>
+                    <dd>El fondo está fijo en relación con la ventana gráfica. Incluso si un elemento tiene un mecanismo de desplazamiento, el fondo no se mueve con el elemento.</dd>
+                    <dt>local:</dt>
+                    <dd>El fondo se fija en relación con el contenido del elemento. Si el elemento tiene un mecanismo de desplazamiento, el fondo se desplaza con el contenido del elemento, y el área de pintura de fondo y el área de posicionamiento del fondo son relativas al área de desplazamiento del elemento en lugar de al borde que los enmarca.</dd>
+                    <dt>scroll:</dt>
+                    <dd>El fondo se fija en relación con el elemento en sí y no se desplaza con su contenido.</dd>
+                </dl>
+                <div class="main-section2">
+                    <div class="boxcontainer4" id="bg-attachement1">
                         <h4 class="titulo4">fixed</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laudantium suscipit, autem unde culpa error nam numquam repudiandae reprehenderit, sint eius, ex dolorum quaerat atque quidem veniam quos dolores maxime.</p>
                     </div>
-                    <div class="div4" id="bg-attachement2">
+                    <div class="boxcontainer4" id="bg-attachement2">
                         <h4 class="titulo4">local</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laudantium suscipit, autem unde culpa error nam numquam repudiandae reprehenderit, sint eius, ex dolorum quaerat atque quidem veniam quos dolores maxime.</p>
                     </div>
-                    <div class="div4" id="bg-attachement3">
+                    <div class="boxcontainer4" id="bg-attachement3">
                         <h4 class="titulo4">scroll</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laudantium suscipit, autem unde culpa error nam numquam repudiandae reprehenderit, sint eius, ex dolorum quaerat atque quidem veniam quos dolores maxime.</p>
                     </div>
                 </div>
             </article>
             <article>
-                <h3 class="titulo3">Background-clip: </h3>
+                <h3 class="titulo3">Background-clip:</h3>
                 <p>La propiedad Background-clip establece si el fondo de un elemento se extiende por debajo de su cuadro de borde, cuadro de relleno o cuadro de contenido. Admite los siguintes valores: </p>
-                <ul class="lista">
-                    <li>border-box: El fondo se extiende hasta el borde exterior de la caja (pero debajo del borde en orden z).</li>
-                    <li>padding-box: El fondo se extiende hasta el borde exterior de la caja. No se dibuja ningún fondo debajo del borde.</li>
-                    <li>content-box: El fondo está pintado dentro (recortado) de la caja.</li>
-                    <li>text: El fondo está pintado dentro (recortado) del texto de primer plano.</li>
-                </ul>
-                <div class="main-section">
-                    <div class="div5" id="bg-clip1">border-box</div>
-                    <div class="div5" id="bg-clip2">padding-box</div>
-                    <div class="div5" id="bg-clip3">content-box</div>
-                    <div class="div5" id="bg-clip4">text text text text</div>
+                <dl class="lista">
+                    <dt>border-box:</dt>
+                    <dd>El fondo se extiende hasta el borde exterior de la caja (pero debajo del borde en orden z).</dd>
+                    <dt>padding-box:</dt>
+                    <dd>El fondo se extiende hasta el borde exterior de la caja. No se dibuja ningún fondo debajo del borde.</dd>
+                    <dt>content-box:</dt>
+                    <dd>El fondo está pintado dentro (recortado) de la caja.</dd>
+                    <dt>text:</dt>
+                    <dd>El fondo está pintado dentro (recortado) del texto de primer plano.</dd>
+                </dl>
+                <div class="main-section2">
+                    <div class="boxcontainer5" id="bg-clip1">border-box</div>
+                    <div class="boxcontainer5" id="bg-clip2">padding-box</div>
+                    <div class="boxcontainer5" id="bg-clip3">content-box</div>
+                    <div class="boxcontainer5" id="bg-clip4">text text text text</div>
                 </div>
             </article>
             <article>
-                <h3 class="titulo3">Fondo de imagen con degradado: </h3>
-                <img src="../assets/images/background3.png" alt="fondo de imagen con degradado" class="img">
-                <div class="div3" id="bg-gradient"></div>
+                <h3 class="titulo3">Fondo de imagen con degradado:</h3>
+                <div class="main-section2">
+                    <div class="boxcontainer3" id="bg-gradient"></div>
+                    <img src="../assets/images/background3.png" alt="fondo de imagen con degradado">
+                </div>
             </article>
         </section>
     </main>

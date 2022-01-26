@@ -27,13 +27,17 @@
             <article>
                 <h3 class="titulo3">Text-align</h3>
                 <p>Text-align es la propiedad que nos permite alinear horizontalmente el contenido de un elemento de bloque siempre que el contenido <span class="resaltado">NO TENGA ANCHO DECLARADO.</span> Sus valores son: </p>
-                <ul class="lista">
-                    <li>text-align:left; Alinea el contenido a la izquierda.</li>
-                    <li>text-align:right; Alinea el contenido a la derecha.</li>                    
-                    <li>text-align:center; Alinea el contenido al centro.</li>
-                    <li>text-align:justify; Alinea el contenido de forma justificada.</li>
-                </ul>
-                <h4 class="ejemplo">Ejemplo: </h3>
+                <dl class="lista">
+                    <dt>text-align: left;</dt>
+                    <dd>Alinea el contenido a la izquierda.</dd> 
+                    <dt>text-align: right;</dt>
+                    <dd>Alinea el contenido a la derecha.</dd>                    
+                    <dt>text-align: center;</dt>
+                    <dd>Alinea el contenido al centro.</dd> 
+                    <dt>text-align: justify;</dt>
+                    <dd>Alinea el contenido de forma justificada.</dd> 
+                </dl>
+                <h4 class="ejemplo">Ejemplo: </h4>
                 <img src="../assets/images/text-align.png" alt="ejemplo text-align" class="img">
                 <p id="text1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius labore veritatis, itaque quidem unde dolore in animi commodi officiis mollitia qui excepturi recusandae perferendis nobis corporis exercitationem minus consequatur.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam repellendus possimus dolor cumque alias eos dignissimos nesciunt, aut adipisci exercitationem asperiores doloribus. Alias beatae debitis doloremque fugiat provident tempora eius!
@@ -47,13 +51,18 @@
                 <p>Cuando se usa una propiedad text-* se está afectando a un bloque completo. Cuando se usa una propiedad font-* se está afectando a la fuente del texto.</p>
                 <h4 class="titulo4">Fuentes predeterminadas:</h4>
                 <p>Son las fuentes que se consideran seguras ya que son genéricas y no establecen una familia tipográfica, si no un estilo de fuente.</p>
-                <ul class="lista">
-                    <li><p id="serif">serif: Fuentes que tienen serifas (adornos en los caracteres).</p></li>
-                    <li><p id="sans-serif">sans-serif: Fuentes sin serifas.</p></li>
-                    <li><p id="monospace">monospace: Fuentes que tienen el mismo espaciado entre todos sus caracteres.</p></li>
-                    <li><p id="cursive">cursive: Fuentes que pretenden emular escritura a mano, con ligaduras y trazos fluidos.</p></li>
-                    <li><p id="fantasy">fantasy: Fuentes que suelen ser decorativas.</p></li>
-                </ul>
+                <dl class="lista">
+                    <dt>serif:</dt>
+                    <dd id="serif">Fuentes que tienen serifas (adornos en los caracteres).</dd>
+                    <dt>sans-serif:</dt>
+                    <dd id="sans-serif">Fuentes sin serifas.</dd>
+                    <dt>monospace:</dt>
+                    <dd id="monospace">Fuentes que tienen el mismo espaciado entre todos sus caracteres.</dd>
+                    <dt>cursive:</dt>
+                    <dd id="cursive">Fuentes que pretenden emular escritura a mano, con ligaduras y trazos fluidos.</dd>
+                    <dt>fantasy:</dt>
+                    <dd id="fantasy">Fuentes que suelen ser decorativas.</dd>
+                </dl>
                 <h4 class="titulo4">Fuentes desde un servidor remoto:</h4>
                 <p>Son fuentes que se encuentran en un servidor y que se descargan para su uso, la más famosa es <a href="https://fonts.google.com/" class="link">Google Fonts.</a> Siempre que se usen fuentes no genéricas, se deben poner fuentes genéricas de fallback (respaldo).</p>
             </article>
@@ -61,88 +70,182 @@
                 <h3 class="titulo3">Transformaciones de texto: </h3>
                 <h4 class="titulo4">Text-transform:</h4>
                 <p>Esta propiedad permite hacer transformaciones ESTÉTICAS en el texto. Admite los valores:</p>
-                <ul class="lista">
-                    <li>none: No se aplicará ninguna transformación.</li>
-                    <li id="text3">uppercase: El texto se pondrá en mayúsculas.</li>
-                    <li id="text4">lowercase: El texto se pondrá en minúsculas.</li>
-                    <li id="text5">capitalize: Transforma la primera letra de cada palabra en mayúscula.</li>
-                </ul>
+                <dl class="lista">
+                    <dt>none:</dt>
+                    <dd>No se aplicará ninguna transformación.</dd>
+                    <dt>uppercase:</dt>
+                    <dd id="text3">El texto se pondrá en mayúsculas.</dd>
+                    <dt>lowercase:</dt>
+                    <dd id="text4">El texto se pondrá en minúsculas.</dd>
+                    <dt>capitalize:</dt>
+                    <dd id="text5"> Transforma la primera letra de cada palabra en mayúscula.</dd>
+                </dl>
                 <h4 class="titulo4">Font-style:</h4>
                 <p>Esta propiedad permite definir el aspecto de una familia tipográfica. Admite los valores: </p>
-                <ul class="lista">
-                    <li>normal: Escoge un tipo de letra clasificado como normal dentro de una familia de fuente.</li>
-                    <li id="italic">italic: Escoge un tipo de letra etiquetado como italic, o, si una versión cursiva del tipo de letra no esté disponible, escoge un tipo de letra etiquetado como oblique en lugar de eso.</li>
-                    <li id="oblique">oblique: Escoge un tipo de letra etiquetado como oblique, o, si una versión oblique del tipo de letra no esté disponible, escoge un tipo de letra etiquetado como italic en lugar de eso.</li>
-                </ul>
+                <dl class="lista">
+                    <dt>normal:</dt>
+                    <dd>Escoge un tipo de letra clasificado como normal dentro de una familia de fuente.</dd>
+                    <dt>italic:</dt>
+                    <dd id="italic">Cursiva. Estilo caracterizado por una ligera inclinación de las letras hacia la derecha.</dd>
+                    <dt>oblique:</dt>
+                    <dd id="oblique">Oblícua. Identica al anterior, salvo que esta inclinación se realiza de forma artificial.</dd>
+                </dl>
                 <h4 class="titulo4">Font-size:</h4>
                 <p>Especifica la dimensión de la letra. Este tamaño puede, a su vez, alterar el aspecto de alguna otra cosa, ya que se usa para calcular la longitud de las unidades em y ex.</p>
-                <p>Admite medidas de px y em pero tambien los valores: </p>
-                <ul class="lista">
-                    <li>xx-small, x-small, small, medium, large, x-large, xx-large: Un grupo de palabras clave de dimensión absoluta en relación al que determina el usuario como tamaño por defecto (que es medium). De forma parecida a las sentencias HTML &lt;font size="1"&gt; hasta &lt;font size="7"&gt; donde el tamaño por defecto es &lt;font size="3"&gt;.</li>
-                    <li>larger, smaller: Más grande o más pequeño que el tamaño de letra del elemento padre, con aproximadamente el mismo ratio que el mencionado anteriormente.</li>
-                </ul>
-                <h4 class="ejemplo">Ejemplo font-size:</h4>
-                <p id="text6">Texto de 20px</p>
-                <p id="text7">Texto xx-small</p>
-                <p id="text8">Texto x-small</p>
-                <p id="text9">Texto small</p>
-                <p id="text10">Texto medium</p>
-                <p id="text11">Texto large</p>
-                <p id="text12">Texto x-large</p>
-                <p id="text13">Texto xx-large</p>
-                <p id="text14">Texto larger</p>
-                <p id="text15">Texto smaller</p>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Tipo de medida</th>
+                            <th>Valores</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Medidas absolutas</td>
+                            <td>xx-small</td>
+                            <td><p id="text7">Texto xx-small</p></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>x-small</td>
+                            <td><p id="text8">Texto x-small</p></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>small</td>
+                            <td><p id="text9">Texto small</p></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>medium</td>
+                            <td><p id="text10">Texto medium</p></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>large</td>
+                            <td><p id="text11">Texto large</p></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>x-large</td>
+                            <td><p id="text12">Texto x-large</p></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>xx-large</td>
+                            <td><p id="text13">Texto xx-large</p></td>
+                        </tr>
+                        <tr>
+                            <td>Medidas relativas</td>
+                            <td>larger</td>
+                            <td><p id="text14">Texto larger</p></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>smaller</td>
+                            <td><p id="text15">Texto smaller</p></td>
+                        </tr>
+                        <tr>
+                            <td>Medida específica</td>
+                            <td>px, %, em & rem</td>
+                            <td><p id="text6">Texto de 20px</p></td>
+                        </tr>
+                    </tbody>
+                </table>
                 <h4 class="titulo4">Font-weight:</h4>
-                <p>Especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en normal y bold. Tambien Admite los siguientes valores: </p>
-                <ul class="lista">
-                    <li>normal : Peso/grueso normal de la fuente. Igual que 400.</li>
-                    <li id="text16">bold: Grueso ancho (negrita). Igual que 700.</li>
-                    <li id="text17">lighter: Corresponde a un tipo de fuente menos grueso que el tipo del elemento padre (dentro de los valores disponibles).</li>
-                    <li id="text18">bolder: Corresponde a un tipo de fuente más grueso que el tipo del elemento padre (dentro de los valores disponibles).</li>
-                    <li>100, 200, 300, 400, 500, 600, 700, 800, 900: Pesos numéricos para los tipos de fuente que nos permiten más flexibilidad que normal - bold. Si el peso especificado no existe en el tipo de fuente escogido, un valor entre 600 y 900 se presentará con el valor más próximo disponible para dar una letra más oscura. De igual forma, un valor entre 100 y 500 se presentará con el valor más próximo disponible para dar una letra más clara. Esto significa que para los tipos de letra que sólo dispongan de normal y bold, cualquier valor entre 100 y 500 será normal y entre 600 y 900, será bold.</li>
-                </ul>
-
+                <p>Especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en normal y bold. Tambien Admite los siguientes valores:</p>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Tipo de valor</th>
+                            <th>Valores</th>
+                            <th>Descripción y ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Valores absolutos</td>
+                            <td>normal</td>
+                            <td>Peso/grueso normal de la fuente. Igual a 400.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>bold</td>
+                            <td id="text16">Grueso ancho (negrita). Igual que 700.</td>
+                        </tr>
+                        <tr>
+                            <td>Valores relativos</td>
+                            <td>lighter</td>
+                            <td id="text17">Corresponde a un tipo de fuente menos grueso que el tipo del elemento padre (dentro de los valores disponibles).</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>bolder</td>
+                            <td id="text18">Corresponde a un tipo de fuente más grueso que el tipo del elemento padre (dentro de los valores disponibles).</td>
+                        </tr>
+                        <tr>
+                            <td>valor numérico</td>
+                            <td>100, 200, 300, 400, 500, 600, 700, 800, 900</td>
+                            <td>Pesos numéricos para los tipos de fuente que nos permiten más flexibilidad que normal - bold. Si el peso especificado no existe en el tipo de fuente escogido, un valor entre 600 y 900 se presentará con el valor más próximo disponible para dar una letra más oscura. De igual forma, un valor entre 100 y 500 se presentará con el valor más próximo disponible para dar una letra más clara. Esto significa que para los tipos de letra que sólo dispongan de normal y bold, cualquier valor entre 100 y 500 será normal y entre 600 y 900, será bold.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </article>
             <article>
                 <h3 class="titulo3">Adornos en el texto:</h3>
                 <h4 class="titulo4">text-decoration:</h4>
                 <p>Text-decoration: Esta propiedad permite controlar la línea que se puede poner en los textos. Admite los valores:</p>
-                <ul class="lista">
-                    <li>none: Elimina cualquier línea.</li>
-                    <li id="overline">overline: Coloca una linea sobre el texto.</li>
-                    <li id="underline">underline: Coloca una linea bajo el texto.</li>
-                    <li id="line-through">line-through: Coloca una linea tachando el texto.</li>
-                </ul>
+                <dl class="lista">
+                    <dt>none:</dt>
+                    <dd>Elimina cualquier línea.</dd>
+                    <dt>overline:</dt>
+                    <dd id="overline">Coloca una linea sobre el texto.</dd>
+                    <dt>underline:</dt>
+                    <dd id="underline">Coloca una linea bajo el texto.</dd>
+                    <dt>line-through:</dt>
+                    <dd id="line-through">Coloca una linea tachando el texto.</dd>
+                </dl>
                 <h4 class="titulo4">text-shadow:</h4>
                 <p>Text-shadow: Funciona exáctamente igual que box-shadow, con la única diferencia de que no admite el valor inset ni la expansión de la sombra. Los valores son: </p>
-                <ul class="lista">
-                    <li>offsetX: desplazamiento horizontal.</li>
-                    <li>offsetY: desplazamiento vertical.</li>
-                    <li>blur: desenfoque.</li>
-                    <li>color: color, por defecto coge el del texto.</li>   
-                </ul>
+                <dl class="lista">
+                    <dt>offsetX:</dt>
+                    <dd>Desplazamiento horizontal.</dd>
+                    <dt>offsetY:</dt>
+                    <dd>Desplazamiento vertical.</dd>
+                    <dt>blur:</dt>
+                    <dd>Desenfoque.</dd>
+                    <dt>color:</dt>
+                    <dd>Color, por defecto toma el del texto.</dd>   
+                </dl>
                 <h2 class="ejemplo" id="text-shadow">Texto con sombra</h2>
             </article>
             <article>
                 <h3 class="titulo3">Espaciado en fuentes y textos:</h3>
-                <ul class="lista">
-                    <li id="letter-spacing">letter-spacing: Establece la separación entre caracteres, se puede establecer en cualquier medida válida para CSS.</li>
-                    <li id="word-spacing">word-spacing: Establece la separación entre palabras, se puede establecer en cualquier medida válida para CSS.</li>
-                    <li>line-height: Establece el alto de cada línea, se puede dar una medida concreta o se puede poner un número que se multipliará por el font size del texto al que se lo estemos aplicando.</li>
-                </ul>
+                <dl class="lista">
+                    <dt>letter-spacing:</dt>
+                    <dd id="letter-spacing">Establece la separación entre caracteres, se puede establecer en cualquier medida válida para CSS.</dd>
+                    <dt>word-spacing:</dt>
+                    <dd id="word-spacing">Establece la separación entre palabras, se puede establecer en cualquier medida válida para CSS.</dd>
+                    <dt>line-height:</dt>
+                    <dd>Establece el alto de cada línea, se puede dar una medida concreta o se puede poner un número que se multipliará por el font size del texto al que se lo estemos aplicando.</dd>
+                </dl>
                 <h4 class="ejemplo">Ejemplos line-height: </h4>
                 <p id="line-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum facilis, sed dolorum voluptates exercitationem voluptatum iure unde consequatur vel distinctio blanditiis iusto quas dolore a. Quos facere a fugiat ut? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut veniam iste labore saepe sequi fuga beatae nihil eligendi odio vero impedit reprehenderit optio, quia rerum dolor itaque illo nam corrupti!</p>
-                <p>Centrar UNA LINEA en un Box:</p>
+                <p>Centrar UNA LINEA en un Box con letter-spacing:</p>
                 <div class="box" id="box13">texto centrado</div>
             </article>
             <article>
                 <h3 class="titulo3">Orientación del texto:</h3>
                 <p>writing-mode:  define si los renglones de texto se disponen horizontal o verticalmente y la dirección en que avanzan los bloques. Admite los valores:</p>
-                <ul class="lista">
-                    <li>horizontal-tb: El contenido fluye horizontalmente de izquierda a derecha y verticalmente de arriba hacia abajo. El próximo renglón horizontal se posiciona debajo del renglón anterior.</li>
-                    <li>vertical-rl: El contenido fluye verticalmente de arriba hacia abajo y horizontalmente de derecha a izquierda. El próximo renglón vertical se posiciona a la izquierda del renglón anterior.</li>
-                    <li>vertical-lr: El contenido fluye verticalmente de arriba hacia abajo y horizontalmente de izquierda a derecha. El próximo renglón vertical se posiciona a la derecha del renglón anterior.</li>
-                </ul>
+                <dl class="lista">
+                    <dt>horizontal-tb:</dt>
+                    <dd>El contenido fluye horizontalmente de izquierda a derecha y verticalmente de arriba hacia abajo. El próximo renglón horizontal se posiciona debajo del renglón anterior.</dd>
+                    <dt>vertical-rl:</dt>
+                    <dd>El contenido fluye verticalmente de arriba hacia abajo y horizontalmente de derecha a izquierda. El próximo renglón vertical se posiciona a la izquierda del renglón anterior.</dd>
+                    <dt>vertical-lr:</dt>
+                    <dd>El contenido fluye verticalmente de arriba hacia abajo y horizontalmente de izquierda a derecha. El próximo renglón vertical se posiciona a la derecha del renglón anterior.</dd>
+                </dl>
                 <h4 class="ejemplo">Ejemplo:</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad dignissimos ipsam praesentium inventore cumque, autem aspernatur, molestias reiciendis dolorem laborum assumenda. Illo ratione doloribus neque perferendis iste facilis asperiores id?</p>
                 <p id="vertical-rl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad dignissimos ipsam praesentium inventore cumque, autem aspernatur, molestias reiciendis dolorem laborum assumenda. Illo ratione doloribus neque perferendis iste facilis asperiores id?</p>
@@ -153,6 +256,133 @@
                 <p>text-indent: Genera una identación en la primer linea del texto.</p>
                 <h4 class="ejemplo">Ejemplo:</h4>
                 <p id="textIndent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ex vero, minus tempora dolorem debitis deserunt. Sed nesciunt ipsum, labore harum omnis quod esse amet, debitis molestias quidem ab exercitationem!</p>
+            </article>
+            <article>
+                <h3 class="titulo3">Espacios en blanco:</h3>
+                <p>Esta propiedad establece cómo se maneja el espacio en blanco dentro de un elemento. La propiedad especifica dos cosas:</p>
+                <ul class="lista">
+                    <li>Si y cómo se contrae el espacio en blanco.</li>
+                    <li>Si las líneas pueden ajustarse en oportunidades de ajuste suave.</li>
+                </ul>
+                <p>La propiedad white-space se especifica como una sola palabra clave elegida de los siguientes valores: </p>
+                <dl class="lista">
+                    <dt>normal: </dt>
+                    <dd>Las secuencias de espacios en blanco están colapsadas. Los caracteres de nueva línea en la fuente se manejan igual que otros espacios en blanco. Las líneas se rompen según sea necesario para llenar los cuadros de línea.</dd>
+                    <dt>nowrap:</dt>
+                    <dd>Contrae los espacios en blanco como para normal, pero suprime los saltos de línea (ajuste de texto) dentro de la fuente.</dd>
+                    <dt>pre:</dt>
+                    <dd>Se conservan las secuencias de espacios en blanco. Las líneas solo se rompen en caracteres de nueva línea en la fuente y en los elementos &lt;br&gt;.</dd>
+                    <dt>pre-wrap:</dt>
+                    <dd>Se conservan las secuencias de espacios en blanco. Las líneas se dividen en los caracteres de nueva línea, en &lt;br&gt; y según sea necesario para llenar los cuadros de línea.</dd>
+                    <dt>pre-line:</dt>
+                    <dd>Las secuencias de espacios en blanco están colapsadas. Las líneas se dividen en los caracteres de nueva línea, en &lt;br&gt; y según sea necesario para llenar los cuadros de línea.</dd>
+                </dl>
+                <h4 class="ejemplo">Ejemplos:</h4>
+                <div class="main-section2">
+                    <div class="boxcontainer">
+                        <h4 class="titulo4">Normal</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Eius, eveniet ipsam. 
+                            Quia sapiente dignissimos, a quos ut molestias at maxime vel totam cum veritatis ratione inventore aliquam nesciunt consequuntur autem!</p>
+                    </div>
+                    <div class="boxcontainer">
+                        <h4 class="titulo4">nowrap</h4>
+                        <p id="white-space-nowrap">Lorem ipsum dolor, sit amet consectetur </p>
+                    </div>
+                    <div class="boxcontainer">
+                        <h4 class="titulo4">pre</h4>
+                        <p id="white-space-pre">Lorem ipsum dolor sit amet consectetur </p>
+                    </div>
+                    <div class="boxcontainer">
+                        <h4 class="titulo4">pre-wrap</h4>
+                        <p id="white-space-pre-wrap">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Eius, eveniet ipsam. 
+                        Quia sapiente dignissimos, a quos ut molestias at maxime vel totam cum veritatis ratione inventore aliquam nesciunt consequuntur autem!</p>
+                    </div>
+                    <div class="boxcontainer">
+                        <h4 class="titulo4">pre-line</h4>
+                        <p id="white-space-pre-line">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Eius, eveniet ipsam. 
+                        Quia sapiente dignissimos, a quos ut molestias at maxime vel totam cum veritatis ratione inventore aliquam nesciunt consequuntur autem!</p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo3">Romper palabras y textos extensos: </h3>
+                <p>Hay ocaciones en la que un texto concreto (por ejemplo, un enlace muy extenso) no cabe dentro de un contenedor, por lo que el texto se desborda.</p>
+                <div class="main-section">
+                    <div class="boxcontainer">
+                        <a href="#" class="link">hola_mundo_soy_un_enlace_muy_extenso</a>
+                        <p>hooooooooooooolaaaaaaaaaaaaa mundo soooooooooooooooooooooooooy un ejemplo muuuuuuuuuuuuuuuuuuuuuuuuuuy exagerado.</p>
+                    </div>
+                </div>
+                <p>Para areglar este tipo de situaciones, existen diferentes propiedades.</p>
+                <dl class="lista">
+                    <dt>hyphens:</dt>
+                    <dd>Especifica cómo se deben dividir las palabras cuando el texto se ajusta a varias líneas.</dd>
+                    <dt>overflow-wrap:</dt>
+                    <dd>Se aplica a los elementos en línea, estableciendo si el navegador debe insertar saltos de línea dentro de una cadena que de otro modo sería irrompible para evitar que el texto se desborde en su cuadro de línea. Esta propiedad  sólo funciona cuando white-space está establecida a valores que respeten espacios.</dd>
+                    <dt>word-break: </dt>
+                    <dd>Establece si los saltos de línea aparecen donde el texto de otro modo desbordaría su cuadro de contenido.</dd>
+                </dl>
+                <div class="overflow">
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Propiedad</th>
+                            <th>Valores</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>hyphens</td>
+                            <td>none</td>
+                            <td>Las palabras no se dividen en los saltos de línea, incluso si los caracteres dentro de las palabras sugieren puntos de salto de línea. Las líneas solo se ajustarán en espacios en blanco.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>manual</td>
+                            <td>Las palabras se dividen para el ajuste de línea solo cuando los caracteres dentro de la palabra sugieren oportunidades de salto de línea.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>auto</td>
+                            <td>El navegador es libre de dividir automáticamente las palabras en los puntos de separación de guiones apropiados, siguiendo las reglas que elija.</td>
+                        </tr>
+                        <tr>
+                            <td>overflow-wrap</td>
+                            <td>normal</td>
+                            <td>Las líneas solo pueden dividirse en puntos normales de separación de palabras (como un espacio entre dos palabras).</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>anywhere</td>
+                            <td>Para evitar el desbordamiento, una cadena de caracteres irrompible, como una palabra larga o una URL, puede dividirse en cualquier punto si no hay puntos de interrupción aceptables en la línea. No se inserta ningún carácter de partición en el punto de interrupción. Las oportunidades de ajuste suave introducidas por el salto de palabra se tienen en cuenta al calcular los tamaños intrínsecos del contenido mínimo.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>break-word</td>
+                            <td>Igual que el anywhere, con palabras normalmente irrompibles que se pueden dividir en puntos arbitrarios si no hay puntos de ruptura aceptables en la línea, pero las oportunidades de ajuste suave introducidas por la ruptura de palabra no se consideran al calcular los tamaños intrínsecos de contenido mínimo.</td>
+                        </tr>
+                        <tr>
+                            <td>word-break</td>
+                            <td>normal</td>
+                            <td>Utiliza la regla de salto de línea predeterminada.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>break-all</td>
+                            <td>Para evitar el desbordamiento, se deben insertar saltos de palabra entre dos caracteres cualesquiera.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>keep-all</td>
+                            <td>Los saltos de palabra no deben usarse para texto en chino/japonés/coreano (CJK). El comportamiento del texto que no es CJK es el mismo que para normal.</td>
+                        </tr>
+                    </tbody>
+                </table>    
+                </div>
             </article>
         </section>
     </main>

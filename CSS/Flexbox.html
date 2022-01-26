@@ -67,12 +67,16 @@
             </ul>
             <h3 class="titulo3">flex-direction: </h3>
             <p>La propiedad de flex-direction especifica en qué dirección corre el eje principal (en qué dirección se disponen los hijos de flexbox). Sus valores son: </p>
-            <ul class="lista">
-                <li>row: Valor predeterminado que hace que los elementos flexibles se coloquen en una fila.</li>
-                <li>column: Este valor vuelve a colocar los elementos en un diseño de columna.</li>
-                <li>row-reverse: Se colocan los valores en fila en dirección inversa.</li>
-                <li>column-reverse: Se colocan los valores en columna en dirección inversa.</li>
-            </ul>
+            <dl class="lista">
+                <dt>row:</dt>
+                <dd>Valor predeterminado que hace que los elementos flexibles se coloquen en una fila.</dd>
+                <dt>column:</dt>
+                <dd>Este valor vuelve a colocar los elementos en un diseño de columna.</dd>
+                <dt>row-reverse:</dt>
+                <dd>Se colocan los valores en fila en dirección inversa.</dd>
+                <dt>column-reverse:</dt>
+                <dd>Se colocan los valores en columna en dirección inversa.</dd>
+            </dl>
             <div class="flex">
                 <div>
                     <p>Elemento 1</p>
@@ -213,11 +217,14 @@
                 </div>
             </div>
             <h4 class="titulo4">Valores de flex-wrap: </h4>
-            <ul class="lista">
-                <li>nowrap: Los elementos flexibles se disponen en una sola línea, lo que puede hacer que el contenedor flexible se desborde. El inicio cruzado es equivalente a inicio o antes, según el valor de flex-direction. Este es el valor predeterminado.</li>
-                <li>wrap: Los elementos flexibles se dividen en varias líneas. El inicio cruzado es equivalente al inicio o antes del valor flex-direction dependiente y el final cruzado es lo opuesto al inicio cruzado especificado .</li>
-                <li>wrap-reverse:Se comporta igual que wrap pero cruzada de inicio y de fin de cruz se permutan.</li>
-            </ul>
+            <dl class="lista">
+                <dt>nowrap:</dt>
+                <dd>Los elementos flexibles se disponen en una sola línea, lo que puede hacer que el contenedor flexible se desborde. El inicio cruzado es equivalente a inicio o antes, según el valor de flex-direction. Este es el valor predeterminado.</dd>
+                <dt>wrap:</dt>
+                <dd>Los elementos flexibles se dividen en varias líneas. El inicio cruzado es equivalente al inicio o antes del valor flex-direction dependiente y el final cruzado es lo opuesto al inicio cruzado especificado.</dd>
+                <dt>wrap-reverse:</dt>
+                <dd>Se comporta igual que wrap pero cruzada de inicio y de fin de cruz se permutan.</dd>
+            </dl>
             <h3 class="titulo3">flex-flow shorthand: </h3>
             <p>Existe una forma abreviada de flex-direction y flex-wrap: flex-flow. Por lo que por ejemplo, este flex:</p>
             <img src="../assets/images/flex1.png" alt="flex-direction y flex-wrap" class="img">

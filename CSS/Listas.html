@@ -124,22 +124,26 @@
             <article>
                 <h3 class="titulo3">pseudo-elemento ::marker</h3>
                 <p>Selecciona el cuadro de marcador de un elemento de lista, que normalmente contiene una viñeta o un número.</p>
-                <img src="../assets/images/lista3.png" alt="ejemplo ::maker" class="img">
-                <ul class="lista" id="listMarker">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
+                <div class="main-section2">
+                    <ul class="lista" id="listMarker">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul> 
+                    <img src="../assets/images/lista3.png" alt="ejemplo ::maker">   
+                </div>
             </article>
             <article>
                 <h3 class="titulo3">Usar una imagen como marco:</h3>
                 <p>La propiedad list-style-image permite usar una imagen personalizada para el marco de los elementos de lista.</p>
-                <img src="../assets/images/lista1.png" alt="lista con imagen para marco" class="img">
-                <ul class="lista" id="listaImg1">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
+                <div class="main-section2">
+                    <ul class="lista" id="listaImg1">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>  
+                    <img src="../assets/images/lista1.png" alt="lista con imagen para marco">  
+                </div>
                 <p>Sin embargo, esta propiedad está un poco limitada en términos de controlar la posición, tamaño, etc. de los marcos, por lo que es mejor: </p>
                 <ol class="lista">
                     <li>Establer el padding-left a 20px tanto en la lista como en los elementos de la lista. Sin esto, las imágenes de fondo se superpondrían con el texto del elemento de la lista, lo que se vería desordenado.</li>
@@ -153,80 +157,117 @@
                         </ol>
                     </li>
                 </ol>
-                <img src="../assets/images/lista2.png" alt="lista con imagen para marco" class="img">
-                <ul class="lista" id="listaImg2">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>    
+                <div class="main-section2">
+                    <ul class="lista" id="listaImg2">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>   
+                    <img src="../assets/images/lista2.png" alt="lista con imagen para marco"> 
+                </div>
             </article>
             <article>
                 <h3 class="titulo3">@counter-style: </h3>
                 <p>@counter-style permite definir estilos de contador que no forman parte del conjunto predefinido de estilos.</p>
-                <h4 class="titulo4">Sintaxis: </h4>
                 <p>Cada @counter-style se identifica con un nombre y tiene un conjunto de descriptores.</p>
                 <ul class="lista">
-                    <li>system: Especifica el algoritmo que se utilizará para convertir el valor entero de un contador en una representación de cadena. Esto puede tomar una de tres formas:
-                        <ul>
-                            <li>Uno de los valores de palabra clave cyclic, numeric, alphabetic, symbolic, additive, fixed o extends.
-                                <ul>
-                                    <li>cyclic: Recorre la lista de símbolos proporcionados. Una vez que se llega al final de la lista de símbolos, volverá al principio y comenzará de nuevo. Se debe especificar al menos un símbolo en el descriptor symbols, o el estilo de contador no es válido.</li>
-                                    <li>fixed: Define un conjunto finito de símbolos especificados. Una vez que el sistema haya recorrido todos los símbolos especificados, retrocederá. También se puede especificar un número entero opcional después del sistema, como el valor del primer símbolo. Si se omite este entero, el valor del primer entero se toma como 1.</li>
-                                    <li>symbolic: Recorre la lista de símbolos proporcionada. En cada paso sucesivo por el ciclo, los símbolos utilizados para la representación del contador se duplican, triplican, etc.</li>
-                                    <li>alphabetic: Interpreta los símbolos especificados como dígitos, en un sistema de numeración alfabético. Si los caracteres "a" a "z"se especifican como símbolos en un estilo de contador, con el sistema alphabetic, las primeras 26 representaciones de contador serán "a", "b" hasta "z". Hasta este punto, el comportamiento es el mismo que el del sistema symbolic. Sin embargo , después "z" seguirá como "aa", … "ab" "ac"-</li>
-                                    <li>numeric: Interpreta los símbolos del contador como dígitos en un sistema de numeración de valor posicional. El sistema numérico es similar al alphabetic. La principal diferencia es que en el alphabetic, el primer símbolo de contador dado en el symbols se interpreta como 1, y en el sistema numeric, el primer símbolo de contador se interpreta como 0.</li>
-                                    <li>additive: Se utiliza para representar sistemas de numeración de "valor de signo", como los números romanos, que en lugar de reutilizar dígitos en diferentes posiciones para obtener valores diferentes, definen dígitos adicionales para valores más grandes. El valor de un número en dicho sistema se puede encontrar sumando los dígitos del número.</li>
-                                    <li>extends: Permite usar el algoritmo de otro estilo de contador, pero alterando sus otros aspectos. Si una regla de estilo de contador está utilizando extends, cualquier descriptor no especificado y sus valores se tomarán del estilo de contador extendido especificado. Si el nombre de estilo de contador especificado en extends no es un nombre de estilo de contador definido actualmente, se extenderá desde el estilo de contador decimal.</li>
-                                </ul>
-                            </li>
-                            <li>El valor de la palabra clave fixed junto con un número entero.</li>
-                            <li>El valor de la palabra clave extends junto con un nombre de @counter-style.</li>
-                        </ul>
-                    </li>
+                    <li>system: Especifica el algoritmo que se utilizará para convertir el valor entero de un contador en una representación de cadena.</li>
                     <li>prefix: Especifica un símbolo que debe anteponerse a la representación del marcador. Los prefijos se agregan a la representación en la etapa final, por lo que en la representación final del contador, viene antes del signo negativo.</li>
                     <li>suffix: Especifica, de forma similar al descriptor de prefijo, un símbolo que se adjunta a la representación del marcador. Los sufijos vienen después de la representación del marcador.</li>
                     <li>range: Define el rango de valores sobre los que se aplica el estilo de contador. Si se usa un estilo de contador para representar un valor de contador fuera de sus rangos, el estilo de contador volverá a su estilo alternativo.</li>
                     <li>symbols: Especifica los símbolos que se utilizarán para las representaciones de marcador. Los símbolos pueden contener cadenas, imágenes o identificadores personalizados.</li>
                 </ul>
-                <h4 class="ejemplo">Ejemplos: </h4>
-                <div class="main-section">
-                    <img src="../assets/images/style-count1.png" alt="ejemplo style-count 1">
-                    <ul class="lista" id="listacount1">
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                        <li>Item 4</li>
-                    </ul>
-                    <img src="../assets/images/style-count2.png" alt="ejemplo style-count 2">
-                    <ul class="lista" id="listacount2">
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                        <li>Item 4</li>
-                    </ul>
-                    <img src="../assets/images/style-count3.png" alt="ejemplo style-count 3">
-                    <ul class="lista" id="listacount3">
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                        <li>Item 4</li>
-                    </ul>
-                </div>
-                <div class="main-section">
-                    <img src="../assets/images/style-count4.png" alt="ejemplo style-count 4">
-                    <ul class="lista" id="listacount4">
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                        <li>Item 4</li>
-                    </ul>
-                    <img src="../assets/images/style-count5.png" alt="ejemplo style-count 5">
-                    <ul class="lista" id="listacount5">
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                        <li>Item 4</li>
-                    </ul>
+                <div class="overflow">
+                    <table class="tabla">
+                        <caption>descriptor system</caption>
+                        <thead>
+                            <tr>
+                                <th>Valor</th>
+                                <th>Descripción</th>
+                                <th>Ejemplo</th>
+                                <th>Resultados</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>cyclic</td>
+                                <td>Recorre la lista de símbolos proporcionados. Una vez que se llega al final de la lista de símbolos, volverá al principio y comenzará de nuevo. Se debe especificar al menos un símbolo en el descriptor symbols, o el estilo de contador no es válido.</td>
+                                <td><img src="../assets/images/style-count1.png" alt="ejemplo style-count 1"></td>
+                                <td>
+                                    <ul class="lista listacount" id="listacount1">
+                                        <li>Item 1</li>
+                                        <li>Item 2</li>
+                                        <li>Item 3</li>
+                                        <li>Item 4</li>
+                                    </ul>                
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>fixed</td>
+                                <td>Define un conjunto finito de símbolos especificados. Una vez que el sistema haya recorrido todos los símbolos especificados, retrocederá. También se puede especificar un número entero opcional después del sistema, como el valor del primer símbolo. Si se omite este entero, el valor del primer entero se toma como 1.</td>
+                                <td><img src="../assets/images/style-count2.png" alt="ejemplo style-count 2"></td>
+                                <td>
+                                    <ul class="lista listacount" id="listacount2">
+                                        <li>Item 1</li>
+                                        <li>Item 2</li>
+                                        <li>Item 3</li>
+                                        <li>Item 4</li>
+                                    </ul>                
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>symbolic</td>
+                                <td>Recorre la lista de símbolos proporcionada. En cada paso sucesivo por el ciclo, los símbolos utilizados para la representación del contador se duplican, triplican, etc.</td>
+                                <td><img src="../assets/images/style-count3.png" alt="ejemplo style-count 3"></td>
+                                <td>
+                                    <ul class="lista listacount" id="listacount3">
+                                        <li>Item 1</li>
+                                        <li>Item 2</li>
+                                        <li>Item 3</li>
+                                        <li>Item 4</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>alphabetic</td>
+                                <td>Interpreta los símbolos especificados como dígitos, en un sistema de numeración alfabético. Si los caracteres "a" a "z"se especifican como símbolos en un estilo de contador, con el sistema alphabetic, las primeras 26 representaciones de contador serán "a", "b" hasta "z". Hasta este punto, el comportamiento es el mismo que el del sistema symbolic. Sin embargo , después "z" seguirá como "aa", … "ab" "ac"</td>
+                                <td><img src="../assets/images/style-count4.png" alt="ejemplo style-count 4"></td>
+                                <td>
+                                    <ul class="lista listacount" id="listacount4">
+                                        <li>Item 1</li>
+                                        <li>Item 2</li>
+                                        <li>Item 3</li>
+                                        <li>Item 4</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>numeric</td>
+                                <td>Interpreta los símbolos del contador como dígitos en un sistema de numeración de valor posicional. El sistema numérico es similar al alphabetic. La principal diferencia es que en el alphabetic, el primer símbolo de contador dado en el symbols se interpreta como 1, y en el sistema numeric, el primer símbolo de contador se interpreta como 0.</td>
+                                <td><img src="../assets/images/style-count5.png" alt="ejemplo style-count 5"></td>
+                                <td>
+                                    <ul class="lista listacount" id="listacount5">
+                                        <li>Item 1</li>
+                                        <li>Item 2</li>
+                                        <li>Item 3</li>
+                                        <li>Item 4</li>
+                                    </ul>                
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>additive</td>
+                                <td>Se utiliza para representar sistemas de numeración de "valor de signo", como los números romanos, que en lugar de reutilizar dígitos en diferentes posiciones para obtener valores diferentes, definen dígitos adicionales para valores más grandes. El valor de un número en dicho sistema se puede encontrar sumando los dígitos del número.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>extends</td>
+                                <td>Permite usar el algoritmo de otro estilo de contador, pero alterando sus otros aspectos. Si una regla de estilo de contador está utilizando extends, cualquier descriptor no especificado y sus valores se tomarán del estilo de contador extendido especificado. Si el nombre de estilo de contador especificado en extends no es un nombre de estilo de contador definido actualmente, se extenderá desde el estilo de contador decimal.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>    
                 </div>
             </article>
         </section>

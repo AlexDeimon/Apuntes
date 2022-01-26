@@ -53,7 +53,7 @@
                     <li>4 valores: margin:top right bottom left;</li>
                     <li>3 valores: margin: top left/right bottom;</li>
                     <li>2 valores: margin: top/bottom left/right;</li>
-                    <li>1 valor: margin: top/right/bottom/left</li>
+                    <li>1 valor: margin: top/right/bottom/left;</li>
                 </ul>
                 <p>Los elementos <span class="resaltado">en bloque</span> toman las 4 márgenes y los elementos <span class="resaltado">en línea</span> toman solo los valores de derecha e izquierda.</p>
                 <p>Los elementos en bloque, si tienen un ancho declarado, se pueden alinear hacia la izquierda (por defecto), hacia a la derecha o en el centro de la página mediante el valor auto en la propiedad de margin. <span class="resaltado">Ojo, se alinea o se centra EL ELEMENTO, NO EL CONTENIDO.</span></p>
@@ -135,22 +135,28 @@
             <article>
                 <h3 class="titulo3">Box-sizing:</h3>
                 <p>Es la propiedad que permite controlar el cálculo que hace el navegador a la hora de modificar las propiedades content, padding y border. Sus 2 valores son:</p>
-                <ul class="lista">
-                    <li>content-box: Valor por defecto</li>
-                    <li>border-box: Cálculo de tamaño del elemento incluyendo el padding y el border.</li>
-                </ul>
+                <dl class="lista">
+                    <dt>content-box:</dt>
+                    <dd>Valor por defecto.</dd> 
+                    <dt>border-box:</dt>
+                    <dd>Cálculo de tamaño del elemento incluyendo el padding y el border.</dd> 
+                </dl>
             </article>
             <article>
                 <h3 class="titulo3">Display</h3>
                 <p>La propiedad display sirve para cambiar el contexto de los elementos dentro del navegador, Admite varios valores: </p>
-                <ul class="lista">
-                    <li>none: Hace que el elemento no se muestre, pero sigue cargándose.</li>
-                    <li>block: Hace que el elemento sea de bloque.</li>
-                    <li>inline: Hace que el elemento sea de línea.</li>
-                    <li>inline-block: Hace que el elemento sea de línea pero admite medidas y márgenes verticales.</li>
-                </ul>
+                <dl class="lista">
+                    <dt>none:</dt>
+                    <dd>Hace que el elemento no se muestre, pero sigue cargándose.</dd> 
+                    <dt>block:</dt>
+                    <dd>Hace que el elemento sea de bloque.</dd> 
+                    <dt>inline:</dt>
+                    <dd>Hace que el elemento sea de línea.</dd> 
+                    <dt>inline-block:</dt>
+                    <dd>Hace que el elemento sea de línea pero admite medidas y márgenes verticales.</dd> 
+                </dl>
                 <h4 class="ejemplo">Ejemplo:</h4>
-                <div class="main-section">
+                <div class="main-section2">
                     <img src="../assets/images/display1.png" alt="ejemplo display 1">
                     <img src="../assets/images/display2.png" alt="ejemplo display 2">
                     <img src="../assets/images/display3.png" alt="ejemplo display 3">

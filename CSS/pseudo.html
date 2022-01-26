@@ -25,103 +25,232 @@
         <section>
             <h2 class="titulo2">Pseudo-clases</h2>
             <p>Una pseudoclase CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. Las pseudoclases, permiten aplicar un estilo a un elemento no sólo en relación con el contenido del árbol de documento, sino también en relación a factores externos como el historial del navegador, el estado del contenido, o la posición del ratón.</p>
-            <h3 class="titulo3">pseudo-clases estándar: </h3>
-            <ul class="lista">
-                <li>:active representa un elemento (como un botón) que el usuario está activando. Cuando se usa un mouse, la "activación" generalmente comienza cuando el usuario presiona el botón primario del mouse y termina cuando se suelta. La pseudo-clase :activese usa comúnmente en los elementos &lt;a&gt; y &lt;button&gt;, pero también se puede usar en otros elementos.
-                    <ul>
-                        <li><a href="#" id="a-active">click aqui</a></li>
-                        <li><button id="button-active">click aqui</button></li>
-                    </ul>
-                </li>
-                <li>:checked representa cualquier radio, checkbox u option que está marcado o conmutado a un estado on.
-                    <ul>
-                        <li>
-                            <input type="radio" name="my-input">
-                            <label>HTML</label> 
-                            <input type="radio" name="my-input">
-                            <label>CSS</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="my-checkbox">
-                            <label for="opt-in">Check me!</label>
-                        </li>
-                        <li>
-                            <select name="my-select">
-                                <option value="opt1">HTML</option>
-                                <option value="opt2">CSS</option>
-                                <option value="opt3">JavaScript</option>
-                            </select> 
-                        </li>
-                    </ul>
-                </li>
-                <li>:default representa cualquier elemento de formulario que sea el predeterminado entre un grupo de elementos relacionados. Este selector se puede usar en los elementos button, checkbox, radio y option.
-                    <ul>
-                        <li>
-                            <input type="radio" name="my-input2" >
-                            <label>HTML</label> 
-                            <input type="radio" name="my-input2" checked>
-                            <label>CSS</label>
-                            <input type="radio" name="my-input2">
-                            <label>JavaScript</label>
-                        </li>
-                    </ul>
-                </li>
-                <li>:empty representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto (incluido el espacio en blanco).
-                    <ul>
-                        <li>El li de abajo está vacio</li>
-                        <li></li>
-                    </ul>
-                </li>
-                <li>:first-child representa el primer elemento entre un grupo de elementos hermanos.</li>
-                <li>:last-child  representa el último elemento entre un grupo de elementos hermanos.</li>
-                <li>:nth-child() coincide con uno o más elementos en función de su posición entre un grupo de hermanos. se especifica con un único argumento, que representa el patrón para los elementos coincidentes.
-                    <ul>
-                        <li>Keywords: odd = Representa elementos cuya posición numérica en una serie de hermanos es impar: 1, 3, 5, etc. even = Representa elementos cuya posición numérica en una serie de hermanos es par: 2, 4, 6, etc.</li>
-                        <li>Notación funcional (An+B): Representa elementos cuya posición numérica en una serie de hermanos coincide con el patrón An+B, para cada entero positivo o valor cero de n. El índice del primer elemento es 1. Los valores A y B deben ser ambos enteros.</li>
-                    </ul>
-                    <div class="ejem-child">
-                        <p>soy el primer elemento hijo</p>
-                        <p>soy el segundo elemento hijo (par)</p>
-                        <p>soy el tercer elemento hijo (impar)</p>
-                        <p>soy el cuarto elemento hijo (par)</p>
-                        <p>soy el quinto elemento hijo (impar)</p>
-                        <p>soy el último elemento hijo</p>
-                      </div>
-                </li>
-                <li>:nth-last-child() selecciona uno o más elementos en función de su posición entre un grupo de hermanos, contando desde el final. Es esencialmente la misma que :nth-child, excepto que cuenta los elementos hacia atrás desde el final, no hacia adelante desde el principio.</li>
-                <li>:first-of-type representa el primer elemento de su tipo entre un grupo de elementos hermanos.</li>
-                <li>:last-of-type representa el último elemento de su tipo entre un grupo de elementos hermanos.</li>
-                <li>:nth-of-type() selecciona uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos.
-                    <ul class="ejem-type">
-                        <li>primer li hijo</li>
-                        <li>segundo li hijo</li>
-                        <li>tercer li hijo</li>
-                        <li>cuarto li hijo</li>
-                        <li>quinto li hijo</li>
-                        <li>último li hijo</li>
-                    </ul>
-                </li>
-                <li>:nth-last-of-type() coincide con uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos, contando desde el final. Es esencialmente la misma que :nth-of-type, excepto que cuenta los elementos hacia atrás desde el final, no hacia adelante desde el principio.</li>
-                <li>:focus: representa un elemento (como una entrada de formulario) que ha recibido el foco. Generalmente se activa cuando el usuario hace clic, toca un elemento o lo selecciona con la tecla "Tab" del teclado.
-                    <ul>
-                        <li><input type="text" placeholder="clic aqui" class="ejem-focus"></li>
-                    </ul>
-                </li>
-                <li>:hover se activa cuando el usuario se desplaza sobre un elemento con el cursor.</li>
-                <li>:link representa un elemento &lt;a&gt; que aún no se ha visitado.</li>
-                <li>:visited representa enlaces que el usuario ya ha visitado. Por motivos de privacidad, los estilos que se pueden modificar con este selector son muy limitados.
-                    <ul>
-                        <li><a href="#" id="link">Enlace con hover, link, visited y active.</a></li>
-                    </ul>
-                </li>
-                <li>:not() representa elementos que no coinciden con una lista de selectores. Como evita que se seleccionen elementos específicos, se lo conoce como la pseudoclase de negación.</li>
-                <li>:target de CSS representa un elemento único (el elemento objetivo) con un id que coincide con el fragmento de la URL.
-                    <ul>
-                        <li><a href="../HTML/Enlaces/Enlaces3.html" class="link">Ejemplo al dar click en alguno de los enlaces.</a></li>
-                    </ul>
-                </li>
-                <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes" class="link">Otras pseudo-clases</a></li>
-            </ul>
+            <div class="overflow">
+                <table class="tabla">
+                    <caption>pseudo-clases estándar</caption>
+                    <thead>
+                        <tr>
+                            <th>Tipo de pseudo-clase</th>
+                            <th>pseudo-clase</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>pseudo-clases de ratón</td>
+                            <td>:active</td>
+                            <td>Representa un elemento (como un botón) que el usuario está activando. Cuando se usa un mouse, la "activación" generalmente comienza cuando el usuario presiona el botón primario del mouse y termina cuando se suelta. La pseudo-clase :activese usa comúnmente en los elementos &lt;a&gt; y &lt;button&gt;, pero también se puede usar en otros elementos.</td>
+                            <td>
+                                <a href="#" id="a-active">click aqui</a><br>
+                                <button id="button-active">click aqui</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:hover</td>
+                            <td>Se activa cuando el usuario se desplaza sobre un elemento con el cursor.</td>
+                            <td rowspan="3"><a href="#" id="link">Enlace con hover, link, visited y active.</a></td>
+                        </tr>
+                        <tr>
+                            <td>pseudo-clases de enlaces</td>
+                            <td>:link</td>
+                            <td>Representa un elemento &lt;a&gt; que aún no se ha visitado.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:visited</td>
+                            <td>Representa enlaces que el usuario ya ha visitado. Por motivos de privacidad, los estilos que se pueden modificar con este selector son muy limitados.</td>
+                        </tr>
+                        <tr>
+                            <td>pseudo-clases de iteración</td>
+                            <td>:checked</td>
+                            <td>Representa cualquier radio, checkbox u option que está marcado o conmutado a un estado on.</td>
+                            <td>
+                                <input type="radio" name="my-input">
+                                <label>HTML</label><br>
+                                <input type="radio" name="my-input">
+                                <label>CSS</label><br>
+                                <input type="checkbox" name="my-checkbox">
+                                <label>Check me!</label><br>
+                                <select name="my-select">
+                                    <option value="opt1">HTML</option>
+                                    <option value="opt2">CSS</option>
+                                    <option value="opt3">JavaScript</option>
+                                </select> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:focus</td>
+                            <td>Representa un elemento (como una entrada de formulario) que ha recibido el foco. Generalmente se activa cuando el usuario hace clic, toca un elemento o lo selecciona con la tecla "Tab" del teclado.</td>
+                            <td><input type="text" placeholder="clic aqui" class="ejem-focus"></td>
+                        </tr>
+                        <tr>
+                            <td>pseudo-clases de habilitación</td>
+                            <td>:enabled </td>
+                            <td>Representa cualquier elemento habilitado. Un elemento está habilitado si puede ser activado o si accepta el foco.</td>
+                            <td><input type="text" placeholder="habilitado"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:disabled </td>
+                            <td>Representa a cualquier elemento deshabilitado. Un elemento se encuentra deshabilitado si no puede ser activado ni aceptar el foco.</td>
+                            <td><input type="text" placeholder="desabilitado" disabled></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:read-only</td>
+                            <td>Representa un elemento que ya no es editable por el usuario.</td>
+                            <td><input type="text" readonly placeholder="solo lectura"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:read-write </td>
+                            <td>Representa un elemento que es editable por el usuario.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>pseudo-clases de validación</td>
+                            <td>:required </td>
+                            <td>Representa cualquier elemento input, select, o textarea que tenga el atributo required establecido en él.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:optional</td>
+                            <td>Representa cualquier elemento input, select, o textarea que no tenga el atributo required establecido en él.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:valid</td>
+                            <td>Representa cualquier elemento input u otro elemento form cuyo contenido se valide satisfactoriamente. Esto permite que los campos válidos adopten fácilmente una apariencia que ayuda al usuario a confirmar que sus datos están formateados correctamente.</td>
+                            <td rowspan="2">
+                                <input class="ejem-valid" type="email" placeholder="Escribe un email">
+                                <label> </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:invalid</td>
+                            <td>Representa cualquier elemento input u otro elemento form cuyos contenidos no se puedan validar.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:in-range</td>
+                            <td>Representa un elemento input cuyo valor actual se encuentra dentro de los límites de rango especificados por los atributos min y max.</td>
+                            <td rowspan="2">
+                                <input class="ejem-range" type="number" placeholder="1 a 10" min="1" max="10" value="12">
+                                <label> </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:out-of-range</td>
+                            <td>Representa un elemento input cuyo valor actual está fuera de los límites de rango especificados por los atributos min y max.</td>
+                        </tr>
+                        <tr>
+                            <td>pseudo-clase de negación</td>
+                            <td>:not() </td>
+                            <td>Representa elementos que no coinciden con una lista de selectores. Como evita que se seleccionen elementos específicos, se lo conoce como la pseudoclase de negación.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>pseudo-clases de posición y estructura de elementos hijos</td>
+                            <td>:first-child</td>
+                            <td>Representa el primer elemento entre un grupo de elementos hermanos.</td>
+                            <td rowspan="3">
+                                <div class="ejem-child">
+                                    <p>soy el primer elemento hijo</p>
+                                    <p>soy el segundo elemento hijo (par)</p>
+                                    <p>soy el tercer elemento hijo (impar)</p>
+                                    <p>soy el cuarto elemento hijo (par)</p>
+                                    <p>soy el quinto elemento hijo (impar)</p>
+                                    <p>soy el último elemento hijo</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:last-child</td>
+                            <td>Representa el último elemento entre un grupo de elementos hermanos.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:nth-child()</td>
+                            <td>Coincide con uno o más elementos en función de su posición entre un grupo de hermanos. se especifica con un único argumento, que representa el patrón para los elementos coincidentes.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>nth-last-child()</td>
+                            <td>Selecciona uno o más elementos en función de su posición entre un grupo de hermanos, contando desde el final. Es esencialmente la misma que :nth-child, excepto que cuenta los elementos hacia atrás desde el final, no hacia adelante desde el principio.</td>
+                            <td></td>
+                        </tr> 
+                        <tr>
+                            <td>pseudo-clases para elementos del mismo tipo</td>
+                            <td>:first-of-type </td>
+                            <td>Representa el primer elemento de su tipo entre un grupo de elementos hermanos.</td>
+                            <td rowspan="3">
+                            <ul class="ejem-type">
+                                <li>primer li hijo</li>
+                                <li>segundo li hijo</li>
+                                <li>tercer li hijo</li>
+                                <li>cuarto li hijo</li>
+                                <li>quinto li hijo</li>
+                                <li>último li hijo</li>
+                            </ul>    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:last-of-type</td>
+                            <td>Representa el último elemento de su tipo entre un grupo de elementos hermanos.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:nth-of-type()</td>
+                            <td>Selecciona uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:nth-last-of-type() </td>
+                            <td>Coincide con uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos, contando desde el final. Es esencialmente la misma que :nth-of-type, excepto que cuenta los elementos hacia atrás desde el final, no hacia adelante desde el principio.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Otras pseudo-clases</td>
+                            <td>:default</td>
+                            <td>Representa cualquier elemento de formulario que sea el predeterminado entre un grupo de elementos relacionados. Este selector se puede usar en los elementos button, checkbox, radio y option.</td>
+                            <td>
+                                <input type="radio" name="my-input2" >
+                                <label>HTML</label><br>
+                                <input type="radio" name="my-input2" checked>
+                                <label>CSS</label><br>
+                                <input type="radio" name="my-input2">
+                                <label>JavaScript</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:empty</td>
+                            <td>Representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto (incluido el espacio en blanco).</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>:target</td>
+                            <td>Representa un elemento único (el elemento objetivo) con un id que coincide con el fragmento de la URL.</td>
+                            <td><a href="../HTML/Enlaces/Enlaces3.html" class="link">Ejemplo al dar click en alguno de los enlaces.</a></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4"><a href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes" class="link">Otras pseudo-clases</a></td>
+                        </tr>
+                    </tfoot>
+                </table>    
+            </div>
         </section>
         <section>
             <h2 class="titulo2">Pseudo-elementos</h2>
@@ -131,7 +260,8 @@
                 <li id="before">::before crea un pseudoelemento que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido estético al principio a un elemento, usando la propiedad content. Este elemento se muestra en línea con el texto de forma predeterminada.</li>
                 <li id="first-letter">::first-letter aplica estilos a la primera letra de la primera línea un elemento de bloque, sólo cuando no es precedido de otro contenido (como imágenes o tablas).</li>
                 <li id="first-line">::first-line aplica estilos a la primera línea de un elemento de bloque. Nótese que la longitud de la primera línea depende de muchos factores, incluyendo el ancho del elemento, el ancho del documento y el tamaño de fuente del texto.</li>
-                <li>::selection CSS pseudo-elemento aplica reglas a una porción de un documento que ha sido destacado (por ejemplo: selección con el mouse o algún otro puntero en un dispositivo) del usuario.
+                <li>::maker permite modificar el cuadro de marcador de un elemento de lista, que normalmente contiene una viñeta o un número.</li>
+                <li>::selection aplica reglas a una porción de un documento que ha sido destacado (por ejemplo: selección con el mouse o algún otro puntero en un dispositivo) del usuario.
                     <ul>
                         <li id="selection">Selecciona este texto.</li>
                     </ul>

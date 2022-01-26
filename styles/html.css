@@ -1,6 +1,6 @@
 /*ESTILOS HTML.html*/
 .titulohtml{
-    text-align: var(--justify-aling-center);
+    text-align: var(--center);
     color: #f33d00;
 }
 
@@ -13,13 +13,11 @@
 
 .header2,
 .footer{
-    text-align: var(--justify-aling-center);
+    text-align: var(--center);
     background-color: #3a3a3a;
 }
 
-.main2{
-    background-color: #00adb9;
-}
+.main2{ background-color: #00adb9;}
 
 .listaNav{
     display: flex;
@@ -36,13 +34,9 @@
     margin: 1%;
 }
 
-.section{
-    background-color: #0151ff;
-}
+.section{ background-color: #0151ff; }
 
-.article{
-    background-color: #8c00ff;
-}
+.article{ background-color: #8c00ff; }
 
 /*ESTILOS Elementos_bloque_&_linea.html*/
 .bloque{
@@ -50,41 +44,27 @@
     color: var(--color-white);
 }
 
-/*ESTILOS formularios.html*/
-.formulario{
-    margin-left: var(--margin-padding-1);
-    margin-right: var(--margin-padding-1);
-    font-family: var(--font-normal);
-    color: var(--color-white);
-}
-
 /*ESTILOS ID Seccion_contenido.html*/
 #tsection, 
 #tarticle{
-    display: inline;
+    display: var(--display-inline);
     padding: var(--margin-padding-0);
     margin-left: var(--margin-padding-1);
 }
 
-#tsection{
-    background-color: #0151ff;
-}
+#tsection{ background-color: #0151ff; }
 
-#tarticle{
-    background-color: #8c00ff;
-}
+#tarticle{ background-color: #8c00ff; }
 
 /*ESTILOS listas.html*/
-#listaCircle{
-    list-style-type: circle;
-}
+#listaCircle{ list-style-type: circle; }
 
 /*ESTILOS tablas.html*/
 #tabla1{
-    margin-left: var(--margin-padding-auto);
-    margin-right: var(--margin-padding-auto);
+    margin-left: var(--auto);
+    margin-right: var(--auto);
     font-family: var(--font-normal);
-    text-align: var(--justify-aling-center);
+    text-align: var(--center);
     border: 2px solid var(--color-black);
 }
 
@@ -110,15 +90,13 @@
 }
 
 /*ESTILOS contenido_embebido.html*/
-#audio{
-    margin-left: var(--margin-padding-1);
-}
+#audio{ margin-left: var(--margin-padding-1); }
 
 #iframe{
     width:560px; 
     height:315px;
-    margin-left: var(--margin-padding-auto);
-    margin-right: var(--margin-padding-auto);
+    margin-left: var(--auto);
+    margin-right: var(--auto);
     max-width: var(--max-width);
-    display: block;
+    display: var(--display-block);
 }
