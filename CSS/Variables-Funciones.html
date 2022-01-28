@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variables CSS</title>
+    <title>Variables y Funciones CSS</title>
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/css.css">
@@ -24,7 +24,7 @@
     <main>
         <section>
             <h2 class="titulo2">Variables CSS</h2>
-            <p>Las propiedades personalizadas (a veces denominadas variables CSS o variables en cascada) son entidades definidas por los autores de CSS que contienen valores específicos para reutilizar en un documento.</p>    
+            <p>Las propiedades personalizadas (a veces denominadas variables CSS o variables en cascada) son entidades que contienen valores específicos para reutilizar en un documento.</p>    
             <p>Los nombres de propiedad que tienen el prefijo --, como --example-name, representan propiedades personalizadas que contienen un valor que se puede usar en otras declaraciones usando la función var().</p>      
             <p>Los sitios web complejos tienen una gran cantidad de CSS, a menudo con muchos valores repetidos. Por ejemplo, el mismo color puede usarse en cientos de lugares diferentes, lo que requiere una búsqueda global y reemplazo si ese color necesita cambiar. Las propiedades personalizadas permiten que un valor se almacene en un lugar y luego se haga referencia en muchos otros lugares. Un beneficio adicional son los identificadores semánticos. Por ejemplo, --main-text-colores más fácil de entender que #00ff00, especialmente si este mismo color también se usa en otros contextos.</p>
             <h3 class="titulo3">Uso básico: </h3>
@@ -36,6 +36,22 @@
             <h3 class="titulo3">Valores alternativos:</h3>
             <p>Usando la función var(), puede definir múltiples valores de respaldo cuando la variable dada aún no está definida.</p>
             <p>El primer argumento de la función es el nombre del propiedad personalizada. El segundo argumento de la función, si se proporciona, es un valor alternativo, que se utiliza como valor de sustitución cuando se hace referencia a un valor de propiedad personalizada no valido. La función solo acepta dos parámetros, asignando todo lo que sigue a la primera coma como segundo parámetro.</p>
+        </section>
+        <section>
+            <h2 class="titulo2">Funciones CSS</h2>
+            <p>Las funciones en CSS permiten realizar cálculos u operaciones sencillas para asignar valores a las propiedades en CSS.</p>
+            <dl class="lista">
+                <dt>calc():</dt>
+                <dd>Esta función puede ser usada en cualquier sitio donde length, frequency, angle, time, number, o integer sea requerido.</dd>
+                <dt>min():</dt>
+                <dd>Esta función permite establecer el valor mas pequeño (mas negativo) de una lista de expresiones separadas por coma como el valor de una propiedad CSS.</dd>
+                <dt>max():</dt>
+                <dd>Esta función permite establecer el valor más grande (más positivo) de una lista de expresiones separadas por comas como el valor de un valor de propiedad CSS.</dd>
+                <dt>clamp():</dt>
+                <dd>Esta función fija un valor entre un límite superior e inferior. Permite seleccionar un valor medio dentro de un rango de valores entre un mínimo y un máximo definidos. Toma tres parámetros: un valor mínimo, un valor preferido y un valor máximo permitido.</dd>
+                <dt>attr():</dt>
+                <dd>Esta función se usa para recuperar el valor de un atributo del elemento seleccionado y usarlo en la hoja de estilo. También se puede usar en pseudoelementos, en cuyo caso se devuelve el valor del atributo en el elemento de origen del pseudoelemento.</dd>
+            </dl>
         </section>
     </main>
 </body>

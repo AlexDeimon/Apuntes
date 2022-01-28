@@ -42,8 +42,8 @@
 
 .box,
 .boxtransitions{
-    width: var(--length-110);
-    height: var(--length-110);
+    width: var(--length-100);
+    height: var(--length-100);
     line-height: var(--length-110);
     font-family: var(--font-normal);
     text-align: var(--center);
