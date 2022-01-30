@@ -354,6 +354,49 @@ input:read-only::placeholder{
     border: 2px solid var(--color-darkorchid);
 }
 
+/*ESTILOS cursor-scroll.html*/
+.ejm-scroll1{ scroll-snap-type: y proximity; }
+
+.ejm-scroll2{ scroll-snap-type: x mandatory; }
+
+.ejm-scroll1 .lista,
+.ejm-scroll2 .lista{
+    padding: var(--length-0);
+    list-style-type: none;
+}
+
+.ejm-scroll2 .lista{
+    display: flex;
+    width: var(--value-100);
+ }
+
+.ejm-scroll1 .lista li {
+    margin-left: var(--length-0);
+    margin-bottom: var(--length-20);
+    padding: var(--margin-padding-1);
+    margin: var(--length-0);
+    scroll-snap-align: start;
+}
+
+.ejm-scroll2 .lista li{
+    display: inline;
+    min-width: var(--value-100);
+    align-self: center;
+    scroll-snap-align: start;
+}
+
+.ejm-scroll1 .lista li:nth-child(odd),
+.ejm-scroll2 .lista li:nth-child(odd){
+    background-color: var(--color-aqua);
+    color: var(--color-blue);
+}
+
+.ejm-scroll1 .lista li:nth-child(even),
+.ejm-scroll2 .lista li:nth-child(even){
+    background-color: var(--color-chocolate);
+    color: var(--color-darkgreen);
+}
+
 /*ESTILOS ID*/
 /*ESTILOS fundamentos.html*/
 #pEjemplo{
@@ -1426,3 +1469,6 @@ input:read-only::placeholder{
     color: cornsilk;
     background-color: darkviolet;
 }
+
+/*ESTILOS cursor-scroll.html*/
+

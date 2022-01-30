@@ -170,13 +170,18 @@
                 <h3 class="titulo3">@counter-style: </h3>
                 <p>@counter-style permite definir estilos de contador que no forman parte del conjunto predefinido de estilos.</p>
                 <p>Cada @counter-style se identifica con un nombre y tiene un conjunto de descriptores.</p>
-                <ul class="lista">
-                    <li>system: Especifica el algoritmo que se utilizará para convertir el valor entero de un contador en una representación de cadena.</li>
-                    <li>prefix: Especifica un símbolo que debe anteponerse a la representación del marcador. Los prefijos se agregan a la representación en la etapa final, por lo que en la representación final del contador, viene antes del signo negativo.</li>
-                    <li>suffix: Especifica, de forma similar al descriptor de prefijo, un símbolo que se adjunta a la representación del marcador. Los sufijos vienen después de la representación del marcador.</li>
-                    <li>range: Define el rango de valores sobre los que se aplica el estilo de contador. Si se usa un estilo de contador para representar un valor de contador fuera de sus rangos, el estilo de contador volverá a su estilo alternativo.</li>
-                    <li>symbols: Especifica los símbolos que se utilizarán para las representaciones de marcador. Los símbolos pueden contener cadenas, imágenes o identificadores personalizados.</li>
-                </ul>
+                <dl class="lista">
+                    <dt>system:</dt>
+                    <dd>Especifica el algoritmo que se utilizará para convertir el valor entero de un contador en una representación de cadena.</dd>
+                    <dt>prefix:</dt>
+                    <dd>Especifica un símbolo que debe anteponerse a la representación del marcador. Los prefijos se agregan a la representación en la etapa final, por lo que en la representación final del contador, viene antes del signo negativo.</dd>
+                    <dt>suffix:</dt>
+                    <dd>Especifica, de forma similar al descriptor de prefijo, un símbolo que se adjunta a la representación del marcador. Los sufijos vienen después de la representación del marcador.</dd>
+                    <dt>range:</dt>
+                    <dd>Define el rango de valores sobre los que se aplica el estilo de contador. Si se usa un estilo de contador para representar un valor de contador fuera de sus rangos, el estilo de contador volverá a su estilo alternativo.</dd>
+                    <dt>symbols:</dt>
+                    <dd>Especifica los símbolos que se utilizarán para las representaciones de marcador. Los símbolos pueden contener cadenas, imágenes o identificadores personalizados.</dd>
+                </dl>
                 <div class="overflow">
                     <table class="tabla">
                         <caption>descriptor system</caption>
