@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Responsive Design</h2>
+            <article>
+                <h3 class="titulo3">Principios Básicos:</h3>
+                <dl class="lista">
+                    <dt>Diseño responsivo y diseño adaptativo:</dt>
+                    <dd>Un diseño responsive responde en todo momento a las dimensiones del dispositivo, reaccionando automáticamente, dando una respuesta ajustada a la situación, mientras que un diseño adaptativo es aquel que se adapta cuando el servidor detecta el dispositivo y envía un contenido adaptado al mismo, pero no necesariamente responde en todo momento.</dd>
+                    <dt>Flujo:</dt>
+                    <dd>Cuando el tamaño de la pantalla es más pequeño, hace que todo ocupe más espacio vertical que horizontal, hecho que hace que el contenido sea empujado hacia abajo.</dd>
+                    <dt>Unidades relativas:</dt>
+                    <dd>Según el dispositivo, el tamaño de la pantalla inevitablemente va a variar, por lo que para trabajar correctamente en diseños responsive hay que tener en cuenta siempre trabajar con unidades relativas como los % e intentar evitar las unidades estáticas, las cuales no responden a la adaptación de diseños flexibles.</dd>
+                    <dt>Puntos de ruptura:</dt>
+                    <dd>Estos permiten que el diseño cambie en puntos predefinidos, Puede ser que en ordenador se muestren 3 columnas de contenido pero al pasar a un ancho más estrecho, estas se muestren una debajo de otra y no de lado.</dd>
+                    <dt>Valores máximos y mínimos:</dt>
+                    <dd>Es importante utilizar propiedades como min-width o max-width, para definir tamaños mínimos o máximos en los elementos para que estos se puedan ampliar o reducirse según sea necesario dependiendo de la pantalla del dispositivo utilizado.</dd>
+                    <dt>Objetos anidados: </dt>
+                    <dd>El maquetar teniendo en cuenta etiquetas como section, article y divs que engloben otros contenidos se es más facil que la apariencia se mantenga constante cuando se desea, por mucho que cambie el tamaño de la pantalla.</dd>
+                    <dt>Móvil o escritorio primero:</dt>
+                    <dd>Se deben considerar el uso de 2 estrategias antes de maquetar: Mobile first: Enfocarse primero en dispositivos móviles y luego en los demás, y la otra es Desktop first: Enfocarse primero en dispositivos de escritorio y luego pensamos en dispositivos móviles.</dd>
+                    <dt>Fuentes web vs fuentes del sistema: </dt>
+                    <dd>Algo más a considerar es el tipo de fuentes que se quieren utilizar. Se pueden usar las fuentes de sistema que son de carga rápida, excepto cuando el usuario no las tiene localmente; o usar fuentes web las cuales, aunque se son más impresionantes y tienen más estilo, servidor tenga que cargarlas por aparte como un archivo más, hecho que ralentiza el proceso de carga de la página.</dd>
+                    <dt>Imágenes de mapa de bits vs Vectores:</dt>
+                    <dd>Los mapas de bits, como el propio nombre indica, están hechos con bits. Estoy significa que si se incrementa mucho el tamaño del archivo, se verá pixelado. Los vectores evitan este problema, ya que son capaces de adaptarse a cualquier tamaño. Para un mapa de bits usa un jpg, png o gif; para los vectores, SVG.</dd>
+                </dl>    
+            </article>
+            <article id="mediaQueries">
+                <h3 class="titulo3">Media queries:</h3>
+                <p>Las reglas media queries son un componente clave del diseño responsive. son un tipo de reglas de CSS que permiten crear un bloque de código que sólo se procesará en los dispositivos que cumplan los criterios especificados como condición, permitiendo adaptar el sitio o aplicación según la presencia o el valor de dichos criterios.</p>
+                <h4 class="titulo4">Tipos de medios:</h4>
+                <dl class="lista">
+                    <dt>all:</dt>
+                    <dd>Aplica a todos los dispositivos. El que se utiliza por defecto.</dd>
+                    <dt>screen:</dt>
+                    <dd>Monitores o pantallas de ordenador. Es el más común.</dd>
+                    <dt>print:</dt>
+                    <dd>Destinado a material paginado y documentos vistos en una pantalla en modo de vista previa de impresión.</dd>
+                </dl>
+                <h4 class="titulo4">Características de medios:</h4>
+                <p>Las características de medios describen características específicas del agente de usuario, el dispositivo de salida o el entorno. Las expresiones de características de medios comprueban su presencia o valor y son completamente opcionales. Cada expresión de características de medios debe estar entre paréntesis.</p>
+                <dl class="lista">
+                    <dt>width:</dt>
+                    <dd>Ancho de la ventana gráfica, incluido el ancho de la barra de desplazamiento.</dd>
+                    <dt>min-width:</dt>
+                    <dd>Ancho mínino de la ventana gráfica.</dd>
+                    <dt>max-width:</dt>
+                    <dd>Ancho máximo de la ventana gráfica.</dd>
+                    <dt>aspect-ratio:</dt>
+                    <dd>Relación de aspecto ancho-alto de la ventana gráfica.</dd>
+                    <dt>orientation:</dt>
+                    <dd>Orientación de la ventana gráfica.</dd>
+                    <dt>otros:</dt>
+                    <dd><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features" class="link">media features</a></dd> 
+                </dl>
+                <h4 class="titulo4">Operadores lógicos:</h4>
+                <p>Estos se pueden utilizar para redactar una media querie compleja.</p>
+                <dl class="lista">
+                    <dt>and:</dt>
+                    <dd>Se utiliza para combinar varias características de medios en una sola media querie, lo que requiere que cada característica encadenada regrese true para que la regla sea true. También se utiliza para unir características de medios con tipos de medios.</dd>
+                    <dt>not:</dt>
+                    <dd>Se usa para negar una media querie, regresando true si la consulta de otra manera devolvería false. Si está presente en una lista de consultas separadas por comas, solo negará la consulta específica a la que se aplica. Si usa el operador not, también se debe especificar un tipo de medio.</dd>
+                    <dt>only:</dt>   
+                    <dd>Aplica un estilo solo si coincide una media completa. Es útil para evitar que navegadores antiguos apliquen estilos seleccionados. Si usa el operador only, también debe especificar un tipo de medio.</dd>
+                    <dt>, (coma):</dt>  
+                    <dd>Las comas se utilizan para combinar múltiples medias queries en una sola regla. Cada query en una lista separada por comas se trata por separado de las demás. Por lo tanto, si alguna de las queries en una lista es true, la declaración de medios completa devuelve true.</dd>
+                </dl>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

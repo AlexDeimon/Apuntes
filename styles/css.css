@@ -44,7 +44,7 @@
 .boxtransitions{
     width: var(--length-100);
     height: var(--length-100);
-    line-height: var(--length-110);
+    line-height: var(--length-100);
     font-family: var(--font-normal);
     text-align: var(--center);
 }
@@ -724,8 +724,6 @@ input:read-only::placeholder{
 
 #box13{
     width: var(--length-200);
-    height: var(--length-100);
-    margin-left: var(--margin-padding-1);
     background-color: var(--color-lightsalmon);
 }
 
@@ -833,7 +831,7 @@ input:read-only::placeholder{
 
 #bg-gradient7{ background: radial-gradient(ellipse farthest-side, var(--color-forestgreen), var(--color-gold)); } 
 
-#bg-gradient8{ background: radial-gradient(ellipse farthest-corner, var(--color-forestgreen), var(--color-gold)); } 
+#bg-gradient8{ background: radial-gradient(circle farthest-corner, var(--color-forestgreen), var(--color-gold)); } 
 
 #bg-gradient9{ background: repeating-linear-gradient(to top left, var(--color-indigo), var(--color-indigo) var(--length-20), var(--color-lightskyblue) var(--length-20), var(--color-lightskyblue) var(--length-40)); } 
 
