@@ -141,6 +141,7 @@ p,
 .titulo4,
 .titulohtml,
 .titulocss,
+.titulojs,
 .resaltado{
     font-family: var(--font-title);
 }
@@ -183,6 +184,8 @@ p,
 .cajaHTML{ border: 1px solid #f33d00; }
 
 .cajaCSS{ border: 1px solid var(--color-blue-2); }
+
+.cajaJS{ border: 1px solid #fed800 ;}
 
 .link{
     font-family: var(--font-title);
@@ -276,6 +279,8 @@ figure .titulo4{
 .cajaHTML:hover{ box-shadow:var(--length-0) var(--length-0)  var(--length-20) var(--length-10) #f33d00; }
 
 .cajaCSS:hover{ box-shadow:var(--length-0) var(--length-0)  var(--length-20) var(--length-10) var(--color-blue-2); }
+
+.cajaJS:hover{ box-shadow: var(--length-0) var(--length-0)  var(--length-20) var(--length-10) #fed800; }
 
 .tabla tbody tr:nth-child(even){ background-color: #2c323f; }
 

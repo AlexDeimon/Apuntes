@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Fundamentos JavaScript</h2>
+            <article>
+                <h3 class="titulo3">Sintaxis: </h3>
+                <dl class="lista">
+                    <dt>Case sensitve:</dt>
+                    <dd>Sensible a mayúsculas y minúsculas.</dd>
+                    <dt>Tipado dinámico:</dt>
+                    <dd>Las variables son del tipo de dato que almacenen.</dd>
+                    <dt>; (punto y coma):</dt>
+                    <dd>Las sentencias finalizan con ; No es obligatorio pero es recomendable.</dd>
+                    <dt>{ bloques }:</dt>
+                    <dd>Los bloques inician y finalizan con {}, de forma opcional se puede añadir ;</dd>
+                </dl>
+            </article>
+            <article>
+                <h3 class="titulo3">Variables, Constantes y Ámbito (scope):</h3>
+                <p>Una variable es un espacio reservado en memoria para almacnar un dato que podrá cambiar durante la ejecución del programa. Se declaran con la palabra reservada "let". No es recomendable usar "var".</p>
+                <p>Las variables se pueden declarar, inicializar y modificar.</p>
+                <dl class="lista">
+                    <dt>Declarar:</dt>
+                    <dd>Indiciarle al programa que la variable existe para que reserve un espacio de memoria para guardar la variable. Puede declararse vacia.</dd>
+                    <dt>Inicializar:</dt>
+                    <dd>Darle un valor a la variable. Se puede declarar e iniciar en la misma sentencia.</dd>
+                    <dt>Modificar:</dt>
+                    <dd>Cambiar el valor de una variable que ya existe. Solo se puede modificar dentro de un mismo ámbito.</dd>
+                </dl>
+                <p>Una constante es un espacio reservado en memoria para almacenar un dato que no cambiará durante la ejecución del programa. Se declaran con la palabra reservada "const". Estas solo admiten la declaración e inicialización en la misma sentencia.</p>
+                <p>El ámbito es la zona donde existe la variable o constante. Si se declara una variable dentro de un bloque solo existirá dentro del bloque y no se podrá acceder a esta fuera del bloque.</p>
+            </article>
+            <article>
+                <h3 class="titulo3">Tipos de datos:</h3>
+                <h4 class="titulo4">Datos primitivos:</h4>
+                <dl class="lista">
+                    <dt>Numeros:</dt>
+                    <dd>JS No distingue entre números reales y numeros decimales.</dd>
+                    <dt>Strings:</dt>
+                    <dd>Al declarar se encierra entre ' ' o " ".</dd>
+                    <dt>Boolean:</dt>
+                    <dd>Datos lógicos. Solo tiene los valores true o false.</dd>
+                    <dt>Undefined</dt>
+                    <dt>Null</dt>
+                    <dt>Symbol</dt>
+                </dl>
+            </article>
+            <article>
+                <h3 class="titulo3">Operadores: </h3>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Tipo de operador</th>
+                            <th>Operación</th>
+                            <th>Operador</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Matemáticos</td>
+                            <td>Suma / Concatenación</td>
+                            <td> + </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Resta</td>
+                            <td> - </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Multiplicación</td>
+                            <td> * </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>División</td>
+                            <td> / </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Módulo</td>
+                            <td> % </td>
+                        </tr>
+                        <tr>
+                            <td>Asignación</td>
+                            <td>Asignación</td>
+                            <td> = </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Suma y Asignación</td>
+                            <td> += </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Resta y Asignación</td>
+                            <td> -= </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Multiplicación y Asignación</td>
+                            <td> *= </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>División y Asignación</td>
+                            <td> /= </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Módulo y Asignación</td>
+                            <td> %= </td>
+                        </tr>
+                        <tr>
+                            <td>Incremento / Decremento</td>
+                            <td>Post-incremento en 1</td>
+                            <td> a++ </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Pre-incremento en 1</td>
+                            <td> ++a </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Post-decremento en 1</td>
+                            <td> a-- </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Pre-decremento en 1</td>
+                            <td> --a </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
