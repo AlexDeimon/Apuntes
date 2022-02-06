@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Strings</h2>
+            <h3 class="titulo3">Métodos y propiedades:</h3>
+            <p>Los métodos son acciones que las cadenas de caracteres pueden hacer. Todos los métodos devuelven una cadena nueva, la cadena original no será modificada. Las popiedades son las características que las cadenas poseen.</p>
+            <p>Se emplean usando la nomeclatura del punto.</p>
+            <ul class="lista">
+                <li>cadena.método()</li>
+                <li>cadena.propiedad</li>
+            </ul>
+            <h4 class="titulo4">Propiedades: </h4>
+            <dl class="lista">
+                <dt>length:</dt>
+                <dd>Devuelve la longitud de la cadena.</dd>
+            </dl>
+            <img src="../assets/images/Strings-JS.png" alt="ejemplo propiedad length" class="img">
+            <h4 class="titulo4">Métodos:</h4>
+            <dl class="lista">
+                <dt>toUpperCase():</dt>
+                <dd>Devuleve la cadena a mayúsculas.</dd>
+                <dt>toLowerCase():</dt>
+                <dd>Devuelve la cadena a minúsculas.</dd>
+                <dt>indexOf(string):</dt>
+                <dd>Devuelve la posición en la que se encuentra el string, si no lo encuentra devuelve -1</dd>
+                <dt>replace(valor a buscar, valor nuevo):</dt>
+                <dd>Remplaza el fragmento de la cadena que se le indique y pone el valor nuevo.</dd>
+                <dt>substring(inicio, fin):</dt>
+                <dd>Extrae los caracteres desde inicio hasta fin (el final no se incluye). Si no se incluye el fin extrae hasta el final.</dd>
+                <dt>slice(inicio, fin):</dt>
+                <dd>Igual que substring pero admite valores negativos, si hay valores negativos empezará desde atrás. Si no se incluye el final extrae hasta el final.</dd>
+                <dt>trim():</dt>
+                <dd>Elimina los espacios al inicio y al final de la cadena.</dd>
+                <dt>startsWith(valor, inicio):</dt>
+                <dd>Sirve para saber si la cadena empieza con ese valor. Devuleve true o false.</dd>
+                <dt>endsWith(valor, longitud):</dt>
+                <dd>Sirve para saber si la cadena termina con ese valor. Devuleve true o false.</dd>
+                <dt>includes(valor, inicio):</dt>
+                <dd>Igual que indexOf pero devuelve true o false.</dd>
+                <dt>repeat(valor): </dt>
+                <dd>Repite el string el número de veces que se le indique.</dd>
+            </dl>
+            <div class="main-section2">
+                <img src="../assets/images/Strings-JS2.png" alt="métodos strings 1">
+                <img src="../assets/images/Strings-JS3.png" alt="métodos strings 2">
+            </div>
+            <h3 class="titulo3">Template Strings:</h3>
+            <p>Funciona como alternativa para evitar usar concatenaciones entre strings y variables. Se hace utilizando ´´ en lugar de ' ' o " " y usando el simbolo $ junto con {} para las variables.</p>
+            <img src="../assets/images/Strings-JS4.png" alt="Template strings" class="img">
+        </section>
+    </main>
+    <script src="Strings.js"></script>
+</body>
+</html>
