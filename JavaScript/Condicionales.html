@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Condicionales</h2>
+            <article>
+                <h3 class="titulo3">Estructura if - else:</h3>
+                <p>Este es el tipo de condicional más comun usado en JavaScript y en otros lenguajes de programación. Su sintaxis es la siguiente: </p>
+                <dl class="lista">
+                    <dt>Condicional simple: </dt>
+                    <dd>Se da cuando solo se quiere que se ejecute el código <strong>si se cumple</strong> la condición.</dd>
+                    <dt>Condicional compuesto:</dt>
+                    <dd>Se da cuando el código tiene dos opciones: <strong>Si se cumple</strong> la condición se ejecuta una opción del código, <strong>de la contrario</strong> se ejecuta la otra opción de código.</dd>
+                    <dt>Condicional múltiple:</dt>
+                    <dd>Se da cuando el código tiene varias opciones: <strong>Si se cumple</strong> la condición se ejecuta la primer opción del código, <strong>de la contrario, si se cumple </strong> otra condición se ejecuta otra opción de código, <strong>de la contrario </strong> si no se cumple ninguna condición anterior se ejecuta una última opción de código.</dd>
+                </dl>
+                <img src="../assets/images/CondicionalesJS1.png" alt="ejemplo if - else" class="img" id="recorteInferior">
+                <h4 class="titulo4">Condicionales anidados:</h4>
+                <p>Es posible insertar condicionales dentro de los mismos bloques de los condicionales.</p>
+                <img src="../assets/images/CondicionalesJS2.png" alt="ejemplo if - else anidados" class="img">
+                <h4 class="titulo4">Operadores lógicos Y y O:</h4>
+                <p>Otra alternaativa la realizar múltiples condiciones sin escribir if...else anidados son los operadores lógicos:</p>
+                <dl class="lista">
+                    <dt>&&- Y:</dt>
+                    <dd>Permite encadenar dos o más expresiones para que todas tengan que evaluarse true individualmente para que se devuelva la expresión completa true.</dd>
+                    <dt>||- O:</dt>
+                    <dd>Permite encadenar dos o más expresiones para que una o más de ellas tengan que evaluarse true individualmente para que se devuelva la expresión completa true.</dd>
+                </dl>
+                <img src="../assets/images/CondicionalesJS3.png" alt="ejemplo operadores lógicos" class="img">
+            </article>
+            <article>
+                <h3 class="titulo3">Estrucutra switch:</h3>
+                <p>La declaración switch evalúa una expresión, comparando el valor de esa expresión con una instancia case, y ejecuta declaraciones asociadas a ese case. por defecto ejecuta tambien las declaraciones en los case que siguen, esto usualmente se evita usando la palabra clave break; la cual está asociada con cada etiqueta de case y asegura que el programa salga del switch una vez que se ejecute la instrucción coincidente.</p>
+                <h4 class="titulo4">Sintaxis Simple:</h4>
+                <p>Esta sintaxis tiene un break por cada case, asegurando que solo se ejecute el caso coincidente.</p>
+                <P>Es útil al hacer menús.</P>
+                <h4 class="titulo4">Sintaxis Múltiple:</h4>
+                <p>Esta sintaxis toma ventaja del hecho de que, si no hay un break debajo de una declaración case, continuará la ejecución hasta el siguiente case, ignorando si en dicho caso se cumple o no el criterio indicado.</p>
+                <img src="../assets/images/CondicionalesJS4.png" alt="ejemplos switch" class="img">
+            </article>
+            <article>
+                <h3 class="titulo3">Operador ternario:</h3>
+                <p>El operador ternario o condicional es una pequeña parte de la sintaxis que prueba una condición y devuelve un valor/expresión si es true, y otro si es false; esto puede ser útil en algunas situaciones y puede ocupar mucho menos código que un bloque if - else.</p>
+                <img src="../assets/images/CondicionalesJS5.png" alt="ejemplo operador ternario" class="img">
+            </article>
+        </section>
+    </main>
+    <script src="Condicionales.js"></script>
+</body>
+</html>

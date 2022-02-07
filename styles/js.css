@@ -3,3 +3,8 @@
     text-align: var(--center);
     color: #fed800;
 }
+
+/*ESTILOS Condicionales.html*/
+#recorteInferior{
+    clip-path: inset(0% 0% .5% 0%);
+}
