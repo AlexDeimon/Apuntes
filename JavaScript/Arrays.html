@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Arrays</h2>
+            <p>Son estructuras que permiten almacenar varios datos y agruparlos.</p>
+            <ul class="lista">
+                <li>Se declaran con llaves cuadradas o corchetes [].</li>
+                <li>Se pueden llenar con cualquier tipo de dato válido en JavaScript y deben ir separados por comas.</li>
+                <li>Pueden declararse vacíos o con un contenido ya establecido.</li>
+                <li>Pueden añadirse o eliminarse elementos en cualquier momento.</li>
+                <li>Cada uno de sus elementos puede ser identificado por su índice, el cual comienza dessde 0.</li>
+                <li>Se pueden mezclar tipos de datos, <strong>pero no es recomendable.</strong></li>
+            </ul>
+            <img src="../assets/images/ArraysJS1.png" alt="ejemplo Arrays" class="img">
+            <h3 class="titulo3">Propiedades y Métodos:</h3>
+            <h4 class="titulo4">Propiedades:</h4>
+            <dl class="lista">
+                <dt>length:</dt>
+                <dd>devuelve el número de posiciones que contiene el array.</dd>
+            </dl>
+            <img src="../assets/images/ArraysJS2.png" alt="Ejemplo Array.length" class="img">
+            <h4 class="titulo4">Métodos:</h4>
+            <dl class="lista">
+                <dt>isArray(variable a evaluar):</dt>
+                <dd>Devuelve true si la variable es un array.</dd>
+                <dt>shift():</dt>
+                <dd>Elimina el primer elemento del array y devuelve ese elemento.</dd>
+                <dt>pop():</dt>
+                <dd>Elimina el último elemento de un array y devuelve ese elemento.</dd>
+                <dt>push(elemento1, elemento2,...):</dt>
+                <dd>Añade uno o más elementos al final del array y devuelve la nueva longitud.</dd>
+                <dt>unshift(elemento1, elemento2,...):</dt>
+                <dd>Añade uno o más elementos al comienzo del array y devuelve la nueva longitud.</dd>
+                <dt>indexOf():</dt>
+                <dd>Devuelve el primer índice del elemento que coincida con el valor especificado, o -1 si ninguno es encontrado.</dd>
+                <dt>lastIndexOf():</dt>
+                <dd>Devuelve el último índice del elemento que coincida con el valor especificado, o -1 si ninguno es encontrado.</dd>
+                <dt>reverse():</dt>
+                <dd>Invierte el orden de los elementos del array.</dd>
+                <dt>join('separador'):</dt>
+                <dd>Devuelve un string con el separador que se le indique, por defecto son comas.</dd>
+                <dt>slice(A, B):</dt>
+                <dd>Extrae elementos de un array desde el índice A hasta el índice B. Si no existe B lo hace desde a hasta el final, si no existe ni A ni B hace una copia del original.</dd>
+                <dt>splice(A, B, items):</dt>
+                <dd>Cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.
+                    <ul>
+                        <li>A: Indice de inicio.</li>
+                        <li>B: Número de elementos.</li>
+                        <li>items: Elementos a añadir en el caso de que se añadan.</li>
+                    </ul>
+                </dd>
+            </dl>
+            <div class="main-section2">
+                <img src="../assets/images/ArraysJS3.png" alt="Ejemplos Métodos Arrays 1">
+                <img src="../assets/images/ArraysJS4.png" alt="Ejemplos Métodos Arrays 2">
+                <img src="../assets/images/ArraysJS5.png" alt="Ejemplos Métodos Arrays 3">
+            </div>
+        </section>
+    </main>
+    <script src="Arrays.js"></script>
+</body>
+</html>

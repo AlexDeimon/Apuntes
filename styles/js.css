@@ -8,3 +8,27 @@
 #recorteInferior{
     clip-path: inset(0% 0% .5% 0%);
 }
+
+/*ESTILOS bucles.html*/
+.listaNav{
+    display: flex;
+    justify-content: var(--center);
+    flex-wrap: wrap;
+    padding: var(--margin-padding-0);
+    font-family: var(--font-title);
+}
+
+.listaNav li{
+    display: var(--display-inline);
+    padding: var(--length-20) var(--length-0);
+    background-color:  #fed800;
+    border: 1px solid #444b52;
+}
+
+.listaNav a{
+    text-decoration: none;
+    color: #444b52;
+    padding: var(--length-20);
+}
+
+.listaNav li:hover{ background-color: #ffe44a; }

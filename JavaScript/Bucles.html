@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Bucles</h2>
+            <ul class="lista">
+                <li>Se usan cuando se desea repetir un bloque de código.</li>
+                <li>Existen 2 tipos: determinados e indeterminados.
+                    <ul>
+                        <li>Los determinados se usan cuando se especifica el número de veces que se va a repetir.</li>
+                        <li>Los indeterminados se usan cuando se desconoce el número de veces que se va a repetir.</li>
+                    </ul>
+                </li>
+            </ul>
+            <article>
+                <h3 class="titulo3">While:</h3>
+                <p>Es un bucle indeterminado. Su sintaxis básicamente significa <strong>Mientras</strong>(la condición se cumpla) {se repetirá el bloque de código }.</p>
+                <h3 class="titulo3">Do While:</h3>
+                <p>Tambien es un bucle indeterminado. Su sintaxis significa <strong>Hacer</strong>{Bloque de código} <strong>Mientras</strong>(la condición se cumpla). Por lo cual el bloque de código se ejecutará al menos una vez, se cumpla o no se cumpla la condición.</p>
+                <img src="../assets/images/BuclesJS1.png" alt="Ejemplo simple bucles while y do while" class="img">
+                <h4 class="ejemplo">Ejemplo algo más avanzado manipulando el DOM:</h4>
+                <div class="main-section2">
+                    <img src="../assets/images/BuclesJS2.png" alt="Ejemplo avanzado bucles while y do while">
+                    <div>
+                        <ul class="listaNav">
+                            <li><a href="javascript:unoADiez()" class="link">Números del 1 al 10</a></li>
+                            <li><a href="javascript:adivinaNumero()" class="link">Adivina el Número</a></li>
+                        </ul>
+                        <ul class="lista" id="unoADiez"></ul>      
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo3">For:</h3>
+                <p>Es un bucle determinado. Su sintaxis se compone de 3 partes:</p>
+                <ol class="lista">
+                    <li>Iniciacion de variable contador.</li>
+                    <li>condición para valor final del contador.</li>
+                    <li>Incremento o decremento del contador.</li>
+                </ol>
+                <p>Durante su ejecución el contador aumentará o disminuirá su valor en cada iteración hasta llegar a su valor final.</p>
+                <img src="../assets/images/BuclesJS3.png" alt="Ejemplo for" class="img">
+            </article>
+    </main>
+    <script src="Bucles.js"></script>
+</body>
+</html>
