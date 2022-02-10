@@ -45,3 +45,31 @@ let numeros = [10, 13, 8]
 for(let i = 0; i < numeros.length; i++){
     console.log(`posición ${i} = ${numeros[i]}`);
 }
+
+//* for of:
+let lenguajes = ['HTML', 'CSS', 'JavaScript', 'Python'];
+
+for(let lenguaje of lenguajes){
+    console.log(lenguaje);
+}
+
+//* for in:
+for(let index in lenguajes){
+    console.log(index);
+}
+
+//* break
+for(let lenguaje of lenguajes){
+    if(lenguaje == 'Python'){
+        break;
+    }
+    console.log(lenguaje);
+}
+
+//* continue
+for(let lenguaje of lenguajes){
+    if(lenguaje == 'CSS'){
+        continue;
+    }
+    console.log(lenguaje);
+}
