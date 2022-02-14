@@ -82,3 +82,82 @@ console.log(numeros4);
 //* Si b vale 0 añade los elementos a partir de la posición a y no elimina ninguno:
 numeros4.splice(4, 0, 43, 20, 2);
 console.log(numeros4);
+
+//* Métodos avanzados:
+let saludo = 'Hola mundo';
+
+console.log(Array.from(saludo));
+
+const letras = ['b', 'c', 'z', 'a'];
+numeros = [1, 8, 100, 300, 3];
+
+console.log(letras.sort());
+
+//* solo con sort() no ordena numeros correctamente debido a su valor unicode:
+console.log(numeros.sort());
+
+//* sort([callback])
+console.log(numeros.sort((a, b) => a - b));
+
+//* callbacks: 
+function menorMayor(a, b) {
+    if (a - b < 0) return -1;
+    if (a - b > 0) return 1;
+    if(a == b) return 0;
+}
+
+function mayorMenor(a, b) {
+    if (b - a < 0) return -1;
+    if (b - a > 0) return 1;
+    if(b == a) return 0;
+}
+
+numeros.forEach((number) => console.log(number));
+numeros.forEach((number, index) => console.log(`${number} está en la posición ${index}`));
+
+lenguajes = ['HTML', 'CSS', 'JavaScript', 'Python'];
+
+console.log(lenguajes.some(lenguaje => lenguaje.length > 3));
+console.log(lenguajes.every(lenguaje => lenguaje.length > 3));
+
+numeros = [1, 2, 3, 4, 5];
+
+numeros2 = numeros.map(numero => numero * 5);
+console.log(numeros2); 
+
+numeros3 = numeros2.filter(numero => numero % 2 ==0);
+console.log(numeros3); 
+
+console.log(numeros3.reduce((a, b) => a + b));
+
+const usuarios = [
+    {
+        username: 'user 1',
+        online: true
+    },
+    {
+        username: 'user 2',
+        online: true
+    },
+    {
+        username: 'user 3',
+        online: false
+    },
+    {
+        username: 'user 4',
+        online: false
+    },
+    {
+        username: 'user 5',
+        online: false
+    }
+];
+
+const usersOnline = usuarios.reduce((cont, user) => {
+    if (user.online) {
+        cont++
+    }
+    return cont;
+}, 0); //* reduce(callback, valor inicial) = reduce((cont, user) => {}, cont = 0)
+
+console.log(`Hay ${usersOnline} usuarios conectados`);
