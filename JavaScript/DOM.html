@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">DOM (Document Object Model)</h2>
+            <p>Es una API definida para representar e interactuar con cualquier documento HTML o XML. El DOM es un modelo de documento que se carga en el navegador web y que representa el documento como un árbol de nodos, en donde cada nodo representa una parte del documento (puede tratarse de un elemento, una cadena de texto o un comentario).</p>
+            <figure>
+                <img class="img" src="https://camo.githubusercontent.com/83886bafe5be41c02da02ea7bb599c70fd00e9513cf9dec0e7f7cd52ebc4dad6/68747470733a2f2f7777772e6b69727570612e636f6d2f68746d6c352f696d616765732f444f4d5f6a735f37322e706e67" alt="Ejemplo DOM">
+                <figcaption class="blank">Imagen tomada de: <a href="https://camo.githubusercontent.com/83886bafe5be41c02da02ea7bb599c70fd00e9513cf9dec0e7f7cd52ebc4dad6/68747470733a2f2f7777772e6b69727570612e636f6d2f68746d6c352f696d616765732f444f4d5f6a735f37322e706e67" class="link">link</a></figcaption>
+            </figure>
+            <h3 class="titulo3">Nodos:</h3>
+            <p>Hay varios tipos de nodos, los más utilizados son:</p>
+            <dl class="lista">
+                <dt>Element node - 1:</dt>
+                <dd>Cualquier etiqueta HTML.</dd>
+                <dt>Text node -3:</dt>
+                <dd>Contenido de la etiqueta.</dd>
+                <dt>Comment node -8:</dt>
+                <dd>Comentario HTML.</dd>
+            </dl>
+            <h3 class="titulo3">Acceder a elementos del DOM: </h3>
+            <p>Hay varias maneras de acceder a elementos del DOM, algunas de ellas son:</p>
+            <dl class="lista">
+                <dt>document.getElementById('id'):</dt>
+                <dd>Acceder a un elemento a través de su id.</dd>
+                <dt>document | element .querySelector('selectorCSS'):</dt>
+                <dd>Accede al primer elemento que coincida con el selector CSS. Se puede usar tanto con document (selector hijo del &lt;html&gt;) o con otro elemento especifico.</dd>
+                <dt>document | element .querySelectorAll('selectorCSS'):</dt>
+                <dd>Accede a todos los elementos que coincidan con el selector CSS, devuelve un nodeList. Se puede usar tanto con document (selector hijo del &lt;html&gt;) o con otro elemento especifico.</dd>
+            </dl>
+            <h4 class="ejemplo">Ejemplos:</h4>
+            <div class="main-section2">
+                <img src="../assets/images/DOMJS01.png" alt="Ejemplos Acceder elementos del DOM 1">
+                <img src="../assets/images/DOMJS02.png" alt="Ejemplos Acceder elementos del DOM 2">
+            </div>
+            <ul class="listaNav">
+                <li><a href="javascript:contenidoTexto()" class="link">Cambiar contenido del párrafo</a></li>
+                <li><a href="javascript:identificarSpan()" class="link">Identificar Span</a></li>
+                <li><a href="javascript:colorParrafos2()" class="link">Cambiar color párrafos a rojo</a></li>
+                <li><a href="javascript:colorParrafos3()" class="link">Cambiar color párrafos a verde</a></li>
+            </ul>
+            <p id="parrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, nostrum provident. Eum earum dolor perferendis, delectus ullam quaerat vero possimus voluptatum nesciunt nemo facere minus temporibus velit debitis quam nobis.</p>
+            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum sit nulla molestias veniam alias eligendi earum velit est non rem! <span>Atque fuga ullam distinctio cupiditate laboriosam</span>, quae necessitatibus dolor doloribus.</p>
+            <p id="parrafo2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet odit laudantium molestias, <span>modi tempora repellendus.</span> Culpa sed harum debitis quos, sit, repellendus nostrum odit ad natus eos blanditiis vitae suscipit?</p>
+            <p class="parrafos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus et eos soluta repudiandae natus sequi asperiores sit quia, libero, voluptas iusto maxime similique distinctio ea velit facere placeat veniam inventore.</p>
+            <p class="parrafos">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi fugit eos omnis est, officiis, corrupti laudantium beatae culpa tenetur veritatis numquam ipsa necessitatibus labore, vero inventore pariatur quo sint rerum.</p>
+            <p class="parrafos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae eos voluptate in, eveniet nulla debitis possimus obcaecati sequi laudantium assumenda! Doloribus officiis veniam dolor commodi impedit facilis quas ullam tempora.</p>
+            <h3 class="titulo3">Modificar atributos y clases: </h3>
+            <ul class="lista">
+                <li>Atributos:
+                    <dl>
+                        <dt>element.getAttribute('attribute'):</dt>
+                        <dd>Devuelve el atributo del elemento.</dd>
+                        <dt>element.setAttribute('attribute', value):</dt>
+                        <dd>Asigna un atributo y su valor a un elemento.</dd>
+                    </dl>
+                </li>
+                <li>Clases:
+                    <dl>
+                        <dt>element.classList.add('class','class',...):</dt>
+                        <dd>Añade la(s) clase(s) al elemento.</dd>
+                        <dt>element.classList.remove('class','class',...):</dt>
+                        <dd>Elimina la(s) clase(s) al elemento.</dd>
+                        <dt>element.classList.toggle('class'[,force]): </dt>
+                        <dd>Si el elemento posee la clase la remueve y si no la posee la añade.</dd>
+                        <dt>element.classList.contains('class'):</dt>
+                        <dd>Devuelve true o false si el elemento tiene o no la clase.</dd>
+                        <dt>element.classList.replace('oldClass', newClass):</dt>
+                        <dd>Sustituye una clase por otra.</dd>
+                    </dl>
+                </li>
+                <li>atributos directos: 
+                    <dl>
+                        <dt>id</dt>
+                        <dd>Devuelve el id del elemento.</dd>
+                        <dt>value</dt>
+                        <dd>Devuelve el <strong>valor</strong> actual del elemento (usado en inputs).</dd>
+                        <dt>textContent</dt>
+                        <dd>Devuelve el contenido textual del elemento.</dd>
+                        <dt>innerHTML</dt>
+                        <dd>Devuelve el contenido HTML del elemento.</dd>
+                    </dl>
+                </li>
+            </ul>
+            <h4 class="ejemplo">Ejemplos:</h4>
+            <img src="../assets/images/DOMJS03.png" alt="Ejemplo modificar atributos y clases" class="img">
+            <ul class="listaNav">
+                <li><a href="javascript:cambioInput()" class="link">Cambiar input a tipo fecha</a></li>
+                <li><a href="javascript:agregarClase()" class="link">Añadir resaltado al Label</a></li>
+                <li><a href="javascript:eliminarClase()" class="link">Eliminar resaltado del Label</a></li>
+                <li><a href="javascript:validarClase()" class="link">¿El label ahora mismo está resaltado?</a></li>
+                <li><a href="javascript:reemplazarClase()" class="link">Cambiar resaltado del label a titulo verde</a></li>
+            </ul>
+            <form>
+                <label for="input" id="labelInput">Input de tipo texto</label><br>
+                <input type="text" id="input">
+            </form>
+        </section>
+    </main>
+    <script src="DOM.js"></script>
+</body>
+</html>
