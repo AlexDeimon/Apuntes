@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Eventos</h2>
+            <p>Un evento es cualquier cosa que puede suceder en el documento.</p>
+            <ul class="lista">
+                <li>El contenido se ha leido.</li>
+                <li>El contenido se ha cargado.</li>
+                <li>El usuario mueve el ratón.</li>
+                <li>El usuario pulsa una tecla.</li>
+                <li>El usuario hace click.</li>
+                <li><a href="https://developer.mozilla.org/es/docs/Web/events" class="link" target="_blank">Entre muchos otros.</a> </li>
+            </ul>
+            <h3 class="titulo3">Eventos del ratón:</h3>
+            <dl class="lista">
+                <dt>click:</dt>
+                <dd>Cuando se pulsa el botón izquierdo del ratón.</dd>
+                <dt>dblclick:</dt>
+                <dd>Cuando se pulsa dos veces seguidas el botón izquierdo del ratón.</dd>
+                <dt>mouseenter:</dt>
+                <dd>Cuando se hace hover en zona que tiene el evento.</dd>
+                <dt>mouseleave:</dt>
+                <dd>Cuando se deja de hacer hover en zona que tiene el evento.</dd>
+                <dt>mousedown:</dt>
+                <dd>Cuando se pulsa o se mantiene pusado el boton izquierdo del ratón.</dd>
+                <dt>mouseup:</dt>
+                <dd>Cuando se suelta el boton izquierdo del ratón.</dd>
+                <dt>mousemove:</dt>
+                <dd>Cuando se mueve el ratón en zona que tiene el evento.</dd>
+            </dl>
+            <h4 class="ejemplo">Ejemplos:</h4>
+            <img src="../assets/images/EventosJS1.png" alt="Ejemplos eventos del ratón" class="img">
+            <div class="main-section2">
+                <button id="boton" class="boton">Haz pruebas de eventos aqui</button>
+            </div>
+            <p id="parrafo"></p>
+            <h3 class="titulo3">Eventos del teclado:</h3>
+            <dl class="lista">
+                <dt>keydown:</dt>
+                <dd>Cuando se pulsa una tecla.</dd>
+                <dt>keyup:</dt>
+                <dd>Cuando se suelta una tecla.</dd>
+                <dt>keypress: </dt>
+                <dd>Cuando se pulsa una tecla y no se suelta.</dd>
+            </dl>
+            <h4 class="ejemplo">Ejemplos:</h4>
+            <img src="../assets/images/EventosJS2.png" alt="Ejemplos eventos del teclado" class="img">
+            <form>
+                <input type="text" id="input"><p id="parrafoevent"></p>
+            </form>
+            <h3 class="titulo3">Objeto evento:</h3>
+            <p>Se coloca como parámetro de la función en el evento y este permite obtener información sobre el evento.</p>
+            <h4 class="ejemplo">Ejemplos:</h4>
+            <img src="../assets/images/EventosJS3.png" alt="Ejemplos objeto evento 1" class="img" id="recorteInferior">
+            <img src="../assets/images/EventosJS4.png" alt="Ejemplos objeto evento 2" class="img">
+            <form id="form">
+                <input id="input2" type="text">
+                <input type="submit" value="enviar" class="boton"><br>
+                <button id="boton2" class="boton">Boton 2</button>
+                <button id="boton3" class="boton">Boton 3</button>
+                <a id="link" href="www.google.com" class="link">Ir a Google</a>
+            </form>
+            <div id="grid" class="grid">
+                <div class="grid_cell">1</div>
+                <div class="grid_cell">2</div>
+                <div class="grid_cell">3</div>
+                <div class="grid_cell">4</div>
+                <div class="grid_cell">5</div>
+                <div class="grid_cell">6</div>
+                <div class="grid_cell">7</div>
+                <div class="grid_cell">8</div>
+                <div class="grid_cell">9</div>
+            </div>
+        </section>
+    </main>
+    <script src="Eventos.js"></script>
+</body>
+</html>
