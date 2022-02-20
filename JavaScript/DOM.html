@@ -116,6 +116,64 @@
                 <label for="input" id="labelInput">Input de tipo texto</label><br>
                 <input type="text" id="input">
             </form>
+            <h3 class="titulo3">Crear e insertar elementos:</h3>
+            <dl class="lista">
+                <dt>document.createElement(element):</dt>
+                <dd>Crear un elemento.</dd>
+                <dt>element.textContent = texto:</dt>
+                <dd>Escribir texto en un elemento.</dd>
+                <dt>element.innerHTML = código HTML:</dt>
+                <dd>Escribir HTML en un elemento.</dd>
+                <dt>parent.appendChild(element):</dt>
+                <dd>Añadir un elemento al DOM.</dd>
+                <dt>document.createDocumentFragment():</dt>
+                <dd>Fragmentos de código.</dd>
+            </dl>
+            <h4 class="ejemplo">Ejemplos:</h4>
+            <img src="../assets/images/DOMJS04.png" alt="ejemplo crear e insertar elementos" class="img">
+            <ul class="listaNav">
+                <li><a href="javascript:crearOl()">Crear lista de dias</a></li>
+                <li><a href="javascript:crearLi()">Insertar item en la lista</a></li>
+                <li><a href="javascript:insertarDias()">Insertar todos los item</a></li>
+                <li><a href="javascript:insertarDias2()">Insertar dias en el select</a></li>
+            </ul>
+            <div class="main-section2">
+                <form><select id="selectDias"></select></form>
+                <div id="lista"></div>
+            </div>
+            <h3 class="titulo3">Recorrer elementos:</h3>
+            <h4 class="titulo4">Padre:</h4>
+            <dl class="lista">
+                <dt>parentElement:</dt>
+                <dd>Devuelve el nodo elemento padre</dd>
+            </dl>
+            <h4 class="titulo4">Hijos:</h4>
+            <dl class="lista">
+                <dt>children:</dt>
+                <dd>Devuelve todos los nodos elementos hijos.</dd>
+                <dt>firstElementChild:</dt>
+                <dd>Devueleve el primer nodo elemento hijo.</dd>
+                <dt>lastElementChild:</dt>
+                <dd>Devueleve el último nodo elemento hijo.</dd>
+                <dt>hasChildNodes():</dt>
+                <dd>Devueleve true si el nodo tiene hijos y false si no tiene.</dd>
+            </dl>
+            <h4 class="titulo4">Hermanos:</h4>
+            <dl class="lista">
+                <dt>nextElementSibling:</dt>
+                <dd>Devuelve el siguiente nodo elemento hermano.</dd>
+                <dt>previousElementSibling:</dt>
+                <dd>Devuelve el anterior nodo elemento hermano.</dd>
+            </dl>
+            <h4 class="ejemplo">Ejemplos:</h4>
+            <div class="main-section2">
+                <ul class="lista" id="listaEjemplo">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul> 
+                <img src="../assets/images/DOMJS05.png" alt="Ejemplo Recorrer elementos">   
+            </div>
         </section>
     </main>
     <script src="DOM.js"></script>

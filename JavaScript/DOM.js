@@ -74,3 +74,54 @@ const validarClase = () => {
 const reemplazarClase = () =>{
     label.classList.replace('resaltado','titulo4');
 }
+
+//* Crear e insertar elementos:
+const dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+const lista = document.getElementById('lista');
+const selectDias = document.getElementById('selectDias');
+// const listaDias = document.getElementById('listaDias');
+const fragment = document.createDocumentFragment()
+
+const crearOl = () =>{
+    lista.innerHTML = '<ol class="lista" id="listaDias"></ol>';
+}
+
+const crearLi = () => {
+    const li = document.createElement('li');
+    li.textContent = 'Lunes';
+    listaDias.appendChild(li);
+}
+
+const insertarDias = () => {
+    for (const dia of dias) {
+        listaDias.innerHTML += `<li>${dia}</li>`;
+    }
+}
+
+const insertarDias2 = () => {
+    for (const dia of dias) {
+        const option = document.createElement('option');
+        option.setAttribute('value', dia.toLowerCase());
+        option.textContent = dia;
+        fragment.appendChild(option);
+        selectDias.appendChild(fragment);
+    }
+}
+
+//*Recorrer elementos
+const listaEjemplo = document.getElementById('listaEjemplo');
+
+//* Padre
+console.log(listaEjemplo.parentElement); //* devuelve section
+
+//* hijos
+console.log(listaEjemplo.children); //* devuelve [li, li, li]
+console.log(listaEjemplo.firstElementChild); //* devuelve li del item 1
+console.log(listaEjemplo.lastElementChild); //* devuelve li del item 3
+console.log(listaEjemplo.hasChildNodes()); //* true
+
+//* hermanos
+console.log(listaEjemplo.nextElementSibling); //* devuelve img
+console.log(listaEjemplo.previousElementSibling); //* devuelve null
+console.log(listaEjemplo.children[1].nextElementSibling); //* devuelve el li del item 1
+console.log(listaEjemplo.children[1].previousElementSibling);//* devuelve el li del item 3
