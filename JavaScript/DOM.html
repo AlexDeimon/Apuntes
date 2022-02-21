@@ -42,11 +42,11 @@
             <h3 class="titulo3">Acceder a elementos del DOM: </h3>
             <p>Hay varias maneras de acceder a elementos del DOM, algunas de ellas son:</p>
             <dl class="lista">
-                <dt>document.getElementById('id'):</dt>
+                <dt>document.getElementById( 'id' ):</dt>
                 <dd>Acceder a un elemento a través de su id.</dd>
-                <dt>document | element .querySelector('selectorCSS'):</dt>
+                <dt>document | element .querySelector( 'selectorCSS' ):</dt>
                 <dd>Accede al primer elemento que coincida con el selector CSS. Se puede usar tanto con document (selector hijo del &lt;html&gt;) o con otro elemento especifico.</dd>
-                <dt>document | element .querySelectorAll('selectorCSS'):</dt>
+                <dt>document | element .querySelectorAll( 'selectorCSS' ):</dt>
                 <dd>Accede a todos los elementos que coincidan con el selector CSS, devuelve un nodeList. Se puede usar tanto con document (selector hijo del &lt;html&gt;) o con otro elemento especifico.</dd>
             </dl>
             <h4 class="ejemplo">Ejemplos:</h4>
@@ -70,23 +70,23 @@
             <ul class="lista">
                 <li>Atributos:
                     <dl>
-                        <dt>element.getAttribute('attribute'):</dt>
+                        <dt>element.getAttribute( 'attribute' ):</dt>
                         <dd>Devuelve el atributo del elemento.</dd>
-                        <dt>element.setAttribute('attribute', value):</dt>
+                        <dt>element.setAttribute( 'attribute' , value ):</dt>
                         <dd>Asigna un atributo y su valor a un elemento.</dd>
                     </dl>
                 </li>
                 <li>Clases:
                     <dl>
-                        <dt>element.classList.add('class','class',...):</dt>
+                        <dt>element.classList.add( 'class', 'class', ... ):</dt>
                         <dd>Añade la(s) clase(s) al elemento.</dd>
-                        <dt>element.classList.remove('class','class',...):</dt>
+                        <dt>element.classList.remove( 'class', 'class', ... ):</dt>
                         <dd>Elimina la(s) clase(s) al elemento.</dd>
-                        <dt>element.classList.toggle('class'[,force]): </dt>
+                        <dt>element.classList.toggle( 'class'[,force] ): </dt>
                         <dd>Si el elemento posee la clase la remueve y si no la posee la añade.</dd>
-                        <dt>element.classList.contains('class'):</dt>
+                        <dt>element.classList.contains( 'class' ):</dt>
                         <dd>Devuelve true o false si el elemento tiene o no la clase.</dd>
-                        <dt>element.classList.replace('oldClass', newClass):</dt>
+                        <dt>element.classList.replace( 'oldClass', 'newClass' ):</dt>
                         <dd>Sustituye una clase por otra.</dd>
                     </dl>
                 </li>
@@ -118,13 +118,13 @@
             </form>
             <h3 class="titulo3">Crear e insertar elementos:</h3>
             <dl class="lista">
-                <dt>document.createElement(element):</dt>
+                <dt>document.createElement( element ):</dt>
                 <dd>Crear un elemento.</dd>
                 <dt>element.textContent = texto:</dt>
                 <dd>Escribir texto en un elemento.</dd>
                 <dt>element.innerHTML = código HTML:</dt>
                 <dd>Escribir HTML en un elemento.</dd>
-                <dt>parent.appendChild(element):</dt>
+                <dt>parent.appendChild( element ):</dt>
                 <dd>Añadir un elemento al DOM.</dd>
                 <dt>document.createDocumentFragment():</dt>
                 <dd>Fragmentos de código.</dd>
@@ -174,6 +174,46 @@
                 </ul> 
                 <img src="../assets/images/DOMJS05.png" alt="Ejemplo Recorrer elementos">   
             </div>
+            <h3 class="titulo3">Insertar, clonar y borrar elementos: </h3>
+            <dl class="lista">
+                <dt>insertBefore( newElement, referenceElement ):</dt>
+                <dd>Insertar un elemento antes del elemento de referencia.</dd>
+                <dt>parent.insertAdjacentElement( position, element ):</dt>
+                <dd>Inserta un elemento en la posición establecida tomando al padre de referencia.</dd>
+                <dt>parent.insertAdjacentHTML( position, HTML ):</dt>
+                <dd>Inserta código HTML en la posición establecida tomando al padre de referencia.</dd>
+                <dt>parent.insertAdjacentText( position, text ):</dt>
+                <dd>Inserta texto en la posición establecida tomando al padre de referencia.</dd>
+                <dt>positions:</dt>
+                <dd>
+                    <ul>
+                        <li>beforebegin: Antes de que empiece (hermano anterior).</li>
+                        <li>afterbegin: Después de que empiece (primer hijo).</li>
+                        <li>beforeend: Antes de que acabe (último hijo).</li>
+                        <li>afterend: después de que acabe (hermano siguiente).</li>
+                    </ul>
+                </dd>
+                <dt>parent.replaceChild( newChild, oldChild ):</dt>
+                <dd>Reemplaza un elemento hijo por otro.</dd>
+                <dt>element.cloneNode( true | false ):</dt>
+                <dd>Clona el nodo. Si el argumento es true clona todo el elemento con los hijos, si el argumento es false clona solo el elemento sin hijos.</dd>
+            </dl>
+            <ul class="listaNav">
+                <li><a href="javascript:insertarLi2()">Insertar item en 2da posición</a></li>
+                <li><a href="javascript:insertarTitulo()">Inserta un titulo para la lista</a></li>
+                <li><a href="javascript:insertarPrimerLi()">Insertar primer item</a></li>
+                <li><a href="javascript:insertarUltimoLi()">Insertar último item</a></li>
+                <li><a href="javascript:insertarParrafo()">Insertar parráfo posterior</a></li>
+                <li><a href="javascript:reemplazarLi()">Reemplazar 3er item</a></li>
+                <li><a href="javascript:clonarUl()">Clonar lista</a></li>
+                <li><a href="javascript:eliminarUl()">Eliminar lista</a></li>
+                <li><a href="javascript:eliminarLi()">Eliminar último item de la lista</a></li>
+            </ul>
+            <ul class="lista" id="listaEjemplo2">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
         </section>
     </main>
     <script src="DOM.js"></script>

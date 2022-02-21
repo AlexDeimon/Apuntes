@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Nativos y Timers</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Objetos Nativos</h2>
+            <article>
+                <h3 class="titulo3">Objeto window:</h3>
+                <p>Es el objeto global, de él descienden todos los objetos.</p>
+                <dl class="lista">
+                    <dt>alert():</dt>
+                    <dd>Lanza una alerta en el navegador.</dd>
+                    <dt>prompt():</dt>
+                    <dd>Permite escribir una cadena de caracteres.</dd>
+                    <dt>confirm():</dt>
+                    <dd>Lanza una ventana para elegir un boolean aceptar o cancelar.</dd>
+                </dl>
+                <div class="main-section2">
+                    <img src="../assets/images/ObjetosNativos1.png" alt="objeto window">
+                    <ul class="listaNav">
+                        <li><a href="javascript:alerta()">lanzar alert</a></li>
+                        <li><a href="javascript:escribe()">lanzar prompt</a></li>
+                        <li><a href="javascript:confirmar()">lanzar confirm</a></li>
+                    </ul>    
+                </div>    
+            </article>
+            <article>
+                 <h3 class="titulo3">Objeto console:</h3>
+                 <p>Es el objeto que contiene la consola del navegador.</p>
+                 <dl class="lista">
+                     <dt>console.log()</dt>
+                     <dd>Imprime un resultado en la consola.</dd>
+                     <dt>console.error()</dt>
+                     <dd>Imprime un error en la consola.</dd>
+                     <dt>console.table()</dt>
+                     <dd>Imprime un objeto ordenado en un tabla en la consola.</dd>
+                 </dl>
+            </article>
+            <article>
+                <h3 class="titulo3">Objeto location:</h3>
+                <p>Es el objeto que contiene la barra de direcciones.</p>
+                <dl class="lista">
+                    <dt>location.href:</dt>
+                    <dd>Devuelve la direccion actual en la barra.</dd>
+                    <dt>location.protocol:</dt>
+                    <dd>Devuelve el protocolo de la página.</dd>
+                    <dt>location.host:</dt>
+                    <dd>Devuelve el dominio de la página.</dd>
+                    <dt>location.pathname:</dt>
+                    <dd>Devuelve los subdominios de la página.</dd>
+                    <dt>location.hash:</dt>
+                    <dd>Devuelve un id # específico de la página.</dd>
+                    <dt>location.reload():</dt>
+                    <dd>Recarga la página.</dd>
+                    <dt>Otros métodos:</dt>
+                    <dd><a href="https://developer.mozilla.org/es/docs/Web/API/Location" class="link">link</a></dd>
+                </dl>
+            </article>
+            <article>
+                <h3 class="titulo3">Objeto history:</h3>
+                <p>Este objeto permite navegar entre las paginas del historial de la pestaña abierta.</p>
+                <dl class="lista">
+                    <dt>.back():</dt>
+                    <dd>Dirige a la página anterior.</dd>
+                    <dt>.forward():</dt>
+                    <dd>Dirige a la página siguiente.</dd>
+                    <dt>.go(n|-n):</dt>
+                    <dd>Dirige n páginas anteriores o siguientes.</dd>
+                </dl>
+            </article>
+            <article>
+                <h3 class="titulo3">Objeto Date:</h3>
+                <p>Este objeto permite trabajar con fechas y horas.</p>
+                <h4 class="titulo4">Constructor Date(): parámetros</h4>
+                <dl class="lista">
+                    <dt>milisegundos:</dt>
+                    <dd>Valor entero que representa el número de milisegundos desde las 00:00:00 UTC del 1 de enero de 1970.</dd>
+                    <dt>cadenaFecha:</dt>
+                    <dd>Valor de tipo cadena que representa una fecha. La cadena debería estar en un formato reconocido por el método Date.parse().</dd>
+                    <dt>año_num, mes_num, dia_num:</dt>
+                    <dd>Valores enteros con las representaciones de las partes de una fecha. Como valor entero, el mes se representa de 0 a 11, con 0 = enero and 11 = diciembre.</dd>
+                    <dt>hor_num, min_num, seg_num, mils_num:</dt>
+                    <dd>Valores enteros que representan las partes de una hora completa.</dd>
+                </dl>
+                <p>Si no proporciona argumentos, el constructor crea un objeto Date con la hora y fecha de hoy según la hora local. Si proporciona algunos argumentos, debe proporcionar al menos 2 argumentos. Los argumentos vacíos se establecen a 0 (ó 1 si falta el día).</p>
+                <h4 class="titulo4">Métodos:</h4>
+                <dl class="lista">
+                    <dt>getDay():</dt>
+                    <dd>Devuelve númericamente el dia de la semana, comenzando por domingo = 0.</dd>
+                    <dt>getDate():</dt>
+                    <dd>Devuelve el dia del mes.</dd>
+                    <dt>getMonth():</dt>
+                    <dd>Devuelve el mes.</dd>
+                    <dt>getFullYear():</dt>
+                    <dd>Devuelve el año.</dd>
+                    <dt>getHours():</dt>
+                    <dd>Devuelve la hora.</dd>
+                    <dt>getMinutes():</dt>
+                    <dd>Devuelve los minutos.</dd>
+                    <dt>getSeconds():</dt>
+                    <dd>Devuelve los segundos.</dd>
+                    <dt>Otros:</dt>
+                    <dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" class="link">link</a></dd>
+                </dl>
+                <div class="main-section2">
+                    <img src="../assets/images/ObjetosNativos2.png" alt="Objeto Date">
+                    <div>
+                        <ul class="listaNav">
+                            <li><a href="javascript:fechaActual()">Generar fecha actual</a></li>
+                            <li><a href="javascript:horaActual()">Generar Hora actual</a></li>
+                        </ul>
+                        <p id="fecha"></p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <h2 class="titulo2">Timers</h2>
+            <dl class="lista">
+                <dt>setTimeout(() => { code }, milisegundos):</dt>
+                <dd>Hace que se ejecute la función despues de la cantidad de milisegundos. Si se referencia mediante una variable/constante este puede detenerse con clearTimeout(variable/constante).</dd>
+                <dt>setInterval(() => { code }, milisegundos):</dt>
+                <dd>Hace que se ejecute la función cada cantidad de milisegundos. Si se referencia mediante una variable/constante este puede detenerse con clearInterval(variable/constante).</dd>
+            </dl>
+            <div class="main-section2">
+                <img src="../assets/images/ObjetosNativos3.png" alt="timers">
+                <div>
+                    <ul class="listaNav">
+                        <li><a href="javascript:holaMundo2s()">Hola mundo con retraso de 2 segundos</a></li>
+                        <li><a href="Javascript:contadorSeg()">Contador de segundos</a></li>
+                        <li><a href="javascript:detener()">Detener contador</a></li>
+                    </ul>
+                    <p id="timers"></p>
+                    <p id="timers2"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="ObjetosNativos.js"></script>
+</body>
+</html>

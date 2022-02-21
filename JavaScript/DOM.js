@@ -125,3 +125,52 @@ console.log(listaEjemplo.nextElementSibling); //* devuelve img
 console.log(listaEjemplo.previousElementSibling); //* devuelve null
 console.log(listaEjemplo.children[1].nextElementSibling); //* devuelve el li del item 1
 console.log(listaEjemplo.children[1].previousElementSibling);//* devuelve el li del item 3
+
+//* Insertar, clonar y borrar elementos
+const listaEjemplo2 = document.getElementById('listaEjemplo2');
+
+const insertarLi2 = () => {
+    const li = document.createElement('li');
+    li.textContent = "nuevo item";
+    listaEjemplo2.insertBefore(li, listaEjemplo2.children[1]);
+}
+
+const insertarTitulo = () => {
+    listaEjemplo2.insertAdjacentHTML('beforebegin', '<h4 class="titulo4">Titulo lista</h4>');
+}
+
+const insertarPrimerLi = () => {
+    const li = document.createElement('li');
+    li.textContent = "primer item";
+    listaEjemplo2.insertAdjacentElement('afterbegin', li);
+}
+
+const insertarUltimoLi = () => {
+    const li = document.createElement('li');
+    li.textContent = "último item";
+    listaEjemplo2.insertAdjacentElement('beforeend', li);
+}
+
+const insertarParrafo = () => {
+    const p = document.createElement('p');
+    p.textContent = 'Parráfo nuevo'
+    listaEjemplo2.insertAdjacentElement('afterend', p);
+}
+
+const reemplazarLi = () => {
+    const li = document.createElement('li');
+    li.textContent = "item reemplazado";
+    listaEjemplo2.replaceChild(li ,listaEjemplo2.children[2])
+}
+
+const clonarUl = () => {
+    listaEjemplo2.after(listaEjemplo2.cloneNode(true));
+}
+
+const eliminarUl = () => {
+    listaEjemplo2.remove()
+}
+
+const eliminarLi = () => {
+    listaEjemplo2.removeChild(listaEjemplo2.lastElementChild);
+}
