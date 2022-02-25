@@ -8,7 +8,8 @@
 }
 
 .listaNav li,
-.boton{
+.boton,
+.boton2{
     display: var(--display-inline);
     padding: var(--length-20) var(--length-0);
     background-color:  #fed800;
@@ -16,25 +17,35 @@
 }
 
 .listaNav a,
-.boton{
+.boton,
+.boton2{
     text-decoration: none;
     color: #444b52;
     padding: var(--length-20);
 }
 
-.boton{ 
+.boton,
+.boton2{ 
     font-family: var(--font-title);
     border-radius: var(--length-10);
     padding: var(--length-10) var(--length-20);
  }
 
-.listaNav li:hover{ background-color: #ffe44a; }
+.listaNav li:hover,
+.boton2:hover{ 
+    background-color: #ffe44a; 
+    cursor: pointer;
+}
 
 .botonHover{
     color: var(--color-white);
     background-color: #ff4a4a;
     border: 2px solid var(--color-white);
     cursor: pointer;
+}
+
+.icon{
+    height: 48px;
 }
 
 .botonShadow{ box-shadow: 0px 0px 10px 5px #ffe44a;}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">AJAX</h2>
+            <p>JavaScript asíncrono y XML, es un enfoque "nuevo" para usar varias tecnologías existentes juntas, incluido HTML o XHTML, CSS, JavaScript, DOM, XML, XSLT y, lo que es más importante, el objeto XMLHttpRequest. Cuando estas tecnologías se combinan en el modelo AJAX, las aplicaciones web pueden realizar actualizaciones rápidas e incrementales en la interfaz de usuario sin recargar toda la página del navegador. Esto hace que la aplicación sea más rápida y responda mejor a las acciones del usuario.</p>
+            <p>Aunque X en AJAX significa XML, hoy en día se prefiere JSON a XML debido a sus muchas ventajas, como ser parte de JavaScript y, por lo tanto, tener un tamaño más ligero. Tanto JSON como XML se utilizan para empaquetar información en el modelo AJAX.</p> 
+            <p>AJAX es el uso del objeto XMLHttpRequest para comunicarse con los servidores. Puede enviar y recibir información en varios formatos, incluidos JSON, XML, HTML y archivos de texto. La característica más atractiva de AJAX es su naturaleza "asincrónica", lo que significa que puede comunicarse con el servidor, intercambiar datos y actualizar la interfaz de usuario sin tener que actualizar toda la página.</p>
+            <p>Las dos características principales de AJAX permiten hacer lo siguiente:</p>
+            <ul class="lista">
+                <li>Realiza solicitudes al servidor sin recargar la página.</li>
+                <li>Recibir y trabajar con datos del servidor.</li>
+            </ul>
+            <h3 class="titulo3">Objeto XMLHttpRequest:</h3>
+            <P>Este objeto se utiliza para interactuar con los servidores. Puede recuperar datos de una URL sin tener que actualizar la página completa. Esto permite que una página web actualice solo una parte de una página sin interrumpir lo que está haciendo el usuario.</P>
+            <div class="main-section2">
+                <img src="../assets/images/AJAX01.png" alt="ejemplo objeto XMLHttpRequest">
+                <div>
+                    <button id="boton" class="boton2">Get data users</button>
+                    <ul class="lista" id="lista"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="AJAX.js"></script>
+</body>
+</html>
