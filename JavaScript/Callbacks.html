@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Callbacks</h2>
+            <p>Una función de callback (a veces denominados funciones de retrollamada o funciones callback) es una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción.</p>
+            <h3 class="ejemplo">Ejemplo:</h3>
+            <div class="main-section2">
+                <img src="../assets/images/callbacks1.png" alt="ejemplo callbacks 1">
+                <div>
+                    <ul class="listaNav">
+                        <li><a href="javascript:verSaludo()" class="link">Saludar</a></li>
+                    </ul>
+                    <p id="saludo"></p>
+                </div>
+            </div>
+            <h3 class="titulo3">Asincronía con callbacks: </h3>
+            <p>Las funciones callback pueden utilizarse como un primer intento de manejar la asincronía en un programa.</p>
+            <h4 class="ejemplo">Ejemplo: Lanzar 10 veces el dado o hasta sacar 6</h4>
+            <div class="main-section2">
+                <img src="../assets/images/callbacks2.png" alt="ejemplo callbacks 2">
+                <img src="../assets/images/callbacks3.png" alt="ejemplo callbacks 3">
+                <div>
+                    <ul class="listaNav">
+                        <li><a href="javascript:dado()" class="link">Lanzamientos del dado</a></li>
+                    </ul>
+                    <p id="resultado"></p>
+                    <ol class="lista" id="numeros"></ol>
+                    <span class="resaltado" id="error"></span>
+                </div>
+            </div>
+            <p>La función lanzarDado() tiene un parámetro iterations que simplemente indica el número de iteraciones que tendrá el bucle (número de lanzamientos del dado). Por otro lado, el segundo parámetro es el callback, por lo que se puede ejecutar en momentos concretos del código. Lo hace en dos ocasiones:</p>
+            <ul class="lista">
+                <li>En el if cuando number es 6 (se detecta como error cuando el resultado es 6). Se pasa un objeto por parámetro que contiene un error, un message (el mensaje de error) y value con el array de resultados obtenidos hasta el 6.</li>
+                <li>Tras el for, con dos parámetros. El primero null, ya que en este caso no hay error. El segundo parámetro un objeto que contiene un campo message para un mensaje de tiradas correctas y value con el array de todos los resultados.</li>
+            </ul>
+            <h3 class="titulo3">Desventajas de los callbacks:</h3>
+            <p>A pesar de ser una forma flexible y potente de controlar la asincronía, que permite realizar múltiples posibilidades, las funciones callbacks tienen ciertas desventajas evidentes:</p>
+            <ul class="lista">
+                <li>El código creado con las funciones es algo caótico.</li>
+                <li>A la hora de tener que gestionar la asincronía varias veces en una misma función, al introducir varias funciones con callbacks en su interior, se obtiene una Callback Hell o Pyramid of Doom, lo cual serian muchas funciones callbacks anidadas.</li>
+            </ul>
+        </section>
+    </main>
+    <script src="Callbacks.js"></script>
+</body>
+</html>
