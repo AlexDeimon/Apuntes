@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Promesas</h2>
+            <p>Una promesa es algo que, en principio pensamos que se cumplirá, pero en el futuro pueden ocurrir varias cosas:</p>
+            <dl class="lista">
+                <dt>Cumplida:</dt>
+                <dd>La operación se completó con éxito.</dd>
+                <dt>Recahazada:</dt>
+                <dd>La operación falló.</dd>
+                <dt>Pendiente:</dt>
+                <dd>Estado inicial, ni cumplida ni rechazada.</dd>
+            </dl>
+            <p>Las promesas en Javascript se representan a través de un Object, y cada promesa estará en un estado concreto: pendiente, aceptada o rechazada. Además, cada promesa tiene los siguientes métodos:</p>
+            <dl class="lista">
+                <dt>.then(function resolve):</dt>
+                <dd>Ejecuta la función callback resolve cuando la promesa se cumple.</dd>
+                <dt>.catch(function reject):</dt>
+                <dd>Ejecuta la función callback reject cuando la promesa se rechaza.</dd>
+                <dt>.then(function resolve, function reject):</dt>
+                <dd>Método equivalente a las dos anteriores en el mismo .then().</dd>
+                <dt>.finally(function end)</dt>
+                <dd>Ejecuta la función callback end tanto si se cumple como si se rechaza.</dd>
+            </dl>
+            <h3 class="ejemplo">Ejemplo:</h3>
+            <div class="main-section2">
+                <div>
+                    <img src="../assets/images/Promesas1.png" class="img" alt="Ejemplo promesas 1">
+                    <img src="../assets/images/Promesas2.png" class="img" alt="Ejemplo promesas 2">
+                </div>
+                
+                <div>
+                    <ul class="listaNav">
+                        <li><a href="javascript:usuario()" class="link">Consultar un usuario</a></li>
+                        <li><a href="javascript:email()" class="link">Consultar correo de usuario</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="Promesas.js"></script>
+</body>
+</html>

@@ -41,6 +41,48 @@
                     <ul class="lista" id="lista"></ul>
                 </div>
             </div>
+            <h3 class="titulo3">Fetch API:</h3>
+            <p>Proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, como peticiones y respuestas. Es similar al objeto XMLHttpRequest, pero la nueva API ofrece un conjunto de características más potente y flexible.</p>
+            <p>También provee un método global fetch() que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red. Está basado en promesas, por lo cual tiene un response y un reject internos.</p>
+            <p>Response tiene varios métodos:</p>
+            <dl class="lista">
+                <dt>arrayBuffer():</dt>
+                <dd>Archivos binarios en bruto (mp3, pdf, jpg, etc). Se utiliza cuando se necesita manipular el contenido del archivo.</dd>
+                <dt>blob():</dt>
+                <dd>Archivos binarios en bruto (mp3, pdf, jpg, etc). Se utiliza cuando no se necesita manipular el contenido y se va a trabajar con el archivo directamente.</dd>
+                <dt>clone():</dt>
+                <dd>crea un clon de un objeto de respuesta, idéntico en todos los sentidos, pero almacenado en una variable diferente.</dd>
+                <dt>formData():</dt>
+                <dd>Se utiliza para leer los objetos formData.</dd>
+                <dt>json():</dt>
+                <dd>Convierte los archivos json en un objeto de JavaScript.</dd>
+                <dt>text():</dt>
+                <dd>Se utiliza cuando queremos leer un archivo de texto. Siempre se codifica en UTF-8.</dd>
+            </dl>
+            <h4 class="titulo4">GET:</h4>
+            <div class="main-section2">
+                <img src="../assets/images/AJAX02.png" alt="ejemplo Fetch">
+                <div>
+                    <button id="boton2" class="boton2">Get data users</button>
+                    <ul class="lista" id="lista2"></ul>
+                </div>
+            </div>
+            <h4 class="titulo4">POST:</h4>
+            <div class="main-section2">
+                <img src="../assets/images/AJAX03.png" alt="ejemplo Fetch POST">
+                <div>
+                    <button id="boton3" class="boton2">Send data</button>
+                </div>
+            </div>
+            <h4 class="titulo4">Leer archivos:</h4>
+            <div class="main-section2">
+                <div>
+                    <button id="boton-img" class="boton2">Ver imagen del código</button><br>
+                    <button id="boton-pdf" class="boton2">PDF</button><br>
+                    <a href="#" class="link" target="_blank" id="link">Ver PDF</a>
+                </div>
+                <img id="img">
+            </div>
         </section>
     </main>
     <script src="AJAX.js"></script>
