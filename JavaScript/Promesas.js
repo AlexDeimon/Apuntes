@@ -1,4 +1,3 @@
-//Una promesa es un objeto con 2 callbacks internos
 const usuarios = [
     {id: 1, nombre: 'Alex'},
     {id: 2, nombre: 'Diego'}, 

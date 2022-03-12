@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Async/Await</h2>
+            <P>Las palabras clave async/await, son una forma de gestionar las promesas de una forma más sencilla. Con async/await seguimos utilizando promesas, pero abandonamos el modelo de encadenamiento de .then() para utilizar uno en el que trabajamos de forma más tradicional.</P>
+            <h3 class="titulo3">Async:</h3>
+            <p>La palabra clave async define a una función como una función asíncrona, por lo que el código no se ejecutará de forma secuencial y automaticámente la función va a devolver una promesa.</p>
+            <h3 class="titulo3">Await:</h3>
+            <p>Establece bloqueos en el código hasta la operación posterior a la palabra clave se haya resuelto. Await no funcionará si no se esta dentro de una función async.</p>
+            <h4 class="ejemplo">Ejemplo 1:</h4>
+            <div class="main-section2">
+                <img src="../assets/images/async01.png" alt="Ejemplo Async-Await">
+                <div>
+                    <ul class="listaNav">
+                        <li><a href="javascript:saludo()" class="link">Saludar en 2 segundos</a></li>
+                    </ul>
+                    <p id="saludo"></p>
+                </div>
+            </div>
+            <h4 class="ejemplo">Ejemplo 2:</h4>
+            <div class="main-section2">
+                <img src="../assets/images/async02.png" alt="Ejemplo Async-Await 2">
+                <ul class="listaNav">
+                    <li><a href="javascript:usuario()" class="link">Consultar datos usuario</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <script src="Async-Await.js"></script>
+</body>
+</html>
