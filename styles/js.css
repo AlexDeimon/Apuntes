@@ -89,3 +89,23 @@
 .red {
     background: var(--color-red);
 }
+
+/* ESTILOS API-WebStorage*/
+.form {
+    margin-bottom: 1rem;
+}
+.form__field {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 200px;
+    margin-bottom: 1rem;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.info p {
+    margin: 0 1rem;
+}

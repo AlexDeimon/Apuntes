@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API-WebStorage</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">API-WebStorage</h2>
+            <p>La API de almacenamiento web proporciona los mecanismos mediante los cuales el navegador puede almacenar información de tipo clave/valor, de una forma mucho más intuitiva que utilizando cookies.</p>
+            <h3 class="titulo3">Almacenamiento web, conceptos y uso:</h3>
+            <p>Los dos mecanismos en el almacenamiento web son los siguientes:</p>
+            <dl class="lista">
+                <dt>sessionStorage:</dt>
+                <dd>Mantiene un área de almacenamiento separada para cada origen que está disponible mientras dure la sesión de la página (mientras el navegador esté abierto, incluyendo recargas de página y restablecimientos).</dd>
+                <dt>localStorage:</dt>
+                <dd>Hace lo mismo, pero persiste incluso cuando el navegador se cierre y se reabra.</dd>
+            </dl>
+            <p>Al invocar uno de éstos, se creará una instancia del objeto Storage, a través del cual los datos pueden ser creados, recuperados y eliminados. sessionStorage y localStorage utilizan un objeto de almacenamiento diferente según su origen — funcionan y son controlados por separado.</p>
+            <h3 class="titulo3">Métodos:</h3>
+            <dl class="lista">
+                <dt>Obtener valores de la memoria (getItem()):</dt>
+                <dd>Los valores se pueden recuperar de la memoria usando Storage.getItem(). Este método usa la clave del dato como argumento y devuelve el valor.</dd>
+                <dt>Guardar valores en la memoria (setItem()):</dt>
+                <dd>Se usa tanto para crear nuevos datos como para actualizar valores existentes (si el dato ya existe). Este método recibe dos argumentos: la clave del dato que se va a crear/modificar y el valor que se va a guardar.</dd>
+                <dt>removeItem():</dt>
+                <dd>Recibe un solo argumento: la llave del dato a eliminar, y lo remueve del objeto de almacenamiento de ese dominio.</dd>
+                <dt>Storage.clear():</dt>
+                <dd>No recibe argumentos; vacía todo el objeto de almacenamiento de ese dominio.</dd>
+            </dl>
+            <h3 class="ejemplo">Ejemplo:</h3>
+            <div class="main-section2">
+                <img src="../assets/images/WebStorage.png" alt="ejemplo WebStorage">
+                <div>
+                    <form id="form" class="form">
+                        <div class="form__field">
+                            <label for="key">Key</label>
+                            <input type="text" id="key" name="key">
+                        </div>
+                        <div class="form__field">
+                            <label for="value">Value</label>
+                            <input type="text" id="value" name="value">
+                        </div>
+                        <input type="submit" value="Save" class="boton">
+                    </form>
+                    <div id="info" class="info">
+                        <select name="keys" id="keys">
+                            <option value="default">Select key</option>
+                        </select>
+                        <p id="infoValue"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="API-WebStorage.js"></script>
+</body>
+</html>
