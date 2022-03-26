@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API-Drag & Drop</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">API-Drag & Drop</h2>
+            <p>Esta Api admite una serie de características para gestionar la funcionalidad de arrastrar y soltar. Esto le permite al usuario hacer clic y mantener presionado el botón del ratón/mouse sobre un elemento, arrastrarlo a otra ubicación y soltarlo para colocar el elemento allí. Al puntero le seguirá una representación transparente de lo que se está arrastrando durante la operación. La ubicación de destino puede ser una aplicación diferente. Sitios web, extensiones y aplicaciones XUL pueden hacer uso de esta funcionalidad para personalizar los elementos que pueden ser arrastrados, evaluar la operación, así como especificar el lugar donde los elementos se pueden soltar.</p>
+            <p>Para controlar estas acciones tenemos varios eventos de cada una de las partes:</p>
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>Parte</th>
+                        <th>Evento</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Objeto a arrastrar</td>
+                        <td>dragstart</td>
+                        <td>Se ejecuta sobre un elemento cuando se inicia una operación de arrastre. El usuario está solicitando arrastrar el elemento al que dispara el evento dragstart.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>drag</td>
+                        <td>Este evento se activa en el origen del arrastre, es decir, el elemento donde dragstart fue disparado, durante la operación de arrastre.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>dragend</td>
+                        <td>El origen del arrastre recibirá un evento dragend cuando la operación se haya completado, tanto si tuvo éxito como si no.</td>
+                    </tr>
+                    <tr>
+                        <td>Zona de destino</td>
+                        <td>dragenter</td>
+                        <td>Se dispara cuando el objeto entra en la zona de destino.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>dragover</td>
+                        <td>Se dispara cuando el objeto se mueve sobre la zona de destino.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>drop</td>
+                        <td>Se dispara cuando soltamos el objeto en la zona de destino.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>dragleave</td>
+                        <td>Se dispara cuando el objeto sale de la zona de destino.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="ejemplo">Ejemplo:</h3>
+            <div class="main-section2">
+                <img src="../assets/images/DragDrop1.png" alt="ejemplo drag drop">
+                <div>
+                    <img src="https://img.icons8.com/fluency/100/000000/wallpaper.png" id="img" alt="img ejemplo">
+                    <p id="parrafo"></p>
+                    <div id="drop-zone" class="drop-zone">Drop Zone</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="API-DragDrop.js"></script>
+</body>
+</html>
