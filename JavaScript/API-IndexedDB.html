@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API IndexedDB</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">API IndexedDB</h2>
+            <p>IndexedDB es una API de bajo nivel que ofrece almacenamiento en el cliente de cantidades significativas de datos estructurados, incluyendo archivos y blobs. Para búsquedas de alto rendimiento en esos datos usa índices. Mientras <a href="API-WebStorage.html" class="link">DOM Storage</a> es útil para el almacenamiento de pequeñas cantidades de datos, no es útil para almacenar grandes cantidades de datos estructurados. IndexedDB proporciona una solución.</p>
+            <ul class="lista">
+                <li>Es una base de datos indexada y es una manera persistente de almacenar datos en el navegador.</li>
+                <li>Almecena pares clave-valor. Los valores pueden ser objetos con estructuras complejas y las claves pueden ser propiedades de esos objetos.</li>
+                <li>Es mayormente asíncrona.</li>
+                <li>Usa eventos DOM para notificar cuando los resultados están disponibles.</li>
+                <li>Es orientada a objetos.</li>
+            </ul>
+            <h3 class="titulo3">Creación:</h3>
+            <ol class="lista">
+                <li>Crear la base de datos a través del objeto IndexedDB y el método open().</li>
+                <li>Comprobar si la base de datos existe o tiene que ser creada a través del método onupgradeneed().</li>
+                <li>Crear colección de objetos con el método createObjectStore().
+                    <ol>
+                        <li><span class="resaltado">Se debe crear una Key para posteriormente poder añadir registros. Esto se puede mediante autoincrement: True o por medio de KeyPath.</span></li>
+                    </ol>
+                </li>
+                <li>Escuchar los eventos de éxito y de error con los métodos onsucces() y onerror().</li>
+            </ol>
+            <h4 class="titulo4">Primer creación:</h4>
+            <img src="../assets/images/IndexedDB1.png" alt="creación DB" class="img">
+            <h4 class="titulo4">Ajuste con la creación de la Key:</h4>
+            <img src="../assets/images/IndexedDB2.png" alt="creación DB con la Key de la colección" class="img">
+            <h3 class="titulo3">Añadir datos:</h3>
+            <ol class="lista">
+                <li>Crear una transacción en la bd mediante el método transaction(['colección'], 'metodo'). Sus parámetros son: la coleccion de datos donde se añadira el registro y el método 'readwrite'.</li>
+                <li>Realizar la transacción mediante el método objectStore('colección').</li>
+                <li>Añadir el registro mediante el método add().</li>
+            </ol>
+            <img src="../assets/images/IndexedDB3.png" alt="Añadir datos" class="img">
+            <form id="form" class="form">
+                <label for="task">Task</label>
+                <input type="text" name="task">
+                <select name="priority">
+                    <option value="low">Low</option>
+                    <option value="normal">Normal</option>
+                    <option value="high">High</option>
+                </select>
+                <button class="boton">Add Task</button>
+            </form>
+            <h3 class="titulo3">Leer datos:</h3>
+            <ol class="lista">
+                <li>Crear una transacción en la bd mediante el método transaction(['colección'], 'metodo'). Sus parámetros son: la coleccion de datos que se quieren leer y el método 'readonly'.</li>
+                <li>Realizar la transacción mediante el método objectStore('colección').</li>
+                <li>Crear un cursor (recorre cada uno de los objetos en la colección y devuelve el valor) mediante el método openCursor().
+                    <ol>
+                        <li>Inicalmente el cursor solo lee el primer registro, por lo que mediante un onsucces() del request se ajusta el cursor para leer todos los registros mediante el metodo continue().</li>
+                    </ol>
+                </li>
+            </ol>
+            <div class="main-section2">
+                <img src="../assets/images/IndexedDB4.png" alt="Leer datos" class="img">
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tasks"></tbody>
+                </table>    
+            </div>      
+        </section>
+    </main>
+    <script src="API-IndexedDB.js"></script>
+</body>
+</html>

@@ -59,3 +59,53 @@ fileInput.addEventListener('change', (e) => {
         progress.style.width = '100%';
     });
 });
+
+//* API FILE + API DRAG DROP
+const fileInput4 = document.getElementById('file4');
+const dropZone = document.getElementById('drop-zone');
+const images2 = document.getElementById('images2');
+
+dropZone.addEventListener('click', () => fileInput4.click());
+
+dropZone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropZone.classList.add('drop-zone--active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+    e.preventDefault();
+    dropZone.classList.remove('drop-zone--active');
+});
+
+fileInput4.addEventListener('change', (e) => {
+    const files = e.target.files;
+    const fragment = document.createDocumentFragment();
+    for (const file of files) {
+        const fileReader = new FileReader();
+        const img = document.createElement('IMG');
+        img.setAttribute('class', 'img');
+        fileReader.readAsDataURL(file);
+        fileReader.addEventListener('load', (e) => {
+            img.setAttribute('src', e.target.result);
+        })
+        fragment.appendChild(img);
+    }
+    images2.appendChild(fragment);
+});
+dropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    fileInput4.files = e.dataTransfer.files;
+    const files = fileInput4.files;
+    const fragment = document.createDocumentFragment();
+    for (const file of files) {
+        const fileReader = new FileReader();
+        const img = document.createElement('IMG');
+        img.setAttribute('class', 'img');
+        fileReader.readAsDataURL(file);
+        fileReader.addEventListener('load', (e) => {
+            img.setAttribute('src', e.target.result);
+        })
+        fragment.appendChild(img);
+    }
+    images2.appendChild(fragment);
+});
