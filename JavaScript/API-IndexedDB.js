@@ -33,15 +33,6 @@ if (indexedDB) {
         readData();
     }
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const data = { //* objeto que se va a añadir a la BD
-            taskTitle: e.target.task.value,
-            taskPriority: e.target.priority.value
-        }
-        addData(data);
-    });
-
     //* leer datos: 
     const readData = () => {
         const transaction = db.transaction(['tasks'], 'readonly'); //* crear la transacción
@@ -55,10 +46,32 @@ if (indexedDB) {
                 const taskTitle = document.createElement('TD');
                 taskTitle.textContent = cursor.value.taskTitle;
                 tr.appendChild(taskTitle);
+
                 const taskPriority = document.createElement('TD');
                 taskPriority.textContent = cursor.value.taskPriority;
                 tr.appendChild(taskPriority);
                 fragment.appendChild(tr);
+
+                const taskupdateTd = document.createElement('TD');
+                const taskUpdate = document.createElement('BUTTON');
+                taskUpdate.setAttribute('class','boton');
+                taskUpdate.dataset.type = 'update';
+                taskUpdate.dataset.key = cursor.key;
+                taskUpdate.innerHTML = '<img src="https://img.icons8.com/ios-glyphs/24/pencil--v1.png">';
+                taskupdateTd.appendChild(taskUpdate);
+                tr.appendChild(taskupdateTd);
+                fragment.appendChild(tr);
+
+                const taskdeleteTd = document.createElement('TD');
+                const taskdelete = document.createElement('BUTTON');
+                taskdelete.setAttribute('class','boton');
+                taskdelete.dataset.type = 'delete';
+                taskdelete.dataset.key = cursor.key;
+                taskdelete.innerHTML = '<img src="https://img.icons8.com/ios-glyphs/24/trash--v1.png">';
+                taskdeleteTd.appendChild(taskdelete);
+                tr.appendChild(taskdeleteTd);
+                fragment.appendChild(tr);
+
                 cursor.continue(); //* recorre el siguiente registro de la colección hasta que el resultado sea null
             } else {
                 tasks.textContent = '';
@@ -66,5 +79,67 @@ if (indexedDB) {
             }
         }
     }
+
+    //* obtener datos:
+    const getData = (key) => {//* usa la key para buscar el registro
+        const transaction = db.transaction(['tasks'], 'readwrite');
+        const objectStore = transaction.objectStore('tasks');
+        const request = objectStore.get(key); //* obtiene el registro
+
+        request.onsuccess = (e) => { //* actualiza el form
+            form.task.value = request.result.taskTitle;
+            form.priority.value = request.result.taskPriority;
+            form.button.dataset.action = 'update';
+            form.button.textContent = 'Update Task';
+        }
+    }
+
+    //*actualizar datos:
+    const updateData = (data) => {
+        const transaction = db.transaction(['tasks'], 'readwrite');//* crear la transacion
+        const objectStore = transaction.objectStore('tasks');//* realizar la transacion
+        const request = objectStore.put(data); //* si el dato existe lo actualiza, si no lo crea
+        request.onsuccess = () => {//* una vez actualizado el form vuelve a su defecto y se actualiza
+            form.button.dataset.action = 'add';
+            form.button.textContent = 'Add Task';
+            readData();
+        }
+    }
+
+    //* eliminar datos:
+    const deleteData = (key) => {
+        const transaction = db.transaction(['tasks'], 'readwrite'); //* crear la transacion
+        const objectStore = transaction.objectStore('tasks'); //* realizar la transacion
+        const request = objectStore.delete(key); //*elimina el registro segun el key
+        request.onsuccess = () => {
+            readData(); //* actualiza la tabla
+        }
+    }
+
+    //*CRUD
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const data = {//* objeto q se va a hacer CRUD en la BD
+            taskTitle: e.target.task.value,
+            taskPriority: e.target.priority.value
+        }
+
+
+        if (e.target.button.dataset.action == 'add') {//* si el dataset del input == add
+            addData(data)
+        } else if (e.target.button.dataset.action == 'update') { //* si el dataset del input == update
+            updateData(data)
+        }
+
+        form.reset()
+    })
+
+    tasks.addEventListener('click', (e) => {
+        if (e.target.dataset.type == 'update') {
+            getData(e.target.dataset.key)
+        } else if (e.target.dataset.type == 'delete') {
+            deleteData(e.target.dataset.key)
+        }
+    })
 }
 
