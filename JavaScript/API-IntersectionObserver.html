@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Intersection Observer</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/js.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">API Intersection Observer</h2>
+            <p>Esta API permite observar cambios en la intersección de un elemento con un elemento ancestro o con el viewport del documento de nivel superior.</p>
+            <p>Históricamente, detectar la visibilidad de un elemento, o la visibilidad relativa de dos elementos, uno respecto del otro, ha sido una tarea difícil para la cual las soluciones no han sido muy fiables y propensas a causar que el navegador y los sitios a los que el usuario accede lleguen a ser lentos. A medida que la web ha madurado, la necesidad para este tipo de información ha ido en aumento. La información sobre intersección es necesaria por muchas razones, tales como:</p>
+            <ul class="lista">
+                <li>Carga en diferido de imágenes u otro contenido a medida que la página se desplaza.</li>
+                <li>Implementación del desplazamiento infinito en sitios web, donde más y más contenido se carga y muestra a medida que se desplaza la página, de forma que el usuario no tiene que pasar páginas.</li>
+                <li>Informes de visualizaciones de anuncios para calcular ingresos por publicidad.</li>
+                <li>Decidir si deben realizarse tareas o procesos de animación basados en si el usuario verá o no el resultado.</li>
+            </ul>
+            <p>El API Intersection Observer deja al código registrar una función callback que se ejecuta si un elemento que se desea monitorizar entra o sale de otro elemento (o del viewport), o cuando la cantidad por la que ambos elementos se intersecan cambia en una cantidad requerida. De esta manera, los sitios no necesitan hacer nada sobre el hilo principal para mirar este tipo de intersección entre elementos, y el navegador está libre para optimizar la gestión de intersecciones como le parezca conveniente.</p>
+            <h3 class="ejemplo">Ejemplo:</h3>
+            <img src="../assets/images/IntersectionObserver1.png" alt="ejemplo 1" class="img">
+            <div id="box1" class="box">box-1</div>
+            <div id="box2" class="box">box-2</div>
+            <div id="box3" class="box">box-3</div>
+            <div id="box4" class="box">box-4</div>
+        </section>
+    </main>
+    <script src="API-IntersectionObserver.js"></script>
+</body>
+</html>
