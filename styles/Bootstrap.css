@@ -1,0 +1,5 @@
+/*Estilos Boostrap.html*/
+.tituloBootstrap{
+    text-align: var(--center);
+    color: var(--color-blueviolet);
+}
