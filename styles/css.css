@@ -152,7 +152,7 @@ input:default + label { color: var(--color-firebrick); }
 
 input:disabled{ background-color: lightslategrey; }
 
-input:enabled{ border: 1px solid var(--color-mediumblue); }
+input:enabled{ border: var(--length-1) solid var(--color-mediumblue); }
 
 .ejem-child p:nth-child(odd){
     color: var(--color-purple);
@@ -267,7 +267,7 @@ input:read-only::placeholder{
 /*ESTILOS BlendingModes.html & Clip-path*/
 .bg-blending-mode,
 .clip-path{
-    background: url('../assets/images/portada.jpg'), var(--color-springgreen);
+    background: url('../assets/images/portada.webp'), var(--color-springgreen);
     background-position: var(--center);
     background-repeat: no-repeat;
     background-size: cover;
@@ -548,7 +548,7 @@ input:read-only::placeholder{
     height: var(--length-100);
     background-color: var(--color-sienna);
     color: var(--color-skyblue);
-    border: 1px solid var(--color-slateblue);
+    border: var(--length-1) solid var(--color-slateblue);
     border-top-left-radius: var(--length-10);
     border-top-right-radius: var(--length-10);
     border-bottom-right-radius: var(--length-20);
@@ -576,7 +576,7 @@ input:read-only::placeholder{
 #block12{
     display: var(--display-inline);
     width: var(--length-200);
-    height: 210px; /*no se aplican al ser un elemento inline*/
+    height: var(--length-210); /*no se aplican al ser un elemento inline*/
     margin: var(--length-10); /*solo se aplican las márgenes horizontales*/
     background-color: var(--color-cornflowerblue);
     color: var(--color-darkorchid);
@@ -584,7 +584,7 @@ input:read-only::placeholder{
 
 #inline11{
     display: var(--display-inline);
-    width: 210px;
+    width: var(--length-210);
     height: var(--length-100); /*no se aplican al ser un elemento inline*/
     margin: var(--length-10); /*solo se aplican las márgenes horizontales*/
     background-color: var(--color-darkslategray);
@@ -841,17 +841,17 @@ input:read-only::placeholder{
 
 #bg-gradient12{ background: conic-gradient(from 10deg, var(--color-midnightblue), var(--color-peru), var(--color-rebeccapurple)); } 
 
-#bg-img1{ background-image: url("../assets/images/css3.png"), url("../assets/images/portada-small.webp"); }
+#bg-img1{ background-image: url("../assets/images/css3.webp"), url("../assets/images/portada-small.webp"); }
 
-#bg-img2{ background: url("../assets/images/css3.png"), var(--color-royalblue); }
+#bg-img2{ background: url("../assets/images/css3.webp"), var(--color-royalblue); }
 
 #bg-repeat1{
-    background: url("../assets/images/css3.png"), var(--color-saddlebrown);
+    background: url("../assets/images/css3.webp"), var(--color-saddlebrown);
     background-repeat: repeat-x;
 }
 
 #bg-repeat2{
-    background: url("../assets/images/css3.png"), var(--color-sandybrown);
+    background: url("../assets/images/css3.webp"), var(--color-sandybrown);
     background-repeat: repeat-y;
 }
 
@@ -872,36 +872,36 @@ input:read-only::placeholder{
 }
 
 #bg-repeat6{
-    background: url("../assets/images/css3.png"), var(--color-turquoise);
+    background: url("../assets/images/css3.webp"), var(--color-turquoise);
     background-repeat: no-repeat;
 }
 
 #bg-position1{
-    background: url("../assets/images/css3.png"), var(--color-aqua);
+    background: url("../assets/images/css3.webp"), var(--color-aqua);
     background-repeat: no-repeat;
     background-position: top;
 }
 
 #bg-position2{
-    background: url("../assets/images/css3.png"), var(--color-blue);
+    background: url("../assets/images/css3.webp"), var(--color-blue);
     background-repeat: no-repeat;
     background-position: right;
 }
 
 #bg-position3{
-    background: url("../assets/images/css3.png"), var(--color-blueviolet);
+    background: url("../assets/images/css3.webp"), var(--color-blueviolet);
     background-repeat: no-repeat;
     background-position: bottom;
 }
 
 #bg-position4{
-    background: url("../assets/images/css3.png"), var(--color-burlywood);
+    background: url("../assets/images/css3.webp"), var(--color-burlywood);
     background-repeat: no-repeat;
     background-position: left;
 }
 
 #bg-position5{
-    background: url("../assets/images/css3.png"), var(--color-chocolate);
+    background: url("../assets/images/css3.webp"), var(--color-chocolate);
     background-repeat: no-repeat;
     background-position: var(--center);
 }
@@ -937,47 +937,47 @@ input:read-only::placeholder{
 }
 
 #bg-size1{
-    background: url("../assets/images/portada.jpg");
+    background: url("../assets/images/portada.webp");
     background-size: cover;
 }
 
 #bg-size2{
-    background: url("../assets/images/portada.jpg");
+    background: url("../assets/images/portada.webp");
     background-size: contain;
 }
 
 #bg-size3{
-    background: url("../assets/images/portada.jpg");
+    background: url("../assets/images/portada.webp");
     background-size: var(--auto);
 }
 
 #bg-size4{
-    background: url("../assets/images/portada.jpg");
+    background: url("../assets/images/portada.webp");
     background-size: var(--length-250);
 }
 
 #bg-size5{
-    background: url("../assets/images/portada.jpg");
+    background: url("../assets/images/portada.webp");
     background-size: 70%;
 }
 
 #bg-attachement1{
     overflow: var(--auto);
-    background: url("../assets/images/portada.jpg");
+    background: url("../assets/images/portada.webp");
     background-attachment: fixed;
     background-size: contain;
 }
 
 #bg-attachement2{
     overflow: var(--auto);
-    background: url("../assets/images/portada.jpg");
+    background: url("../assets/images/portada.webp");
     background-attachment: local;
     background-size: contain;
 }
 
 #bg-attachement3{
     overflow: var(--auto);
-    background: url("../assets/images/portada.jpg");
+    background: url("../assets/images/portada.webp");
     background-attachment: scroll;
     background-size: contain;
 }
@@ -1010,8 +1010,8 @@ input:read-only::placeholder{
 
 #bg-gradient{
     background: #8e0e00;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, rgba(31, 28, 24, 0.603), rgba(142, 14, 0, 0.61)), url("../assets/images/portada.jpg");  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, rgba(31, 28, 24, 0.603), rgba(142, 14, 0, 0.61)), url("../assets/images/portada.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, rgba(31, 28, 24, 0.603), rgba(142, 14, 0, 0.61)), url("../assets/images/portada.webp");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(31, 28, 24, 0.603), rgba(142, 14, 0, 0.61)), url("../assets/images/portada.webp"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
 } 
 
@@ -1083,8 +1083,8 @@ input:read-only::placeholder{
 
 #link2{
     background: url('https://img.icons8.com/color/16/000000/link--v2.png') no-repeat var(--value-100) 0;
-    background-size: 16px 16px;
-    padding-right: 19px;
+    background-size: 22px 22px;
+    padding-right: 25px;
 }
 
 /*ESTILOS listas.html*/
@@ -1131,7 +1131,7 @@ input:read-only::placeholder{
 #tabla th,
 #tabla td{
     padding: var(--length-10) var(--length-10);
-    border: 1px solid #5d5d5d;
+    border: var(--length-1) solid #5d5d5d;
     color: var(--color-white);
 }
 
@@ -1308,7 +1308,7 @@ input:read-only::placeholder{
 #box20:hover{
     color: var(--color-white);
     background-color: var(--color-aqua);
-    border: 1px solid azure;
+    border: var(--length-1) solid azure;
     border-radius: var(--length-50);
 }
 
@@ -1356,7 +1356,7 @@ input:read-only::placeholder{
     line-height: var(--length-200);
     color: papayawhip;
     background-color: var(--color-red);
-    border: 1px solid var(--color-seashell);
+    border: var(--length-1) solid var(--color-seashell);
     border-radius: var(--length-100);
     box-shadow: var(--length-0) var(--length-0) var(--length-30) var(--color-sienna);
     transform: rotate(360deg);

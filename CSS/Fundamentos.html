@@ -29,16 +29,16 @@
                 <p>Existen 4 formas de dar estilos a HTML mediante CSS:</p>
                 <h4 class="titulo4">Etiqueta &lt;link&gt;:</h4>
                 <p>Se tiene un archivo CSS externo, usualmente en otra carpeta, el cual se vincula al HTML mediante la etiqueta &lt;link&gt;.</p><p>Dicho archivo se puede vincular a varios archivos HTML.</p>
-                <img src="../assets/images/link1.png" alt="link1" class="img">
+                <img src="../assets/images/link1.webp" alt="link1" class="img">
                 <h4 class="titulo4">Etiqueta &lt;style&gt; &lt;style/&gt;:</h4>
                 <p>Dentro del mismo archivo HTML dentro de la etiqueta &lt;head&gt; se agrega la etiqueta &lt;style&gt; en la cual se escribe directamente el código CSS.</p>
-                <img src="../assets/images/style1.png" alt="style1" class="img">
+                <img src="../assets/images/style1.webp" alt="style1" class="img">
                 <h4 style="color: #6ae96d; font-family: 'Exo 2', sans-serif; padding: 0% 2%;">CSS en linea: </h4>
                 <p>Se agrega el atributo style a cualquier etiqueta y se agregan las propiedades y valores de estilo que se quieren agregar.</p><p><small><strong>Mala practica.</strong></small></p>
-                <img src="../assets/images/style2.png" alt="style2" class="img">
+                <img src="../assets/images/style2.webp" alt="style2" class="img">
                 <h4 class="titulo4" id="import">Import: </h4>
                 <p>En la etiqueta &lt;style&gt; se importa la url del archivo CSS externo.</p><p><small><strong>Mala practica debido a que primero carga todo el contenido del HTML y luego carga el CSS.</strong></small></p>
-                <img src="../assets/images/style3.png" alt="style2" class="img">
+                <img src="../assets/images/style3.webp" alt="style2" class="img">
             </article>
             <article>
                 <h3 class="titulo3">Sintaxis CSS:</h3>
@@ -50,9 +50,9 @@
                     <dt>Valor:</dt>
                     <dd>El nuevo valor que se le va a dar a la propiedad.</dd> 
                     <dt>Declaración:</dt>
-                    <dd>Propiedad+valor, estas declaraciones se separan mediante ;</dd> 
+                    <dd>Propiedad + valor, estas declaraciones se separan mediante ;</dd> 
                     <dt>Regla:</dt>
-                    <dd>Conjunto de selector+declaracion(es).</dd> 
+                    <dd>Conjunto de selector + declaracion(es).</dd> 
                 </dl>
             </article>
             <article>
@@ -95,8 +95,8 @@
                 <h4 class="ejemplo">Ejemplo Herencia:</h4>
                 <p>El siguiente párrafo tiene color blanco y contiene 2 span y un enlace; el primer span hereda ese mismo color pero el segundo no lo hereda debido a la propiedad initial y el enlace por defecto tiene un color azul pero se esta forzando a tener el color blanco del párrafo con la propiedad inherit.</p>
                 <div class="main-section2">
-                    <img src="../assets/images/herencia1.png" alt="Ejemplo herencia HTML">
-                    <img src="../assets/images/herencia2.png" alt="Ejemplo herencia CSS">
+                    <img src="../assets/images/herencia1.webp" alt="Ejemplo herencia HTML">
+                    <img src="../assets/images/herencia2.webp" alt="Ejemplo herencia CSS">
                 </div>
                 <p id="pEjemplo">Lorem ipsum dolor <span>sit amet consectetur , </span><span id="spanEjemplo">adipisicing elit.</span>  Velit voluptatum molestiae veritatis sequi doloremque, voluptatibus suscipit ducimus eaque, atque doloribus quia amet praesentium autem esse eius debitis maxime voluptate omnis? <a href="#" id="aEjemplo">enlace ejemplo</a></p>
             </article>
@@ -123,28 +123,28 @@
                             <tr>
                                 <td>Selector Universal *</td>
                                 <td>Se aplica a todos los elementos.</td>
-                                <td><img src="../assets/images/selector1.png" alt="ejemplo selector universal"></td>
+                                <td><img src="../assets/images/selector1.webp" alt="ejemplo selector universal"></td>
                                 <td>
                                     <p>Asi se veria la página con esa regla.</p>
-                                    <img src="../assets/images/selector2.png" alt="ejemplo selector universal" >
+                                    <img src="../assets/images/selector2.webp" alt="ejemplo selector universal" >
                                 </td>
                             </tr>
                             <tr>
                                 <td>Selector de tipo o etiqueta</td>
                                 <td>nombre de la etiqueta &lt;&gt;.</td>
-                                <td><img src="../assets/images/selector3.png" alt="ejemplo selector etiqueta" ></td>
+                                <td><img src="../assets/images/selector3.webp" alt="ejemplo selector etiqueta" ></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>id</td>
                                 <td># + id del elemento. <small><strong>No es recomendable.</strong></small></td>
-                                <td><img src="../assets/images/selector4.png" alt="ejemplo selector id" ></td>
+                                <td><img src="../assets/images/selector4.webp" alt="ejemplo selector id" ></td>
                                 <td><h4 id="tituloid">Selector id</h4></td>
                             </tr>
                             <tr>
                                 <td>clase</td>
                                 <td>. + clase del elemento.</td>
-                                <td><img src="../assets/images/selector5.png" alt="ejemplo selector class" ></td>
+                                <td><img src="../assets/images/selector5.webp" alt="ejemplo selector class" ></td>
                                 <td><h4 class="titulocss">Selector clase</h4></td>
                             </tr>
                         </tbody>
@@ -187,7 +187,7 @@
                 </table>                    
                 <h4 class="titulo4">Selectores Compuestos:</h4>
                 <p>Selectores Agrupados: Se agrupan los selectores separados por comas y se escribe el estilo una sola vez.</p>
-                <img src="../assets/images/selector6.png" alt="ejemplo selectores agrupados" class="img">
+                <img src="../assets/images/selector6.webp" alt="ejemplo selectores agrupados" class="img">
                 <div class="overflow">
                     <table class="tabla">
                         <caption>Selectores Combinadores: </caption>
@@ -203,7 +203,7 @@
                             <tr>
                                 <td>Selector descendente</td>
                                 <td>Selecciona un elemento dentro de otro; se coloca el selector padre y separado por un espacio el selector hijo. <small><strong>Recomendación: no utilizar mas de 1 nivel.</strong></small></td>
-                                <td><img src="../assets/images/selector7.png" alt="ejemplo selector decendiente"></td>
+                                <td><img src="../assets/images/selector7.webp" alt="ejemplo selector decendiente"></td>
                                 <td>
                                     <dl class="lista">
                                         <dt>Selector descendente</dt>
@@ -214,7 +214,7 @@
                             <tr>
                                 <td>Selector de hermano siguiente +</td>
                                 <td>Selecciona el elemento hermano inmediatamente siguiente.</td>
-                                <td rowspan="2"><img src="../assets/images/selector8.png" alt="ejemplo selector hermanos siguientes"></td>
+                                <td rowspan="2"><img src="../assets/images/selector8.webp" alt="ejemplo selector hermanos siguientes"></td>
                                 <td rowspan="2">
                                     <p id="Hermano1">Hermano 1</p>
                                     <p id="Hermano2">Hermano 2</p>
@@ -229,7 +229,7 @@
                             <tr>
                                 <td>Selector de hijo directo ></td>
                                 <td>Selecciona solo a los hijos directos.</td>
-                                <td><img src="../assets/images/selector9.png" alt="ejemplo selector hijo directo HTML"><img src="../assets/images/selector10.png" alt="ejemplo selector hijo directo HTML"></td>
+                                <td><img src="../assets/images/selector9.webp" alt="ejemplo selector hijo directo HTML"><img src="../assets/images/selector10.webp" alt="ejemplo selector hijo directo HTML"></td>
                                 <td>
                                     <div id="padre">
                                         <p class="Hijo">Hijo 1</p>
@@ -243,7 +243,7 @@
                             <tr>
                                 <td>Selector de Subclases</td>
                                 <td>Se selecciona un elemento de etiqueta con una clase definida.</td>
-                                <td><img src="../assets/images/selector11.png" alt="ejemplo selector subclase"></td>
+                                <td><img src="../assets/images/selector11.webp" alt="ejemplo selector subclase"></td>
                                 <td><p class="texto">selector subclase</p></td>
                             </tr>
                         </tbody>

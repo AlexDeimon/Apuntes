@@ -13,10 +13,12 @@
     --font-title: 'Exo 2', sans-serif;
     --color-white: #fff;
     --color-black: #000;
+    --color-html: #ff4747;
     --color-aqua: aqua;
     --color-blue: blue;
     --color-blue-1: #448cff;
     --color-blue-2: #00b5fd;
+    --color-js: #fed800;
     --color-blueviolet: blueviolet;
     --color-burlywood: burlywood;
     --color-cadetblue: cadetblue;
@@ -84,6 +86,7 @@
     --color-turquoise: turquoise;
     --color-yellowgreen: yellowgreen;
     --length-0: 0px;
+    --length-1: 1px;
     --length-10: 10px;
     --length-20: 20px;
     --length-30: 30px;
@@ -98,6 +101,7 @@
     --length-120: 120px;
     --length-170: 170px;
     --length-200: 200px;
+    --length-210: 210px;
     --length-250: 250px;
     --length-300: 300px;
     --value-100: 100%;
@@ -152,7 +156,7 @@ p,
     font-family: var(--font-title);
 }
 
-.titulo2{ color: #ff4747; }
+.titulo2{ color: var(--color-html); }
 
 .titulo3{ color: #ff9d47; }
 
@@ -160,7 +164,7 @@ p,
 
 .ejemplo{ color: var(--color-blue-1); }
 
-.resaltado{ color: #ff4747; }
+.resaltado{ color: var(--color-html); }
 
 .blank{ color:var(--color-white); }
 
@@ -187,11 +191,11 @@ p,
     padding-top: 2%;
 }
 
-.cajaHTML{ border: 1px solid #f33d00; }
+.cajaHTML{ border: var(--length-1) solid var(--color-html); }
 
-.cajaCSS{ border: 1px solid var(--color-blue-2); }
+.cajaCSS{ border: var(--length-1) solid var(--color-blue-2); }
 
-.cajaJS{ border: 1px solid #fed800 ;}
+.cajaJS{ border: var(--length-1) solid var(--color-js) ;}
 
 .link{
     font-family: var(--font-title);
@@ -228,7 +232,7 @@ p,
 .tabla td,
 .tabla caption{
     padding: var(--length-10) var(--length-10);
-    border: 1px solid var(--color-white);
+    border: var(--length-1) solid var(--color-white);
 }
 
 .tabla thead,
@@ -262,7 +266,7 @@ figure .titulo4{
 
 .caja img{
     height: 326px;
-    width: 300px;
+    width: var(--length-300);
 }
 
 .lista h3,
@@ -286,7 +290,7 @@ figure .titulo4{
 
 .cajaCSS:hover{ box-shadow:var(--length-0) var(--length-0)  var(--length-20) var(--length-10) var(--color-blue-2); }
 
-.cajaJS:hover{ box-shadow: var(--length-0) var(--length-0)  var(--length-20) var(--length-10) #fed800; }
+.cajaJS:hover{ box-shadow: var(--length-0) var(--length-0)  var(--length-20) var(--length-10) var(--color-js); }
 
 .tabla tbody tr:nth-child(even){ background-color: #2c323f; }
 
@@ -300,7 +304,7 @@ figure .titulo4{
 
 /*BOTON TEMA ALEATORIO*/
 #linkA{
-    width: 210px;
+    width: var(--length-210);
     display: var(--display-block);
     margin: 30px var(--auto) var(--margin-padding-0);
     padding: var(--length-20) var(--length-20) var(--margin-padding-0);

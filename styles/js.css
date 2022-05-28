@@ -12,7 +12,7 @@
 .boton2{
     display: var(--display-inline);
     padding: var(--length-20) var(--length-0);
-    background-color:  #fed800;
+    background-color:  var(--color-js);
     border: 2px solid #444b52;
 }
 
@@ -54,7 +54,7 @@
 /*ESTILOS JavaScript.html*/
 .titulojs{
     text-align: var(--center);
-    color: #fed800;
+    color: var(--color-js);
 }
 
 /*ESTILOS Condicionales.html*/
@@ -83,7 +83,7 @@
     justify-content: var(--center);
     align-items: var(--center);
     font-size: x-large;
-    border: 1px solid var(--color-white);
+    border: var(--length-1) solid var(--color-white);
     cursor: pointer;
 }
 

@@ -72,7 +72,7 @@ const buttonImg = document.getElementById('boton-img');
 const buttonPDF = document.getElementById('boton-pdf');
 
 buttonImg.addEventListener('click', () => {
-    fetch('../assets/images/AJAX04.png')
+    fetch('../assets/images/AJAX04.webp')
     .then(res => res.blob())
     .then(img => {
         document.getElementById('img').src = URL.createObjectURL(img);

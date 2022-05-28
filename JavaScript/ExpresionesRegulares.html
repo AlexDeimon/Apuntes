@@ -28,9 +28,11 @@
             <p>Son una secuencia de caracteres que forma un patrón de búsqueda, principalmente utilizada para la búsqueda de patrones de cadenas de caracteres u operaciones de sustituciones. Su sintaxis es /patron/ </p>
             <h3 class="titulo3">Links útiles:</h3>
             <nav class="listaNav">
-                <li><a href=" https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions">MDN</a></li>
-                <li><a href=" https://regex101.com/">Evaluador Expresiones regulares</a></li>
-                <li><a href="https://ascii.cl/es/">ASCII</a></li>
+                <ul>
+                    <li><a href=" https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions">MDN</a></li>
+                    <li><a href=" https://regex101.com/">Evaluador Expresiones regulares</a></li>
+                    <li><a href="https://ascii.cl/es/">ASCII</a></li>    
+                </ul>
             </nav>
             <h3 class="titulo3">Banderas:</h3>
             <p>Las expresiones regulares tienen seis indicadores opcionales que permiten funciones como la búsqueda global y que no distinga entre mayúsculas y minúsculas. Estos indicadores se pueden usar por separado o juntos en cualquier orden y se incluyen como parte de la expresión regular.</p>
@@ -100,13 +102,13 @@
                         </tr>
                         <tr>
                             <td></td>
-                            <td>(?<=y)x</td>
-                            <td><b>Aserción de búsqueda inversa:</b> coincide con "x" solo si "x" está precedida por "y". Por ejemplo, /(?<=Jack)Sprat/ coincide con "Sprat" sólo si va precedida de "Jack". /(?<=Jack|Tom)Sprat/ coincide con "Sprat" solo si va precedido de "Jack" o "Tom". Sin embargo, ni "Jack" ni "Tom" forman parte del resultado.</td>
+                            <td>(?&lt;=y)x</td>
+                            <td><b>Aserción de búsqueda inversa:</b> coincide con "x" solo si "x" está precedida por "y". Por ejemplo, /(?&lt;=Jack)Sprat/ coincide con "Sprat" sólo si va precedida de "Jack". /(?&lt;=Jack|Tom)Sprat/ coincide con "Sprat" solo si va precedido de "Jack" o "Tom". Sin embargo, ni "Jack" ni "Tom" forman parte del resultado.</td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td>(?< !y)x</td>
-                            <td><b>Aserción de búsqueda inversa negativa:</b> coincide con "x" solo si "x" no está precedida por "y". Por ejemplo, /(?< !-)\d+/ coincide con un número solo si no está precedido por un signo de menos. /(? coincide con "3". /(?< !-)\d+/.exec('-3') no se encuentra la coincidencia porque el número está precedido por el signo menos.</td>
+                            <td>(?&lt;!y)x</td>
+                            <td><b>Aserción de búsqueda inversa negativa:</b> coincide con "x" solo si "x" no está precedida por "y". Por ejemplo, /(?&lt;!-)\d+/ coincide con un número solo si no está precedido por un signo de menos. /(? coincide con "3". /(?&lt;!-)\d+/.exec('-3') no se encuentra la coincidencia porque el número está precedido por el signo menos.</td>
                         </tr>
                         <tr>
                             <td>Clases de caracteres</td>
@@ -200,8 +202,8 @@
                         </tr>
                         <tr>
                             <td></td>
-                            <td>(?< Nombre>x)</td>
-                            <td>Grupo de captura con nombre: Coincide con "x" y la almacena en la propiedad de grupos de las coincidencias devueltas con el nombre especificado por Nombre. Los corchetes angulares (< y >) son necesarios para el nombre del grupo. Por ejemplo, para extraer el código de área de Estados Unidos de un número de teléfono, podrías usar /\((?< area>\d\d\d)\)/. El número resultante aparecería en matches.groups.area.</td>
+                            <td>(?&lt;Nombre>x)</td>
+                            <td>Grupo de captura con nombre: Coincide con "x" y la almacena en la propiedad de grupos de las coincidencias devueltas con el nombre especificado por Nombre. Los corchetes angulares (&lt;y>) son necesarios para el nombre del grupo. Por ejemplo, para extraer el código de área de Estados Unidos de un número de teléfono, podrías usar /\((?&lt;area>\d\d\d)\)/. El número resultante aparecería en matches.groups.area.</td>
                         </tr>
                         <tr>
                             <td></td>

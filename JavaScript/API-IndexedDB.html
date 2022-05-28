@@ -44,16 +44,16 @@
                 <li>Escuchar los eventos de éxito y de error con los métodos onsucces() y onerror().</li>
             </ol>
             <h4 class="titulo4">Primer creación:</h4>
-            <img src="../assets/images/IndexedDB1.png" alt="creación DB" class="img">
+            <img src="../assets/images/IndexedDB1.webp" alt="creación DB" class="img">
             <h4 class="titulo4">Ajuste con la creación de la Key:</h4>
-            <img src="../assets/images/IndexedDB2.png" alt="creación DB con la Key de la colección" class="img">
+            <img src="../assets/images/IndexedDB2.webp" alt="creación DB con la Key de la colección" class="img">
             <h3 class="titulo3">Añadir datos:</h3>
             <ol class="lista">
                 <li>Crear una transacción en la bd mediante el método transaction(['colección'], 'metodo'). Sus parámetros son: la coleccion de datos donde se añadira el registro y el método 'readwrite'.</li>
                 <li>Realizar la transacción mediante el método objectStore('colección').</li>
                 <li>Añadir el registro mediante el método add().</li>
             </ol>
-            <img src="../assets/images/IndexedDB3.png" alt="Añadir datos" class="img">
+            <img src="../assets/images/IndexedDB3.webp" alt="Añadir datos" class="img">
             <h3 class="titulo3">Leer datos:</h3>
             <ol class="lista">
                 <li>Crear una transacción en la bd mediante el método transaction(['colección'], 'metodo'). Sus parámetros son: la coleccion de datos que se quieren leer y el método 'readonly'.</li>
@@ -64,7 +64,7 @@
                     </ol>
                 </li>
             </ol>
-            <img src="../assets/images/IndexedDB4.png" alt="Leer datos" class="img"> 
+            <img src="../assets/images/IndexedDB4.webp" alt="Leer datos" class="img"> 
             <h3 class="titulo3">Actualizar datos:</h3>
             <ol class="lista">
                 <li>Se recupera el registro que se quiere actualizar mediante su key.</li>
@@ -72,18 +72,18 @@
                 <li>Realizar la transacción mediante el método objectStore('colección').</li>
                 <li>Actualizar el registro mediante el método put().</li>
             </ol>
-            <img src="../assets/images/IndexedDB5.png" alt="Actualizar datos" class="img">
+            <img src="../assets/images/IndexedDB5.webp" alt="Actualizar datos" class="img">
             <h3 class="titulo3">Eliminar datos:</h3>
             <ol class="lista">
                 <li>Crear una transacción en la bd mediante el método transaction(['colección'], 'metodo'). Sus parámetros son: la coleccion de datos donde se añadira el registro y el método 'readwrite'.</li>
                 <li>Realizar la transacción mediante el método objectStore('colección').</li>
                 <li>Eliminar el registro mediante el método delete().</li>
             </ol>
-            <img src="../assets/images/IndexedDB6.png" alt="eliminar datos" class="img">
+            <img src="../assets/images/IndexedDB6.webp" alt="eliminar datos" class="img">
             <h3 class="ejemplo">Ejemplo:</h3>
             <form id="form" class="form">
                 <label for="task">Task</label>
-                <input type="text" name="task">
+                <input type="text" name="task" id="task">
                 <select name="priority">
                     <option value="low">Low</option>
                     <option value="normal">Normal</option>
