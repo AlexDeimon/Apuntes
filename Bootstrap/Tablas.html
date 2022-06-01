@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/Bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>    
+        <section>
+            <h2 class="titulo2">Tablas</h2>
+            <p>El elemento table de HTML nos permite mostrar datos en forma tabular. Cuando incluimos el framework Bootstrap 4 se introducen una serie de reglas a los elementos relacionados a la etiqueta "table".</p>
+            <p>Una tabla básica la logramos insertando la clase "table":</p>
+            <table class="table tabla2">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Angélica</td>
+                    <td>Alvárez</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Beatriz</td>
+                    <td>Benavides</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Evee</td>
+                    <td>Lozano</td>
+                    <td>26</td>
+                </tr>
+                </tbody>
+            </table>
+            <p>Una primer variante que podemos aplicar a una tabla HTML empleando Bootstrap 4 es definir un color oscuro a la misma agregando la clase "table-dark".</p>
+            <table class="table table-dark tabla2">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Angélica</td>
+                    <td>Alvárez</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Beatriz</td>
+                    <td>Benavides</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Evee</td>
+                    <td>Lozano</td>
+                    <td>26</td>
+                </tr>
+                </tbody>
+            </table>   
+            <article>
+                <h3 class="titulo3">Cabecera de la tabla:</h3>
+                <p>Disponemos las clases "thead-light" y ".thead-dark" para aplicar a la etiqueta "thead" de una tabla.</p>
+                <h4 class="titulo4">thead-light:</h4>
+                <table class="table tabla2">
+                    <thead class="thead-light">
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Angélica</td>
+                        <td>Alvárez</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Beatriz</td>
+                        <td>Benavides</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Evee</td>
+                        <td>Lozano</td>
+                        <td>26</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h4 class="titulo4">thead-dark:</h4>
+                <table class="table tabla2">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Angélica</td>
+                        <td>Alvárez</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Beatriz</td>
+                        <td>Benavides</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Evee</td>
+                        <td>Lozano</td>
+                        <td>26</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h3 class="titulo3">Filas con colores alternados:</h3>
+                <p>Una actividad común es mostrar una tabla HTML con colores que se van alternando para facilitar la lectura de sus datos, sobre todo cuando hay tablas con muchas columnas y filas.</p>
+                <p>Esta actividad se logra agregando la clase table-striped a la marca table.</p>
+                <table class="table tabla2 table-striped">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Angélica</td>
+                        <td>Alvárez</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Beatriz</td>
+                        <td>Benavides</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Evee</td>
+                        <td>Lozano</td>
+                        <td>26</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h3 class="titulo3">Borde en cada celda:</h3>
+                <p>Por defecto una tabla en Bootstrap 4 solo las filas tienen una línea separadora, si se quiere que todas las celdas aparezcan recuadradas se debe añadir la clase "table-bordered".</p>
+                <table class="table tabla2 table-bordered">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Angélica</td>
+                        <td>Alvárez</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Beatriz</td>
+                        <td>Benavides</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Evee</td>
+                        <td>Lozano</td>
+                        <td>26</td>
+                    </tr>
+                    </tbody>
+                </table> 
+            </article>
+            <article>
+                <h3 class="titulo3">Fila con hover:</h3>
+                <p>Si se quiere que se muestre la fila donde se encuentra el mouse con un color distinto se agrega la clase "table-hover".</p>
+                <table class="table tabla2 table-hover">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Angélica</td>
+                        <td>Alvárez</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Beatriz</td>
+                        <td>Benavides</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Evee</td>
+                        <td>Lozano</td>
+                        <td>26</td>
+                    </tr>
+                    </tbody>
+                </table> 
+            </article>  
+            <article>
+                <h3 class="titulo3">Tabla pequeña:</h3>
+                <p>Si hay que mostrar grandes tablas con datos puede ser necesario mostrar más información al mismo tiempo por pantalla condensando los datos (son los mismos datos pero más comprimidos en pantalla)</p>
+                <p>Esto se logra agregando la clase "table-sm" a la marca HTML "table".</p>
+                <table class="table table-sm tabla2">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Angélica</td>
+                        <td>Alvárez</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Beatriz</td>
+                        <td>Benavides</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Evee</td>
+                        <td>Lozano</td>
+                        <td>26</td>
+                    </tr>
+                    </tbody>
+                </table> 
+            </article>  
+            <article>
+                <h3 class="titulo3">Etiqueta &lt;caption&gt;: </h3>
+                <p>En Bootstrap 4, el titulo de la tabla se ubicará en la parte inferior de esta.</p>
+                <table class="table tabla2">
+                    <caption>Usuarios</caption>
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Angélica</td>
+                        <td>Alvárez</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Beatriz</td>
+                        <td>Benavides</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Evee</td>
+                        <td>Lozano</td>
+                        <td>26</td>
+                    </tr>
+                    </tbody>
+                </table> 
+            </article>
+            <article>
+                <h3 class="titulo3">Tabla responsive:</h3>
+                <p>Cuando hay tablas con muchas columnas y dependiendo del tamaño del dispositivo se puede hacer que aparezca una barra de desplazamiento en la parte inferior de la tabla.</p>
+                <p>Esta característica la resuelve Bootstrap 4 mediante las clases:</p>
+                <dl class="lista">
+                    <dt>table-responsive:</dt>
+                    <dd>Sin importar el punto de ruptura la tabla siempre será responsive.</dd>
+                    <dt>table-responsive-sm:</dt>
+                    <dd>Punto de ruptura de min-width: 576px y max-width: 767.98px</dd>
+                    <dt>table-responsive-md:</dt>
+                    <dd>Punto de ruptura de min-width: 768px y max-width: 991.98px</dd>
+                    <dt>table-responsive-lg:</dt>
+                    <dd>Punto de ruptura de min-width: 992px y max-width: 1199.98px</dd>
+                    <dt>table-responsive-xl:</dt>
+                    <dd>Punto de ruptura de min-width: 1200px</dd>
+                </dl>
+                <table class="table tabla2 table-responsive">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th>Teléfono</th>
+                        <th>Dirección</th>
+                        <th>correo</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Angélica</td>
+                        <td>Alvárez</td>
+                        <td>24</td>
+                        <td>3529106202</td>
+                        <td>Cra 2 #25-32</td>
+                        <td>angelica-alvarez@mail.com</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Beatriz</td>
+                        <td>Benavides</td>
+                        <td>16</td>
+                        <td>3252910620</td>
+                        <td>Calle 10 #62-02</td>
+                        <td>beatriz-benavides@mail.com</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Evee</td>
+                        <td>Lozano</td>
+                        <td>26</td>
+                        <td>3225311062</td>
+                        <td>Cra 25 #33-10</td>
+                        <td>evee-lozano@mail.com</td>
+                    </tr>
+                    </tbody>
+                </table> 
+            </article>
+        </section>
+    </main>
+</body>
+</html>
