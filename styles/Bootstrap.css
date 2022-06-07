@@ -1,3 +1,7 @@
+/*ESTILOS generales*/
+.p{
+    color: #000;
+}
 /*Estilos Boostrap.html*/
 .tituloBootstrap{
     text-align: var(--center);
@@ -31,4 +35,10 @@
 .tabla2 caption{
     font-family: var(--font-title);
     color: #6ae96d;
+}
+/*ESTILOS cards.html*/
+.card{
+    width: 320px;
+    text-align: center;
+    margin-bottom: 20px;
 }
