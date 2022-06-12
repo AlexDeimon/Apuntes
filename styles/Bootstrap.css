@@ -2,6 +2,28 @@
 .p{
     color: #000;
 }
+.listaNav{
+    display: flex;
+    justify-content: var(--center);
+    flex-wrap: wrap;
+    padding: var(--margin-padding-0);
+    font-family: var(--font-title);
+}
+.listaNav li,
+.boton,
+.boton2{
+    display: var(--display-inline);
+    padding: var(--length-20) var(--length-0);
+    background-color:  var(--color-blueviolet);
+    border: 2px solid #ffffff;
+}
+.listaNav a,
+.boton,
+.boton2{
+    text-decoration: none;
+    color: #ffffff;
+    padding: var(--length-20);
+}
 /*Estilos Boostrap.html*/
 .tituloBootstrap{
     text-align: var(--center);
