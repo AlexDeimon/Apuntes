@@ -39,6 +39,7 @@ let numero = 3;
 console.log(numero + 4);
 console.log(numero - 9);
 console.log(numero * 4);
+console.log(numero ** 2);
 console.log(numero / 2);
 console.log(numero % 2);
 
@@ -58,7 +59,10 @@ console.log(numero);
 numero /= 3;
 console.log(numero);
 
-numero %= 4;
+numero %= 8;
+console.log(numero);
+
+numero **=2;
 console.log(numero);
 
 //* Incremento / decremento: 
@@ -73,3 +77,20 @@ console.log(numero);
 
 console.log(--numero);
 console.log(numero);
+
+//* Comparación
+let a = 2, b = 2, c = 3, d='3';
+
+console.log(a==c);
+console.log(c===d);
+console.log(a===b);
+console.log(a!=b);
+console.log(c!==d);
+
+//* Relación
+let e = 2, f = 3;
+
+console.log(e>f);
+console.log(e<f);
+console.log(e>=c);
+console.log(e<=a);

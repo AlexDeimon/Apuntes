@@ -101,7 +101,7 @@
                                 <td>Matemáticos</td>
                                 <td>Suma / Concatenación</td>
                                 <td> + </td>
-                                <td rowspan="5"><img src="../assets/images/fundamentos-JS3.webp" alt="ejemplo operadores Matemáticos"></td>
+                                <td rowspan="6"><img src="../assets/images/fundamentos-JS3.webp" alt="ejemplo operadores Matemáticos"></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -115,6 +115,11 @@
                             </tr>
                             <tr>
                                 <td></td>
+                                <td>Potenciación</td>
+                                <td> ** </td>
+                            </tr>
+                            <tr>
+                                <td></td>
                                 <td>División</td>
                                 <td> / </td>
                             </tr>
@@ -124,10 +129,31 @@
                                 <td> % </td>
                             </tr>
                             <tr>
+                                <td>Incremento / Decremento</td>
+                                <td>Post-incremento en 1</td>
+                                <td> a++ </td>
+                                <td rowspan="4"><img src="../assets/images/fundamentos-JS5.webp" alt="ejemplo operadores Asignación"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Pre-incremento en 1</td>
+                                <td> ++a </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Post-decremento en 1</td>
+                                <td> a-- </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Pre-decremento en 1</td>
+                                <td> --a </td>
+                            </tr>
+                            <tr>
                                 <td>Asignación</td>
                                 <td>Asignación</td>
                                 <td> = </td>
-                                <td rowspan="6"><img src="../assets/images/fundamentos-JS4.webp" alt="ejemplo operadores Asignación"></td>
+                                <td rowspan="7"><img src="../assets/images/fundamentos-JS4.webp" alt="ejemplo operadores Asignación"></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -155,29 +181,253 @@
                                 <td> %= </td>
                             </tr>
                             <tr>
-                                <td>Incremento / Decremento</td>
-                                <td>Post-incremento en 1</td>
-                                <td> a++ </td>
-                                <td rowspan="4"><img src="../assets/images/fundamentos-JS5.webp" alt="ejemplo operadores Asignación"></td>
+                                <td></td>
+                                <td>Potenciación y Asignación</td>
+                                <td> **= </td>
+                            </tr>
+                            <tr>
+                                <td>Comparación</td>
+                                <td>Igualdad</td>
+                                <td>==</td>
+                                <td rowspan="4"><img src="../assets/images/fundamentos-JS8.webp" alt="ejemplo operadores Comparación"></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>Pre-incremento en 1</td>
-                                <td> ++a </td>
+                                <td>Igualdad estricta</td>
+                                <td>===</td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>Post-decremento en 1</td>
-                                <td> a-- </td>
+                                <td>Desigualdad</td>
+                                <td>!=</td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>Pre-decremento en 1</td>
-                                <td> --a </td>
+                                <td>Desigualdad estricta</td>
+                                <td>!==</td>
+                            </tr>
+                            <tr>
+                                <td>Relación</td>
+                                <td>Mayor que</td>
+                                <td>&gt;</td>
+                                <td rowspan="4"><img src="../assets/images/fundamentos-JS9.webp" alt="ejemplo operadores Relación"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Menor que</td>
+                                <td>&lt;</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Mayor o igual que</td>
+                                <td>&gt;=</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Menor o igual que</td>
+                                <td>&lt;=</td>
                             </tr>
                         </tbody>
                     </table>    
                 </div>
+            </article>
+            <article>
+                <h3 class="titulo3">Precedencia de operadores:</h3>
+                <p>La precedencia de operadores determina el orden en el cual los operadores son evaluados uno respecto del otro. Los operadores con mayor precedencia se convierten en los operandos de los operadores con menor precedencia.</p>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Precedencia</th>
+                            <th>Operadores</th>
+                            <th>Descripción</th>
+                            <th>Asociatividad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>19</td>
+                            <td>(...)</td>
+                            <td>Agrupamiento</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>... . ...</td>
+                            <td>Acceso a propiedades (notación por punto)</td>
+                            <td rowspan="4">A la izquierda</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>... [...]</td>
+                            <td>Acceso a propiedades (notación por corchetes)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>new ... (...)</td>
+                            <td>Locación de memoria (con lista de argumentos)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>... (...)</td>
+                            <td>Llamada a función</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>new ...</td>
+                            <td>Locación de memoria (sin lista de argumentos)</td>
+                            <td>A la derecha</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>...++</td>
+                            <td>Post Incremento</td>
+                            <td rowspan="2">N/A</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>...--</td>
+                            <td>Post Decremento</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>!...</td>
+                            <td>Negación lógica</td>
+                            <td rowspan="9">A la derecha</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>~...</td>
+                            <td>Negación bits</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>++...</td>
+                            <td>Pre Incremento</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>--...</td>
+                            <td>Pre Decremento</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>typeOf ...</td>
+                            <td>Tipo de dato</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>void ...</td>
+                            <td>vacio</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>delete ...</td>
+                            <td>Eliminación</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>await ...</td>
+                            <td>Espera de función</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>... ** ...</td>
+                            <td>Potenciación</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>... * ...</td>
+                            <td>Multiplicación</td>
+                            <td rowspan="15">A la izquierda</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>... / ...</td>
+                            <td>División</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>... % ...</td>
+                            <td>Módulo</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>... + ...</td>
+                            <td>Suma</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>... - ...</td>
+                            <td>Resta</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>...  &lt; ...</td>
+                            <td>Menor a</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>...  &lt;= ...</td>
+                            <td>Menor o igual a</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>...  &gt; ...</td>
+                            <td>Mayor a</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>...  &gt;= ...</td>
+                            <td>Mayor o igual a</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>...  == ...</td>
+                            <td>Igualdad</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>... != ...</td>
+                            <td>Desigualdad</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>...  === ...</td>
+                            <td>Igualdad estricta</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>... !== ...</td>
+                            <td>Desigualdad estricta</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>... && ...</td>
+                            <td>AND lógico</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>... || ...</td>
+                            <td>OR lógico</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>... ? ... : ...</td>
+                            <td>Operador ternario</td>
+                            <td rowspan="2">Derecha</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td colspan="2">Todos los operadores de Asignación</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>... , ...</td>
+                            <td>Operador coma</td>
+                            <td>izquierda</td>
+                        </tr>
+                    </tbody>
+                </table>
             </article>
         </section>
     </main>
