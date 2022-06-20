@@ -32,6 +32,13 @@ let correcto = true;
 
 let incorrecto = false;
 
+//* typeOf 
+console.log(typeof edad);
+console.log(typeof altura);
+console.log(typeof lenguaje);
+console.log(typeof correcto);
+console.log(typeof incorrecto);
+
 //* Operadores
 let numero = 3;
 
