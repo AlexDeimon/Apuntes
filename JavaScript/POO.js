@@ -65,8 +65,14 @@ function saludar1(){
     console.log("Hola mundo");
 }
 
-//* sintaxis con funcion flecha:
-const saludar2 = () => { console.log("Hola mundo") };
+//* sintaxis función de tipo expresión:
+let saludar2 = function(){ return "Hola mundo" };
+
+//* sintaxis función de tipo Self Invoking:
+(function(a,b){ console.log("suma: " + (a+b)) })(1, 1);
+
+//* sintaxis función flecha:
+const saludar3 = () => { console.log("Hola mundo") };
 
 //* uso de parámatros:
 function saludarUsuario1(usuario){
@@ -77,14 +83,15 @@ const saludarUsuario2 = (usuario) => { console.log(`Hola ${usuario}`) };
 
 //* devolucion de valores (return): 
 function suma1(num1, num2){
-    return num1 + num2
+    return 'suma: '+ (num1 + num2)
 }
 
-const suma2 = (num1, num2) => num1 + num2 //* en las funciones flecha si solo hay una instruccion no es necesario el return ni las {} 
+const suma2 = (num1, num2) => 'suma: '+ (num1 + num2) //* en las funciones flecha si solo hay una instruccion no es necesario el return ni las {} 
 
 //* invocar funciones:
 saludar1();
-saludar2();
+console.log(saludar2());
+saludar3();
 
 saludarUsuario1('Alex');
 saludarUsuario2('Diego');
