@@ -35,6 +35,9 @@ for(const key in usuario){
     console.log(`${key}: ${usuario[key]}`);
 }
 
+//* imprimir todo el objeto:
+console.log(usuario);
+
 //* acceder a cada uno de los valores del atributo lenguajes:
 for(const lenguaje of usuario.lenguajes){
     console.log(lenguaje);
@@ -42,6 +45,14 @@ for(const lenguaje of usuario.lenguajes){
 
 //* imprimir el objeto en una frase
 console.log(`El usuario ${usuario.id} de nombre ${usuario.nombre} tiene ${usuario.edad} años y maneja los lenguajes: ${usuario.lenguajes.join(', ')}`);
+
+//* objetos a partir de Object:
+let usuario2 = new Object();
+usuario2.nombre = 'Diego';
+usuario2.edad = 23;
+usuario2.email = 'diego@mail.com';
+
+console.log(usuario2);
 
 //* Objetos a partir de clases:
 let persona1 = new Persona('Diego', 'Sandoval', 22);
@@ -58,6 +69,13 @@ console.log(persona2);
 //* invocar método saludar:
 console.log(persona1.saludar());
 console.log(persona2.saludar());
+
+//* agregar y eliminar atributos
+console.log(usuario);
+usuario.email = 'alex@mail.com';
+console.log(usuario);
+delete usuario.lenguajes;
+console.log(usuario);
 
 //*Funciones
 //* sintaxis con fuction:
@@ -173,3 +191,22 @@ const showBooks = () => {
         }
     }
 }
+
+//* Herencia
+class Empleado extends Persona{ //* se hereda de la clase Persona
+    constructor(nombre, apellido, edad, departamento){
+        super(nombre, apellido, edad); //* el método super hereda los atributos de la clase Persona
+        this.departamento = departamento;
+    }
+    //* sobreescritura
+    saludar(){
+        return super.saludar() + ` Mi departamento es el de ${this.departamento}.` //* con super llamamos al método saludar de la clase Persona
+    }
+}
+
+let empleado1 = new Empleado('Jose', 'Sandoval', 36, 'Seguridad informática');
+console.log(empleado1.departamento);
+console.log(empleado1);
+empleado1.edad = 35;
+console.log(empleado1);
+console.log(empleado1.saludar());

@@ -36,58 +36,90 @@
                 <li>Herencia.</li>
                 <li>Polimorfismo.</li>
             </ul>
-            <h3 class="titulo3">Clases:</h3>
-            <p>Son plantillas/modelos sobre las cuales se pueden crear objetos nuevos. Estas inician con mayúsculas y deben tener una función constructor, la cual contiene los parámetros mínimos que necesita un objeto para existir y asi poder dar un estado inicial a los objetos creados a partir de la clase.</p>
-            <h4 class="titulo4">Propiedades:</h4>
-            <p>Son los atributos o características de los objetos. Estas se definen tanto en los parámetros del constructor como dentro de la misma función para así inicializar los objetos. Tambien se pueden añadir propiedades que no esten en los parámetros pero siempre utilizando this para referenciar al objeto.</p>
-            <img src="../assets/images/POOJS4.webp" alt="Ejemplo clase" class="img">
-            <h4 class="titulo4">Métodos:</h4>
-            <p>Se denomina métodos a las funciones asociadas a los comportamientos o acciones que realizan los objetos.</p>
-            <img src="../assets/images/POOJS5.webp" alt="Ejemplo clase con método" class="img">
-            <h3 class="titulo3">Objetos:</h3>
-            <p>Son estructuras de datos que representan instancias de clases. Todos los objetos tienen propiedades o atributos y comportamientos y acciones representados por pares de clave: valor.</p>
-            <p>Para acceder a las propiedades y acciones del objeto se utiliza la nomeclatura del punto.</p>
-            <p>Hay 2 maneras de crear objetos:</p>
-            <h4 class="titulo4">Crear un objeto único declarandolo como una variable o constante:</h4>
-            <img src="../assets/images/POOJS1.webp" alt="ejemplo objetos 1" class="img">
-            <h4 class="titulo4">Mediante clases usando new:</h4>
-            <img src="../assets/images/POOJS6.webp" alt="ejemplo objetos 2" class="img">
-            <h3 class="titulo3">Funciones o métodos:</h3>
-            <p>Son fragmentos de código reutilizable que se escriben para ejecutar una tarea y no volver a escribir el mismo código más de una vez.</p>
-            <ul class="lista">
-                <li>Primero se deben declarar y definir.</li>
-                <li>Para utilizarlas se deben invocar.</li>
-                <li>Deben realizar solo una tarea.</li>
-                <li>Se pueden invocar todas las veces que se necesiten.</li>
-                <li>Ayudan a modularizar el código.</li>
-                <li>Pueden recibir parámetros (información de entrada).</li>
-                <li>Pueden devolver valores (return).</li>
-                <li>En JavaScript se pueden invocar funciones ya sea antes o después de que se declaren (hoisting).</li>
-            </ul>
-            <h4 class="titulo4">Sintaxis:</h4>
-            <p>Para declarar funciones hay varias sintaxis:</p>
-            <dl class="lista">
-                <dt>Palabra reservada function:</dt>
-                <dd>Se utiliza la palabra function, posteriormente el nombre de la función, luego paréntesis () los cuales pueden contener parámetros opcionales, y por último, el cuerpo de la función el cual es contenido con llaves {}.</dd>
-                <dt>Funciones de tipo expresión o anónimas:</dt>
-                <dd>Se declara una variable y se define igual a la palabra function, luego paréntesis () para los parámetros y luego el cuerpo de la función. La variable es el nombre de la función.</dd>
-                <dt>Funciones de tipo Self Invoking:</dt>
-                <dd>Este tipo de funciones no tienen nombre, no se declaran con ninguna variable y solo se invocan una sola vez dentro de si mismas. Se abren paréntesis dentro de los cuales se define de forma similar a las funciones anónimas, luego despues de dichos paréntesis se abren otros paréntesis para los argumentos de la función.</dd>
-                <dt>Funciones flecha:</dt>
-                <dd>Se define una constante igual a paréntesis para los parámetros, luego se agregan los simbolos => y posteriormente se define el cuerpo de la función.</dd>
-            </dl>
-            <img src="../assets/images/POOJS2.webp" alt="Sintaxis funciones" class="img">
-            <h4 class="ejemplo">Ejemplos de funciones:</h4>
-            <img src="../assets/images/POOJS3.webp" alt="ejemplos funciones" class="img">
-            <h3 class="ejemplo">Ejercicio:</h3>
-            <img src="../assets/images/POOJS7.webp" alt="ejercicio POO 1" class="img">
-            <img src="../assets/images/POOJS8.webp" alt="ejercicio POO 2" class="img">
-            <img src="../assets/images/POOJS9.webp" alt="ejercicio POO 3" class="img">
-            <ul class="listaNav">
-                <li><a href="javascript:appendBook()" class="link">Agregar libro</a></li>
-                <li><a href="javascript:showBooks()" class="link">Mostrar libros</a></li>
-            </ul>
-            <ul class="lista" id="libros"></ul> 
+            <article>
+                <h3 class="titulo3">Clases:</h3>
+                <p>Son plantillas/modelos sobre las cuales se pueden crear objetos nuevos. Estas inician con mayúsculas y deben tener una función constructor, la cual contiene los parámetros mínimos que necesita un objeto para existir y asi poder dar un estado inicial a los objetos creados a partir de la clase.</p>
+                <h4 class="titulo4">Propiedades:</h4>
+                <p>Son los atributos o características de los objetos. Estas se definen tanto en los parámetros del constructor como dentro de la misma función para así inicializar los objetos. Tambien se pueden añadir propiedades que no esten en los parámetros pero siempre utilizando this para referenciar al objeto.</p>
+                <img src="../assets/images/POOJS4.webp" alt="Ejemplo clase" class="img">
+                <h4 class="titulo4">Métodos:</h4>
+                <p>Se denomina métodos a las funciones asociadas a los comportamientos o acciones que realizan los objetos.</p>
+                <img src="../assets/images/POOJS5.webp" alt="Ejemplo clase con método" class="img">    
+            </article>
+            <article>
+                <h3 class="titulo3">Objetos:</h3>
+                <p>Son estructuras de datos que representan instancias de clases. Todos los objetos tienen propiedades o atributos y comportamientos y acciones representados por pares de clave: valor.</p>
+                <p>Para acceder a las propiedades y acciones del objeto se utiliza la nomeclatura del punto.</p>
+                <h4 class="titulo4">Crear objetos:</h4>
+                <p>Hay varias maneras de crear objetos:</p>
+                <ul class="lista">
+                    <li>Crear un objeto único declarandolo como una variable o constante.</li>
+                    <li>Creando un tipo de dato Object usando new. Se crea un objeto vacio y sus propiedades se van definiendo dinámicamente.</li>
+                    <li>Mediante clases usando new.</li>
+                </ul>
+                <img src="../assets/images/POOJS1.webp" alt="ejemplo objetos 1" class="img">
+                <img src="../assets/images/POOJS10.webp" alt="ejemplo objetos 2" class="img">
+                <img src="../assets/images/POOJS6.webp" alt="ejemplo objetos 3" class="img">
+                <h4 class="titulo4">Agregar y eliminar propiedades en objetos:</h4>
+                <ul class="lista">
+                    <li>Para agregar una nueva propiedad solo se debe definirla mediante la nomeclatura del punto.</li>
+                    <li>Para eliminar una propiedad de un objeto se utiliza la palabra delete.</li>
+                </ul>
+                <img src="../assets/images/POOJS11.webp" alt="agregar y eliminar propiedades en objetos" class="img">    
+            </article>
+            <article>
+                <h3 class="titulo3">Funciones o métodos:</h3>
+                <p>Son fragmentos de código reutilizable que se escriben para ejecutar una tarea y no volver a escribir el mismo código más de una vez.</p>
+                <ul class="lista">
+                    <li>Primero se deben declarar y definir.</li>
+                    <li>Para utilizarlas se deben invocar.</li>
+                    <li>Deben realizar solo una tarea.</li>
+                    <li>Se pueden invocar todas las veces que se necesiten.</li>
+                    <li>Ayudan a modularizar el código.</li>
+                    <li>Pueden recibir parámetros (información de entrada).</li>
+                    <li>Pueden devolver valores (return).</li>
+                    <li>En JavaScript se pueden invocar funciones ya sea antes o después de que se declaren (hoisting).</li>
+                </ul>
+                <h4 class="titulo4">Sintaxis:</h4>
+                <p>Para declarar funciones hay varias sintaxis:</p>
+                <dl class="lista">
+                    <dt>Palabra reservada function:</dt>
+                    <dd>Se utiliza la palabra function, posteriormente el nombre de la función, luego paréntesis () los cuales pueden contener parámetros opcionales, y por último, el cuerpo de la función el cual es contenido con llaves {}.</dd>
+                    <dt>Funciones de tipo expresión o anónimas:</dt>
+                    <dd>Se declara una variable y se define igual a la palabra function, luego paréntesis () para los parámetros y luego el cuerpo de la función. La variable es el nombre de la función.</dd>
+                    <dt>Funciones de tipo Self Invoking:</dt>
+                    <dd>Este tipo de funciones no tienen nombre, no se declaran con ninguna variable y solo se invocan una sola vez dentro de si mismas. Se abren paréntesis dentro de los cuales se define de forma similar a las funciones anónimas, luego despues de dichos paréntesis se abren otros paréntesis para los argumentos de la función.</dd>
+                    <dt>Funciones flecha:</dt>
+                    <dd>Se define una constante igual a paréntesis para los parámetros, luego se agregan los simbolos => y posteriormente se define el cuerpo de la función.</dd>
+                </dl>
+                <img src="../assets/images/POOJS2.webp" alt="Sintaxis funciones" class="img">
+                <h4 class="ejemplo">Ejemplos de funciones:</h4>
+                <img src="../assets/images/POOJS3.webp" alt="ejemplos funciones" class="img">    
+            </article>
+            <article>
+                <h3 class="ejemplo">Ejercicio:</h3>
+                <img src="../assets/images/POOJS7.webp" alt="ejercicio POO 1" class="img">
+                <img src="../assets/images/POOJS8.webp" alt="ejercicio POO 2" class="img">
+                <img src="../assets/images/POOJS9.webp" alt="ejercicio POO 3" class="img">
+                <ul class="listaNav">
+                    <li><a href="javascript:appendBook()" class="link">Agregar libro</a></li>
+                    <li><a href="javascript:showBooks()" class="link">Mostrar libros</a></li>
+                </ul>
+                <ul class="lista" id="libros"></ul>     
+            </article>
+            <article>
+                <h3 class="titulo3">Herencia:</h3>
+                <ul class="lista">
+                    <li>La herencia es una de las características más importantes de la Programación orientada a objetos.</li>
+                    <li>Es un mecanismo que permite derivar una clase a otra clase, permitiendo que se puedan definir nuevas clases basadas de unas ya existentes a fin de reutilizar código, generando así una jerarquía de clases dentro de una aplicación.</li>
+                    <li>Si una clase deriva de otra, esta hereda sus atributos y métodos y puede añadir nuevos atributos, métodos o redefinir los heredados.</li>
+                    <li>Para crear una clase hija, se utiliza la palabra clave extends para decirle a JavaScript la clase padre de la cual se quiere heredar para la clase hija.</li>
+                    <li>En el constructor de la clase hija deben estar las mismas propiedades definidas en la clase padre, en el mismo orden, despues se pueden añadir las nuevas propiedades.</li>
+                    <li>Para poder llamar al constructor de la clase padre y poder heredar sus propiedades se utiliza el método super() dentro del constructor de la clase hija.</li>
+                    <li>Para sobreescribir métodos tambien se debe utilizar super. Se define el método con el mismo nombre que en la clase padre y se puede reescribir por completo O utilizando super. y el nombre del método original, asi se puede heredar el retorno de este y añadirle algo nuevo.</li>
+                </ul>
+                <img src="../assets/images/POOJS12.webp" alt="ejemplo herencia en JS" class="img">
+            </article>
         </section>   
     </main>
     <script src="POO.js"></script>
