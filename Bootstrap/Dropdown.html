@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/Bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>    
+        <section>
+            <h2 class="titulo2">Dropdown</h2>
+            <p>Una lista desplegable es una interfaz visual que al ser presionada muestra una lista de opciones que puede elegir el visitante.</p>
+            <p>La funcionalidad de los dropdowns o listas desplegables se logra gracias a Javascript, por lo que no se debe olvidar de agregar los archivos bootstrap.min.js, jquery-3.2.1.slim.min.js y popper.min.js.</p>
+            <div class="main-section2">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">Lenguajes</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Javascript</a>
+                    </div>
+                </div>
+                <ul class="lista">
+                    <li>El div principal debe definir la clase "dropdown".</li>
+                    <li>Dentro de este div se dispone un "button" que debe tener las clases btn, cuaquier clase contextual que se desee y dropdown-toggle.</li>
+                    <li>El button tambien debe tener un id definido y el atributo data-toggle="dropdown".</li> 
+                    <li>La lista de opciones que se mostrarán deben estar agrupadas en un div con la clase "dropdown-menu"</li>
+                    <li>Tambien debe contar con el atributo aria-labelledby, el cual debe tener el valor del id del boton de dicho dropdown.</li>
+                    <li>Las opciones son anclas que deben tener definida la clase "dropdown-item".</li>
+                </ul>
+            </div>
+            <article>
+                <h3 class="titulo3">Menús desplegables de botones divididos:</h3>
+                <div class="main-section2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary">Lenguajes</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">HTML</a>
+                            <a class="dropdown-item" href="#">CSS</a>
+                            <a class="dropdown-item" href="#">Javascript</a>
+                        </div>
+                    </div>
+                    <ul class="lista">
+                        <li>Se crea un btn-group, un button para el nombre del boton y el segundo para el dropdown.</li>
+                        <li>El segundo button tiene la clase dropdown-toggle y la clase dropdown-toggle-split para tener el espacio adecuado alrededor del símbolo de intercalación desplegable.</li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo3">Tamaños:</h3>
+                <p>Para definir el tamaño del dropdown se hace indicando el tamaño del botón: btn-sm, btn-lg o el tamaño por defecto.</p>
+                <div class="main-section2">
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">Large button</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">HTML</a>
+                            <a class="dropdown-item" href="#">CSS</a>
+                            <a class="dropdown-item" href="#">Javascript</a>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-lg" type="button">Large split button</button>
+                        <button type="button" class="btn btn-lg btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">HTML</a>
+                            <a class="dropdown-item" href="#">CSS</a>
+                            <a class="dropdown-item" href="#">Javascript</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="main-section2">
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Small button</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">HTML</a>
+                            <a class="dropdown-item" href="#">CSS</a>
+                            <a class="dropdown-item" href="#">Javascript</a>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-sm" type="button">Small split button</button>
+                        <button type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">HTML</a>
+                            <a class="dropdown-item" href="#">CSS</a>
+                            <a class="dropdown-item" href="#">Javascript</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo3">Direcciones:</h3>
+                <p>Se puede definir en que dirección del boton se despliega la lista de opciones mediante las clases: dropup, dropright, dropleft y por defecto el dropdown.</p>
+                <div class="main-section2">
+                    <div class="dropup">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropup</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">HTML</a>
+                            <a class="dropdown-item" href="#">CSS</a>
+                            <a class="dropdown-item" href="#">Javascript</a>
+                        </div>
+                    </div>
+                    <div class="dropright">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropright</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">HTML</a>
+                            <a class="dropdown-item" href="#">CSS</a>
+                            <a class="dropdown-item" href="#">Javascript</a>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="main-section2">
+                    <div class="dropleft">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropleft</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">HTML</a>
+                            <a class="dropdown-item" href="#">CSS</a>
+                            <a class="dropdown-item" href="#">Javascript</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">HTML</a>
+                            <a class="dropdown-item" href="#">CSS</a>
+                            <a class="dropdown-item" href="#">Javascript</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo3">Titulos en las listas desplegables:</h3>
+                <p>Se puede agregar un div dentro de las opciones con un mensaje informativo. Para esto se agrega la clase "dropdown-header":</p>
+                <div class="main-section2">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown</button>
+                        <div class="dropdown-menu">
+                            <h6 class="dropdown-header">Lenguajes desarrollo web</h6>
+                            <a class="dropdown-item" href="#">HTML</a>
+                            <a class="dropdown-item" href="#">CSS</a>
+                            <a class="dropdown-item" href="#">Javascript</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo3">Linea divisoria:</h3>
+                <p>Si se quiere agregar una línea separadora entre opciones se agrega un div vacío con la clase "dropdown-divider":</p>
+                <div class="main-section2">
+                    <div class="dropright">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown</button>
+                        <div class="dropdown-menu">
+                            <h6 class="dropdown-header">Lenguajes desarrollo web</h6>
+                            <a class="dropdown-item" href="#">HTML</a>
+                            <a class="dropdown-item" href="#">CSS</a>
+                            <a class="dropdown-item" href="#">Javascript</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Frameworks desarrollo web</h6>
+                            <a class="dropdown-item" href="#">Bootstrap</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo3">Formularios:</h3>
+                <p>Una variante es disponer un formulario en vez de una lista de opciones dentro del dropdown.</p>
+                <div class="main-section2">
+                    <div class="dropright">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Log in</button>
+                        <div class="dropdown-menu">
+                            <form class="px-1 py-2 p">
+                                <div class="form-group"> 
+                                    <label for="nombre">Ingrese su nombre:</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre">
+                                </div> 
+                                <div class="form-group"> 
+                                    <label for="clave">Ingrese su clave:</label>
+                                    <input type="password" class="form-control" id="clave" name="clave">
+                                </div> 
+                                <button type="submit" class="btn btn-primary">Enviar</button>       
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
