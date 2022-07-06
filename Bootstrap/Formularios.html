@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/Bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>    
+        <section>
+            <h2 class="titulo2">Formularios</h2>
+            <p>Dado que Bootstrap aplica display: block and width: 100% a casi todos los controles de formulario, los formularios se apilarán verticalmente de manera predeterminada. Se pueden usar clases adicionales para variar este diseño según el formulario.</p>
+            <article>
+                <h3 class="titulo3">Form groups:</h3>
+                <p>La clase .form-group es la forma más fácil de agregar algo de estructura a los formularios. Proporciona una clase flexible que fomenta la agrupación adecuada de etiquetas, controles, texto de ayuda opcional y mensajes de validación de formularios.</p>
+                <div class="main-section2">
+                    <form>
+                        <div class="form-group">
+                            <label for="usuario">Usuario</label>
+                            <input type="text" class="form-control" id="usuario" placeholder="Digite su nombre de usuario">
+                        </div>
+                        <div class="form-group">
+                            <label for="contraseña">Contraseña</label>
+                            <input type="password" class="form-control" id="contraseña" placeholder="Digite su contraseña">
+                        </div>
+                    </form>   
+                    <img src="../assets/images/Form-group1.webp" alt="ejemplo form-group">
+                </div>
+                <h4 class="titulo4">Texto de ayuda:</h4>
+                <p>El texto de ayuda a nivel de bloque en los formularios se puede crear usando .form-text. El texto de ayuda en línea se puede implementar de manera flexible utilizando cualquier elemento HTML en línea y clases de utilidad como .text-muted.</p>
+                <p>El texto de ayuda debajo de los input se puede diseñar con .form-text. Esta clase incluye display: block y agrega un margen superior para facilitar el espaciado de los inputs anteriores.</p>
+                <div class="main-section2">
+                    <form>
+                        <div class="form-group">
+                            <label for="contraseña">Contraseña</label>
+                            <input type="password" class="form-control" id="contraseña" placeholder="Digite su contraseña">
+                            <small id="passwordHelpBlock" class="form-text text-muted">Su contraseña debe tener entre 8 y 20 caracteres, contener letras y números, y no debe contener espacios, caracteres especiales ni emoji.</small>
+                        </div>
+                    </form>   
+                    <img src="../assets/images/Form-group2.webp" alt="ejemplo texto de ayuda">
+                </div>
+                <h4 class="titulo4">Validación:</h4>
+                <ul class="lista">
+                    <li>La validación de formularios HTML se aplica a través de dos pseudoclases de CSS, :invalid y :valid. Se aplica a los elementos input, select y textarea.</li>
+                    <li>Bootstrap aplica los estilos :invalid y :valid a la clase principal .was-validated, generalmente aplicada al form. De lo contrario, cualquier campo obligatorio sin valor aparecerá como no válido al cargar la página. De esta forma, se puede elegir cuándo activarlos (por lo general, después de intentar enviar el formulario).</li>
+                    <li>Debido a las limitaciones en el funcionamiento de CSS, aún no es posible aplicar estilos a una etiqueta que se encuentra antes de un control de formulario en el DOM sin la ayuda de JavaScript personalizado.</li>
+                    <li>Para los mensajes de validación de formulario Bootstrap personalizados, se debe agregar el atributo booleano novalidate al form. Esto deshabilita la información sobre herramientas de comentarios predeterminada del navegador, pero aún proporciona acceso a las API de validación de formularios en JavaScript.</li>
+                </ul>
+                <form class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" class="form-control" id="usuario" placeholder="Digite su nombre de usuario" required>
+                        <div class="invalid-feedback">Digite un nombre de usuario.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contraseña">Contraseña</label>
+                        <input type="password" class="form-control" id="contraseña" placeholder="Digite su contraseña" required>
+                        <div class="invalid-feedback">Digite una contraseña.</div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                </form>   
+                <img src="../assets/images/Form-group3.webp" alt="ejemplo validación HTML" class="img">
+                <img src="../assets/images/Form-group4.webp" alt="ejemplo validación JS" class="img">
+            </article>
+        </section>
+    </main>
+    <script src="Formularios.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
