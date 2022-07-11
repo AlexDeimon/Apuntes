@@ -64,3 +64,9 @@
     text-align: center;
     margin-bottom: 20px;
 }
+
+/*ESTILOS formularios.html*/
+.input-group-text{
+    background-color: var(--color-blueviolet);
+    color: #ffffff;
+}
