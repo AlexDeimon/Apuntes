@@ -1,6 +1,6 @@
 /*ESTILOS generales*/
 .p{
-    color: #000;
+    color: var(--color-black);
 }
 .listaNav{
     display: flex;
@@ -15,13 +15,13 @@
     display: var(--display-inline);
     padding: var(--length-20) var(--length-0);
     background-color:  var(--color-blueviolet);
-    border: 2px solid #ffffff;
+    border: 2px solid var(--color-white);
 }
 .listaNav a,
 .boton,
 .boton2{
     text-decoration: none;
-    color: #ffffff;
+    color: var(--color-white);
     padding: var(--length-20);
 }
 /*Estilos Boostrap.html*/
@@ -32,7 +32,7 @@
 
 /*Estilos imagenes.html*/
 .img1{
-    width: 200px;
+    width: var(--length-200);
 }
 
 /*Estilos Tablas.html*/
@@ -61,12 +61,17 @@
 /*ESTILOS cards.html*/
 .card{
     width: 320px;
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: var(--center);
+    margin-bottom: var(--length-20);
 }
 
 /*ESTILOS formularios.html*/
 .input-group-text{
     background-color: var(--color-blueviolet);
-    color: #ffffff;
+    color: var(--color-white);
+}
+
+/*ESTILOS progress.html*/
+.progress{
+    margin: var(--length-20) var(--margin-padding-1);
 }
