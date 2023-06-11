@@ -1,0 +1,40 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inferencia</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/ts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Inferencia con TypeScript</h2>
+            <p>Typescript usa la información disponible que resulta obvia para el propio sistema, es decir si se declara una variable y se le asigna como primer valor un número, Typescript supone entonces que el tipo de esta variable a través de todo el programa será siempre de tipo number.</p>
+            <h3 class="ejemplo">Ejemplo con objeto: </h3>
+            <div class="main-section">
+                <img src="../assets/images/Inferencia1.webp" alt="ejemplo inferencia">  
+                <p>Se puede ver que gracias a TypeScript el sistema ya sabe el tipo de datos de las propiedades de los objetos.</p>  
+            </div>
+            <div class="main-section">
+                <img src="../assets/images/Inferencia2.webp" alt="ejemplo inferencia">  
+                <p>Tambien, en caso de que se intente acceder a una propiedad que no existe en dicho objeto, TypeScript lo verá como un error, ya que ha detectado como está formado el objeto, por eso genera un autocomplete con los atributos ya definidos en el objeto.</p>  
+            </div>
+        </section>
+    </main>
+</body>
+</html>
