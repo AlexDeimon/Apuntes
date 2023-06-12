@@ -1,0 +1,44 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de datos</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/ts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Tipos de datos</h2>
+            <p>Como su nombre indica, todo en Typescript trata de tipos. Como Typescript es la versión tipificada de JS, se puede especificar tipos a las variables cuando se declaran.</p>
+            <p>Esto hace que el código sea más escalable y fiable, y se puede comprobar que el código se ejecuta correctamente antes del tiempo de ejecución.</p>
+            <p>Javascript está tipado dinámicamente, lo que significa que no conoce el tipo de su variable hasta el tiempo de ejecución y las variables pueden cambiar de tipo. Incluso si se cambian intencionadamente, a menudo surgen errores y fallos. Typescript ayuda con este problema añadiendo tipos estáticos al código.</p>
+            <dl class="lista">
+                <dt>Tipo Any:</dt>
+                <dd>Una variable puede ser de cualquier tipo. Si usamos este tipo va a <span class="resaltado">IGNORAR </span> el tipado de Typescript.</dd>
+                <img src="../assets/images/Tipos_Datos1.webp" alt="ejemplo Any" class="img">
+                <dt>Tipo Built-in:</dt>
+                <dd>Incluye los <a href="../JavaScript/Fundamentos.html#TiposDatos" class="link">tipos de datos primitivos de Javascript</a> (el número, la cadena, el booleano, el indefinido, el nulo y el vacío).</dd>
+                <img src="../assets/images/Tipos_Datos2.webp" alt="Ejemplo Built-in" class="img">
+                <dt>User-defined:</dt>
+                <dd>Incluye enum, array, interfaz, clase y tupla.</dd>
+            </dl>
+            <p><span class="resaltado">Nota: Intentar escribir los menos tipos de datos posibles. Todo lo que pueda hacer automáticamente Typescript, dejar que lo haga.</span></p>
+        </section>
+    </main>
+</body>
+</html>
