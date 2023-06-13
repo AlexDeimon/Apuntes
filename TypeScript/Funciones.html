@@ -1,0 +1,59 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/ts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Funciones</h2>
+            <p>Typescript no realiza ningún cambio importante en el núcleo de funciones de Javascript. Sin embargo, Typescript mejora las funciones con firmas fuertes que podemos utilizar para definir parámetros y tipos de retorno.</p>
+            <p>Algo que se debe tener en cuenta al momento de usar parámetros, es que si no se le asigna el tipo de dato, implicitámente se le asignara un tipo <span class="resaltado">Any</span>, por lo cual no podrá inferir posteriormente que tipo de dato es o son los parámetros.</p>
+            <img src="../assets/images/Funciones1.webp" alt="Ejemplo funciones 1" class="img">
+        <article>
+            <h3 class="titulo3">Usando objetos como parámetros</h3>
+            <p>Puede que se necesiten usar objetos como parámetros en alguna función, sin embargo se debe tener cuidado con el tipado en estos casos.</p>
+            <img src="../assets/images/Funciones2.webp" alt="Ejemplo funciones con objetos como parámetros" class="img">
+            <img src="../assets/images/Funciones3.webp" alt="Ejemplo funciones con objetos como parámetros 2" class="img">
+        </article>
+        <article>
+            <h3 class="titulo3">Funciones con tipo de retorno</h3>
+            <p>Las funciones anteriores retornan por defecto un void, pero usualmente deben retornar algo, y ese algo debe tener un tipo de dato. TypeScript tambien puede inferir el tipo de dato que retorna alguna función.</p>
+            <img src="../assets/images/Funciones4.webp" alt="Ejemplo funciones con tipo de retorno" class="img">
+        </article>
+        <article>
+            <h3 class="titulo3">Tipando Callbacks</h3>
+            <p>Cuando en las funciones se usen <a href="../JavaScript/Callbacks.html" class="link">Callbacks</a> como argumentos, estas tambien se pueden asignar tipos de datos.</p>
+            <img src="../assets/images/Funciones5.webp" alt="Ejemplo funciones tipo callback" class="img">
+        </article>
+        <article>
+            <h3 class="titulo3">Tipando funciones flecha</h3>
+            <p>Hay 2 maneras de tipar <a href="../JavaScript/POO.html#FuncionesFlecha" class="link">funciones flecha:</a></p>
+            <img src="../assets/images/Funciones6.webp" alt="Ejemplo funciones tipo flecha" class="img">
+        </article>
+        <article>
+            <h3 class="titulo3">Casos en los que SI hay inferencia en funciones</h3>
+            <p>En las funciones anónimas, segun el contexto, TypeScript si puede inferir los tipos de datos necesarios de las funciones:</p>
+            <img src="../assets/images/Funciones7.webp" alt="Ejemplo inferencia funciones anónimas" class="img">
+        </article>
+        </section>
+    </main>
+</body>
+</html>

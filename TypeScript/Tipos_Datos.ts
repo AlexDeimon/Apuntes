@@ -6,7 +6,7 @@ let anyValue:any = 'Hola mundo'
 
 //* Tipo Built-in
 let numero:number = 1
-let cadenaTexto:String = 'Soy un String'
+let cadenaTexto:string = 'Soy un String'
 let booleano:boolean = true
 let indefinido:undefined
 let nulo:null
