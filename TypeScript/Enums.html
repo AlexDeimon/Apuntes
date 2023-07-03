@@ -1,0 +1,45 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enums</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/ts.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Enums</h2>
+            <p>Los enum son un tipo de dato en TypeScript. Esta característica no es una extensión de JavaScript, sino una peculiaridad propia de TypeScript. Se encargan de juntar en un solo tipo de dato un conjunto finito de constantes.</p>
+            <p>Similar a un Array, al definir un enum, cada constante se le asigna por defecto un índice desde 0 y se incrementa automáticamente para el resto de las constantes.</p>
+            <h3 class="titulo3">Ventajas</h3>
+            <ul class="lista">
+                <li>Proporciona flexibilidad haciendo más fácil expresar y documentar intenciones y casos de uso.</li>
+                <li>Ahorra tiempo de compilación y de ejecución con el código inline en JavaScript.</li>
+                <li>Permite la creación de constantes personalizadas de memoria eficiente en JavaScript.</li>
+            </ul>
+            <h3 class="titulo3">Numéricos</h3>
+            <img src="../assets/images/Enums1.webp" alt="Ejemplo Enum Numérico" class="img">
+            <h3 class="titulo3">Strings</h3>
+            <img src="../assets/images/Enums2.webp" alt="Ejemplo Enum Strings" class="img">
+            <h3 class="titulo3">Mapeo inverso</h3>
+            <p>Es posible acceder al valor de una constante y a un nombre de constante a partir de su valor.</p>
+            <img src="../assets/images/Enums3.webp" alt="Ejemplo Mapeo inverso" class="img">
+            <p><span class="resaltado">Nota:</span> Se recomienda utilizar <span class="resaltado">const enums</span> para mejorar el rendimiento de los enums, permitiendo a la hora de compilar el código, generar menos líneas de código que aparecerían sin el const.</p>
+        </section>
+    </main>
+</body>
+</html>
