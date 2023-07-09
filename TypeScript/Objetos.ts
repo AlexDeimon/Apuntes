@@ -136,3 +136,83 @@ function createAddress(){
 }
 //* permite obtener el type que está retornando una función
 type Address2 = ReturnType<typeof createAddress>
+
+//* Interfaces
+interface Hero {
+    id: string,
+    name: string,
+    age: number,
+    saludar: () => void
+}
+
+const hero:Hero = {
+    id: '1',
+    name: 'Spiderman',
+    age: 30,
+    saludar() {
+        console.log(`hola`)
+    },
+}
+
+//* Interfaces anidadas
+interface Producto {
+    id: string,
+    nombre: string,
+    precio: number,
+    quantity: number
+}
+
+interface carritoCompras {
+    totalPrice: number,
+    productos: Producto[]
+}
+
+const carrito: carritoCompras = {
+    totalPrice: 100,
+    productos: [
+        {
+            id: '1',
+            nombre: 'teclado',
+            precio: 400,
+            quantity: 1
+        }
+    ]
+}
+
+//* extends
+interface Camiseta extends Producto {
+    talla: number | string
+}
+
+interface carritoCamisetas {
+    totalPrice: number,
+    camisetas: Camiseta[]
+}
+
+const carrito2: carritoCamisetas = {
+    totalPrice: 100,
+    camisetas: [
+        {
+            id: '1',
+            nombre: 'teclado',
+            precio: 400,
+            quantity: 1,
+            talla: 'L'
+        }
+    ]
+}
+
+//* Funciones en interfaces
+//* manera 1:
+interface carritoOps {
+    add: (producto: Producto) => void,
+    remove: (producto: Producto) => void,
+    clear: () => void
+}
+
+//* manera 2:
+interface carritoOps2 {
+    add(producto: Producto): void,
+    remove(producto: Producto): void,
+    clear(): void
+}
