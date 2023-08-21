@@ -46,6 +46,8 @@ function mostrarLongitud(objeto: number | string){
 //* con narrowing
 function mostrarLongitud2(objeto: number | string){
     if(typeof objeto ==='string') return objeto.length;
-    else return objeto.toString()
+    else if(typeof objeto ==='number') return objeto.toString()
+    //* tipo never :
+    else return objeto
 }
 
