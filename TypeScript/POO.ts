@@ -216,3 +216,52 @@ interface carritoOps2 {
     remove(producto: Producto): void,
     clear(): void
 }
+
+//* Clases
+class Avenger{
+    readonly name: string
+    private powerScore: number //* usando la palabra reservada private se evita usar el # en las demas partes donde se llame a la propiedad
+    protected wonBattles: number = 0
+
+    constructor(name:string, powerScore:number, wonBattles:number){
+        this.name = name
+        this.powerScore = powerScore
+        this.wonBattles = wonBattles
+    }
+
+    get fullName(){
+        return `${this.name} con poder ${this.powerScore}`
+    }
+
+    set power(newPower:number){
+        if(newPower <= 100)  this.powerScore = newPower
+        else throw new Error('Power Score cannot be more than 100')
+    }
+}
+
+class NewAvenger extends Avenger{
+    age:number
+    constructor(name:string, powerScore:number, wonBattles:number, age:number){
+        super(name,powerScore,wonBattles)
+        this.age = age
+    }
+
+    set power(newPower:number){
+        if(newPower <= 100)  this.powerScore = newPower
+        else throw new Error('Power Score cannot be more than 100')
+    }
+
+    set recruit(newAge:number){
+        if(newAge >=18 )  this.age = newAge
+        else throw new Error('Power Score cannot be more than 100')
+    }
+
+}
+
+const avenger = new Avenger('Spidey',80, 80)
+
+avenger.powerScore
+
+//! mutando el objeto
+avenger.name = 'Hulk'
+

@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Objetos</title>
+    <title>POO</title>
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/ts.css">
@@ -23,8 +23,11 @@
     </header>
     <main>
         <section>
-            <h2 class="titulo2">Objetos</h2>
-            <p>Como se pudo ver en el primer ejemplo de <a href="Inferencia.html" class="link">inferencia</a>, los objetos en TypeScript, una vez que son definidas sus propiedades, son esas las <span class="resaltado">únicas propiedades de dicho objeto</span> y no se pueden llamar o crear nuevas propiedades posteriormente.</p>
+            <h2 class="titulo2">POO</h2>
+            <article>
+                <h3 class="titulo3">Objetos</h3>
+                <p>Como se pudo ver en el primer ejemplo de <a href="Inferencia.html" class="link">inferencia</a>, los objetos en TypeScript, una vez que son definidas sus propiedades, son esas las <span class="resaltado">únicas propiedades de dicho objeto</span> y no se pueden llamar o crear nuevas propiedades posteriormente.</p>
+            </article>
             <article>
                 <h3 class="titulo3">Type Alias</h3>
                 <p>Los Type Alias son tipos de datos definidos por el usuario con nombres alternativos, esto sirve para darle más semántica al lenguaje.</p>
@@ -59,6 +62,27 @@
                 <h4 class="titulo4">Declarar funciones en interfaces</h4>
                 <p>Hay 2 maneras de declarar funciones en interfaces: </p>
                 <img src="../assets/images/Interfaces4.webp" alt="Ejemplo funciones en interfaces" class="img">
+            </article>
+            <article>
+                <h3 class="titulo3">Clases</h3>
+                <p>La sintaxis básica de una clase puede ser:</p>
+                <img src="../assets/images/TSClases1.webp" alt="ejemplo clases" class="img">
+                <h4 class="titulo4">Modificadores de acceso</h4>
+                <h4 class="titulo4">Public:</h4>
+                <p>Uso por defecto.</p>
+                <h4 class="ejemplo">ReadOnly:</h4>
+                <p>Un error muy comun es mutar la propiedad de un objeto ya definido:</p>
+                <img src="../assets/images/TSClases2.webp" alt="ejemplo mutación objeto" class="img">
+                <p>Esto se puede solucionar con ReadOnly. Mediante readonly el valor de la propiedad solo puede ser cargado en el constructor o al momento de definirlo y luego no puede ser modificado ni desde un método de la clase o fuera de la clase.</p>
+                <img src="../assets/images/TSClases3.webp" alt="ejemplo readonly" class="img">
+                <h4 class="ejemplo">Private</h4>
+                <p>Private hace que el acceso a la propiedad sea solo de forma interna.</p>
+                <img src="../assets/images/TSClases4.webp" alt="ejemplo Private" class="img">
+                <p>Otra manera de usar private:</p>
+                <img src="../assets/images/TSClases5.webp" alt="ejemplo Private" class="img">
+                <h4 class="ejemplo">Protected:</h4>
+                <p>Es similar a private, ya que evita el acceso de la propiedad a los objetos, pero lo permite en clases heredadas.</p>
+                <img src="../assets/images/TSClases6.webp" alt="ejemplo protected" class="img">
             </article>
         </section>
     </main>
