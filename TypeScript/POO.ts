@@ -138,21 +138,21 @@ function createAddress(){
 type Address2 = ReturnType<typeof createAddress>
 
 //* Interfaces
-interface Hero {
+/*interface Hero {
     id: string,
     name: string,
     age: number,
     saludar: () => void
-}
+}*/
 
-const hero:Hero = {
+/*const hero:Hero = {
     id: '1',
     name: 'Spiderman',
     age: 30,
     saludar() {
         console.log(`hola`)
     },
-}
+}*/
 
 //* Interfaces anidadas
 interface Producto {
@@ -218,7 +218,7 @@ interface carritoOps2 {
 }
 
 //* Clases
-class Avenger{
+/*class Avenger{
     readonly name: string
     private powerScore: number //* usando la palabra reservada private se evita usar el # en las demas partes donde se llame a la propiedad
     protected wonBattles: number = 0
@@ -247,8 +247,8 @@ class NewAvenger extends Avenger{
     }
 
     set power(newPower:number){
-        if(newPower <= 100)  this.powerScore = newPower
-        else throw new Error('Power Score cannot be more than 100')
+      if(newPower <= 100)  this.powerScore = newPower
+      else throw new Error('Power Score cannot be more than 100')
     }
 
     set recruit(newAge:number){
@@ -256,12 +256,37 @@ class NewAvenger extends Avenger{
         else throw new Error('Power Score cannot be more than 100')
     }
 
-}
+}*/
 
-const avenger = new Avenger('Spidey',80, 80)
+//*const avenger = new Avenger('Spidey',80, 80)
 
-avenger.powerScore
+//*avenger.powerScore
 
 //! mutando el objeto
-avenger.name = 'Hulk'
+//*avenger.name = 'Hulk'
+
+//* Clases e interfaces
+interface Avenger{
+    name: string
+    powerScore: number 
+    wonBattles: number
+    age: number
+}
+
+class Avenger implements Avenger{
+    constructor(name:string, powerScore:number, wonBattles:number){
+        this.name = name
+        this.powerScore = powerScore
+        this.wonBattles = wonBattles
+    }
+
+    get fullName(){
+        return `${this.name} con poder ${this.powerScore}`
+    }
+
+    set power(newPower:number){
+        if(newPower <= 100)  this.powerScore = newPower
+        else throw new Error('Power Score cannot be more than 100')
+    }
+}
 
