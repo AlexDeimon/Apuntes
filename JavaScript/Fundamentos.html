@@ -59,12 +59,49 @@
                     <dd>Indiciarle al programa que la variable existe para que reserve un espacio de memoria para guardar la variable. Puede declararse vacia.</dd>
                     <dt>Inicializar:</dt>
                     <dd>Darle un valor a la variable. Se puede declarar e iniciar en la misma sentencia.</dd>
-                    <dt>Modificar:</dt>
-                    <dd>Cambiar el valor de una variable que ya existe. Solo se puede modificar dentro de un mismo ámbito.</dd>
+                    <dt>Reasignar:</dt>
+                    <dd>Cambiar el valor de una variable que ya existe. Solo se puede reasignar dentro de un mismo ámbito.</dd>
                 </dl>
                 <p>Una constante es un espacio reservado en memoria para almacenar un dato que no cambiará durante la ejecución del programa. Se declaran con la palabra reservada "const". Estas solo admiten la declaración e inicialización en la misma sentencia.</p>
                 <p>El ámbito es la zona donde existe la variable o constante. Si se declara una variable dentro de un bloque solo existirá dentro del bloque y no se podrá acceder a esta fuera del bloque.</p>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>var</th>
+                            <th>let</th>
+                            <th>const</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Declaración sin inicialización</td>
+                            <td><span class="titulo4">Si</span></td>
+                            <td><span class="titulo4">Si</span></td>
+                            <td><span class="resaltado">No</span></td>
+                        </tr>
+                        <tr>
+                            <td>Declaración e inicialización</td>
+                            <td><span class="titulo4">Si</span></td>
+                            <td><span class="titulo4">Si</span></td>
+                            <td><span class="titulo3">Necesario</span></td>
+                        </tr>
+                        <tr>
+                            <td>Reasignación</td>
+                            <td><span class="titulo4">Si</span></td>
+                            <td><span class="titulo4">Si</span></td>
+                            <td><span class="resaltado">No</span></td>
+                        </tr>
+                        <tr>
+                            <td>Redeclaración</td>
+                            <td><span class="titulo4">Si</span></td>
+                            <td><span class="resaltado">No</span></td>
+                            <td><span class="resaltado">No</span></td>
+                        </tr>
+                    </tbody>
+                </table>
                 <img src="../assets/images/fundamentos-JS1.webp" alt="ejemplo variables y constantes" class="img">
+                <img src="../assets/images/fundamentos-JS11.webp" alt="ejemplo var" class="img">
             </article>
             <article>
                 <h3 class="titulo3" id="TiposDatos">Tipos de datos:</h3>
@@ -83,6 +120,16 @@
                     </dl>
                     <img src="../assets/images/fundamentos-JS2.webp" alt="ejemplo tipos de datos" class="img">    
                 </div>
+                <h4 class="titulo4">Datos compuestos: </h4>
+                <ul class="lista">
+                    <li><a href="POO.html#Objetos" class="link">Objetos</a></li>
+                    <li><a href="Arrays.html" class="link">Arrays</a></li>
+                    <li><a href="POO.html#Funciones" class="link">Funciones</a></li>
+                </ul>
+                <h4 class="titulo4">Definidos por el usuario:</h4>
+                <ul class="lista">
+                    <li><a href="POO.html#Clases" class="link">Clases</a></li>
+                </ul>
                 <h4 class="titulo4">typeOf:</h4>
                 <p>El operador typeOf devuelve el tipo de dato de cualquier variable declarada.</p>
                 <img src="../assets/images/fundamentos-JS10.webp" alt="ejemplo typeOf" class="img">

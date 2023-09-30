@@ -217,6 +217,18 @@ interface carritoOps2 {
     clear(): void
 }
 
+//* Propiedades opcionales
+interface Producto{
+    nombre: string,
+    precio: number,
+    descripcion?: string //? propiedad opcional
+}
+
+//* Funciones
+interface Comprador{
+    (a:number, b:number): boolean
+}
+
 //* Clases
 /*class Avenger{
     readonly name: string

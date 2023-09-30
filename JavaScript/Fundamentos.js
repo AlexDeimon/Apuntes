@@ -2,11 +2,14 @@
 //* Declaración
 let nombre;
 
+//* Declaración múltiple
+let dia,mes,año;
+
 //* Inicialización
 nombre = "Alex";
 console.log(nombre);
 
-//* Modificación
+//* Reasignación
 nombre = "Diego";
 console.log(nombre);
 
@@ -15,6 +18,15 @@ const EDAD = 22;
 console.log(EDAD);
 
 //! EDAD = 23; //! ERROR YA QUE NO PUEDE MODIFICARSE UNA CONSTANTE
+
+//* var
+var fecha;
+
+fecha = '29/10/2023';
+
+//* Redeclaración
+//let nombre;
+var fecha = '30/10/2023'; //! POR ESTE MOTIVO YA NO SE USA VAR, DEBIDO A QUE PERMITE REDECLARAR VARIABLES
 
 //* Tipos de datos
 //* Numeros:

@@ -1,68 +1,88 @@
+//* Función con tipado explícito
+function sumar(a:number, b:number) : number{
+    return a + b;
+}
+
+//* Función flecha con retorno implícito (Inferencia)
+const dividir = (a:number, b:number) => a/b;
+
+//* Función con parametros opcionales
+function saludar(nombre:string, edad?:number): string{ //? parametro opcional con simbolo ?
+    if(edad!==undefined) return `hola, mi nombre es ${nombre} y tengo ${edad} años`;
+    else return `hola, mi nombre es ${nombre}`;
+}
+
+//* Función con parametros por defecto
+function saludar2(nombre:string, edad:number=24): string{
+    return `hola, mi nombre es ${nombre} y tengo ${edad} años`;
+}
+
 //* Funcion con Any implícito
-function saludar(name){
+function saludar3(name){
     console.log(`Hola ${name}`)
 }
 
-saludar(5) //* actualmente name es any por lo que no infiere que debe ser un String
+saludar3(5) //* actualmente name es any por lo que no infiere que debe ser un String
 
 //* Funcion con tipo de dato
-function saludar2(name: string){
+function saludar4(name: string){
     console.log(`Hola ${name}`)
 }
 
-//*saludar2(5) //! como ahora name es String el usar otro tipo de dato en el argumento da error
+//! como ahora name es String el usar otro tipo de dato en el argumento da error
+//*saludar4(5)
 
-saludar2('mundo')
+saludar4('mundo')
 
 //* Funciones con objetos como parámetros
 //! Any implícito
-function saludar3({name, age}){
+function saludar5({name, age}){
     console.log(`hola ${name} tienes ${age} años`)
 }
 
-saludar3({name:3, age:'Diego'}) //* No infiere los tipos de datos asi que podrian ser cualquier dato incorrecto 
+saludar5({name:3, age:'Diego'}) //* No infiere los tipos de datos asi que podrian ser cualquier dato incorrecto 
 
 //! Tipado incorrecto
-// function saludar4({name: string, age: number}){ //! Aqui se están reenombrando los parámetros debido a la sintaxis propia de JavaScript por lo que luego no encontrará ni a name ni a age
-//     console.log(`hola ${name} tienes ${age} años`)
-// }
+/*function saludar6({name: string, age: number}){ //! Aqui se están reenombrando los parámetros debido a la sintaxis propia de JavaScript por lo que luego no encontrará ni a name ni a age
+    console.log(`hola ${name} tienes ${age} años`)
+}*/
 
-saludar3({name:3,age:'Diego'})
+saludar5({name:3,age:'Diego'})
 
 //* Tipado correcto:
 //* 1ra forma
-function saludar5({name, age}:{name: string, age: number}){ // * Se tipea todo el objeto
+function saludar7({name, age}:{name: string, age: number}){ // * Se tipea todo el objeto
     console.log(`hola ${name} tienes ${age} años`)
 }
 
-//saludar5({name:23,age:'Diego'}) //! Ahora si genera error de tipo de datos
-saludar5({name:'Diego',age:23}) //* Correcto
+//saludar7({name:23,age:'Diego'}) //! Ahora si genera error de tipo de datos
+//saludar7({name:'Diego',age:23}) //* Correcto
 
 //* 2da forma
-function saludar6(persona:{name: string, age: number}){ // * se asigna como parámetro una clase tipando las propiedades
+function saludar8(persona:{name: string, age: number}){ // * se asigna como parámetro una clase tipando las propiedades
     const {name, age} = persona //! se DEBEN asignar los parámetros a la clase o saldrá error
     console.log(`hola ${name} tienes ${age} años`)
 }
 
-//saludar6({name:23,age:'Diego'}) //! error de tipo de datos
-saludar6({name:'Diego',age:23}) //* Correcto
+//saludar8({name:23,age:'Diego'}) //! error de tipo de datos
+//saludar8({name:'Diego',age:23}) //* Correcto
 
 //* Funciones con tipo de retorno
 //* Inferido
-function saludar7({name, age}:{name: string, age: number}){ 
+function saludar9({name, age}:{name: string, age: number}){ 
     let mensaje =`hola ${name} tienes ${age} años`
     return mensaje //* se infiere que el retorno es de tipo String
 }
 
-saludar7({name:'Diego',age:23})
+saludar9({name:'Diego',age:23})
 
 //* Asignado
-function saludar8({name, age}:{name: string, age: number}) : string{ //* se asigna un String como tipo de retorno
+function saludar10({name, age}:{name: string, age: number}) : string{ //* se asigna un String como tipo de retorno
     let mensaje =`hola ${name} tienes ${age} años`
     return mensaje 
 }
 
-saludar8({name:'Diego',age:23})
+saludar10({name:'Diego',age:23})
 
 //* Callbacks
 //! tipado incorrecto
@@ -85,7 +105,7 @@ funcionSaludar2((name: string) => {
 
 //* arrow functions
 //* 1ra forma
-const sumar = (a: number, b: number) : number => {
+const sumar2 = (a: number, b: number) : number => {
     return a + b
 }
 
