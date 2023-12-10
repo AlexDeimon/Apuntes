@@ -302,3 +302,23 @@ class Avenger implements Avenger{
     }
 }
 
+//* Genericos 
+class Sorteo<T>{
+    private ticket?: T;
+    constructor(private nombre:string){}
+
+    //* Encampsulamiento: getters (obtener) y setters (configurar)
+    setTicket(ticket:T){ this.ticket = ticket; }
+    getTicket(){ return this.ticket }
+
+    public sortear():string{ return `Para ${this.nombre} el ticket es ${this.ticket}` }
+}
+
+//* Instancias dinamicas
+let sorteo = new Sorteo<number>('Diego')
+sorteo.setTicket(235)
+console.log(sorteo.sortear())
+
+let sorteo2 = new Sorteo<string>('Alex')
+sorteo2.setTicket('A012')
+console.log(sorteo2.sortear())
