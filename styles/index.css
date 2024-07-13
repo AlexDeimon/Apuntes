@@ -156,6 +156,7 @@ p,
 .titulojs,
 .tituloBootstrap,
 .titulots,
+.tituloNode,
 .resaltado{
     font-family: var(--font-title);
 }
@@ -204,6 +205,8 @@ p,
 .cajaBootstrap { border: var(--length-1) solid var(--color-blueviolet); }
 
 .cajaTS { background-image: url("../assets/images/Typescript_logo_2020.webp"); }
+
+.cajaNode { border: var(--length-1) solid var(--color-limegreen); }
 
 .link{
     font-family: var(--font-title);
@@ -307,6 +310,8 @@ figure .titulo4{
 .cajaBootstrap:hover{ box-shadow: var(--length-0) var(--length-0)  var(--length-20) var(--length-10) var(--color-blueviolet); }
 
 .cajaTS:hover{ box-shadow: var(--length-0) var(--length-0)  var(--length-20) var(--length-10) var(--color-ts); }
+
+.cajaNode:hover{ box-shadow: var(--length-0) var(--length-0)  var(--length-20) var(--length-10) var(--color-limegreen); }
 
 .tabla tbody tr:nth-child(even){ background-color: #2c323f; }
 

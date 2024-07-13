@@ -1,0 +1,10 @@
+/*ESTILOS Node.html*/
+.cajaNode { 
+    background: #181c27;
+    border: var(--length-1) solid var(--color-limegreen) ;
+}
+
+.tituloNode{
+    text-align: var(--center);
+    color: var(--color-limegreen);
+}
