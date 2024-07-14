@@ -1,0 +1,396 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/node.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">HTTP</h2>
+            <p>HTTP (Hypertext Transfer Protocol) es el protocolo utilizado por la World Wide Web para la transferencia de información entre un cliente (como un navegador web) y un servidor. HTTP define cómo deben formatearse y transmitirse los mensajes, y cómo los servidores y navegadores deben responder a varios comandos.</p>
+            <dl class="lista">
+                <dt>Cliente:</dt>
+                <dd>Generalmente un navegador web que solicita recursos, como páginas web, imágenes, etc.</dd>
+                <dt>Servidor:</dt>
+                <dd>Un sistema que alberga los recursos y los envía al cliente cuando se solicitan.</dd>
+            </dl>
+            <article>
+                <h3 class="titulo3">Solicitudes HTTP</h3>
+                <p>Las solicitudes HTTP son mensajes enviados por el cliente al servidor para solicitar algún recurso o realizar una acción. Una solicitud HTTP tiene varios componentes importantes:</p>
+                <h4 class="titulo4">Método HTTP</h4>
+                <p>Define la acción a realizar. Los métodos más comunes son:</p>
+                <dl class="lista">
+                    <dt>GET:</dt>
+                    <dd>Solicita datos de un recurso específico.</dd>
+                    <dt>POST:</dt>
+                    <dd>Envía información a un recurso específico.</dd>
+                    <dt>PUT:</dt>
+                    <dd>Envía información al servidor para actualizar un recurso específico.</dd>
+                    <dt>DELETE:</dt>
+                    <dd>Elimina un recurso específico.</dd>
+                    <dt>PATCH:</dt>
+                    <dd>Modifica parcialmente un recurso específico.</dd>
+                </dl>
+                <h4 class="titulo4">Header</h4>
+                <p>Contiene datos que proporciona información adicional sobre la solicitud o sobre el cliente.</p>
+                <dl class="lista">
+                    <dt>Host:</dt>
+                    <dd>Indica el nombre del servidor.</dd>
+                    <dt>User-agent:</dt>
+                    <dd>Información sobre el cliente que hace la solicitud.</dd>
+                    <dt>Accept:</dt>
+                    <dd>Tipo de contenido que el cliente puede procesar.</dd>
+                </dl>
+                <h4 class="titulo4">Body</h4>
+                <p>Utilizado principalmente en solicitudes POST y PUT para enviar datos adicionales al servidor (como formularios, JSON, etc.).</p>
+            </article>
+            <article>
+                <h3 class="titulo3">Respuestas HTTP</h3>
+                <p>Las respuestas HTTP son mensajes enviados por el servidor al cliente en respuesta a una solicitud HTTP. Una respuesta HTTP tiene varios componentes importantes:</p>
+                <h4 class="titulo4">Código de Estado</h4>
+                <p>Un número que indica el resultado de la solicitud.</p>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <td>Clase</td>
+                            <td>Código</td>
+                            <td>Significado</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Informativos</td>
+                            <td>100</td>
+                            <td>El servidor ha recibido los encabezados de la solicitud y el cliente puede proceder a enviar el cuerpo de la solicitud.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>101</td>
+                            <td>Cambio de protocolos.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>102</td>
+                            <td>Procesando.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>103</td>
+                            <td>Punto de control.</td>
+                        </tr>
+                        <tr>
+                            <td>Exitosos</td>
+                            <td>200</td>
+                            <td>La solicitud ha tenido éxito.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>201</td>
+                            <td>La solicitud ha tenido éxito y se ha creado un nuevo recurso.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>202</td>
+                            <td>El recurso se ha aceptado.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>203</td>
+                            <td>Información no autorizada.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>204</td>
+                            <td>No hay contenido para mostrar.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>205</td>
+                            <td>Contenido reestablecido.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>206</td>
+                            <td>Contenido parcial.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>207</td>
+                            <td>Estado múltiple.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>208</td>
+                            <td>Ya reportado.</td>
+                        </tr>
+                        <tr>
+                            <td>Redirección</td>
+                            <td>300</td>
+                            <td>Opciones múltiples.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>301</td>
+                            <td>El recurso solicitado se ha movido permanentemente a una nueva URL.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>302</td>
+                            <td>El recurso solicitado se ha encontrado temporalmente en una URL diferente.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>303</td>
+                            <td>Ver otros.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>304</td>
+                            <td>Sin modificaciones</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>305</td>
+                            <td>Uso de proxy.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>306</td>
+                            <td>Cambio de proxy.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>307/td>
+                            <td>Redirección temporal.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>308</td>
+                            <td>Redirección permanente.</td>
+                        </tr>
+                        <tr>
+                            <td>Errores del cliente</td>
+                            <td>400</td>
+                            <td>La solicitud no se puede procesar debido a un error del cliente.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>401</td>
+                            <td>La autenticación es necesaria y ha fallado o no se ha proporcionado.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>402</td>
+                            <td>Pago requerido.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>403</td>
+                            <td>El cliente no tiene permisos para acceder al recurso.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>404</td>
+                            <td>El recurso solicitado no se ha encontrado.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>405</td>
+                            <td>Método no autorizado.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>406</td>
+                            <td>Solicitud no aceptada.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>407</td>
+                            <td>Autenticación proxy requerida.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>408</td>
+                            <td>Exceso de demora en la petición.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>409</td>
+                            <td>Conflicto.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>410</td>
+                            <td>El recurso se ha ido.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>411</td>
+                            <td>Longitud requerida.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>412</td>
+                            <td>Condición previa fallida.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>413</td>
+                            <td>Entidad solicitante muy extensa.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>414</td>
+                            <td>petición URI muy larga.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>415</td>
+                            <td>Multimedia no soportada.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>416</td>
+                            <td>Rango no satisfactorio.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>417</td>
+                            <td>La expectativa fracasó.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>423</td>
+                            <td>Bloqueado.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>424</td>
+                            <td>Dependencia fallida.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>425</td>
+                            <td>Colección desordenada.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>426</td>
+                            <td>Se requiere actualización.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>428</td>
+                            <td>Condición previa requerida.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>429</td>
+                            <td>Exceso de peticiones.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>431</td>
+                            <td>Datos del header muy extensos.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>450</td>
+                            <td>Bloqueo parental.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>451</td>
+                            <td>No disponible por legales.</td>
+                        </tr>
+                        <tr>
+                            <td>Errores de servidor</td>
+                            <td>500</td>
+                            <td>Ha ocurrido un error interno en el servidor.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>501</td>
+                            <td>No implementado.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>502</td>
+                            <td>Error en puerta de acceso.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>503</td>
+                            <td>El servidor no está disponible temporalmente.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>504</td>
+                            <td>Exceso de demora en la puerta de acceso.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>505</td>
+                            <td>Versión HTTP no soportada.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>507</td>
+                            <td>Espacio insuficiente.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>508</td>
+                            <td>Bucle detectado.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>509</td>
+                            <td>Exceso de ancho de banda.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>510</td>
+                            <td>No extendido.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>511</td>
+                            <td>Autenticación requerida.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4 class="titulo4">Header</h4>
+                <p>Proporcionan información adicional sobre la respuesta.</p>
+                <dl class="lista">
+                    <dt>Content-Type:</dt>
+                    <dd>Tipo de contenido de la respuesta (por ejemplo, text/html, application/json).</dd>
+                    <dt>Content-Length:</dt>
+                    <dd>Longitud del contenido de la respuesta.</dd>
+                    <dt>Accept:</dt>
+                    <dd>Tipo de contenido que el cliente puede procesar.</dd>
+                </dl>
+                <h4 class="titulo4">Body</h4>
+                <p>El contenido real solicitado por el cliente (por ejemplo, el HTML de una página web, una imagen, datos JSON, etc.).</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

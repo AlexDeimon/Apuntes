@@ -1,0 +1,74 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables de entorno</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/node.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Variables de entorno</h2>
+            <p>Las variables de entorno en Node.js son una forma de almacenar valores que pueden cambiar dependiendo del entorno en el que se ejecuta una aplicación (desarrollo, prueba, producción, etc.). Esto permite configurar una aplicación de manera flexible sin tener que modificar el código fuente.</p>
+            <p>Las variables de entorno se utilizan para almacenar información que puede ser específica del entorno en el que se ejecuta la aplicación, como claves de API, configuraciones de bases de datos, puertos de servidores, etc.</p>
+            <article>
+                <h3 class="titulo3">Beneficios de usar variables de entorno</h3>
+                <dl class="lista">
+                    <dt>Seguridad:</dt>
+                    <dd>Almacenar información sensible (como contraseñas y claves de API) fuera del código fuente reduce el riesgo de exposición.</dd>
+                    <dt>Configuración Flexible:</dt>
+                    <dd>Facilita la configuración de diferentes entornos (desarrollo, prueba, producción) sin cambiar el código fuente.</dd>
+                    <dt>Mantenimiento:</dt>
+                    <dd>Mantiene la configuración centralizada y fácil de modificar.</dd>
+                </dl>
+            </article>
+            <article>
+                <h3 class="titulo3">Cómo Acceder a las Variables de Entorno</h3>
+                <p>En Node.js, mediante el objeto process.env se puede acceder a las variables de entorno.</p>
+                <h4 class="ejemplo">Ejemplo:</h4>
+                <p>En este ejemplo el código intenta obtener el número de puerto de la variable de entorno PORT. Si PORT no está definida, usa el valor predeterminado de 3000. Luego se importa el módulo <a href="https://expressjs.com" class="link">express</a> , que es un framework web para Node.js el cual crea una instancia de una aplicación Express. Se define una ruta GET en la raíz (/) que responde un mensaje, se inicia el servidor Express en el puerto especificado por la variable port y mendiante un callback que se ejecuta una vez que el servidor ha comenzado a escuchar en el puerto especificado, se imprime un mensaje en la consola indicando en qué puerto se está ejecutando el servidor. </p>
+                <div class="main-section2">
+                    <img src="../assets/images/variables_Entorno1.webp" alt="ejemplo process.env">
+                    <div>
+                        <br>
+                        <img src="../assets/images/variables_Entorno2.webp" alt="ejecución process.env" class="img"><br>
+                        <img src="../assets/images/variables_Entorno3.webp" alt="Salida ejecución process.env" class="img">
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo3">Configuración de Variables de Entorno</h3>
+                <p>Para definir variables de entorno en proyectos de Node.js se suele usar un archivo .env. Para manejar este archivo se debe instalar el paquete <a href="https://www.npmjs.com/package/dotenv" class="link">dotenv</a>.</p>
+                <h4 class="ejemplo">Ejemplo:</h4>
+                <p>Similar al ejemplo anterior, se configuran 4 variables de entorno en el archivo .env: puerto, host, usuario y contraseña, simulando las variables de entorno para acceder a un servidor de base de datos.</p>
+                <div class="main-section2">
+                    <div>
+                        <img src="../assets/images/variables_Entorno5.webp" alt="ejemplo archivo .env"><br>
+                        <img src="../assets/images/variables_Entorno4.webp" alt="ejemplo 2 process.env" class="img">
+                    </div>
+                    <div>
+                        <br>
+                        <img src="../assets/images/variables_Entorno6.webp" alt="Ejecución process.env 2" class="img"><br>
+                        <img src="../assets/images/variables_Entorno7.webp" alt="Salida ejecución process.env 2" class="img">
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
