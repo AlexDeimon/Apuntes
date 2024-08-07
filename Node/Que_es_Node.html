@@ -40,43 +40,67 @@
                     <dd>Cuenta con un gestor de paquetes integrado llamado npm (Node Package Manager). Es una herramienta poderosa que permite instalar, gestionar y compartir paquetes de código JavaScript fácilmente.</dd>
                 </dl>
             </article>
+        </section>
+        <section>
+            <h2 class="titulo2">Patrón de diseño Módulo</h2>
+            <p>Node.js funciona con un patrón en el cual el código se separa en módulos diferentes los cuales se podrán importar y exportar para poder reutilizarlo y no repetirlo.</p>
             <article>
                 <h3 class="titulo3">Módulos</h3>
                 <p>Un modulo es un bloque de código reutilizable cuya existencia no impacta de manera accidental otros bloques de código.</p>
-                <p>Un módulo contiene funciones, objetos, variables donde se indica cuales serán exportados para ser utilizados por otros programas.</p>
-                <div class="main-section2">
-                    <div>
-                        <h4 class="titulo4">Ejemplo de módulo</h4>
-                        <img src="../assets/images/Modulo1.webp" alt="Ejemplo módulo" class="img">
-                    </div>
-                    <div>
-                        <h3 class="titulo4">Ejecución</h3>
-                        <img src="../assets/images/EjecutarModulo1.webp" alt="Ejemplo ejecución modulo" class="img">
-                    </div>
-                    <div>
-                        <h3 class="titulo4">Salida</h3>
-                        <img src="../assets/images/salidaModulo1.webp" alt="Salida ejecución modulo" class="img">
-                    </div>
-                </div>
+                <p>Un módulo contiene funciones, objetos, variables donde se indica cuales serán exportados para ser utilizados por otros programas.</p>    
+            </article>
+            <article>
+                <h3 class="titulo3">CommonJS (CJS)</h3>
+                <p>CommonJS es la forma <span class="resaltado">clásica</span> para crear un sistema de módulos.</p>
                 <dl class="lista">
                     <dt>module.exports:</dt>
                     <dd>Objeto que el sistema de módulos de Node.js utiliza para determinar qué se exporta desde un archivo de módulo cuando se requiere en otro archivo.</dd>
                     <dt>require:</dt>
                     <dd>Es una de las funciones principales del sistema de módulos de Node.js la cual se utiliza para cargar y utilizar las funcionalidades exportadas por un módulo, ya sea módulos nativos, módulos creados por el usuario y módulos instalados desde el gestor de paquetes npm.</dd>
                 </dl>
-                <h4 class="titulo4">Usando export e import</h4>
-                <p>Actualmente, para proyectos usados en Frameworks de JavaScript no se usan module.exports ni requiere. Se utilizan las palabras clave import y export.</p>
                 <div class="main-section2">
                     <div>
-                        <h4 class="titulo4">Ejemplo export</h4>
+                        <h4 class="titulo4">Ejemplo</h4>
+                        <img src="../assets/images/Modulo1.webp" alt="Ejemplo módulo" class="img">
+                    </div>
+                    <div>
+                        <h4 class="titulo4">Ejecución</h4>
+                        <img src="../assets/images/EjecutarModulo1.webp" alt="Ejemplo ejecución modulo" class="img">
+                    </div>
+                    <div>
+                        <h4 class="titulo4">Salida</h4>
+                        <img src="../assets/images/salidaModulo1.webp" alt="Salida ejecución modulo" class="img">
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3 class="titulo3">ES Modules (ESM)</h3>
+                <p>ES Modules es la forma <span class="resaltado">moderna</span> para crear un sistema de módulos.</p>
+                <dl class="lista">
+                    <dt>export:</dt>
+                    <dd>Mediante la palabra clave export se crea lo que se llama un módulo de exportación que contiene datos. Estos datos pueden ser variables, funciones, clases u objetos más complejos.</dd>
+                    <dt>import:</dt>
+                    <dd>Con la palabra clave import se pueden leer dichos módulos exportados desde otros archivos y utilizar sus elementos en el código del archivo actual.</dd>
+                </dl>
+                <div class="main-section2">
+                    <div>
+                        <h4 class="titulo4">Ejemplo export (Declaración y exportación)</h4>
                         <img src="../assets/images/export.webp" alt="Ejemplo módulo" class="img">
                     </div>
                     <div>
-                        <h3 class="titulo4">Ejecución usando import</h3>
+                        <h4 class="titulo4">Ejemplo export (Exportación post-declaración)</h4>
+                        <img src="../assets/images/export2.webp" alt="Ejemplo módulo" class="img">
+                    </div>
+                    <div>
+                        <h4 class="titulo4">Ejecución usando import (importación nombrada)</h4>
                         <img src="../assets/images/import.webp" alt="Ejemplo ejecución modulo" class="img">
                     </div>
                     <div>
-                        <h3 class="titulo4">Salida</h3>
+                        <h4 class="titulo4">Ejecución usando import (importación masiva)</h4>
+                        <img src="../assets/images/import2.webp" alt="Ejemplo ejecución modulo" class="img">
+                    </div>
+                    <div>
+                        <h4 class="titulo4">Salida</h4>
                         <img src="../assets/images/salidaModulo1-2.webp" alt="Salida ejecución modulo" class="img">
                     </div>
                 </div>

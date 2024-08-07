@@ -1,12 +1,8 @@
-function sumar(x1, x2) {
-    return x1 + x2
-}
+const sumar = (x1, x2) => x1 + x2
   
-function restar(x1, x2) {
-    return x1 - x2
-}
+const restar = (x1, x2) =>  x1 - x2
   
-function dividir(x1, x2) {
+const dividir = (x1, x2) => {
     if (x2 == 0) {
         mostrarErrorDivision()
     }
@@ -14,15 +10,13 @@ function dividir(x1, x2) {
         return x1 / x2
     }
 }
-  
-function mostrarErrorDivision() {
-    console.log('No se puede dividir por cero')
-}
-  
-module.exports = {
+
+const mostrarErrorDivision = () => console.log('No se puede dividir por cero')
+
+export {
     sumar,
     restar,
     dividir
-}
+};
 
 
