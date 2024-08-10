@@ -27,7 +27,8 @@
             <p>Node js cuenta con un módulo centralizado, llamado File System (fs), diseñado específicamente para la manipulación de archivos.</p>
             <p>Este módulo permite realizar operaciones como leer, escribir, actualizar y eliminar archivos.</p>
             <article>
-                <h3 class="titulo3">operaciones con File System</h3>
+                <h3 class="titulo3">Operaciones con File System</h3>
+                <h4 class="titulo4">Opeaciones Síncronas</h4>
                 <dl class="lista">
                     <dt>fs.readFileSync():</dt>
                     <dd>Lectura del contenido de archivos.</dd>
@@ -38,9 +39,38 @@
                     <dt>fs.unlinkSync():</dt>
                     <dd>Eliminar un archivo.</dd>
                 </dl>
-                <h4 class="titulo4">Ejemplo:</h4>
+                <h4 class="ejemplo">Ejemplo:</h4>
                 <img src="../assets/images/File_system.webp" alt="ejemplo File System" class="img"><br>
                 <img src="../assets/images/File_system2.webp" alt="ejemplo File System" class="img">
+                <h4 class="titulo4">Opeaciones Asíncronas</h4>
+                <dl class="lista">
+                    <dt>fs.readFile():</dt>
+                    <dd>Lectura del contenido de archivos.</dd>
+                    <dt>fs.writeFile():</dt>
+                    <dd>Escritura de contenido de archivos.</dd>
+                    <dt>fs.appendFile():</dt>
+                    <dd>Añadir datos al final de un archivo.</dd>
+                    <dt>fs.unlink():</dt>
+                    <dd>Eliminar un archivo.</dd>
+                </dl>
+                <p>La principal diferencia con las operaciones síncronas es que las asíncronas se manejan mediante <a href="../JavaScript/Callbacks.html" class="link">Callbacks</a>, <a href="../JavaScript/Promesas.html" class="link">Promesas</a> o <a href="../JavaScript/Async-Await.html" class="link">Async/await</a>.</p>
+                <h4 class="ejemplo">Ejemplo con Async/await:</h4>
+                <img src="../assets/images/File_system3.webp" alt="ejemplo File System con Async/await" class="img">
+                <P class="resaltado">Se recomienda usar Promesas o Async/await y evitar el uso de Callbacks debido a que puede generarse un callback hell.</P>
+            </article>
+            <article>
+                <h3 class="titulo3">Lectura de directorios</h3>
+                <p>El método readdir() es parte del módulo fs y se utiliza para leer el contenido de un directorio. Cuando se usa readdir(), se obtiene una lista de los nombres de los archivos y subdirectorios que se encuentran dentro de un directorio específico. Tambien tiene una versión síncrona (fs.readdirSync) y una versión asíncrona (fs.readdir).</p>
+                <p>El primer argumento es el directorio el cual se va a leer. Tambien tiene un argumento opcional que especifica opciones adicionales, como la codificación de los nombres de los archivos o si se quiere obtener objetos fs.Dirent que contienen metadatos adicionales sobre los archivos.</p>
+                <dl class="lista">
+                    <dt>withFileTypes: true:</dt>
+                    <dd>Si se especifica esta opción, los elementos en el array de archivos serán objetos fs.Dirent en lugar de solo los nombres de los archivos, lo que permite distinguir fácilmente entre archivos y directorios usando métodos como isDirectory() y isFile().</dd>
+                </dl>
+                <h4 class="ejemplo">Ejemplo:</h4>
+                <div class="main-section2">
+                    <img src="../assets/images/Readdir.webp" alt="ejemplo readdir" class="img">
+                    <img src="../assets/images/Readdir2.webp" alt="ejemplo readdir" class="img">
+                </div>
             </article>
         </section>
     </main>

@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('node:fs')
 
 //* Leer un archivo
 const archivo = fs.readFileSync('Hola_mundo.txt', 'utf8');
