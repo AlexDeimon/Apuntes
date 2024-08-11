@@ -72,6 +72,39 @@
                     <img src="../assets/images/Readdir2.webp" alt="ejemplo readdir" class="img">
                 </div>
             </article>
+            <article>
+                <h3 class="titulo3">Obtener información de archivos</h3>
+                <p>El método stat() se utiliza para obtener información sobre un archivo o un directorio. Esta información se presenta en un objeto de tipo fs.Stats, que contiene varios detalles sobre el archivo o directorio, como su tamaño, permisos, fecha de creación, y si es un archivo regular o un directorio.</p>
+                <p>Existen varias versiones de este método:</p>
+                <dl class="lista">
+                    <dt>Síncrona (fs.statSync):</dt>
+                    <dd>Bloquea la ejecución hasta que la operación se completa.</dd>
+                    <dt>Asíncrona (fs.stat):</dt>
+                    <dd>Utiliza un callback para manejar la respuesta</dd>
+                    <dt>Versión Promisificada (fs.promises.stat):</dt>
+                    <dd>Devuelve una promesa, permitiendo usar async/await.</dd>
+                </dl>
+                <h4 class="titulo4">Propiedades</h4>
+                <dl class="lista">
+                    <dt>stats.isFile():</dt>
+                    <dd>Devuelve true si la ruta es un archivo.</dd>
+                    <dt>stats.isDirectory()</dt>
+                    <dd>Devuelve true si la ruta es un directorio.</dd>
+                    <dt>stats.size:</dt>
+                    <dd>Tamaño del archivo en bytes.</dd>
+                    <dt>stats.birthtime:</dt>
+                    <dd>Fecha de creación del archivo.</dd>
+                    <dt>stats.mtime:</dt>
+                    <dd>Fecha de la última modificación del archivo.</dd>
+                    <dt>stats.atime:</dt>
+                    <dd>Fecha de la última vez que el archivo fue accedido.</dd>
+                    <dt>stats.ctime:</dt>
+                    <dd>Fecha del último cambio en los metadatos del archivo.</dd>
+                </dl>
+                <h4 class="ejemplo">Ejemplo:</h4>
+                <img src="../assets/images/Stat.webp" alt="ejemplo stat" class="img">
+                <img src="../assets/images/Stat2.webp" alt="ejemplo stat" class="img">
+            </article>
         </section>
     </main>
 </body>
