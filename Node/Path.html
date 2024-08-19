@@ -1,0 +1,56 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/node.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Path</h2>
+            <p>Path es un módulo incorporado en Node.js que proporciona una serie de utilidades para manejar y transformar rutas de archivos. Las rutas de archivos pueden variar entre sistemas operativos; por ejemplo, en Windows se utilizan barras invertidas (\) como separadores, mientras que en macOS y Linux se utilizan barras inclinadas (/). El módulo path abstrae estas diferencias, permitiendo escribir código que funcione correctamente en cualquier entorno.</p>
+            <section>
+                <h3 class="titulo3">Métodos</h3>
+                <p>Algunos de los métodos más comunes del módulo path son:</p>
+                <dl class="lista">
+                    <dt>path.join():</dt>
+                    <dd>Esta función une segmentos de ruta en una sola ruta, manejando automáticamente los separadores de directorios. Es útil para crear rutas de manera segura.</dd>
+                    <dt>path.resolve():</dt>
+                    <dd>resuelve una secuencia de segmentos de ruta en una ruta absoluta. Parte desde el directorio actual a menos que se pase una ruta absoluta como argumento.</dd>
+                    <dt>path.basename():</dt>
+                    <dd>Devuelve el último segmento de una ruta, que usualmente es el nombre del archivo. Si se agrega un segundo argumento, el método devuelve el nombre del archivo sin la extensión.</dd>
+                    <dt>path.dirname():</dt>
+                    <dd>Devuelve la parte de la ruta que corresponde al directorio, excluyendo el archivo o el último segmento.</dd>
+                    <dt>path.extname()</dt>
+                    <dd>Devuelve la extensión de un archivo.</dd>
+                    <dt>path.parse():</dt>
+                    <dd>Convierte una ruta en un objeto con las siguientes propiedades: root, dir, base, ext, y name.</dd>
+                    <dt>path.format():</dt>
+                    <dd>Toma un objeto con las propiedades mencionadas y construye una ruta.</dd>
+                    <dt>path.normalize():</dt>
+                    <dd>Normaliza una ruta, resolviendo .. y . automáticamente. También convierte múltiples separadores consecutivos en uno solo.</dd>
+                </dl>
+                <h4 class="ejemplo">Ejemplo:</h4>
+                <img src="../assets/images/path.webp" alt="Ejemplo path" class="img"><br>
+                <img src="../assets/images/path2.webp" alt="Ejemplo path" class="img">
+            </section>
+        </section>
+    </main>
+</body>
+</html>
