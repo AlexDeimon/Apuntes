@@ -32,6 +32,19 @@
                 <dd>Un sistema que alberga los recursos y los envía al cliente cuando se solicitan.</dd>
             </dl>
             <article>
+                <h3 class="titulo3">Creando un servidor HTTP</h3>
+                <p>El método principal para crear un servidor es <span class="resaltado">http.createServer()</span>. Este método devuelve un servidor que puede escuchar solicitudes entrantes.</p>
+                <div class="main-section2">
+                    <div>
+                        <img src="../assets/images/HTTP1.webp" alt="ejemplo servidor básico" class="img"><br>
+                        <img src="../assets/images/HTTP2.webp" alt="ejemplo ejecución servidor básico" class="img">    
+                    </div>
+                    <div>
+                        <br><img src="../assets/images/HTTP3.webp" alt="ejemplo ejecución servidor básico en el navegador" class="img">      
+                    </div>
+                </div>
+            </article>
+            <article>
                 <h3 class="titulo3">Solicitudes HTTP</h3>
                 <p>Las solicitudes HTTP son mensajes enviados por el cliente al servidor para solicitar algún recurso o realizar una acción. Una solicitud HTTP tiene varios componentes importantes:</p>
                 <h4 class="titulo4">Método HTTP</h4>
@@ -389,6 +402,40 @@
                 </dl>
                 <h4 class="titulo4">Body</h4>
                 <p>El contenido real solicitado por el cliente (por ejemplo, el HTML de una página web, una imagen, datos JSON, etc.).</p>
+            </article>
+            <article>
+                <h3 class="titulo3">Métodos del módulo HTTP</h3>
+                <p>El módulo HTTP proporciona varios métodos para interactuar con el servidor y las solicitudes y respuestas HTTP. Algunos de los métodos más comunes son:</p>
+                <dl class="lista">
+                    <dt>http.createServer():</dt>
+                    <dd>Crea un servidor HTTP.</dd>
+                    <dt>http.request()</dt>
+                    <dd>Envía una solicitud HTTP a un servidor.</dd>
+                    <dt>server.listen():</dt>
+                    <dd>Escucha las solicitudes entrantes en un puerto específico.</dd>
+                    <dt>request.url:</dt>
+                    <dd>Devuelve la URL de la solicitud.</dd>
+                    <dt>request.method:</dt>
+                    <dd>Devuelve el método de la solicitud.</dd>
+                    <dt>response.writeHead():</dt>
+                    <dd>Envía una línea de estado y encabezados de respuesta al cliente.</dd>
+                    <dt>response.write():</dt>
+                    <dd>Envía datos al cliente.</dd>
+                    <dt>response.end():</dt>
+                    <dd>Finaliza la respuesta.</dd>
+                </dl>
+                <h4 class="ejemplo">Ejemplos: </h4>
+                <img src="../assets/images/HTTP4.webp" alt="Ejemplo servidor y peticion" class="img"><br>
+                <div class="main-section2">
+                    <div>
+                        <img src="../assets/images/HTTP5.webp" alt="" class="img">    
+                    </div>
+                    <div>
+                        <img src="../assets/images/HTTP6.webp" alt="" class="img"><br>
+                        <img src="../assets/images/HTTP7.webp" alt="" class="img"><br>
+                        <img src="../assets/images/HTTP8.webp" alt="" class="img">    
+                    </div>
+                </div>
             </article>
         </section>
     </main>
