@@ -1,0 +1,110 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/node.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Express</h2>
+            <p>Express es un framework minimalista y flexible para Node.js, diseñado para construir aplicaciones web y APIs. Ofrece una abstracción más sencilla y potente sobre el módulo <a href="HTTP.html" class="link">http</a> nativo de Node.js, facilitando la creación de aplicaciones robustas y escalables.</p>
+            <article>
+                <h3 class="titulo3">Crear un servidor</h3>
+                <img src="../assets/images/express1.jpg" alt="ejemplo express" class="img">
+                <dl class="lista">
+                    <dt>express():</dt>
+                    <dd>Inicializa una nueva aplicación Express.</dd>
+                    <dt>app.get():</dt>
+                    <dd>Define una ruta para manejar solicitudes GET.</dd>
+                    <dt>app.listen():</dt>
+                    <dd>Hace que el servidor escuche en un puerto específico.</dd>
+                </dl>
+            </article>
+            <article>
+                <h3 class="titulo3">Definición de rutas</h3>
+                <p>Las rutas se utilizan para responder a solicitudes específicas de URL y métodos <a href="HTTP.html" class="link">HTTP</a>.</p>
+                <img src="../assets/images/express2.webp" alt="ejemplo rutas express" class="img">
+                <h4 class="titulo4">Rutas con parámetros</h4>
+                <p>Los parámetros de ruta se utilizan para capturar valores específicos en las URL.</p>
+                <img src="../assets/images/express3.webp" alt="ejemplo rutas con parámetros" class="img">
+                <h4 class="titulo4">Consultas con Query parameters</h4>
+                <p>Los Query parameters se utilizan para enviar datos a través de la URL. Se consultan agregando un signo de ? a la url seguido de la clave del parametro = su valor.</p>
+                <img src="../assets/images/express4.webp" alt="ejemplo query parameters" class="img">
+            </article>
+            <article>
+                <h3 class="titulo3">route y router</h3>
+                <p>El método app.route() se utiliza para manejar varias solicitudes HTTP en un solo punto de ruta sin necesidad de repetir la ruta en cada método.</p>
+                <img src="../assets/images/express6.webp" alt="ejemplo route" class="img">
+                <p>El método app.Router() permite modularizar rutas y manejadores. Esto es util cuando se tiene un proyecto grande y se necesita organizar las rutas en diferentes archivos.</p>
+                <div class="main-section2">
+                   <img src="../assets/images/express7.webp" alt="ejemplo router" class="img">
+                   <img src="../assets/images/express8.webp" alt="ejemplo router" class="img">
+                </div>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <td>Características</td>
+                            <td>app.route()</td>
+                            <td>express.Router</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Propósito</td>
+                            <td>Manejar múltiples métodos en una ruta.</td>
+                            <td>Modularizar y agrupar rutas relacionadas.</td>
+                        </tr>
+                        <tr>
+                            <td>Uso principal</td>
+                            <td>Simplificación para rutas específicas.</td>
+                            <td>Estructuración y escalabilidad de la app.</td>
+                        </tr>
+                        <tr>
+                            <td>Escalabilidad</td>
+                            <td>Limitada a rutas únicas.</td>
+                            <td>Ideal para proyectos grandes.</td>
+                        </tr>
+                        <tr>
+                            <td>Sintaxis</td>
+                            <td>Más concisa para casos simples.</td>
+                            <td>Más código, pero mejor organización.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h3 class="titulo3">Middleware</h3>
+                <p>El middleware es una función que se ejecuta antes de que se ejecute una ruta. Se utiliza para realizar tareas comunes a todas las rutas, como la validación de datos, la autenticación de usuarios y el manejo de errores.</p>
+                <img src="../assets/images/express5.webp" alt="ejemplo middleware" class="img">
+            </article>
+            <article>
+                <h3 class="titulo3">Manejo de errores</h3>
+                <p>Express maneja los errores de forma predeterminada, pero se pueden personalizar los mensajes de error y las respuestas a través de middleware.</p>
+                <img src="../assets/images/express9.webp" alt="ejemplo manejo de errores" class="img">
+            </article>
+            <article>
+                <h3 class="titulo3">Body Parsing</h3>
+                <p>Express no analiza automáticamente los cuerpos de las solicitudes. Para manejar datos enviados desde formularios o como JSON, utiliza el middleware express.json() y express.urlencoded().</p>
+                <img src="../assets/images/express10.webp" alt="ejemplo body parsing" class="img">
+            </article>
+        </section>
+    </main>
+</body>
+</html>
