@@ -1,0 +1,79 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API REST</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/node.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">API REST</h2>
+            <p>API REST (Application Programming Interface - Representational State Transfer) es un estilo de arquitectura que permite la comunicación entre sistemas a través del protocolo HTTP. Es ampliamente utilizada para construir servicios web debido a su simplicidad y escalabilidad.</p>
+            <article>
+                <h3 class="titulo3">Principios</h3>
+                <dl class="lista">
+                    <dt>Simplicidad:</dt>
+                    <dd>Utiliza los métodos HTTP estándar para realizar operaciones sobre los recursos, lo que facilita la comprensión y el mantenimiento de la API.</dd>
+                    <dt>Escalabilidad:</dt>
+                    <dd>Permite la creación de servicios web escalables y flexibles, ya que los recursos son independientes y pueden ser accedidos de forma concurrente.</dd>
+                    <dt>Portabilidad:</dt>
+                    <dd>Al utilizar HTTP como protocolo de comunicación, las APIs REST pueden ser consumidas por cualquier cliente que soporte este protocolo, como navegadores web, aplicaciones móviles o servicios en la nube.</dd>
+                    <dt>Visibilidad:</dt>
+                    <dd>Los recursos son accesibles a través de URLs únicas, lo que facilita la identificación y el acceso a los mismos.</dd>
+                    <dt>Fiabilidad:</dt>
+                    <dd>Al ser una arquitectura basada en estándares, las API REST son fáciles de implementar y mantener, lo que garantiza su fiabilidad y disponibilidad.</dd>
+                    <dt>Fácil de modificar:</dt>
+                    <dd>Permite la evolución de la API sin afectar a los clientes existentes, ya que los cambios se realizan en los recursos y no en la interfaz.</dd>
+                </dl>
+            </article>
+            <article>
+                <h3 class="titulo3">Fundamentos</h3>
+                <dl class="lista">
+                    <dt>Recursos:</dt>
+                    <dd>En REST, todo es considerado un recurso, representado generalmente por una URL única. Los recursos son las entidades que se pueden manipular a través de la API REST, se acceden mediante los métodos HTTP. Cada recurso puede tener diferentes representaciones, como JSON, XML, o HTML.
+                        <ul class="lista">
+                            <li><strong class="link">https://api.mitienda.com/productos</strong> Representa una colección de productos.</li>
+                            <li><strong class="link">https://api.mitienda.com/productos/1</strong> Representa un producto específico.</li>
+                        </ul>
+                    </dd>
+                    <dt>Métodos HTTP:</dt>
+                    <dd>Los <a href="HTTP.html#metodos" class="link">métodos HTTP</a> son fundamentales en REST y representan las acciones que se pueden realizar sobre los recursos.</dd>
+                    <dt>Representaciones:</dt>
+                    <dd>Las representaciones son los formatos en los que se pueden devolver los recursos, como JSON, XML o HTML.</dd>
+                    <dt>Estado Sin Estado (Stateless):</dt>
+                    <dd>Cada solicitud HTTP contiene toda la información necesaria para procesarla, lo que permite que las solicitudes sean independientes y no requieran información adicional del servidor.</dd>
+                    <dt>Interfaz uniforme:</dt>
+                    <dd>Simplificar la comunicación entre sistemas. 
+                        <ul class="lista">
+                            <li><strong class="link">Mensajes auto-descriptivos:</strong> Cada mensaje debe contener toda la información necesaria para ser procesado.</li>
+                            <li><strong class="link">HATEOAS (Hypermedia As The Engine Of Application State):</strong> Los recursos deben contener enlaces a otros recursos relacionados.</li>
+                        </ul>
+                    </dd>
+                    <dt>Protocolo cliente/servidor:</dt>
+                    <dd>La arquitectura cliente/servidor permite separar la interfaz de usuario de la lógica del servidor, lo que facilita la escalabilidad y la portabilidad.</dd>
+                </dl>
+            </article>
+            <h4 class="ejemplo">Ejemplo API REST</h4>
+            <img src="../assets/images/API_REST.webp" alt="Ejemplo api rest" class="img">
+            <img src="../assets/images/API_REST2.webp" alt="Ejemplo api rest" class="img">
+            <img src="../assets/images/API_REST3.webp" alt="Ejemplo api rest" class="img">
+        </section>
+    </main>
+</body>
+</html>
