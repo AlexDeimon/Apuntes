@@ -1,0 +1,93 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zod</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/node.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Zod</h2>
+            <p>Zod es una biblioteca de validación de datos para JavaScript y TypeScript. Es simple, poderosa, y permite definir esquemas para validar datos de entrada y garantizar que cumplan con ciertas reglas o estructuras.</p>
+            <article>
+                <h3 class="titulo3">Características Principales:</h3>
+                <dl class="lista">
+                    <dt>Definición de Esquemas:</dt>
+                    <dd>Puede definir la forma esperada de los datos con tipos y reglas de validación.</dd>
+                    <dt>Validación:</dt>
+                    <dd>Valida datos de manera simple con métodos como parse o safeParse.</dd>
+                    <dt>Integración con TypeScript:</dt>
+                    <dd>Genera automáticamente tipos TypeScript basados en los esquemas definidos.</dd>
+                    <dt>Encadenamiento de Métodos:</dt>
+                    <dd>Define reglas adicionales mediante métodos como min, max, regex, etc.</dd>
+                    <dt>Composición de Esquemas:</dt>
+                    <dd>Puede combinar esquemas para representar datos más complejos.</dd>
+                    <dt>Tipado seguro:</dt>
+                    <dd>Permite definir esquemas de validación de datos en TypeScript, lo que garantiza que los datos de entrada cumplan con las reglas definidas en el esquema.</dd>
+                    <dt>Sintaxis simple:</dt>
+                    <dd>La sintaxis de Zod es simple y fácil de entender, lo que facilita la definición de esquemas de validación de datos.</dd>
+                    <dt>Extensibilidad:</dt>
+                    <dd>Permite extender los esquemas de validación con reglas personalizadas, lo que brinda flexibilidad para adaptar la validación a las necesidades específicas de cada proyecto.</dd>
+                </dl>
+            </article>
+            <article>
+                <h3 class="titulo3">Uso básico</h3>
+                <h4 class="titulo4">Definir y Validar un Esquema</h4>
+                <img src="../assets/images/zod.webp" alt="ejemplo definición y validación de esquema" class="img">
+                <dl class="lista">
+                    <dt>z.object():</dt>
+                    <dd>Define un esquema de objeto con las propiedades y reglas de validación especificadas.</dd>
+                    <dt>parse():</dt>
+                    <dd>Valida y transforma los datos de entrada según el esquema definido.</dd>
+                </dl>
+                <h4 class="titulo4">Validación Segura con safeParse</h4>
+                <p>A diferencia de parse, el método safeParse no lanza excepciones. En su lugar, devuelve un objeto con el resultado.</p>
+                <img src="../assets/images/zod2.webp" alt="ejemplo validación segura" class="img">
+                <dl class="lista">
+                    <dt>safeParse():</dt>
+                    <dd>Valida los datos de entrada y devuelve un resultado seguro que indica si la validación fue exitosa y los datos transformados, o los errores de validación.</dd>
+                </dl>
+                <h4 class="titulo4">Esquemas Personalizados</h4>
+                <p>Es posible definir esquemas personalizados para validar tipos de datos específicos.</p>
+                <img src="../assets/images/zod3.webp" alt="ejemplo esquema personalizado" class="img">
+                <dl class="lista">
+                    <dt>refine():</dt>
+                    <dd>Define una regla de validación personalizada para un esquema.</dd>
+                </dl>
+            </article>
+            <article>
+                <h3 class="titulo3">Tipos de Esquemas</h3>
+                <h4 class="titulo4">Tipos primitivos</h4>
+                <img src="../assets/images/zod4.webp" alt="ejemplo tipos primitivos" class="img">
+                <h4 class="titulo4">Strings</h4>
+                <img src="../assets/images/zod5.webp" alt="ejemplo strings validaciones y transformaciones" class="img">
+                <p>Al utilizar métodos de validación, puede pasar un argumento adicional para proporcionar un mensaje de error personalizado.</p>
+                <img src="../assets/images/zod6.webp" alt="ejemplo validaciones con mensaje de error" class="img">
+                <h4 class="titulo4">Numbers</h4>
+                <p>Las validaciones de los numbers tambien pueden tener un mensaje de error personalizado.</p>
+                <img src="../assets/images/zod7.webp" alt="ejemplo números y validaciones con mensaje de error" class="img">
+                <p>Se puede personalizar ciertos mensajes de error al crear un esquema numérico.</p>
+                <img src="../assets/images/zod8.webp" alt="ejemplo esquema numerico mensaje de error" class="img">
+                <h4 class="titulo4">Objetos</h4>
+                <img src="../assets/images/zod9.webp" alt="ejemplo objeto" class="img">
+            </article>
+        </section>
+    </main>
+</body>
+</html>
