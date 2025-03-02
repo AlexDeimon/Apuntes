@@ -1,0 +1,121 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/node.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">WebSocket</h2>
+            <p>WebSockets es un protocolo que permite una comunicación bidireccional en tiempo real entre un cliente y un servidor a través de una sola conexión persistente. A diferencia de <a href="HTTP.html" class="link">HTTP</a>, donde cada solicitud del cliente requiere una respuesta del servidor, WebSockets mantiene una conexión abierta, permitiendo el intercambio continuo de datos sin la sobrecarga de abrir y cerrar conexiones repetidamente.</p>
+            <article>
+                <h3 class="titulo3">Diferencias entre WebSocket y HTTP</h3>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>WebSocket</th>
+                            <th>HTTP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Modo de comunicación</td>
+                            <td>Comunicación bidireccional en tiempo real</td>
+                            <td>Cliente envía solicitud → Servidor responde</td>
+                        </tr>
+                        <tr>
+                            <td>Estado de conexión</td>
+                            <td>Conexión persistente, mantiene una conexión abierta</td>
+                            <td>Sin estado (stateless), cada solicitud es independiente</td>
+                        </tr>
+                        <tr>
+                           <td>Latencia</td>
+                            <td>Menor latencia, intercambio continuo de datos, ideal para aplicaciones en tiempo real</td>
+                            <td>Mayor latencia, cada solicitud requiere una respuesta del servidor</td>
+                        </tr>
+                        <tr>
+                            <td>Casos de uso</td>
+                            <td>Chats, juegos en línea, transmisiones en vivo</td>
+                            <td>Páginas web estándar, API REST</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h3 class="titulo3">Funcionamiento</h3>
+                <ol class="lista">
+                    <li><Strong class="link">Establecimiento de la conexión (Handshake)</Strong>
+                        <ul>
+                            <li>El cliente envía una solicitud HTTP con el encabezado Upgrade para indicar que quiere cambiar a WebSockets.</li>
+                            <li>El servidor responde con un código de estado <span class="resaltado">101 (Switching Protocols)</span> y actualiza la conexión a WebSocket.</li>
+                        </ul>
+                    </li>
+                    <li><strong class="link">Comunicación Bidireccional:</strong> Una vez establecida la conexión, el cliente y el servidor pueden enviarse mensajes en cualquier momento sin necesidad de nuevas solicitudes HTTP.</li>
+                    <li><strong class="link">Cierre de la conexión:</strong> El cliente o el servidor pueden cerrar la conexión en cualquier momento.</li>
+                </ol>
+            </article>
+            <article>
+                <h3 class="titulo3">API WebSocket</h3>
+                <p>En el lado del servidor, Node.js proporciona un módulo nativo llamado <strong class="link">ws</strong> para crear un servidor WebSocket. En el lado del cliente, se puede utilizar la API nativa de JavaScript <strong class="link">WebSocket</strong> para establecer una conexión WebSocket.</p>
+                <h4 class="titulo4">Eventos de ws</h4>
+                <dl class="lista">
+                    <dt>open:</dt>
+                    <dd>Se emite cuando el servidor WebSocket se inicia y está escuchando en un puerto.</dd>
+                    <dt>connection</dt>
+                    <dd>Se emite cuando un cliente se conecta al servidor WebSocket.</dd>
+                    <dt>message</dt>
+                    <dd>Se emite cuando el servidor recibe un mensaje del cliente.</dd>
+                    <dt>close</dt>
+                    <dd>Se emite cuando la conexión se cierra.</dd>
+                </dl>
+                <h4 class="titulo4">Métodos de ws</h4>
+                <dl class="lista">
+                    <dt>server():</dt>
+                    <dd>Crea un servidor WebSocket.</dd>
+                    <dt>on():</dt>
+                    <dd>Escucha un evento específico.</dd>
+                    <dt>send()</dt>
+                    <dd>Envía un mensaje al cliente.</dd>
+                    <dt>close()</dt>
+                    <dd>Cierra la conexión.</dd>
+                </dl>
+            </article>
+            <article>
+                <h3 class="titulo3">Casos de uso</h3>
+                <ul class="lista">
+                    <li>Chats en vivo</li>
+                    <li>Notificaciones en tiempo real</li>
+                    <li>Juegos multijugador</li>
+                    <li>Monitoreo en tiempo real</li>
+                    <li>Transmisiones en vivo</li>
+                </ul>
+            </article>
+            <article>
+                <h3 class="ejemplo">Ejemplo Implementación</h3>
+                <div class="main-section2">
+                    <img src="../assets/images/WebsocketServer.webp" alt="Ejemplo servidor WebSocket">
+                    <img src="../assets/images/WebsocketClient.webp" alt="Ejemplo cliente WebSocket">
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
