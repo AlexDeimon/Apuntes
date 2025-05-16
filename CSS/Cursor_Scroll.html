@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor & Scroll</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Cursor del ratón</h2>
+            <p>La propiedad cursor especifica el tipo de cursor que se muestra cuando este se encuentra sobre un elemento.</p>
+            <table class="tabla">
+                <caption>Valores para cursor</caption>
+                <thead>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Valor</th>
+                        <th>Descripción y ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>General</td>
+                        <td>auto</td>
+                        <td>El navegador determina el cursor que muestra basado en el contenido presente.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>default</td>
+                        <td  style="cursor: default">Muestra el cursor del ratón por defecto del sistema (flecha).</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>none</td>
+                        <td style="cursor: none;">No muestra ningún cursor, pero el cursor del ratón sigue funcionando.</td>
+                    </tr>
+                    <tr>
+                        <td>Enlaces y estado</td>
+                        <td>context-menu</td>
+                        <td style="cursor: context-menu;">Indica que un menú contextual está disponible debajo del cursor (boton derecho).</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>help</td>
+                        <td style="cursor: help;">Indica que hay ayuda disponible.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>pointer</td>
+                        <td style="cursor: pointer;">Cursor usado sobre enlaces.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>progress</td>
+                        <td style="cursor: progress;">Indica que el programa está ocupado en segundo plano, pero el usuario aún puede interactuar con la interfaz.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Wait</td>
+                        <td style="cursor: wait;">Indica que el programa está trabajando en primer plano.</td>
+                    </tr>
+                    <tr>
+                        <td>Selección</td>
+                        <td>cell</td>
+                        <td style="cursor: cell;">Cursor de cruceta, que indica que se pueden ajustar celdas.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>crosshair</td>
+                        <td style="cursor: crosshair;">Cursor de cruceta. A menudo utilizado para indicar la selección en un mapa de bits.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>text</td>
+                        <td style="cursor: text">Permite seleccionar texto de una forma más cómoda.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>vertical-text</td>
+                        <td style="cursor: vertical-text;">Permite seleccionar texto de manera vertical.</td>
+                    </tr>
+                    <tr>
+                        <td>Arrastrar y soltar</td>
+                        <td>alias</td>
+                        <td style="cursor: alias;">Representa un alias o acceso directo.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>copy</td>
+                        <td style="cursor: copy;">Indica que algo se puede copiar.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>move</td>
+                        <td style="cursor: move;">Indica un elemento que puede moverse de su lugar.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>no-drop</td>
+                        <td style="cursor: no-drop;">Indica que no se puede arrastrar y soltar en ese lugar.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>not-allowed</td>
+                        <td style="cursor: not-allowed;">Indica que no se puede realizar una acción.</td>
+                    </tr>
+                    <tr>
+                        <td>Redimención y desplazamiento.</td>
+                        <td>all-scroll</td>
+                        <td style="cursor: all-scroll;">Muestra que algo se puede desplazar en cualquier dirección (panorámica).</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>col-resize</td>
+                        <td style="cursor: col-resize">Permite cambiar el tamaño de las columnas horizontalmente.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>e-resize</td>
+                        <td  style="cursor: e-resize">Permite cambiar el tamaño del borde derecho de un cuadro.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>ew-resize</td>
+                        <td  style="cursor: ew-resize">Permite cambiar el tamaño a la izquierda o a la derecha.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>n-resize </td>
+                        <td  style="cursor: n-resize">Permite cambiar el tamaño del borde superior de un cuadro.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>ne-resize</td>
+                        <td  style="cursor: ne-resize">Permite cambiar el tamaño de la esquina superior derecha de un cuadro.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>nesw-resize</td>
+                        <td  style="cursor: nesw-resize">Permite cambiar el tamaño en las direcciones superior derecha o inferior izquierda.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>ns-resize</td>
+                        <td  style="cursor: ns-resize">Permite cambiar el tamaño hacia arriba o hacia abajo.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>nw-resize</td>
+                        <td  style="cursor: nw-resize">Permite cambiar el tamaño de la esquina superior izquierda de un cuadro.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>nwse-resize</td>
+                        <td  style="cursor: nwse-resize">Permite cambiar el tamaño en las direcciones superior izquierda o inferior derecha.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>row-resize</td>
+                        <td  style="cursor: row-resize">Permite cambiar el tamaño de las filas verticalmente.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>s-resize</td>
+                        <td  style="cursor: s-resize">Permite cambiar el tamaño del borde inferior de un cuadro.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>se-resize</td>
+                        <td  style="cursor: se-resize">Permite cambiar el tamaño de la esquina inferior derecha de un cuadro.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>sw-resize</td>
+                        <td  style="cursor: sw-resize">Permite cambiar el tamaño de la esquina inferior izquierda de un cuadro.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>w-resize</td>
+                        <td  style="cursor: w-resize">Permite cambiar el tamaño del borde izquierdo de un cuadro.</td>
+                    </tr>
+                    <tr>
+                        <td>Otros valores</td>
+                        <td>grab</td>
+                        <td  style="cursor: grab">Indica que algo se puede agarrar y arrastrar.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>grabbing</td>
+                        <td  style="cursor: grabbing">Indica que algo se está arrastrando.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>zoom-in</td>
+                        <td  style="cursor: zoom-in">Indica que se puede acercar la imagen.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>zoom-out</td>
+                        <td  style="cursor: zoom-out">Indica que se puede alejar la imagen.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2 class="titulo2">Scroll</h2>
+            <p>A parte de resolver contenido desbordado con la propiedad overflow, CSS tiene otras propiedades de scroll útiles, estas son:</p>
+            <dl class="lista">
+                <dt>scroll-behavior:</dt>
+                <dd>Especifica el comportamiento del desplazamiento para un elemento con desplazamiento.</dd>
+                <dt>scroll-snap-type:</dt>
+                <dd>Se utiliza en el elemento contenedor y permite identificar el tipo de los puntos de ajuste del contenido. Tambien acepta un segundo parámetro que determina si el viewport del contenido se debe ajustar a los elementos de forma obligatoria o no.</dd>
+                <dt>scroll-snap-align:</dt>
+                <dd>Se utiliza en los elementos hijos del contenedor e indica el punto de ajuste para alinear el elemento.</dd>
+            </dl>
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Valores</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>scroll-behavior</td>
+                        <td>auto</td>
+                        <td>La caja de desplazamiento realiza el desplazamiento instantáneamente.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>smooth</td>
+                        <td>La caja se desplaza suavemente.</td>
+                    </tr>
+                    <tr>
+                        <td>scroll-snap-type</td>
+                        <td>none</td>
+                        <td>Cuando se desplaza la ventana gráfica de este contenedor de desplazamiento, debe ignorar los puntos de ajuste.</td> 
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>x</td>
+                        <td>Los puntos de ajuste son horizontales.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>y</td>
+                        <td>Los puntos de ajuste son verticales.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>both</td>
+                        <td>Los puntos de ajuste son tanto horizontales como verticales.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>mandatory</td>
+                        <td>El scroll se mueve automáticamente al punto de ajuste que se haya determinado.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>proximity</td>
+                        <td>El scroll se mueve automáticamente sólo cuando el scroll esté muy próximo al punto de ajuste que se haya determinado.</td>
+                    </tr>
+                    <tr>
+                        <td>scroll-snap-align</td>
+                        <td>none</td>
+                        <td>El elemento no tiene ningún punto de ajuste en su eje.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>start</td>
+                        <td>El elemento tiene como punto de ajuste su inicio.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>end</td>
+                        <td>El elemento tiene como punto de ajuste su final.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>center</td>
+                        <td>El elemento tiene como punto de ajuste su centro.</td>
+                    </tr>
+                </tbody>
+            </table> 
+            <h3 class="ejemplo">Ejemplos:</h3>   
+            <div class="main-section2">
+                <div class="ejm-scroll1 boxcontainer overflow">
+                    <ul class="lista">
+                        <li>scroll-snap-type: y proximity;<br>scroll-snap-align: start;</li>
+                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos molestiae itaque, sit maiores explicabo modi veritatis consequatur ullam dolor enim vel libero, aliquam rem officia perferendis commodi harum magnam laboriosam.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nihil officia commodi nesciunt cupiditate eius? Commodi consectetur ipsum quibusdam quisquam quidem magni? Eaque sapiente, repellendus nulla consectetur adipisci laboriosam deserunt.</li>
+                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero aperiam sed nemo, laudantium officiis fuga reiciendis libero maxime quis, eos modi impedit laborum. Cupiditate dolorum totam, veniam libero sapiente doloremque?</li>
+                    </ul>
+                </div>
+                <div class="ejm-scroll2 boxcontainer overflow">
+                    <ul class="lista">
+                        <li>scroll-snap-type: x mandatory;<br>scroll-snap-align: start;</li>
+                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos molestiae itaque, sit maiores explicabo modi veritatis consequatur ullam dolor enim vel libero, aliquam rem officia perferendis commodi harum magnam laboriosam.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nihil officia commodi nesciunt cupiditate eius? Commodi consectetur ipsum quibusdam quisquam quidem magni? Eaque sapiente, repellendus nulla consectetur adipisci laboriosam deserunt.</li>
+                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero aperiam sed nemo, laudantium officiis fuga reiciendis libero maxime quis, eos modi impedit laborum. Cupiditate dolorum totam, veniam libero sapiente doloremque?</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

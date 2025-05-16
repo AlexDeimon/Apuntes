@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/Bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>    
+        <section>
+            <h2 class="titulo2">Navbar</h2>
+            <p>Bootstrap 4 dispone la posibilidad de implementar barras horizontales de opciones. Cuando el ancho de las opciones no entran en pantalla se muestran una abajo del otra.</p>
+            <ul class="lista">
+                <li>Las barras de navegación requieren una clase .navbar envolvente con .navbar-expand{-sm|-md|-lg|-xl} para indicar en que momento la barra debe colapsar y mostrarse las opciones una debajo de otra.</li>
+                <li>Las barras de navegación y su contenido son fluidos de forma predeterminada.</li>
+                <li>Hay clases adicionales de utilidad de espaciado y flexión para controlar el espaciado y la alineación dentro de las barras de navegación.</li>
+                <li>Tambien se puede utilizar como color de fondo de la barra de navegación cualquiera de los colores contextuales.</li>
+            </ul>
+            <article>
+                <h3 class="titulo3">Contenido compatible:</h3>
+                <p>Las barras de navegación vienen con soporte integrado para un puñado de subcomponentes:</p>
+                <dl class="lista">
+                    <dt>.navbar-brand:</dt>
+                    <dd>Para el nombre de empresa, producto o proyecto. (Tambien puede incluir la imagen)</dd>
+                    <dt>.navbar-nav:</dt>
+                    <dd>Para una navegación liviana y de altura completa (incluido soporte para menús desplegables).</dd>
+                    <dt>.navbar-toggler:</dt>
+                    <dd>Para uso en dispositivos angostos, este complemento oculta la barra de navegación y muestra en su lugar un botón de hamburguesa a la izquierda o derecha, el cual al ser presionado se despliegan las opciones del menú de barra en forma vertical.</dd>
+                    <dt>.form-inline:</dt>
+                    <dd>Para cualquier control y acción de formulario.</dd>
+                    <dt>.navbar-text:</dt>
+                    <dd>Para agregar cadenas de texto centradas verticalmente.</dd>
+                    <dt>.collapse.navbar-collapse:</dt>
+                    <dd>Para agrupar y ocultar el contenido de la barra de navegación cuando el dispositivo sea pequeño.</dd>
+                </dl>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">Apuntes</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Página principal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Bootstrap.html">Bootstrap</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Link desactivo</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn btn-outline-primary my-2 my-sm-0" type="button">Buscar</button>
+                        </form>
+                    </div>
+                </nav><br>
+                <img src="../assets/images/Navbar1.webp" alt="ejemplo navbar" class="img">
+            </article>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

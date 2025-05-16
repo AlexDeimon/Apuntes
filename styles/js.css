@@ -1,0 +1,204 @@
+/*ESTILOS GENERALES APUNTES JS*/
+.listaNav{
+    display: flex;
+    justify-content: var(--center);
+    flex-wrap: wrap;
+    padding: var(--margin-padding-0);
+    font-family: var(--font-title);
+}
+
+.listaNav li,
+.boton,
+.boton2{
+    display: var(--display-inline);
+    padding: var(--length-20) var(--length-0);
+    background-color:  var(--color-js);
+    border: 2px solid #444b52;
+}
+
+.listaNav a,
+.boton,
+.boton2{
+    text-decoration: none;
+    color: #444b52;
+    padding: var(--length-20);
+}
+
+.boton,
+.boton2{ 
+    font-family: var(--font-title);
+    border-radius: var(--length-10);
+    padding: var(--length-10) var(--length-20);
+ }
+
+.listaNav li:hover,
+.boton2:hover,
+.boton:hover{ 
+    background-color: #ffe44a; 
+    cursor: pointer;
+}
+
+.botonHover{
+    color: var(--color-white);
+    background-color: #ff4a4a;
+    border: 2px solid var(--color-white);
+    cursor: pointer;
+}
+
+.botonShadow{ box-shadow: 0px 0px 10px 5px #ffe44a;}
+
+/*ESTILOS JavaScript.html*/
+.titulojs{
+    text-align: var(--center);
+    color: var(--color-js);
+}
+
+/*ESTILOS Condicionales.html*/
+#recorteInferior{
+    clip-path: inset(0% 0% .5% 0%);
+}
+
+/*ESTILOS eventos.html*/
+#parrafoevent{
+    display: inline;
+}
+
+.grid {
+    display: grid;
+    width: var(--max-width);
+    margin: var(--length-20) var(--auto);
+    grid-template-columns: repeat(3, 30%);
+    column-gap: 5%;
+    row-gap: var(--length-10);
+    font-family: var(--font-title);
+    color: var(--color-white);
+}
+
+.grid_cell {
+    display: flex;
+    justify-content: var(--center);
+    align-items: var(--center);
+    font-size: x-large;
+    border: var(--length-1) solid var(--color-white);
+    cursor: pointer;
+}
+
+.red {
+    background: var(--color-red);
+}
+
+/* ESTILOS API-WebStorage*/
+.form {
+    margin-bottom: 1rem;
+}
+.form__field {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 200px;
+    margin-bottom: 1rem;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.info p {
+    margin: 0 1rem;
+}
+
+/*ESTILOS API-dragDrop*/
+.drop-zone {
+    margin-left: var(--auto);
+    margin-right: var(--auto);
+    width: var(--max-width);
+    border: 2px dotted var(--color-white);
+    height: var(--length-100);
+    text-align: var(--center);
+    line-height: var(--length-100);
+    font-family: var(--font-normal);
+    color: var(--color-white);
+}
+
+/*ESTILOS API-File*/
+.load-bar {
+    width: var(--max-width);
+    height: var(--length-20);
+    margin: var(--length-10) var(--auto);
+    background-color: var(--color-black);
+}
+  
+.progress {
+    display: block;
+    width: 0;
+    height: var(--length-20);
+    background: repeating-linear-gradient(35deg, var(--color-seagreen), var(--color-seagreen) var(--length-20), var(--color-springgreen) var(--length-20), var(--color-springgreen) var(--length-40));
+  }
+
+.hide{
+    display: none;
+}
+
+.drop-zone2 {
+    width: var(--max-width);
+    margin: 1rem var(--auto);
+    height: var(--length-200);
+    background-color: #838383;
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--center);
+    text-align: var(--center);
+    align-items: var(--center);
+    font-size: 1.5rem;
+    border: 5px dashed var(--color-white);
+  }
+  
+.drop-zone--active {
+    border: 5px solid var(--color-springgreen);
+    background-color: #414141;
+    color: var(--color-springgreen);
+}
+
+/* ESTILOS API-Online-Ofline*/
+.alert {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+    transform: translateY(-100%);
+  }
+  
+.alert--online {
+    background-color: rgba(0, 255, 0, 0.6);
+    animation: reveal 4s ease;
+}
+  
+.alert--offline {
+    background-color: rgba(255, 0, 0, 0.6);
+    animation: reveal 4s ease;
+}
+  
+ @keyframes reveal {
+    0% {
+      transform: translateY(-100%);
+    }
+    15%,
+    85% {
+      transform: translateY(0);
+    }
+}
+
+/* ESTILOS API-IntersectionObserver*/
+.box {
+  background-color: var(--color-seagreen);
+  color: var(--color-white);
+  text-align: var(--center);
+  font-size: 2rem;
+  font-family: var(--font-title);
+  margin-bottom: 100vh;
+  padding: 1.5rem 0;
+  position: relative;
+}

@@ -1,0 +1,54 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/node.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Process</h2>
+            <p>En Node.js, el objeto process es un objeto global que se utiliza para interactuar con el sistema operativo y el entorno de ejecución. Proporciona una gran cantidad de información y control sobre la ejecución de un programa en Node.js, incluyendo la manipulación de variables de entorno, la gestión de la entrada/salida estándar, y el manejo de eventos del proceso.</p>
+            <p>Al ser un objeto global no necesita ser importado ni requerido.</p>
+            <article>
+                <h3 class="titulo3">Funcionalidades:</h3>
+                <dl class="lista">
+                    <dt>Acceso a Variables de Entorno:</dt>
+                    <dd>process.env es un objeto que contiene las <a href="Variables_Entorno.html" class="link">variables del entorno</a>  en el que se está ejecutando el proceso de Node.js. Es común usarlo para acceder a configuraciones que pueden variar entre entornos (desarrollo, producción, etc.).</dd>
+                    <dt>información del proceso:</dt>
+                    <dd>process.pid es un número que representa el identificador de proceso Node.js; process.platform es una cadena que representa el sistema operativo en el que se está ejecutando el proceso de Node.js (por ejemplo, 'win32', 'linux', 'darwin'); Y procces.version devuelve la versión del Node.js que se está utilizando.</dd>
+                    <dt>Argumentos de Línea de Comandos:</dt>
+                    <dd>process.argv es un array que contiene los argumentos de la línea de comandos con los que se ha ejecutado el proceso de Node.js. El primer elemento es el ejecutable de Node.js, el segundo elemento es el archivo JavaScript que se está ejecutando, y los elementos restantes son los argumentos pasados al script.</dd>
+                    <dt>Entrada/Salida Estándar:</dt>
+                    <dd>process.stdin, process.stdout y process.stderr son streams que representan la entrada estándar, la salida estándar y la salida de errores del proceso de Node.js, respectivamente.</dd>
+                    <dt>Manejo de Eventos:</dt>
+                    <dd>process.on() se utiliza para registrar manejadores de eventos para eventos específicos del proceso de Node.js, como 'exit', 'uncaughtException', 'warning', y 'beforeExit'.</dd>
+                    <dt>Manejo de Señales del Sistema:</dt>
+                    <dd>process.on() tambien se utiliza para registrar manejadores de eventos para las señales del sistema, como SIGINT (generada por la combinación de teclas Ctrl+C) y SIGTERM (generada por el comando kill).</dd>
+                    <dt>Finalización del Proceso:</dt>
+                    <dd>process.exit() se utiliza para finalizar el proceso de Node.js con un código de salida específico. Por defecto, el código de salida es 0, lo que indica que el proceso se ha completado correctamente, mientras que un código diferente de 0 indica un error.</dd>
+                </dl>
+                <h4 class="ejemplo">Ejemplo:</h4>
+                <img src="../assets/images/Process.webp" alt="Ejemplo process" class="img">
+                <img src="../assets/images/Process2.webp" alt="Ejemplo process" class="img">
+            </article>
+        </section>
+    </main>
+</body>
+</html>

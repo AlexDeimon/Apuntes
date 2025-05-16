@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Pocisionamiento</h2>
+            <p>La propiedad position permite posicionar los elementos.</p>
+            <h3 class="titulo3">Flujo de renderizado:</h3>
+            <p>Por norma general los elementos se dibujan de izquierda a derecha y de arriba abajo. El punto 0,0 de los elementos, por norma general, es la esquina superior izquierda.</p>
+            <h3 class="titulo3">Espacio reservado:</h3>
+            <p>Es el espacio que tiene un elemento asignado en el navegador.</p>
+            <h3 class="titulo3">Elemento posicionado:</h3>
+            <p>Esto significa que el elemento tiene la propiedad position con un valor distinto de "static", que es el valor que tiene esta propiedad por defecto.</p>
+            <h3 class="titulo3">Stackin context:</h3>
+            <p>Contexto de apilamiento. Es el orden en el que se apilarán las cajas que se superponen, dentro del mismo contenedor.</p>
+            <p>El orden del stacking context es: (de delante a atrás):</p>
+            <ol class="lista">
+                <li>Elementos posicionados con un z-index de 1 ó más.</li>
+                <li>Elementos posicionados sin z-index declarado (o z-index:auto).</li>
+                <li>Elementos no posicionados.</li>
+                <li>Elementos con z-index negativo.</li>
+            </ol>
+            <h3 class="titulo3">Propiedades:</h3>
+            <dl class="lista">
+                <dt>top:</dt>
+                <dd>El elemento se moverá desde la parte superior la distancia que se le haya indicado.</dd> 
+                <dt>right:</dt>
+                <dd>El elemento se moverá desde la parte derecha la distancia que se le haya indicado.</dd>
+                <dt>bottom:</dt>
+                <dd>El elemento se moverá desde la parte inferior la distancia que se le haya indicado.</dd> 
+                <dt>left:</dt>
+                <dd>El elemento se moverá desde la parte izquierda la distancia que se le haya indicado.</dd> 
+                <dt>z-index:</dt>
+                <dd>Permite mover el elemento en el contexto de apilamiento (eje z). Es la propiedad que permite ordenar los elementos superpuestos para controlar cual se coloca por delante y cual por detrás.</dd> 
+            </dl>
+            <p><span class="resaltado">Si a un elemento se le declara la propiedad top y/o left, las propiedades bottom y/o right no funcionarán. </span></p>
+            <h3 class="titulo3">Z-index: </h3>
+            <ul class="lista">
+                <li>sin z-index es el orden del html el que prevalece.</li>
+                <li>Con z-index el numero mayor es el que prevalece.</li>
+                <li>No utilizar números consecutivos.</li>
+                <li>Un elemento padre jamas se colocará por delante del hijo, pero si es posible poner al hijo detrás del padre con valores de z-index negativos y es importante que el padre no tenga z-index. </li>
+            </ul>
+            <h4 class="ejemplo">Ejemplo: </h4>
+            <div class="main-section">
+                <img src="../assets/images/z-index.webp" alt="ejemplo z-index">
+            </div>
+            <div class="main-section">
+                <div class="div">
+                    <h4 class="titulo4">Sin z-index: </h4>
+                    <div class="boxcontainer">
+                        <div class="box box1">Caja 1</div>
+                        <div class="box box2">caja 2</div>
+                    </div>
+                    <div>
+                        <div class="box box3">caja 3</div>
+                        <div class="box box4">Caja 4</div>
+                    </div> 
+                </div>
+                <div class="div">
+                    <h4 class="titulo4">Con z-index: </h4>
+                    <div class="boxcontainer">
+                        <div id="box1" class="box box1">caja 1</div>
+                        <div id="box2" class="box box2">caja 2</div>
+                    </div>
+                    <div>
+                        <div id="box3" class="box box3">caja 3</div>
+                        <div class="box box4">caja 4</div>
+                    </div> 
+                </div>
+            </div>
+            <h3 class="titulo3">Valores para position:</h3>
+            <h4 class="titulo4">Static:</h4>
+            <p>Es el valor que tiene por defecto un elemento, con este valor el elemento NO ESTÁ POSICIONADO y por lo cual no puede moverse.</p>
+            <h4 class="titulo4">Relative:</h4> 
+            <p>El elemento mantendrá su posición y medidas en el flujo de renderizado y mantendrá su espacio reservado. Si se mueve lo hará usando su posición original en el html como punto de referencia (esquina superior izquierda).</p>
+            <h4 class="ejemplo">Ejemplo 1: </h4>
+            <img src="../assets/images/relative.webp" alt="ejemplo relative" class="img">
+            <div class="main-section">
+                <div>
+                    <p>Position static:</p>
+                    <div class="box box5">Caja 5</div>
+                    <div class="box box6">Caja 6</div>
+                </div>
+                <div>
+                    <p>Position relative:</p>
+                    <div class="box box5" id="box5">Caja 5</div>
+                    <div class="box box6">Caja 6</div>
+                </div>
+            </div>  
+            <h4 class="ejemplo">Ejemplo 2: </h4>
+            <img src="../assets/images/relative2.webp" alt="ejemplo relative 2" class="img">
+            <div class="main-section">
+                <div>
+                    <p>Position static:</p>
+                    <div class="box box7">Caja 7</div>
+                    <div class="box box8">Caja 8</div>
+                </div>
+                <div>
+                    <p>Position relative:</p>
+                    <div class="box box7">Caja 7</div>
+                    <div class="box box8" id="box8">Caja 8</div>
+                </div>
+            </div> 
+            <p>En este ejemplo se aplica el contexto de apilamiento, ya que la caja 8 ocupa parte del espacio de la caja 7.</p> 
+            <h4 class="titulo4">Absolute:</h4>
+            <p>El elemento perderá sus medidas y su espacio reservado. Si se mueve usará el elemento posicionado contenedor como referencia. Si no tiene ninguno, usará el elemento html de referencia.</p>
+            <p>Si se utliza position absolute en un elemento en linea, este pasará a ser de bloque, por lo que no es necesario utilizar display block.</p>
+            <h4 class="ejemplo">Ejemplo 1: </h4>
+            <img src="../assets/images/absolute1.webp" alt="ejemplo absolute" class="img">
+            <div class="main-section">
+                <div>
+                    <p>Position static:</p>
+                    <div class="box box9">Caja 9</div>
+                    <div class="box box10">Caja 10</div>
+                </div>
+                <div class="boxcontainer">
+                    <p>Position absolute:</p>
+                    <div class="box box9">Caja 9</div>
+                    <div class="box box10" id="box10">Caja 10</div>
+                </div>
+            </div>  
+            <h4 class="ejemplo">Ejemplo 2: </h4>
+            <img src="../assets/images/absolute2.webp" alt="ejemplo absolute 2" class="img">
+            <div class="main-section">
+                <div>
+                    <p>Position static:</p>
+                    <div class="box box11">Caja 11</div>
+                    <div class="box box12">Caja 12</div>
+                </div>
+                <div class="boxcontainer">
+                    <p>Position absolute:</p>
+                    <div class="box box11" id="box11">Caja 11</div>
+                    <div class="box box12">Caja 12</div>
+                </div>
+            </div> 
+            <p>En este ejemplo, al ser position absolute, la caja 11 pierde su espacio reservado por lo que ahora lo esta ocupando la caja 12.</p>
+            <h4 class="titulo4">Fixed:</h4>
+            <p>El elemento perderá sus medidas y su espacio reservado. Si se mueve usará el elemento html de referencia, y además se quedará fijo en esa posición aunque se haga scroll.</p>
+            <h4 class="ejemplo"><a href="EjemploFixed.html" class="link">Ejemplo Fixed</a></h4>
+            <h4 class="titulo4">Sticky:</h4>
+            <p>Es una mezcla de position relative y "fixed". Con este tipo de posicionamiento los valores top, left, bottom y right no sirven para mover el elemento, si no para indicarle en qué punto pasará a tener un comportamiento de posicionamiento similar a fixed, hasta llegar a ese punto se comportará como si no tuviera posicionamiento, aunque sí contará como posicionado si se necesita colocar otro elemento respecto a él (absolute).</p> 
+            <h4 class="ejemplo"><a href="EjemploSticky.html" class="link">Ejemplo Sticky</a></h4>
+            <h3 class="titulo3">Float:</h3>
+            <p>La propiedad float ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido de su flujo normal de renderizado, aunque aún sigue siendo parte del flujo (a diferencia del  posicionamiento absoluto). Admite los siguientes valores: </p>
+            <dl class="lista">
+                <dt>left:</dt>
+                <dd>El elemento flota a la izquierda de su bloque contenedor.</dd> 
+                <dt>right:</dt>
+                <dd>El elemento flota a la derecha de su bloque contenedor.</dd> 
+                <dt>none:</dt>
+                <dd>El elemento no flota.</dd> 
+            </dl>
+            <h3 class="titulo3">Clear: </h3>
+            <p>La propiedad clear se encarga de impedir elementos flotantes en la zona indicada, a la izquierda del elemento (left), a la derecha (right) o en ambos lados (both).</p>
+            <h4 class="ejemplo">Ejemplo:</h4>
+            <figure class="floatLeft">
+                <figcaption><h4 class="titulo4">Float: left</h4></figcaption>
+                <img src="../assets/images/css3.webp" alt="logo CSS" >
+            </figure>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci corporis aut fugit libero doloribus aliquam totam eius maxime explicabo voluptas, nobis iusto nostrum reprehenderit illo unde quae consectetur tenetur magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sapiente, odit neque porro odio quas nesciunt atque quaerat voluptates veritatis aperiam sunt delectus doloribus dicta, dolore nobis praesentium, laborum exercitationem?</p>
+            <figure class="floatRight">
+                <figcaption><h4 class="titulo4">Float: right</h4></figcaption>
+                <img src="../assets/images/css3.webp" alt="logo CSS" >
+            </figure>
+            <div class="clearLeft">
+                <h4 class="titulo4">Div Clear Left</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ipsa praesentium dolore pariatur commodi vel quasi aliquam obcaecati maxime nobis. Itaque, cumque blanditiis odio explicabo molestias aliquam repellat culpa veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi praesentium aliquid eos, dolor nihil minus beatae nobis similique maiores temporibus repellendus exercitationem non molestias deleniti pariatur voluptatem, rerum deserunt vitae!</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

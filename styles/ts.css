@@ -1,0 +1,13 @@
+/*ESTILOS GENERALES APUNTES TS*/
+
+
+/*ESTILOS TypeScript.html*/
+.cajaTS { 
+    background: #181c27;
+    border: var(--length-1) solid var(--color-ts2) ;
+}
+
+.titulots{
+    text-align: var(--center);
+    color: var(--color-ts2);
+}

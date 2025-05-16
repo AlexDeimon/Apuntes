@@ -1,0 +1,116 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORS</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/node.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">CORS</h2>
+            <p>CORS es un mecanismo de seguridad implementado en los navegadores para controlar cómo se accede a los recursos de una aplicación web desde otro dominio. Este mecanismo se asegura de que solo los orígenes autorizados puedan realizar solicitudes a tu servidor, protegiendo tus datos de accesos no deseados.</p>
+            <article>
+                <h3 class="titulo3">Contexto y necesidad de CORS</h3>
+                <p>En el pasado, los navegadores permitían que cualquier sitio web hiciera solicitudes a cualquier otro sitio web. Esto permitía que un sitio web malicioso pudiera hacer solicitudes a un sitio web de confianza en nombre del usuario, lo que permitía a los atacantes robar información confidencial. Para evitar esto, los navegadores implementaron CORS, que restringe las solicitudes entre diferentes dominios.</p>
+                <p>En los navegadores, el Same-Origin Policy (Política del Mismo Origen) restringe el acceso a los recursos para evitar ataques maliciosos. Bajo esta politica solo las solicitudes desde el mismo <b>protocolo, host, y puerto</b> que el recurso solicitado son permitidas.</p>
+            </article>
+            <article>
+                <h3 class="titulo3">Cómo Funciona CORS</h3>
+                <p>CORS funciona añadiendo encabezados HTTP que permiten a los servidores definir quién puede acceder a sus recursos. Cuando un servidor recibe una solicitud, verifica si el origen de la solicitud está en la lista blanca de orígenes permitidos. Si lo está, el servidor responde con un encabezado <b>Access-Control-Allow-Origin</b> que contiene el origen permitido. Si no lo está, el servidor responde con un error.</p>
+                <p>El servidor también puede responder con otros encabezados CORS, como <b>Access-Control-Allow-Methods</b> y <b>Access-Control-Allow-Headers</b>, que especifican los métodos HTTP y los encabezados permitidos en las solicitudes.</p>
+                <p>CORS permite que un servidor declare explícitamente qué dominios, métodos HTTP, encabezados y credenciales son permitidos para interactuar con él.</p>
+                <dl class="lista">
+                    <dt>Cabeceras de Respuesta HTTP (Response Headers):</dt>
+                    <dd>El servidor responde con cabeceras específicas para indicar qué solicitudes están permitidas.</dd>
+                    <dt>Preflight Requests (Solicitudes Preliminares):</dt>
+                    <dd>Para ciertas operaciones como <span class="resaltado">PUT</span>, <span class="resaltado">DELETE</span> o cuando se utilizan encabezados personalizados, los navegadores envían una solicitud previa (con el método OPTIONS) para verificar los permisos.</dd>
+                </dl>
+            </article>
+            <article>
+                <h3 class="titulo3">Cabeceras Importantes de CORS</h3>
+                <h4 class="titulo4">Del lado del servidor (Respuesta)</h4>
+                <dl class="lista">
+                    <dt>Access-Control-Allow-Origin:</dt>
+                    <dd>Indica qué dominios pueden acceder a los recursos del servidor.</dd>
+                    <dt>Access-Control-Allow-Methods:</dt>
+                    <dd>Indica qué métodos HTTP están permitidos en las solicitudes.</dd>
+                    <dt>Access-Control-Allow-Headers:</dt>
+                    <dd>Indica qué encabezados personalizados están permitidos en las solicitudes.</dd>
+                    <dt>Access-Control-Allow-Credentials:</dt>
+                    <dd>Indica si las solicitudes pueden incluir credenciales (como cookies o autenticación HTTP).</dd>
+                    <dt>Access-Control-Max-Age</dt>
+                    <dd>Indica cuánto tiempo (en segundos) la respuesta puede ser almacenada en caché.</dd>
+                </dl>
+                <h4 class="titulo4">Del lado del cliente (Solicitud)</h4>
+                <dl class="lista">
+                    <dt>Origin:</dt>
+                    <dd>Indica el origen de la solicitud.</dd>
+                    <dt>Access-Control-Request-Method:</dt>
+                    <dd>Indica el método HTTP de la solicitud.</dd>
+                    <dt>Access-Control-Request-Headers:</dt>
+                    <dd>Indica los encabezados personalizados de la solicitud.</dd>
+                </dl>
+            </article>
+            <article>
+                <h3 class="titulo3">Tipos de Solicitudes CORS</h3>
+                <h4 class="titulo4">Simple Requests (Solicitudes Simples)</h4>
+                <p>Las solicitudes simples son aquellas que cumplen con ciertas condiciones y no requieren una solicitud previa. Para ser considerada una solicitud simple, la solicitud debe cumplir con los siguientes criterios:</p>
+                <ul class="lista">
+                    <li>El método HTTP es <span class="resaltado">GET</span>, <span class="resaltado">HEAD</span> o <span class="resaltado">POST</span>.</li>
+                    <li>Los encabezados personalizados permitidos son limitados.</li>
+                    <li>No incluye credenciales como cookies.</li>
+                </ul>
+                <h4 class="ejemplo">Flujo:</h4>
+                <ol class="lista">
+                    <li>El cliente envía una solicitud al servidor.</li>
+                    <li>El servidor responde con un encabezado <b>Access-Control-Allow-Origin</b> que contiene el origen permitido.</li>
+                    <li>El cliente recibe la respuesta y procesa los datos.</li>
+                </ol>
+                <h4 class="titulo4">Preflight Requests (Solicitudes Preliminares)</h4>
+                <p>Las solicitudes preliminares son aquellas que no cumplen con las condiciones de una solicitud simple y requieren una solicitud previa. Para ser considerada una solicitud preliminar, la solicitud debe cumplir con los siguientes criterios:</p>
+                <ul class="lista">
+                    <li>El método HTTP es <span class="resaltado">PUT</span>, <span class="resaltado">DELETE</span> o utiliza encabezados personalizados.</li>
+                    <li>Incluye credenciales.</li>
+                </ul>
+                <h4 class="ejemplo">Flujo:</h4>
+                <ol class="lista">
+                    <li>El cliente envía una solicitud previa (con el método OPTIONS) al servidor.</li>
+                    <li>El servidor responde con los encabezados CORS permitidos.</li>
+                    <li>El cliente envía la solicitud real al servidor.</li>
+                    <li>El servidor responde con los datos solicitados.</li>
+                </ol>
+                <p><span class="resaltado">Nota:</span> Si la solicitud incluye credenciales (cookies, tokens), el servidor debe incluir la cabecera <span class="resaltado">Access-Control-Allow-Credentials: true</span>. Además <span class="resaltado">Access-Control-Allow-Origin</span> no puede ser *. Debe ser un dominio explícito.</p>
+            </article>
+            <article>
+                <h3 class="titulo3">Errores Comunes de CORS</h3>
+                <dl class="lista">
+                    <dt>Access-Control-Allow-Origin no configurado correctamente:</dt>
+                    <dd>Si el origen del cliente no coincide con el valor de esta cabecera, el navegador bloqueará la solicitud.</dd>
+                    <dt>Falta de respuesta a la solicitud OPTIONS:</dt>
+                    <dd>Si el servidor no maneja el método OPTIONS, las solicitudes preliminares fallarán.</dd>
+                    <dt>Configuración de credenciales incorrecta:</dt>
+                    <dd>Usar * en Access-Control-Allow-Origin mientras se permite Access-Control-Allow-Credentials</dd>
+                </dl>
+            </article>
+            <h3 class="ejemplo">Ejemplo:</h3>
+            <img src="../assets/images/CORS.webp" alt="Ejemplo cors" class="img">
+        </section>
+    </main>
+</body>
+</html>

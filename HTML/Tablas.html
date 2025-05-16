@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/html.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Tablas &lt;table&gt;</h2>
+            <p>Las tablas en HTML sirven para mostrar contenido tabulado.</p>
+            <p>La estructura básica de una tabla se compone de: </p>
+            <dl class="lista">
+                <dt>&lt;table&gt;:</dt>
+                <dd>Etiqueta que encierra una tabla.</dd> 
+                <dt>table header &lt;th&gt;:</dt>
+                <dd>Etiqueta que contruye las celdas de la cabecera de la tabla.</dd>
+                <dt>table row &lt;tr&gt;:</dt>
+                <dd>Etiqueta que construye una fila.</dd> 
+                <dt>table data &lt;td&gt;:</dt>
+                <dd>Etiqueta que construye una celda.</dd> 
+            </dl>
+            <p>Hay un grupo de etiquetas para organizar el contenido de la tabla, estas son: </p>
+            <dl class="lista">
+                <dt>&lt;caption&gt;:</dt>
+                <dd>Establece el título de la tabla.</dd>
+                <dt>&lt;thead&gt;:</dt>
+                <dd>Establece la cabecera de la tabla.</dd> 
+                <dt>&lt;tbody&gt;:</dt>
+                <dd>Establece el cuerpo de la tabla.</dd> 
+                <dt>&lt;tfoot&gt;:</dt>
+                <dd>Establece el pie de la tabla.</dd> 
+            </dl>
+            <p>Para hacer que las celdas ocupen más de una fila o más de una columna hay 2 atributos:</p>
+            <dl class="lista">
+                <dt>rowspan:</dt>
+                <dd>Sirve para que una celda ocupe mas de una fila.</dd> 
+                <dt>colspan:</dt>
+                <dd>Sirve para que una celda ocupe mas de una columna.</dd> 
+            </dl>
+            <p>Cuando se necesita seleccionar una columna, existe la etiqueta &lt;colgroup&gt;, que permite seleccionar una columna en concreto. Dentro se pone tantas etiquetas &lt;col&gt; como columnas se tengan, cada etiqueta col equivaldrá a una columna siguiendo el mismo orden que tienen en la tabla.</p>
+            <p>Si se necesita que la etiqueta &lt;col&gt; agrupe más de una columna, está el atributo span, que funciona igual que rowspan y colspan.</p> 
+            <h3 class="ejemplo">Ejemplo:</h3>
+            <table id="tabla1">
+                <caption>HORARIO DE CLASES UNIVERSIDAD 2022-1</caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miercoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th>Sábado</th>    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>7:00 - 8:00</td>
+                        <td rowspan="7"></td>
+                        <td rowspan="4"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="7"></td>
+                        <td rowspan="7"></td>
+                        <td rowspan="3">Mineria de datos</td>
+                    </tr>
+                    <tr>
+                        <td>8:00 - 9:00</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 - 12:00</td>
+                        <td rowspan="2">Cine</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 1:00</td>
+                        <td rowspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td>2:00 - 3:00</td>
+                        <td rowspan="2">Proyección social</td>
+                        <td rowspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td>3:00 - 4:00</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">6:00 - 7:00</td>
+                        <td rowspan="3">Investigacion 4</td>
+                        <td class="blank">q</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">Programación Web</td>
+                        <td rowspan="2">Seguridad Informática</td>
+                        <td rowspan="2">Seguridad Informática</td>
+                        <td rowspan="2">Ing de software 4</td>
+                        <td class="blank">w</td>
+                    </tr>
+                    <tr>
+                        <td>7:00 - 8:00</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>8:00 - 9:00</td>
+                        <td rowspan="3"></td>
+                        <td rowspan="2">Ing de software 4</td>
+                        <td rowspan="2">Ing económica</td>
+                        <td rowspan="2">Ing económica</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">9:00 - 10:00</td>
+                        <td class="blank">e</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="blank">r</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">Total asignaturas</td>
+                        <td>8</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

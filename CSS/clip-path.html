@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip-path</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">Clip-path</h2>
+            <p>La propiedad Clip-path crea una región de recorte que establece qué parte de un elemento debe mostrarse. Se muestran las partes que están dentro de la región, mientras que las que están fuera están ocultas.</p>
+            <h3 class="titulo3">Valores:</h3>
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>Tipo de valor</th>
+                        <th>Valor</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>none</td>
+                        <td>No se crea ninguna ruta de recorte.</td>
+                    </tr>
+                    <tr>
+                        <td>clip-source</td>
+                        <td>URL</td>
+                        <td>Una url()referencia a un elemento SVG clipPath.</td>
+                    </tr>
+                    <tr>
+                        <td>basic-shape</td>
+                        <td>inset()</td>
+                        <td>Define un rectángulo insertado.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>circle()</td>
+                        <td>Define un círculo utilizando un radio y una posición.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>ellipse()</td>
+                        <td>Define una elipse utilizando dos radios y una posición.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>polygon()</td>
+                        <td>Define un polígono usando una regla de relleno SVG y un conjunto de vértices.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>path()</td>
+                        <td>Define una forma usando una regla de relleno SVG y una definición de ruta SVG.</td> 
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="ejemplo">Ejemplos: </h3>
+            <img src="../assets/images/clip-path.webp" alt="ejemplos clip-path" class="img">
+            <div class="main-section2">
+                <div class="boxcontainer3 clip-path">none</div>
+                <div class="boxcontainer3 clip-path" id="cp2">inset</div>
+                <div class="boxcontainer3 clip-path" id="cp3">circle</div>
+                <div class="boxcontainer3 clip-path" id="cp4">ellipse</div>
+                <div class="boxcontainer3 clip-path" id="cp5">polygon</div>
+            </div>                
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPM</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/node.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><h1 class="titulo1">Mis apuntes de <span class="resaltado">desarrollo web &lt;/&gt;</span></h1></a>
+    </header>
+    <main>
+        <section>
+            <h2 class="titulo2">NPM</h2>
+            <p>npm (Node Package Manager) es el gestor de paquetes oficial para Node.js. Sirve como una plataforma para la distribución de paquetes de software, permitiendo gestionar dependencias de proyectos.</p>
+            <article>
+                <h3 class="titulo3">Funcionalidades Principales</h3>
+                <h3 class="titulo4">Gestión de Paquetes</h3>
+                <dl class="lista">
+                    <dt>Instalación:</dt>
+                    <dd>Permite instalar paquetes (bibliotecas y herramientas) de una manera sencilla. Estos paquetes pueden ser instalados de manera local o global.</dd>
+                    <dt>Actualización:</dt>
+                    <dd>Facilita la actualización de paquetes a sus últimas versiones.</dd>
+                    <dt>Desinstalación:</dt>
+                    <dd>Permite desinstalar paquetes que ya no son necesarios.</dd>
+                </dl>
+                <h3 class="titulo4">Gestión de Dependencias</h3>
+                <dl class="lista">
+                    <dt>Automatización de Dependencias:</dt>
+                    <dd>Administra las dependencias que requiera el proyecto, asegurando que todas las bibliotecas necesarias estén disponibles y sean compatibles.</dd>
+                    <dt>Archivo package.json:</dt>
+                    <dd>Este archivo en la raíz del proyecto mantiene un registro de todas las dependencias del proyecto y otra información relevante como el nombre, versión, scripts, etc.</dd>
+                </dl>
+                <h3 class="titulo4">Scripts</h3>
+                <p>Permite definir scripts personalizados en el archivo package.json que pueden ser ejecutados fácilmente con comandos de npm, como <span class="resaltado">npm start, npm test, npm run build, etc.</span></p>
+            </article>
+            <article>
+                <h3 class="titulo3">Usos Comunes de npm</h3>
+                <dl class="lista">
+                    <dt>npm init</dt>
+                    <dd>Sirve para inicializar un nuevo proyecto node, creando un archivo package.json</dd>
+                    <img src="../assets/images/npm_init.webp" alt="ejemplo npm init" class="img">
+                    <dt>npm install nombre-del-paquete</dt>
+                    <dd>Sirve para instalar un paquete y añadirlo a las dependencias del proyecto</dd>
+                    <img src="../assets/images/npm_install1.webp" alt="ejemplo 1 npm install" class="img">
+                    <dt>npm install nombre-del-paquete --save-dev</dt>
+                    <dd>Sirve para instalar un paquete como dependencia de desarrollo (útil durante el desarrollo pero no necesario en producción)</dd>
+                    <img src="../assets/images/npm_install2.webp" alt="ejemplo 1 npm install" class="img">
+                </dl>
+                <h4 class="titulo4">Archivo package.json</h4>
+                <p>Despues de ejecutar los comandos anteriores asi queda el archivo package.json</p>
+                <img src="../assets/images/package.webp" alt="package.json" class="img">
+                <h4 class="titulo4">Ejecución de Scripts</h4>
+                <dl class="lista">
+                    <dt>start:</dt>
+                    <dd>El comando 'node src/index.js' definido en el archivo package.json ejecuta una sola vez el archivo principal del proyecto.</dd>
+                    <dt>dev:</dt>
+                    <dd>El comando 'nodemon src/index.js' permitira que el programa continue ejecutando mientras toma los cambios que se realicen en tiempo real gracias a la dependencia de desarrollo instalada <a href="https://nodemon.io/" class="link">nodemon</a></dd>
+                </dl>
+                <img src="../assets/images/npm_run.webp" alt="ejemplo scripts" class="img">
+            </article>
+        </section>
+    </main>
+</body>
+</html>
