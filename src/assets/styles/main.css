@@ -1,0 +1,53 @@
+:root{
+  --font-normal: 'Roboto', sans-serif;
+  --font-title: 'Exo 2', sans-serif;
+  --active-bar: #141820;
+  --sidebar: #171c26;
+  --sidebar-active: #1f2633;
+  --editor: #1d232f;
+  --tech-color: #fff; 
+  --color-html: #ff4747;
+  --color-css: #00b5fd;
+  --color-js: #f0db4f;
+  --color-bootstrap: #8a2be2;
+  --color-typescript: #3178c6;
+  --color-nodejs: #32cd32;
+}
+
+p,
+.tittle2,
+.list{
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.tittle1, 
+.tittle3{
+  font-family: var(--font-title);
+  color: var(--tech-color);
+}
+
+.tittle1{
+  margin-bottom: 0;
+}
+
+.tittle2{
+  font-family: var(--font-title);
+}
+
+.link{
+  font-family: var(--font-title);
+  color: var(--color-css);
+}
+
+.list li,
+.list dt,
+.list dd{
+    line-height: 1.5;
+}
+
+.list dt{ color: #6ae96d; }
+
+.list dt::before{ content: "◆ "; }
+
+.list li::marker{ color: var(--color-typescript); }
