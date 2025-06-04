@@ -6,7 +6,7 @@
     <div class="sidebar-content">
       <div v-for="module in getCurrentModules" :key="module.id" class="module-item" @click="openModule(module)">
         <img :src="module.icon" alt="" class="module-icon">
-        <h3 class="tittle3">{{ module.name }}</h3>
+        <h3 class="tittleTech">{{ module.name }}</h3>
       </div>
     </div>
   </aside>

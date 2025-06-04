@@ -12,21 +12,33 @@
   --color-bootstrap: #8a2be2;
   --color-typescript: #3178c6;
   --color-nodejs: #32cd32;
+  --color-blue-1: #448cff;
 }
 
 p{
   line-height: 1.3;
 }
 
+hr{
+  width: 94%;
+}
+
 p,
+.tittle1,
 .tittle2,
+.tittle3,
+.tittle4,
+.example,
 .list{
   margin-left: 3%;
   margin-right: 3%;
 }
 
-.tittle1, 
-.tittle3{
+.tittleTech,
+.tittle1,
+.tittle3,
+.tittle4,
+.example{
   font-family: var(--font-title);
   color: var(--tech-color);
 }
@@ -37,7 +49,14 @@ p,
 
 .tittle2{
   font-family: var(--font-title);
+  color: var(--color-html);
 }
+
+.tittle3{ color: #ff9d47; }
+
+.tittle4{ color: #6ae96d; }
+
+.example{ color: var(--color-blue-1);}
 
 .link{
   font-family: var(--font-title);
