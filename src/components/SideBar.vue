@@ -16,10 +16,13 @@ import { computed } from 'vue'
 import { technologies } from '@/constants/technologies'
 import { modules } from '@/constants/modules'
 import type { Tab } from '@/constants/editor'
+import { useEditorStore } from '@/stores/editor'
 
 const props = defineProps<{
   selectedTech: string
 }>()
+
+const store = useEditorStore()
 
 const getCurrentTechName = computed(() => {
   const tech = technologies.find(t => t.id === props.selectedTech)
@@ -31,7 +34,7 @@ const getCurrentModules = computed(() => {
 })
 
 const openModule = (module: { id: string, name: string }) => {
-  const tab:Tab = {
+  const tab: Tab = {
     id: `${props.selectedTech}-${module.id}`,
     title: module.name,
     route: `/${props.selectedTech}/${module.id}`,
@@ -39,12 +42,8 @@ const openModule = (module: { id: string, name: string }) => {
     techId: props.selectedTech
   }
 
-  emit('open-tab', tab)
+  store.addTab(tab)
 }
-
-const emit = defineEmits<{
-  'open-tab': [tab: Tab]
-}>()
 </script>
 <style scoped>
 .sidebar {

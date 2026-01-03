@@ -1,23 +1,19 @@
 <template>
   <div class="workspace" :data-tech="selectedTech">
     <ActivityBar v-model="selectedTech" />
-    <SideBar :selected-tech="selectedTech" @open-tab="handleOpenTab"/>
-    <EditorComponent ref="editorRef"/>
+    <SideBar :selected-tech="selectedTech" />
+    <EditorComponent />
   </div>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
 import ActivityBar from '@/components/ActivityBar.vue'
 import SideBar from '@/components/SideBar.vue'
 import EditorComponent from '@/components/EditorComponent.vue'
-import type { Tab } from '@/constants/editor'
+import { useEditorStore } from '@/stores/editor'
+import { storeToRefs } from 'pinia'
 
-const selectedTech = ref('')
-const editorRef = ref()
-
-const handleOpenTab = (tab: Tab) => {
-  editorRef.value?.addTab(tab)
-}
+const store = useEditorStore()
+const { selectedTech } = storeToRefs(store)
 </script>
 <style scoped>
 .workspace {

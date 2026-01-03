@@ -1,7 +1,8 @@
 <template>
   <div class="editor-container">
     <div class="editor-tabs">
-      <div v-for="tab in openTabs" :key="tab.id" :class="['tab', { active: currentTab === tab.id }]" @click="switchTab(tab.id)">
+      <div v-for="tab in openTabs" :key="tab.id" :class="['tab', { active: currentTab === tab.id }]"
+        @click="switchTab(tab.id)">
         <img :src="getTechIcon(tab.techId)" :alt="tab.techId" class="tab-icon">
         <span class="tab-title">{{ tab.title }}</span>
         <button class="tab-close" @click.stop="closeTab(tab.id)">X</button>
@@ -17,54 +18,17 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { useEditorStore } from '@/stores/editor'
 import { technologies } from '@/constants/technologies'
-import type { Tab } from '@/constants/editor'
+import { storeToRefs } from 'pinia'
 
-const router = useRouter()
-const openTabs = ref<Tab[]>([])
-const currentTab = ref<string>('')
+const store = useEditorStore()
+const { openTabs, currentTab } = storeToRefs(store)
+const { switchTab, closeTab } = store
 
 const getTechIcon = (techId: string) => {
   const tech = technologies.find(t => t.id === techId)
   return tech ? tech.icon : ''
-}
-
-const addTab = (tab: Tab) => {
-  if (!openTabs.value.find(t => t.id === tab.id)) {
-    openTabs.value.push(tab)
-  }
-  currentTab.value = tab.id
-  router.push(tab.route)
-}
-
-defineExpose({
-  addTab
-})
-
-const switchTab = (tabId: string) => {
-  const tab = openTabs.value.find(t => t.id === tabId)
-  if (tab) {
-    currentTab.value = tabId
-    router.push(tab.route)
-  }
-}
-
-const closeTab = (tabId: string) => {
-  const index = openTabs.value.findIndex(t => t.id === tabId)
-  if (index > -1) {
-    openTabs.value.splice(index, 1)
-    if (currentTab.value === tabId) {
-      const nextTab = openTabs.value[index] || openTabs.value[index - 1]
-      if (nextTab) {
-        switchTab(nextTab.id)
-      } else {
-        currentTab.value = ''
-        router.push('/')
-      }
-    }
-  }
 }
 </script>
 <style scoped>
@@ -85,7 +49,7 @@ const closeTab = (tabId: string) => {
   background-color: var(--sidebar);
   overflow-x: auto;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.2) transparent; 
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
 }
 
 .tab {
@@ -146,6 +110,6 @@ const closeTab = (tabId: string) => {
 }
 
 .tab-close:hover {
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 </style>
