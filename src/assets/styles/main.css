@@ -206,6 +206,12 @@ p {
   background-clip: text;
 }
 
+.main-title.bootstrap {
+  background: linear-gradient(135deg, #8a2be2 0%, #8a2be2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -217,6 +223,10 @@ p {
 
 .card.warning {
   border-color: #e6a23c;
+}
+
+.card.info {
+  border-color: #448cff;
 }
 
 .badge.success {
