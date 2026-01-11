@@ -8,7 +8,7 @@
         <button class="tab-close" @click.stop="closeTab(tab.id)">X</button>
       </div>
     </div>
-    <div class="editor-content">
+    <div class="editor-content" ref="contentRef">
       <router-view v-slot="{ Component }">
         <transition name="fade" mode="out-in">
           <component :is="Component" />
@@ -18,6 +18,8 @@
   </div>
 </template>
 <script setup lang="ts">
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import { useEditorStore } from '@/stores/editor'
 import { technologies } from '@/constants/technologies'
 import { storeToRefs } from 'pinia'
@@ -25,11 +27,23 @@ import { storeToRefs } from 'pinia'
 const store = useEditorStore()
 const { openTabs, currentTab } = storeToRefs(store)
 const { switchTab, closeTab } = store
+const route = useRoute()
+
+const contentRef = ref<HTMLElement | null>(null)
 
 const getTechIcon = (techId: string) => {
   const tech = technologies.find(t => t.id === techId)
   return tech ? tech.icon : ''
 }
+
+watch(
+  () => route.path,
+  () => {
+    if (contentRef.value) {
+      contentRef.value.scrollTop = 0
+    }
+  }
+)
 </script>
 <style scoped>
 .editor-container {
@@ -106,7 +120,7 @@ const getTechIcon = (techId: string) => {
 
 .tab.active {
   background-color: var(--sidebar-active);
-  border-top: 2px solid #fff;
+  border-top: 2px solid var(--tech-color);
 }
 
 .tab-close:hover {

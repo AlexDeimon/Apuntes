@@ -5,7 +5,7 @@
       <p class="subtitle">La base fundamental para dar estilo a la web</p>
     </div>
     <section class="topic-section">
-      <h2 class="section-title css">Conectar HTML y CSS</h2>
+      <h2 class="section-title">Conectar HTML y CSS</h2>
       <p class="section-desc">Existen 4 formas de dar estilos a HTML mediante CSS. Es crucial entenderlas para elegir la mejor arquitectura.</p>
       <div class="cards-grid">
         <div class="card recommended">
@@ -57,37 +57,43 @@ body {
     </section>
     <hr class="divider" />
     <section class="topic-section">
-      <h2 class="section-title css">Sintaxis CSS</h2>
+      <h2 class="section-title">Sintaxis CSS</h2>
       <p>La regla CSS se compone de un <strong>selector</strong> y un <strong>bloque de declaración</strong>.</p>
-      <div class="syntax-visualization">
-        <CodeBlock language="css" code='selector {
+      <div class="card">
+        <ul class="def-list">
+          <li><span class="def-term">Selector:</span> Indica a qué elemento(s) HTML se aplicarán los estilos.</li>
+          <li><span class="def-term">Propiedad:</span> El aspecto que quieres cambiar (ej. color, font-size).</li>
+          <li><span class="def-term">Valor:</span> El ajuste específico para la propiedad (ej. red, 16px).</li>
+        </ul>
+        <div class="syntax-visualization">
+          <CodeBlock language="css" code='selector {
   propiedad: valor;
   propiedad: valor;
 }' />
-        <ul>
-          <li><strong>Selector:</strong> Indica a qué elemento(s) HTML se aplicarán los estilos.</li>
-          <li><strong>Propiedad:</strong> El aspecto que quieres cambiar (ej. color, font-size).</li>
-          <li><strong>Valor:</strong> El ajuste específico para la propiedad (ej. red, 16px).</li>
-        </ul>
+        </div>
       </div>
     </section>
     <hr class="divider" />
     <section class="topic-section">
-      <h2 class="section-title css">La Cascada en CSS</h2>
+      <h2 class="section-title">La Cascada en CSS</h2>
       <p>El algoritmo que usa el navegador para decidir qué estilos aplicar cuando hay conflictos. Se basa en 3 factores:</p>
-      <div class="cascade-factors">
-        <div class="factor">
-          <h3>1. Importancia</h3>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>1. Importancia</h3>
+          </div>
           <p>Origen del estilo. Orden de menor a mayor:</p>
-          <ol>
+          <ol class="list">
             <li>Navegador (User Agent)</li>
             <li>Usuario (Configuración browser)</li>
             <li>Autor (Desarrollador)</li>
             <li><code>!important</code> (Rompe la cascada, usar con precaución)</li>
           </ol>
         </div>
-        <div class="factor">
-          <h3>2. Especificidad</h3>
+        <div class="card">
+          <div class="card-header">
+            <h3>2. Especificidad</h3>
+          </div>
           <p>Calcula el "peso" de un selector. Cuanto más específico, gana.</p>
           <div class="specificity-table">
             <div class="spec-row">
@@ -110,37 +116,60 @@ body {
           <a href="https://jonassebastianohlsson.com/specificity-graph/" target="_blank"
             class="link-external">Visualizador de Especificidad</a>
         </div>
-        <div class="factor">
-          <h3>3. Orden de Fuente</h3>
-          <p>Si la importancia y especificidad son iguales, gana la regla que se declaró al final (más abajo en el código).</p>
+        <div class="card">
+          <div class="card-header">
+            <h3>3. Orden de Fuente</h3>
+          </div>
+          <p>El orden tiene que ver directamente con las manera de conexión entre el documento HTML y el CSS:</p>
+          <ol class="list">
+            <li>Estilos en línea (Inline)</li>
+            <li>Estilos internos (style)</li>
+            <li>Estilos externos (link)</li>
+          </ol>
         </div>
       </div>
     </section>
     <hr class="divider" />
     <section class="topic-section">
-      <h2 class="section-title css">Herencia</h2>
-      <p>Algunas propiedades CSS (como color, font-family) se heredan de padres a hijos, mientras que otras (como border, margin) no.</p>
-      <div class="keywords-grid">
-        <div class="keyword-card">
-          <h4>inherit</h4>
+      <h2 class="section-title">Herencia</h2>
+      <p>Algunas propiedades CSS (como color, font-family) se heredan de padres a hijos (elementos que contienen a otros elementos), mientras que otras (como border, margin) no.</p>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>inherit</h3>
+          </div>
           <p>Fuerza a un elemento a heredar la propiedad de su padre, aunque normalmente no lo haría.</p>
-          <CodeBlock language="css" code='a {
-  color: inherit; /* Hereda el color del texto del padre */
+          <CodeBlock language="css" code='/* .padre tiene color: #42b883 */
+.link-heredado {
+  color: inherit; /* Hereda el verde */
   text-decoration: none;
 }' />
+          <div class="demo-box inherit-demo">
+            <div>Padre (color verde)</div>
+            <a href="#" class="demo-link-inherit">Link (inherit)</a>
+            <a href="#" class="demo-link-normal">Link (normal)</a>
+          </div>
         </div>
-        <div class="keyword-card">
-          <h4>initial</h4>
+        <div class="card">
+          <div class="card-header">
+            <h3>initial</h3>
+          </div>
           <p>Resetea la propiedad a su valor inicial predeterminado por la especificación CSS.</p>
-          <CodeBlock language="css" code='div {
-  color: initial; /* Vuelve a negro (usualmente) */
+          <CodeBlock language="css" code='/* .padre tiene color: #e6a23c */
+.texto-reset {
+  color: initial; /* Vuelve al color original */
+  border: 1px solid currentColor;
 }' />
+          <div class="demo-box initial-demo">
+            <div>Padre (color naranja)</div>
+            <div class="demo-initial-text">Texto Initial</div>
+          </div>
         </div>
       </div>
     </section>
     <hr class="divider" />
     <section class="topic-section">
-      <h2 class="section-title css">Normalización</h2>
+      <h2 class="section-title">Normalización</h2>
       <p>Los navegadores tienen estilos por defecto inconsistentes. Usar un "Reset" o "Normalize" asegura que tu sitio
         se vea igual en todos lados.</p>
       <div class="info-box">
@@ -152,115 +181,218 @@ body {
     </section>
     <hr class="divider" />
     <section class="topic-section">
-      <h2 class="section-title css">Selectores CSS</h2>
+      <h2 class="section-title">Selectores CSS</h2>
       <h3 class="subsection-title">Selectores Simples</h3>
-      <div class="editors-comparison">
-        <div class="editor-col">
-          <p><strong>#id: </strong>Selecciona un elemento único por su atributo ID.</p>
-          <CodeBlock language="css" code='#id {
-  background-color: blue;
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>#id</h3>
+          </div>
+          <p>Selecciona un elemento único por su atributo ID.</p>
+          <CodeBlock language="css" code='#boton-unico {
+  background-color: #2b5581;
+  color: white;
+  padding: 5px 10px;
+  border: none;
 }' />
+          <div class="demo-box">
+            <button id="boton-unico">Soy Único</button>
+          </div>
         </div>
-        <div class="editor-col">
-          <p><strong>.clase: </strong>Selecciona todos los elementos con esa clase.</p>
-          <CodeBlock language="css" code='.clase {
-  margin: 10px;
+        <div class="card">
+          <div class="card-header">
+            <h3>.clase</h3>
+          </div>
+          <p>Selecciona todos los elementos con esa clase.</p>
+          <CodeBlock language="css" code='.tarjeta-demo {
+  border-left: 4px solid #42b883;
+  padding-left: 8px;
 }' />
+          <div class="demo-box">
+            <div class="tarjeta-demo">Item 1</div>
+            <div class="tarjeta-demo" style="margin-top:5px;">Item 2</div>
+          </div>
         </div>
-        <div class="editor-col">
-          <p><strong>elemento: </strong>Selecciona por etiqueta (ej. p, div, h1).</p>
-          <CodeBlock language="css" code='h1 {
-  margin-left: 10px;
+        <div class="card">
+          <div class="card-header">
+            <h3>elemento</h3>
+          </div>
+          <p>Selecciona por etiqueta (ej. small).</p>
+          <CodeBlock language="css" code='small {
+  color: #9cdcfe;
 }' />
+          <div class="demo-box">
+            <small id="demo-small">Texto pequeño</small><br>
+            <span>Texto normal</span>
+          </div>
         </div>
-        <div class="editor-col">
-          <p><strong>*: </strong>Selector universal (todo).</p>
-          <CodeBlock language="css" code='* {
-  text-align: center;
+        <div class="card">
+          <div class="card-header">
+            <h3>*</h3>
+          </div>
+          <p>Selector universal (todo).</p>
+          <CodeBlock language="css" code='.contenedor * {
+  border: 1px dashed #666;
 }' />
+          <div class="demo-box demo-universal">
+            <p>Párrafo</p>
+            <span>Span</span>
+          </div>
         </div>
       </div>
       <h3 class="subsection-title">Selectores de Atributos</h3>
-      <div class="editors-comparison">
-        <div class="editor-col">
-          <p><strong>[atributo]: </strong>Selecciona por atributo.</p>
-          <CodeBlock language="css" code='a[href] {
-  color: blue;
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>[atributo]</h3>
+          </div>
+          <p>Selecciona si tiene el atributo.</p>
+          <CodeBlock language="css" code='input[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
 }' />
+          <div class="demo-box">
+            <input type="text" disabled value="Deshabilitado" size="12">
+            <input type="text" value="Habilitado" size="10">
+          </div>
         </div>
-        <div class="editor-col">
-          <p><strong>[atributo=valor]: </strong>Selecciona por atributo con valor exacto.</p>
-          <CodeBlock language="css" code='a[href="https://google.com"] {
-  color: red;
+        <div class="card">
+          <div class="card-header">
+            <h3>[attr=valor]</h3>
+          </div>
+          <p>Valor exacto.</p>
+          <CodeBlock language="css" code='input[type="checkbox"] {
+  accent-color: #42b883;
 }' />
+          <div class="demo-box">
+            <label><input type="checkbox" checked> Checkbox</label>
+          </div>
         </div>
-        <div class="editor-col">
-          <p><strong>[atributo^=valor]: </strong>Selecciona por atributo que comienza con valor.</p>
-          <CodeBlock language="css" code='a[href^="https://google.com"] {
-  color: green;
+        <div class="card">
+          <div class="card-header">
+            <h3>[attr^=valor]</h3>
+          </div>
+          <p>Comienza con.</p>
+          <CodeBlock language="css" code='a[href^="https"] {
+  color: #42b883;
 }' />
+          <div class="demo-box">
+            <a href="https://alexdeimon.github.io/Apuntes/index.html" target="_blank">Seguro (https)</a><br>
+            <a href="http://alexdeimon.github.io/Apuntes/index.html" target="_blank">No seguro</a>
+          </div>
         </div>
-        <div class="editor-col">
-          <p><strong>[atributo$=valor]: </strong>Selecciona por atributo que termina con valor.</p>
-          <CodeBlock language="css" code='a[href$="google.com"] {
-  color: purple;
+        <div class="card">
+          <div class="card-header">
+            <h3>[attr$=valor]</h3>
+          </div>
+          <p>Termina con.</p>
+          <CodeBlock language="css" code='a[href$=".png"] {
+  color: #e6a23c;
 }' />
+          <div class="demo-box">
+            <a href="https://raw.githubusercontent.com/AlexDeimon/Apuntes/refs/heads/version2/src/assets/images/DISANDEV.png">imagen.png</a>
+          </div>
         </div>
-        <div class="editor-col">
-          <p><strong>[atributo*=valor]: </strong>Selecciona por atributo que contiene valor.</p>
+        <div class="card">
+          <div class="card-header">
+            <h3>[attr*=valor]</h3>
+          </div>
+          <p>Contiene.</p>
           <CodeBlock language="css" code='a[href*="google"] {
-  color: orange;
+  text-decoration: underline wavy;
 }' />
-        </div>
-        <div class="editor-col">
-          <p><strong>[atributo|=valor]: </strong>Selecciona por atributo que contiene valor (espaciado).</p>
-          <CodeBlock language="css" code='a[href~="google"] {
-  color: pink;
-}' />
+          <div class="demo-box">
+            <a href="https://google.com">Ir a Google</a>
+          </div>
         </div>
       </div>
       <h3 class="subsection-title">Selectores Compuestos y Combinadores</h3>
-      <div class="editors-comparison">
-        <div class="editor-col">
-          <p><strong>Agrupación: </strong>Aplicar estilos a varios selectores.</p>
-          <CodeBlock language="css" code='h1, h2, h3 {
-  font-family: "Helvetica", sans-serif;
-  color: #333;
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>Agrupación</h3>
+          </div>
+          <p>Varios selectores.</p>
+          <CodeBlock language="css" code='.demo-g, .demo-em {
+  color: #42b883;
 }' />
+          <div class="demo-box">
+            <strong class="demo-g">Negrita</strong> y <em class="demo-em">Cursiva</em>
+          </div>
         </div>
-        <div class="editor-col">
-          <p><strong>Descendiente (Espacio): </strong>Elemento dentro de otro (cualquier nivel).</p>
-          <CodeBlock language="css" code='div p {
-  /* Todos los <p> dentro de <div> */
-  color: blue;
+        <div class="card">
+          <div class="card-header">
+            <h3>Descendiente</h3>
+          </div>
+          <p>(Espacio) Cualquier nivel.</p>
+          <CodeBlock language="css" code='.caja p {
+  color: #9cdcfe;
 }' />
+          <div class="demo-box caja">
+            <p>Párrafo hijo</p>
+            <div>
+              <p>Párrafo nieto</p>
+            </div>
+          </div>
         </div>
-        <div class="editor-col">
-          <p><strong>Hijo Directo (>): </strong>Solo hijos directos (primer nivel).</p>
-          <CodeBlock language="css" code='ul > li {
-  /* Solo <li> que son hijos directos de <ul> */
-  list-style: none;
+        <div class="card">
+          <div class="card-header">
+            <h3>Hijo Directo (>): </h3>
+          </div>
+          <p>Solo primer nivel.</p>
+          <CodeBlock language="css" code='.lista>li::marker {
+  content: "➣ ";
+  color: #d41414;
 }' />
+          <div class="demo-box">
+            <ul class="lista">
+              <li>Hijo directo</li>
+              <ul>
+                <li>Nieto (no afectado)</li>
+              </ul>
+            </ul>
+          </div>
         </div>
-        <div class="editor-col">
-          <p><strong>Combinador General (+): </strong>Elemento siguiente hermano.</p>
-          <CodeBlock language="css" code='h1 + p {
-  /* Solo el <p> que sigue inmediatamente a <h1> */
-  color: green;
+        <div class="card">
+          <div class="card-header">
+            <h3>Ayacente (+): </h3>
+          </div>
+          <p>Siguiente hermano inmediato.</p>
+          <CodeBlock language="css" code='h5 + p {
+  color: #e6a23c;
 }' />
+          <div class="demo-box">
+            <h5>Título 5</h5>
+            <p>Afectado</p>
+            <p>No afectado</p>
+          </div>
         </div>
-        <div class="editor-col">
-          <p><strong>Combinador General (~): </strong>Todos los elementos hermanos siguientes.</p>
-          <CodeBlock language="css" code='h1 ~ p {
-  /* Todos los <p> que siguen inmediatamente a <h1> */
-  color: green;
+        <div class="card">
+          <div class="card-header">
+            <h3>General (~): </h3>
+          </div>
+          <p>Todos los hermanos siguientes.</p>
+          <CodeBlock language="css" code='h5 ~ span {
+  color: #42b883;
 }' />
+          <div class="demo-box">
+            <h5>Título 5</h5>
+            <span>Afectado</span><br>
+            <span>Afectado también</span>
+          </div>
         </div>
-        <div class="editor-col">
-          <p><strong>Sub clase: </strong>Selecciona un elemento de etiqueta con una clase definida.</p>
-          <CodeBlock language="css" code='div.clase {
-  margin: 10px;
+        <div class="card">
+          <div class="card-header">
+            <h3>Sub clase: </h3>
+          </div>
+          <p>Etiqueta con clase específica.</p>
+          <CodeBlock language="css" code='div.error {
+  border-color: #f56c6c;
 }' />
+          <div class="demo-box">
+            <div class="error" style="border: 1px solid #333; padding: 2px;">Error</div>
+            <div style="border: 1px solid #333; padding: 2px; margin-top:2px;">Normal</div>
+          </div>
         </div>
       </div>
     </section>
@@ -270,24 +402,13 @@ body {
 import CodeBlock from '@/components/CodeBlock.vue'
 </script>
 <style scoped>
-.card.recommended {
-  border-color: #42b883;
+h5+p {
+  color: #e6a23c;
+  margin: 0;
 }
 
-.card.warning {
-  border-color: #e6a23c;
-}
-
-.cascade-factors {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.factor {
-  background: #1e1e1e;
-  padding: 1.5rem;
-  border-radius: 8px;
+h5~span {
+  color: #42b883;
 }
 
 .specificity-table {
@@ -304,44 +425,95 @@ import CodeBlock from '@/components/CodeBlock.vue'
   border-bottom: 1px solid #3c3c3c;
 }
 
-.spec-row:last-child {
-  border-bottom: none;
-}
-
 .spec-val {
   font-family: monospace;
   color: #9cdcfe;
   font-weight: bold;
 }
 
-.keywords-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+.inherit-demo {
+  color: #42b883;
 }
 
-@media (max-width: 768px) {
-  .keywords-grid {
-    grid-template-columns: 1fr;
-  }
+.demo-link-inherit {
+  color: inherit;
+  margin-right: 10px;
+  text-decoration: none;
 }
 
-.keyword-card {
-  background: #252526;
-  padding: 1.5rem;
-  border-radius: 8px;
+.demo-link-normal {
+  color: #9cdcfe;
 }
 
-.info-box {
-  background: #1a2632;
+.initial-demo {
+  color: #e6a23c;
+}
+
+.demo-initial-text {
+  color: initial;
+  border: 1px solid currentColor;
+  padding: 2px 5px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.tarjeta-demo {
   border-left: 4px solid #42b883;
-  padding: 1.5rem;
-  border-radius: 0 8px 8px 0;
+  padding-left: 8px;
+  color: #ddd;
 }
 
-.editors-comparison {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+.demo-universal * {
+  border: 1px dashed #666;
+  padding: 2px;
+}
+
+.demo-g,
+.demo-em {
+  color: #42b883;
+}
+
+.caja p {
+  color: #9cdcfe;
+  margin: 0;
+}
+
+div.error {
+  border-color: #f56c6c !important;
+}
+
+.lista>li::marker {
+  color: #d41414;
+  content: "➣ ";
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+.demo-box a[href^="https"] {
+  color: #42b883;
+}
+
+.demo-box a[href$=".png"] {
+  color: #e6a23c;
+}
+
+.demo-box a[href*="google"] {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
+
+#boton-unico {
+  background-color: #2b5581;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#demo-small {
+  color: #9cdcfe;
 }
 </style>

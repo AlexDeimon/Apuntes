@@ -39,7 +39,7 @@ const copyToClipboard = async () => {
     background-color: #1e1e1e;
     border-radius: 8px;
     border: 1px solid #333;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 0 0;
     overflow: hidden;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }

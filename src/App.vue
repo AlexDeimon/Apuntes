@@ -19,13 +19,6 @@ const { selectedTech } = storeToRefs(store)
 .workspace {
   display: flex;
   height: 100vh;
-  background-color: var(--editor);
-  color: #fff;
-}
-
-.editor {
-  flex: 1;
-  background-color: var(--editor);
 }
 
 .workspace[data-tech="html"] {

@@ -59,6 +59,12 @@ const openModule = (module: { id: string, name: string }) => {
   color: #ccc;
 }
 
+.tittle1 {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  color: var(--tech-color);
+}
+
 .sidebar-content {
   padding: 8px;
 }
