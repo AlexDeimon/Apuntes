@@ -29,6 +29,11 @@ const router = createRouter({
       name: 'bootstrap-inicio',
       component: () => import('@/views/Bootstrap/InicioBootstrap.vue'),
     },
+    {
+      path: '/typescript/inicio',
+      name: 'typescript-inicio',
+      component: () => import('@/views/TypeScript/InicioTS.vue'),
+    },
   ],
 })
 
