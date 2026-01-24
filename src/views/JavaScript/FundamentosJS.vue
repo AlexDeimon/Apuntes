@@ -6,9 +6,7 @@
     </div>
     <section class="topic-section">
       <h2 class="section-title">Conectar HTML y JavaScript</h2>
-      <p class="section-desc">
-        Existen principalmente dos formas de vincular JavaScript a un documento HTML. La ubicación del script es crucial para el rendimiento de carga.
-      </p>
+      <p class="section-desc"> Existen principalmente dos formas de vincular JavaScript a un documento HTML. La ubicación del script es crucial para el rendimiento de carga.</p>
       <div class="cards-grid">
         <div class="card recommended">
           <div class="card-header">
@@ -120,8 +118,7 @@ console.log(nombre); // Error!' />
     <hr class="divider" />
     <section class="topic-section">
       <h2 class="section-title">Tipos de Datos</h2>
-      <p class="section-desc">JavaScript es un lenguaje de tipado dinámico. Los datos se dividen en Primitivos y
-        Compuestos.</p>
+      <p class="section-desc">JavaScript es un lenguaje de tipado dinámico. Los datos se dividen en Primitivos y Compuestos.</p>
       <div class="cards-grid">
         <div class="card">
           <h3>Primitivos</h3>

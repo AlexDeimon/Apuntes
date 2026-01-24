@@ -5,6 +5,7 @@ export interface Technology {
 }
 
 export const technologies: Technology[] = [
+    { id: 'home', name: 'Home', icon: '/Apuntes/v2/icons/home.svg' },
     { id: 'html', name: 'HTML', icon: '/Apuntes/v2/icons/html.svg' },   
     { id: 'css', name: 'CSS', icon: '/Apuntes/v2/icons/css.svg' },
     { id: 'js', name: 'JavaScript', icon: '/Apuntes/v2/icons/javascript.svg' },

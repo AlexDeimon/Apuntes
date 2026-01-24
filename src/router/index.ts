@@ -34,6 +34,11 @@ const router = createRouter({
       name: 'typescript-inicio',
       component: () => import('@/views/TypeScript/InicioTS.vue'),
     },
+    {
+      path: '/nodejs/inicio',
+      name: 'nodejs-inicio',
+      component: () => import('@/views/Node/InicioNode.vue'),
+    },
   ],
 })
 
@@ -41,7 +46,7 @@ router.beforeEach((to, from, next) => {
   const store = useEditorStore()
 
   if (to.path === '/') {
-    store.clearActiveTab()
+    store.syncTabFromRoute(to.path)
     next()
   } else {
     // Check if the route corresponds to an open tab

@@ -1,14 +1,18 @@
 <template>
   <nav class="activity-bar">
     <div class="tech-icons">
-      <button v-for="tech in technologies" :key="tech.id" :class="['tech-button', { active: modelValue === tech.id }]" @click="handleClick(tech.id)">
-        <img :src="tech.icon" :alt="tech.name" class="tech-icon">
+      <button v-for="tech in visibleTechnologies" :key="tech.id"
+        :class="['tech-button', { active: modelValue === tech.id }]" @click="handleClick(tech.id)">
+        <img :src="tech.icon" :alt="tech.name" class="tech-icon" />
       </button>
     </div>
   </nav>
 </template>
 <script setup lang="ts">
+import { computed } from 'vue'
 import { technologies } from '@/constants/technologies'
+
+const visibleTechnologies = computed(() => technologies.filter((t) => t.id !== 'home'))
 
 const props = defineProps<{
   modelValue: string

@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2 class="section-title">Referencias</h2>
+    <h2 class="section-title">Temas relacionados</h2>
     <ul class="reference-list">
       <li v-for="(ref, index) in references" :key="index" class="reference-item">
         <a href="#" @click.prevent="openReference(ref)" class="link-external">

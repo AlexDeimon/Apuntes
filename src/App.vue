@@ -1,5 +1,5 @@
 <template>
-  <div class="workspace" :data-tech="selectedTech">
+  <div class="workspace" :data-tech="activeTech">
     <ActivityBar v-model="selectedTech" />
     <SideBar :selected-tech="selectedTech" />
     <EditorComponent />
@@ -13,7 +13,7 @@ import { useEditorStore } from '@/stores/editor'
 import { storeToRefs } from 'pinia'
 
 const store = useEditorStore()
-const { selectedTech } = storeToRefs(store)
+const { selectedTech, activeTech } = storeToRefs(store)
 </script>
 <style scoped>
 .workspace {

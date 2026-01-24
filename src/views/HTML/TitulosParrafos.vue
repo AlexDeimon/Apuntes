@@ -77,7 +77,7 @@
         </div>
         <div>
           <CodeBlock language="css" code='h1 {
-  color: #222;
+  color: #fff;
   font-size: 2.5rem;
   margin-top: 0;
   border-bottom: 2px solid #ff4747;
@@ -96,7 +96,7 @@ h3 {
 }
 
 h4 {
-  color: #7f8c8d;
+  color: #d35400;
   font-size: 1.1rem;
   text-transform: uppercase;
   margin-top: 1.5rem;
@@ -132,15 +132,15 @@ import ReferenceSection from '@/components/ReferenceSection.vue'
 }
 
 .preview-container {
-  background: #fff;
-  color: #333;
+  background: #2d2d2d;
+  color: #fff;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .preview-header {
-  background: #e0e0e0;
-  color: #555;
+  background: #2d2d2d;
+  color: #fff;
   padding: 0.5rem 1rem;
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -154,7 +154,7 @@ import ReferenceSection from '@/components/ReferenceSection.vue'
 }
 
 .preview-h1 {
-  color: #222;
+  color: #fff;
   font-size: 2.5rem;
   margin-top: 0;
   border-bottom: 2px solid #ff4747;
@@ -173,7 +173,7 @@ import ReferenceSection from '@/components/ReferenceSection.vue'
 }
 
 .preview-h4 {
-  color: #7f8c8d;
+  color: #d35400;
   font-size: 1.1rem;
   text-transform: uppercase;
   margin-top: 1.5rem;

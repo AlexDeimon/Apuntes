@@ -1,5 +1,5 @@
 <template>
-  <aside class="sidebar" v-if="selectedTech">
+  <aside class="sidebar" v-if="selectedTech" :style="{ '--tech-color': `var(--color-${selectedTech})` }">
     <div class="sidebar-header">
       <h1 class="tittle1">{{ getCurrentTechName }}</h1>
     </div>

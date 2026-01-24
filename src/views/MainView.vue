@@ -1,6 +1,7 @@
 <template>
   <section class="section1">
-    <h2 class="title2">&lt; Hola mundo /&gt;</h2>
+    <h1 class="title1">&lt; Hola mundo /&gt;</h1>
+    <h2 class="title2">&lt; diseñado por = "Diego Sandoval" /&gt;</h2>
     <div class="welcome-container">
       <i class="fas fa-book-open icon-main"></i>
       <p>Bienvenido a mi sitio de apuntes sobre desarrollo web. Iniciado a finales de 2021, mi objetivo es mantener una documentación actualizada sobre las tecnologías que utilizo tanto en el ámbito personal como profesional.</p>
@@ -32,6 +33,20 @@
       <p>Lo que ves aquí es la versión 2 de mi sitio de apuntes, la cual como podrás notar, está en desarrollo <i class="fa-solid fa-wrench"></i>. Estoy migrando gradualmente desde la versión 1 (un sitio web estático, hecho con herramientas front-end básicas <i class="fab fa-html5"></i> <i class="fab fa-css3-alt"></i> <i class="fa-brands fa-js"></i>, diseño simple, ejemplos de código en imágenes <i class="fa-solid fa-image"></i> y un responsive con algunas fallas <i class="fa-solid fa-triangle-exclamation"></i>) a esta nueva versión (Desarrollada Vue.js <i class="fa-brands fa-vuejs"></i> como SPA, diseño mejorado basado en IDE, mejora del responsive, ofrecerá ejemplos de código copiables, entre otras mejoras).</p>
       <p>Si deseas conocer mi sitio y revisar algún tema el enlace es: <a href="https://alexdeimon.github.io/Apuntes/index.html" class="link" target="_blank">Version 1</a></p>
     </div>
+    <div class="networks-container">
+      <i class="fas fa-share-alt icon-main"></i>
+      <p>Mis redes sociales:</p>
+      <ul class="list">
+        <li>
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/AlexDeimon" class="link" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/diego-alejandro-sandoval-fern%C3%A1ndez/" class="link" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
 <script setup lang="ts">
@@ -40,8 +55,6 @@ import '@fortawesome/fontawesome-free/css/all.css'
 <style scoped>
 .section1 {
   position: relative;
-  height: 90%;
-  padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -52,22 +65,33 @@ import '@fortawesome/fontawesome-free/css/all.css'
   z-index: 1;
 }
 
-.title2 {
+.title1 {
   width: 15ch;
-  margin-bottom: 3rem;
-  border-right: 4px solid;
+  margin-bottom: 1rem;
   font-family: monospace;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--color-html);
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 2s steps(15), blin .5s infinite step-end alternate;
+  animation: typing1 2s steps(15), blin .5s 5 step-end alternate backwards;
+}
+
+.title2 {
+  width: 0;
+  margin-bottom: 2rem;
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing2 3s 2.5s steps(36) forwards, blin .5s 2.5s infinite step-end alternate;
 }
 
 .welcome-container,
 .about-container,
 .credits-container,
-.version-container {
+.version-container,
+.networks-container {
   padding: 1.5rem;
   border-radius: 8px;
   border-left: 4px solid var(--color-html);
@@ -120,24 +144,26 @@ import '@fortawesome/fontawesome-free/css/all.css'
 
 .section1::before {
   content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  top: 10%;
+  left: 48px;
+  width: 90%;
+  height: 90%;
   background: url('@/assets/images/DISANDEV.png') no-repeat center;
   background-size: contain;
   opacity: 0.2;
   mix-blend-mode: screen;
   filter: brightness(1.5);
   z-index: 0;
+  pointer-events: none;
 }
 
 .welcome-container:hover,
 .about-container:hover,
 .credits-container:hover,
-.version-container:hover {
-  transform: translateX(10px);
+.version-container:hover,
+.networks-container:hover {
+  transform: scale(1.05);
 }
 
 .list .fab {
@@ -148,12 +174,27 @@ import '@fortawesome/fontawesome-free/css/all.css'
   color: #fff;
 }
 
-@keyframes typing {
+.list .fa-github {
+  color: #fff;
+}
+
+.list .fa-linkedin {
+  color: #0077b5;
+}
+
+@keyframes typing1 {
   from { width: 0ch; }
   to { width: 15ch; }
 }
 
+@keyframes typing2 {
+  from { width: 0ch; }
+  to { width: 36ch; }
+}
+
 @keyframes blin {
+  from { border-right: 4px solid }
   50% { border-color: transparent }
+  to { border-right-color: transparent }
 }
 </style>

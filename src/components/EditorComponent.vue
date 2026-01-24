@@ -5,7 +5,7 @@
         @click="switchTab(tab.id)">
         <img :src="getTechIcon(tab.techId)" :alt="tab.techId" class="tab-icon">
         <span class="tab-title">{{ tab.title }}</span>
-        <button class="tab-close" @click.stop="closeTab(tab.id)">X</button>
+        <button v-if="tab.id !== 'home'" class="tab-close" @click.stop="closeTab(tab.id)">X</button>
       </div>
     </div>
     <div class="editor-content" ref="contentRef">

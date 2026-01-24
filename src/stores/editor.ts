@@ -2,19 +2,22 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import type { Tab } from '@/constants/editor'
+import { homeTab } from '@/constants/editor'
 
 export const useEditorStore = defineStore('editor', () => {
   const router = useRouter()
-  const openTabs = ref<Tab[]>([])
-  const currentTab = ref<string>('')
+  const openTabs = ref<Tab[]>([homeTab])
+  const currentTab = ref<string>(homeTab.id)
   const selectedTech = ref<string>('')
+  const activeTech = ref<string>('')
 
   const addTab = (tab: Tab) => {
     if (!openTabs.value.find((t) => t.id === tab.id)) {
       openTabs.value.push(tab)
     }
     currentTab.value = tab.id
-    selectedTech.value = tab.techId
+    activeTech.value = tab.techId
+    selectedTech.value = ''
     router.push(tab.route)
   }
 
@@ -22,12 +25,13 @@ export const useEditorStore = defineStore('editor', () => {
     const tab = openTabs.value.find((t) => t.id === tabId)
     if (tab) {
       currentTab.value = tabId
-      selectedTech.value = tab.techId
+      activeTech.value = tab.techId
       router.push(tab.route)
     }
   }
 
   const closeTab = (tabId: string) => {
+    if (tabId === 'home') return
     const index = openTabs.value.findIndex((t) => t.id === tabId)
     if (index > -1) {
       openTabs.value.splice(index, 1)
@@ -37,8 +41,8 @@ export const useEditorStore = defineStore('editor', () => {
         if (nextTab) {
           switchTab(nextTab.id)
         } else {
-          currentTab.value = ''
-          router.push('/')
+          currentTab.value = 'home'
+          activeTech.value = ''
         }
       }
     }
@@ -50,7 +54,7 @@ export const useEditorStore = defineStore('editor', () => {
     const foundTab = openTabs.value.find((t) => t.route === path)
     if (foundTab) {
       currentTab.value = foundTab.id
-      selectedTech.value = foundTab.techId
+      activeTech.value = foundTab.techId
       return true
     }
     return false
@@ -58,12 +62,14 @@ export const useEditorStore = defineStore('editor', () => {
 
   const clearActiveTab = () => {
     currentTab.value = ''
+    activeTech.value = ''
   }
 
   return {
     openTabs,
     currentTab,
     selectedTech,
+    activeTech,
     addTab,
     switchTab,
     closeTab,

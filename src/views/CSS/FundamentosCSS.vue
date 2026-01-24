@@ -58,7 +58,7 @@ body {
     <hr class="divider" />
     <section class="topic-section">
       <h2 class="section-title">Sintaxis CSS</h2>
-      <p>La regla CSS se compone de un <strong>selector</strong> y un <strong>bloque de declaración</strong>.</p>
+      <p class="section-desc">La regla CSS se compone de un <strong>selector</strong> y un <strong>bloque de declaración</strong>.</p>
       <div class="card">
         <ul class="def-list">
           <li><span class="def-term">Selector:</span> Indica a qué elemento(s) HTML se aplicarán los estilos.</li>
@@ -76,7 +76,7 @@ body {
     <hr class="divider" />
     <section class="topic-section">
       <h2 class="section-title">La Cascada en CSS</h2>
-      <p>El algoritmo que usa el navegador para decidir qué estilos aplicar cuando hay conflictos. Se basa en 3 factores:</p>
+      <p class="section-desc">El algoritmo que usa el navegador para decidir qué estilos aplicar cuando hay conflictos. Se basa en 3 factores:</p>
       <div class="cards-grid">
         <div class="card">
           <div class="card-header">
@@ -132,7 +132,7 @@ body {
     <hr class="divider" />
     <section class="topic-section">
       <h2 class="section-title">Herencia</h2>
-      <p>Algunas propiedades CSS (como color, font-family) se heredan de padres a hijos (elementos que contienen a otros elementos), mientras que otras (como border, margin) no.</p>
+      <p class="section-desc">Algunas propiedades CSS (como color, font-family) se heredan de padres a hijos (elementos que contienen a otros elementos), mientras que otras (como border, margin) no.</p>
       <div class="cards-grid">
         <div class="card">
           <div class="card-header">
@@ -170,7 +170,7 @@ body {
     <hr class="divider" />
     <section class="topic-section">
       <h2 class="section-title">Normalización</h2>
-      <p>Los navegadores tienen estilos por defecto inconsistentes. Usar un "Reset" o "Normalize" asegura que tu sitio
+      <p class="section-desc">Los navegadores tienen estilos por defecto inconsistentes. Usar un "Reset" o "Normalize" asegura que tu sitio
         se vea igual en todos lados.</p>
       <div class="info-box">
         <p><strong>Normalize.css</strong> es una alternativa moderna a los resets CSS tradicionales. Preserva valores
