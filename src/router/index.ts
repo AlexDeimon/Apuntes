@@ -10,6 +10,11 @@ const router = createRouter({
       component: () => import('@/views/MainView.vue'),
     },
     {
+      path: '/html/inicio',
+      name: 'html-inicio',
+      component: () => import('@/views/HTML/InicioHTML.vue'),
+    },
+    {
       path: '/html/titulosParrafos',
       name: 'html-titulosParrafos',
       component: () => import('@/views/HTML/TitulosParrafos.vue'),
