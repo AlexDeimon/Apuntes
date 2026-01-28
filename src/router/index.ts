@@ -25,6 +25,11 @@ const router = createRouter({
       component: () => import('@/views/CSS/FundamentosCSS.vue'),
     },
     {
+      path: '/css/medidas',
+      name: 'css-medidas',
+      component: () => import('@/views/CSS/MedidasCSS.vue'),
+    },
+    {
       path: '/js/fundamentos',
       name: 'js-fundamentos',
       component: () => import('@/views/JavaScript/FundamentosJS.vue'),

@@ -80,6 +80,8 @@ const openModule = (module: { id: string, name: string }) => {
 
 .module-icon {
   font-size: 16px;
+  width: 48px;
+  height: 48px;
 }
 
 .module-item:hover {
