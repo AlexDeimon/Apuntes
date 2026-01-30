@@ -43,13 +43,11 @@
       <div class="cards-grid">
         <div class="card">
           <h3>Fiabilidad</h3>
-          <p>Detecta errores en tiempo de compilación/escritura en lugar de en tiempo de ejecución (runtime).
-            "Si compila, probablemente funcione".</p>
+          <p>Detecta errores en tiempo de compilación/escritura en lugar de en tiempo de ejecución (runtime). "Si compila, probablemente funcione".</p>
         </div>
         <div class="card">
           <h3>Escalabilidad</h3>
-          <p>Facilita trabajar en proyectos grandes y con equipos numerosos gracias a las interfaces y tipos
-            explícitos que documentan el código automáticamente.</p>
+          <p>Facilita trabajar en proyectos grandes y con equipos numerosos gracias a las interfaces y tipos explícitos que documentan el código automáticamente.</p>
         </div>
         <div class="card">
           <h3>Tooling Moderno</h3>
@@ -75,8 +73,7 @@
           </div>
           <p>Convierte un archivo <code>.ts</code> a <code>.js</code>.</p>
           <CodeBlock language="bash" code='tsc archivo.ts' />
-          <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">Esto generará un archivo
-            <code>archivo.js</code> que puede ser interpretado por el navegador o Node.js.</p>
+          <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">Esto generará un archivo <code>archivo.js</code> que puede ser interpretado por el navegador o Node.js.</p>
         </div>
       </div>
     </section>

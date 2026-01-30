@@ -13,7 +13,10 @@ export const modules: Record<string, Module[]> = {
     { id: 'fundamentos', name: 'Fundamentos CSS', icon: '/Apuntes/v2/icons/css.svg' },
     { id: 'medidas', name: 'Medidas y Unidades', icon: '/Apuntes/v2/icons/regla.png' },
   ],
-  js: [{ id: 'fundamentos', name: 'Fundamentos JS', icon: '/Apuntes/v2/icons/javascript.svg' }],
+  js: [
+    { id: 'fundamentos', name: 'Fundamentos JS', icon: '/Apuntes/v2/icons/javascript.svg' },
+    { id: 'strings', name: 'Strings', icon: '/Apuntes/v2/icons/strings.png' },
+  ],
   bootstrap: [
     { id: 'inicio', name: 'Iniciando con Bootstrap', icon: '/Apuntes/v2/icons/bootstrap.svg' },
   ],

@@ -170,13 +170,10 @@ body {
     <hr class="divider" />
     <section class="topic-section">
       <h2 class="section-title">Normalización</h2>
-      <p class="section-desc">Los navegadores tienen estilos por defecto inconsistentes. Usar un "Reset" o "Normalize" asegura que tu sitio
-        se vea igual en todos lados.</p>
+      <p class="section-desc">Los navegadores tienen estilos por defecto inconsistentes. Usar un "Reset" o "Normalize" asegura que tu sitio se vea igual en todos lados.</p>
       <div class="info-box">
-        <p><strong>Normalize.css</strong> es una alternativa moderna a los resets CSS tradicionales. Preserva valores
-          útiles por defecto en lugar de eliminarlos todos.</p>
-        <a href="https://necolas.github.io/normalize.css/" target="_blank" class="button-link">Descargar
-          Normalize.css</a>
+        <p><strong>Normalize.css</strong> es una alternativa moderna a los resets CSS tradicionales. Preserva valores útiles por defecto en lugar de eliminarlos todos.</p>
+        <a href="https://necolas.github.io/normalize.css/" target="_blank" class="button-link">Descargar Normalize.css</a>
       </div>
     </section>
     <hr class="divider" />

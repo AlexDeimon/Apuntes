@@ -35,6 +35,21 @@ const copyToClipboard = async () => {
 </script>
 
 <style scoped>
+code {
+    font-family: inherit;
+}
+
+.code-content {
+    margin: 0;
+    padding: 1.5rem;
+    overflow-x: auto;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #d4d4d4;
+    background-color: #1e1e1e;
+}
+
 .code-block-container {
     background-color: #1e1e1e;
     border-radius: 8px;
@@ -75,20 +90,5 @@ const copyToClipboard = async () => {
 .copy-btn:hover {
     background-color: #333;
     border-color: #666;
-}
-
-.code-content {
-    margin: 0;
-    padding: 1.5rem;
-    overflow-x: auto;
-    font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #d4d4d4;
-    background-color: #1e1e1e;
-}
-
-code {
-    font-family: inherit;
 }
 </style>

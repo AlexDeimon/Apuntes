@@ -35,6 +35,11 @@ const router = createRouter({
       component: () => import('@/views/JavaScript/FundamentosJS.vue'),
     },
     {
+      path: '/js/strings',
+      name: 'js-strings',
+      component: () => import('@/views/JavaScript/StringsJS.vue'),
+    },
+    {
       path: '/bootstrap/inicio',
       name: 'bootstrap-inicio',
       component: () => import('@/views/Bootstrap/InicioBootstrap.vue'),

@@ -6,16 +6,14 @@
     </div>
     <section class="topic-section">
       <h2 class="section-title css">Medidas Absolutas</h2>
-      <p class="section-desc">Estas medidas <strong>no cambian</strong> y mantienen su tamaño independientemente del
-        dispositivo o configuración del usuario.</p>
+      <p class="section-desc">Estas medidas <strong>no cambian</strong> y mantienen su tamaño independientemente del dispositivo o configuración del usuario.</p>
       <div class="cards-grid">
         <div class="card recommended">
           <div class="card-header">
             <h3>Píxeles (px)</h3>
             <span class="badge success">Más usada</span>
           </div>
-          <p>Aunque técnicamente es relativa a la pantalla (1/96 de pulgada), en la práctica se considera absoluta. Es
-            la base de muchas otras medidas.</p>
+          <p>Aunque técnicamente es relativa a la pantalla (1/96 de pulgada), en la práctica se considera absoluta. Es la base de muchas otras medidas.</p>
           <CodeBlock language="css" code=".px-box { width: 200px; }" />
           <div class="demo-box">
             <div class="px-box">200px</div>
@@ -47,8 +45,7 @@
             <h3>REM</h3>
             <span class="badge info">Usada en font-size</span>
           </div>
-          <p>Relativo siempre al tamaño de fuente del elemento raíz (<code>&lt;html&gt;</code>). Por defecto, 1rem =
-            16px. Es más predecible que EM.</p>
+          <p>Relativo siempre al tamaño de fuente del elemento raíz (<code>&lt;html&gt;</code>). Por defecto, 1rem = 16px. Es más predecible que EM.</p>
           <CodeBlock language="css" code="html { font-size: 16px; }
 .box {
   font-size: 1.5rem; /* 1.5 * 16 = 24px */
@@ -163,11 +160,9 @@
     </section>
   </div>
 </template>
-
 <script setup lang="ts">
 import CodeBlock from '@/components/CodeBlock.vue'
 </script>
-
 <style scoped>
 .px-box {
   width: 200px;
