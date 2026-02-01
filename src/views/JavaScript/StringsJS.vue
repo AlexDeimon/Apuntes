@@ -1,7 +1,7 @@
 <template>
   <div class="module-content">
     <div class="header-section">
-      <h1 class="main-title js">Strings en JavaScript</h1>
+      <h1 class="main-title js">Strings</h1>
       <p class="subtitle">Manipulación y propiedades de cadenas de texto</p>
     </div>
     <section class="topic-section">
@@ -117,11 +117,8 @@ console.log(str1.concat(str2)); // 'HolaMundo'" />
     </section>
   </div>
 </template>
-
 <script setup lang="ts">
 import CodeBlock from '@/components/CodeBlock.vue'
 </script>
-
 <style scoped>
-/* Utiliza estilos globales de main.css */
 </style>

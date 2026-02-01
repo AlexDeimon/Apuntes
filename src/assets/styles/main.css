@@ -166,6 +166,12 @@ p {
   font-weight: bold;
 }
 
+.text-muted {
+  color: #6c757d;
+  font-size: 0.8rem;
+  margin: 5px 0;
+}
+
 .def-list li {
   margin-bottom: 0.8rem;
   font-family: monospace;

@@ -145,7 +145,7 @@
 }" />
           <div class="demo-box">
             <div class="limit-box">Max 300px / Min 150px</div>
-            <p style="font-size: 0.8rem; color: #888; margin-top:5px;">(Intenta redimensionar la ventana)</p>
+            <p class="text-muted">(Intenta redimensionar la ventana)</p>
           </div>
         </div>
         <div class="card info">
