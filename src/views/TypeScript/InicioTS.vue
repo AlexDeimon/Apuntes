@@ -26,13 +26,13 @@
     <section class="topic-section">
       <h2 class="section-title typescript">¿Por qué usarlo?</h2>
       <div class="cards-grid">
-        <div class="card">
+        <div class="card recommended">
           <div class="card-header">
             <h3>Popularidad</h3>
           </div>
           <p>A lo largo de los últimos años Javascript ha crecido mucho y se ha convertido en el camino a seguir para escribir aplicaciones multiplataforma. En los últimos años la popularidad de TypeScript se ha disparado y se perfila como uno de los lenguajes de programación con más futuro.</p>
         </div>
-        <div class="card">
+        <div class="card recommended">
           <div class="card-header">
             <h3>Sencillo de aprender</h3>
           </div>
@@ -41,15 +41,15 @@
       </div>
       <p class="section-desc">Ventajas principales frente a JavaScript vainilla.</p>
       <div class="cards-grid">
-        <div class="card">
+        <div class="card recommended">
           <h3>Fiabilidad</h3>
           <p>Detecta errores en tiempo de compilación/escritura en lugar de en tiempo de ejecución (runtime). "Si compila, probablemente funcione".</p>
         </div>
-        <div class="card">
+        <div class="card recommended">
           <h3>Escalabilidad</h3>
           <p>Facilita trabajar en proyectos grandes y con equipos numerosos gracias a las interfaces y tipos explícitos que documentan el código automáticamente.</p>
         </div>
-        <div class="card">
+        <div class="card recommended">
           <h3>Tooling Moderno</h3>
           <p>Mejora el autocompletado y la refactorización en editores como VS Code.</p>
         </div>
@@ -60,14 +60,14 @@
       <h2 class="section-title typescript">Instalación y Uso</h2>
       <p class="section-desc">Herramientas necesarias para empezar.</p>
       <div class="cards-grid">
-        <div class="card">
+        <div class="card info">
           <div class="card-header">
             <h3>Instalación Global</h3>
           </div>
           <p>Se instala mediante NPM (Node Package Manager).</p>
           <CodeBlock language="bash" code='npm install -g typescript' />
         </div>
-        <div class="card">
+        <div class="card info">
           <div class="card-header">
             <h3>Compilación</h3>
           </div>
@@ -81,7 +81,7 @@
     <section class="topic-section">
       <h2 class="section-title typescript">Ejemplo Comparativo</h2>
       <div class="cards-grid">
-        <div class="card">
+        <div class="card warning">
           <div class="card-header">
             <h3>JavaScript</h3>
             <span class="badge danger">Sin Tipos</span>
@@ -96,7 +96,7 @@ console.log(sumar("5", 5)); // "55"' />
         <div class="card recommended">
           <div class="card-header">
             <h3>TypeScript</h3>
-            <span class="badge typescript">Tipado</span>
+            <span class="badge success">Tipado</span>
           </div>
           <CodeBlock language="typescript" code='function sumar(a: number, b: number): number {
   return a + b;

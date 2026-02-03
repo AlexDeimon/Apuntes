@@ -55,6 +55,11 @@ const router = createRouter({
       component: () => import('@/views/TypeScript/InicioTS.vue'),
     },
     {
+      path: '/typescript/inferencia',
+      name: 'typescript-inferencia',
+      component: () => import('@/views/TypeScript/InferenciaTS.vue'),
+    },
+    {
       path: '/nodejs/inicio',
       name: 'nodejs-inicio',
       component: () => import('@/views/Node/InicioNode.vue'),
