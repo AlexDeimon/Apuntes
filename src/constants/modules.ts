@@ -25,5 +25,8 @@ export const modules: Record<string, Module[]> = {
     { id: 'inicio', name: '¿Qué es TS?', icon: '/Apuntes/v2/icons/typescript.svg' },
     { id: 'inferencia', name: 'Inferencia', icon: '/Apuntes/v2/icons/visual.png' },
   ],
-  nodejs: [{ id: 'inicio', name: '¿Qué es Node.js?', icon: '/Apuntes/v2/icons/node.svg' }],
+  nodejs: [
+    { id: 'inicio', name: '¿Qué es Node.js?', icon: '/Apuntes/v2/icons/node.svg' },
+    { id: 'filesystem', name: 'File System', icon: '/Apuntes/v2/icons/file.png' },
+  ],
 }

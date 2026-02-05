@@ -64,6 +64,11 @@ const router = createRouter({
       name: 'nodejs-inicio',
       component: () => import('@/views/Node/InicioNode.vue'),
     },
+    {
+      path: '/nodejs/filesystem',
+      name: 'nodejs-filesystem',
+      component: () => import('@/views/Node/FileSystemNode.vue'),
+    },
   ],
 })
 
