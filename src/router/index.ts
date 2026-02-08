@@ -20,6 +20,11 @@ const router = createRouter({
       component: () => import('@/views/HTML/TitulosParrafos.vue'),
     },
     {
+      path: '/html/secciones',
+      name: 'html-secciones',
+      component: () => import('@/views/HTML/SeccionContenido.vue'),
+    },
+    {
       path: '/css/fundamentos',
       name: 'css-fundamentos',
       component: () => import('@/views/CSS/FundamentosCSS.vue'),
