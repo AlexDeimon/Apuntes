@@ -35,6 +35,11 @@ const router = createRouter({
       component: () => import('@/views/CSS/MedidasCSS.vue'),
     },
     {
+      path: '/css/boxmodel',
+      name: 'css-boxmodel',
+      component: () => import('@/views/CSS/BoxModelCSS.vue'),
+    },
+    {
       path: '/js/fundamentos',
       name: 'js-fundamentos',
       component: () => import('@/views/JavaScript/FundamentosJS.vue'),
