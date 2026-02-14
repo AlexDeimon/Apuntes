@@ -50,6 +50,11 @@ const router = createRouter({
       component: () => import('@/views/JavaScript/StringsJS.vue'),
     },
     {
+      path: '/js/math',
+      name: 'js-math',
+      component: () => import('@/views/JavaScript/MathJS.vue'),
+    },
+    {
       path: '/bootstrap/inicio',
       name: 'bootstrap-inicio',
       component: () => import('@/views/Bootstrap/InicioBootstrap.vue'),
