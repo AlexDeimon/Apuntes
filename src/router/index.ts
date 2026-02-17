@@ -65,6 +65,11 @@ const router = createRouter({
       component: () => import('@/views/Bootstrap/ImagenesBootstrap.vue'),
     },
     {
+      path: '/bootstrap/tablas',
+      name: 'bootstrap-tablas',
+      component: () => import('@/views/Bootstrap/TablasBootstrap.vue'),
+    },
+    {
       path: '/typescript/inicio',
       name: 'typescript-inicio',
       component: () => import('@/views/TypeScript/InicioTS.vue'),

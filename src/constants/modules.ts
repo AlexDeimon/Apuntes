@@ -23,6 +23,7 @@ export const modules: Record<string, Module[]> = {
   bootstrap: [
     { id: 'inicio', name: 'Iniciando con Bootstrap', icon: '/Apuntes/v2/icons/bootstrap.svg' },
     { id: 'imagenes', name: 'Imágenes', icon: '/Apuntes/v2/icons/imagen.png' },
+    { id: 'tablas', name: 'Tablas', icon: '/Apuntes/v2/icons/tabla.png' },
   ],
   typescript: [
     { id: 'inicio', name: '¿Qué es TS?', icon: '/Apuntes/v2/icons/typescript.svg' },
