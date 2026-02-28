@@ -94,6 +94,11 @@ const router = createRouter({
       name: 'nodejs-filesystem',
       component: () => import('@/views/Node/FileSystemNode.vue'),
     },
+    {
+      path: '/nodejs/path',
+      name: 'nodejs-path',
+      component: () => import('@/views/Node/PathNode.vue'),
+    },
   ],
 })
 
