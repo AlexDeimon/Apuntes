@@ -20,6 +20,11 @@ const router = createRouter({
       component: () => import('@/views/HTML/TitulosParrafos.vue'),
     },
     {
+      path: '/html/bloqueLinea',
+      name: 'html-bloqueLinea',
+      component: () => import('@/views/HTML/BloqueLinea.vue'),
+    },
+    {
       path: '/html/secciones',
       name: 'html-secciones',
       component: () => import('@/views/HTML/SeccionContenido.vue'),

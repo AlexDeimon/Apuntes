@@ -9,6 +9,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'inicio', name: 'Iniciando con HTML', icon: '/Apuntes/v2/icons/html.svg' },
     { id: 'titulosParrafos', name: 'Titulos & Parrafos', icon: '/Apuntes/v2/icons/texto.png' },
     { id: 'secciones', name: 'Secciones de Contenido', icon: '/Apuntes/v2/icons/contenido.png' },
+    { id: 'bloqueLinea', name: 'Bloque vs Línea', icon: '/Apuntes/v2/icons/webpage.png' },
   ],
   css: [
     { id: 'fundamentos', name: 'Fundamentos CSS', icon: '/Apuntes/v2/icons/css.svg' },
