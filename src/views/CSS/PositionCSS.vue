@@ -135,7 +135,7 @@
           <div class="preview-container">
             <div class="preview-header">Ejemplo: Sticky</div>
             <div class="fixed-scroll-demo">
-              <img src="/Apuntes/v2/icons/css.svg" alt="css">
+              <img src="https://alexdeimon.github.io/Apuntes/v2/icons/css.svg" alt="css">
               <div class="fixed-item">Header</div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio facere illum laborum eligendi.</p>
@@ -343,5 +343,5 @@ import ReferenceSection from '@/components/ReferenceSection.vue'
   background: rgba(0, 181, 253, 0.2);
   border: 2px solid var(--color-css);
   color: var(--color-css);
-} 
+}
 </style>
