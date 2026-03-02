@@ -15,6 +15,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'fundamentos', name: 'Fundamentos CSS', icon: '/Apuntes/v2/icons/css.svg' },
     { id: 'medidas', name: 'Medidas y Unidades', icon: '/Apuntes/v2/icons/regla.png' },
     { id: 'boxmodel', name: 'Modelo de Caja', icon: '/Apuntes/v2/icons/caja.png' },
+    { id: 'position', name: 'Posicionamiento', icon: '/Apuntes/v2/icons/position.png' },
   ],
   js: [
     { id: 'fundamentos', name: 'Fundamentos JS', icon: '/Apuntes/v2/icons/javascript.svg' },

@@ -45,6 +45,11 @@ const router = createRouter({
       component: () => import('@/views/CSS/BoxModelCSS.vue'),
     },
     {
+      path: '/css/position',
+      name: 'css-position',
+      component: () => import('@/views/CSS/PositionCSS.vue'),
+    },
+    {
       path: '/js/fundamentos',
       name: 'js-fundamentos',
       component: () => import('@/views/JavaScript/FundamentosJS.vue'),
