@@ -21,6 +21,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'fundamentos', name: 'Fundamentos JS', icon: '/Apuntes/v2/icons/javascript.svg' },
     { id: 'strings', name: 'Strings', icon: '/Apuntes/v2/icons/strings.png' },
     { id: 'math', name: 'Math', icon: '/Apuntes/v2/icons/calculadora.png' },
+    { id: 'condicionales', name: 'Condicionales', icon: '/Apuntes/v2/icons/condicionales.png' },
   ],
   bootstrap: [
     { id: 'inicio', name: 'Iniciando con Bootstrap', icon: '/Apuntes/v2/icons/bootstrap.svg' },

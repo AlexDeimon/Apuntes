@@ -65,6 +65,11 @@ const router = createRouter({
       component: () => import('@/views/JavaScript/MathJS.vue'),
     },
     {
+      path: '/js/condicionales',
+      name: 'js-condicionales',
+      component: () => import('@/views/JavaScript/CondicionalesJS.vue'),
+    },
+    {
       path: '/bootstrap/inicio',
       name: 'bootstrap-inicio',
       component: () => import('@/views/Bootstrap/InicioBootstrap.vue'),
