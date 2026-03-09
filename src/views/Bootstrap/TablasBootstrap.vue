@@ -372,7 +372,7 @@
                 </tbody>
               </table>
             </div>
-            <small class="text-muted d-block mt-2">Intenta hacer scroll horizontal si la pantalla es pequeña.</small>
+            <small class="text-muted d-block">Intenta hacer scroll horizontal si la pantalla es pequeña.</small>
           </div>
         </div>
       </div>
@@ -391,6 +391,26 @@ import CodeBlock from '@/components/CodeBlock.vue'
   vertical-align: top;
   border-color: #3c3c3c;
   border-collapse: collapse;
+}
+
+.table-dark {
+  color: #fff;
+  background-color: #212529;
+  border-color: #373b3e;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.text-muted {
+  color: #888;
+  font-size: 0.9em;
+}
+
+.d-block {
+  display: block;
 }
 
 .table> :not(caption)>*>* {
@@ -414,25 +434,9 @@ import CodeBlock from '@/components/CodeBlock.vue'
   text-align: left;
 }
 
-.table-dark {
-  color: #fff;
-  background-color: #212529;
-  border-color: #373b3e;
-}
-
 .table-dark th,
 .table-dark td {
   border-color: #373b3e;
-}
-
-.table-striped>tbody>tr:nth-of-type(odd)>* {
-  color: #e0e0e0;
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.table-hover>tbody>tr:hover>* {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.075);
 }
 
 .table-bordered> :not(caption)>* {
@@ -448,6 +452,10 @@ import CodeBlock from '@/components/CodeBlock.vue'
   border: 1px solid #444;
 }
 
+.table-sm> :not(caption)>*>* {
+  padding: 0.25rem 0.25rem;
+}
+
 .table-borderless th,
 .table-borderless td,
 .table-borderless thead,
@@ -455,25 +463,13 @@ import CodeBlock from '@/components/CodeBlock.vue'
   border: 0;
 }
 
-.table-sm> :not(caption)>*>* {
-  padding: 0.25rem 0.25rem;
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  color: #e0e0e0;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
-.table-responsive {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.text-muted {
-  color: #888;
-  font-size: 0.9em;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.d-block {
-  display: block;
+.table-hover>tbody>tr:hover>* {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.075);
 }
 </style>

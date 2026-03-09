@@ -85,6 +85,11 @@ const router = createRouter({
       component: () => import('@/views/Bootstrap/TablasBootstrap.vue'),
     },
     {
+      path: '/bootstrap/botones',
+      name: 'bootstrap-botones',
+      component: () => import('@/views/Bootstrap/BotonesBootstrap.vue'),
+    },
+    {
       path: '/typescript/inicio',
       name: 'typescript-inicio',
       component: () => import('@/views/TypeScript/InicioTS.vue'),
