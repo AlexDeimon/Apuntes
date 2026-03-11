@@ -105,6 +105,11 @@ const router = createRouter({
       component: () => import('@/views/TypeScript/TiposDatosTS.vue'),
     },
     {
+      path: '/typescript/funciones',
+      name: 'typescript-funciones',
+      component: () => import('@/views/TypeScript/FuncionesTS.vue'),
+    },
+    {
       path: '/nodejs/inicio',
       name: 'nodejs-inicio',
       component: () => import('@/views/Node/InicioNode.vue'),

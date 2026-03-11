@@ -33,6 +33,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'inicio', name: '¿Qué es TS?', icon: '/Apuntes/v2/icons/typescript.svg' },
     { id: 'inferencia', name: 'Inferencia', icon: '/Apuntes/v2/icons/visual.png' },
     { id: 'tipos', name: 'Tipos de Datos', icon: '/Apuntes/v2/icons/datos.png' },
+    { id: 'funciones', name: 'Funciones', icon: '/Apuntes/v2/icons/funciones.png' },
   ],
   nodejs: [
     { id: 'inicio', name: '¿Qué es Node.js?', icon: '/Apuntes/v2/icons/node.svg' },
