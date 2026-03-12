@@ -125,12 +125,8 @@ const __dirname = path.dirname(__filename);
 console.log(__dirname);" />
       </div>
     </section>
-    <ReferenceSection :references="[
-      { techId: 'nodejs', moduleId: 'inicio', text: '¿Qué es Node.js?' }
-        ]" />
-    </div>
+  </div>
 </template>
 <script setup lang="ts">
 import CodeBlock from '@/components/CodeBlock.vue'
-import ReferenceSection from '@/components/ReferenceSection.vue'
 </script>

@@ -124,6 +124,11 @@ const router = createRouter({
       name: 'nodejs-path',
       component: () => import('@/views/Node/PathNode.vue'),
     },
+    {
+      path: '/nodejs/process',
+      name: 'nodejs-process',
+      component: () => import('@/views/Node/ProcessNode.vue'),
+    },
   ],
 })
 

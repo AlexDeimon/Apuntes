@@ -39,5 +39,6 @@ export const modules: Record<string, Module[]> = {
     { id: 'inicio', name: '¿Qué es Node.js?', icon: '/Apuntes/v2/icons/node.svg' },
     { id: 'filesystem', name: 'File System', icon: '/Apuntes/v2/icons/file.png' },
     { id: 'path', name: 'Path', icon: '/Apuntes/v2/icons/path.png' },
+    { id: 'process', name: 'Objeto Process', icon: '/Apuntes/v2/icons/process.png' },
   ],
 }
