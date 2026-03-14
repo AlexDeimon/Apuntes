@@ -30,6 +30,11 @@ const router = createRouter({
       component: () => import('@/views/HTML/SeccionContenido.vue'),
     },
     {
+      path: '/html/enlaces',
+      name: 'html-enlaces',
+      component: () => import('@/views/HTML/EnlacesHTML.vue'),
+    },
+    {
       path: '/css/fundamentos',
       name: 'css-fundamentos',
       component: () => import('@/views/CSS/FundamentosCSS.vue'),

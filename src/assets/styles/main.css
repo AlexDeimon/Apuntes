@@ -195,6 +195,17 @@ p {
   margin: 5px 0;
 }
 
+.link {
+  color: var(--tech-color);
+  transition: color 0.3s ease;
+}
+
+.card .link{
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+}
+
 .def-list li {
   margin-bottom: 0.8rem;
   font-family: monospace;
@@ -218,6 +229,8 @@ p {
 .list dt::before{ content: "➣ "; }
 
 .list li::marker{ color: var(--color-primary); }
+
+.link:hover { color: #fff; }
 
 .main-title.css {
   background: linear-gradient(135deg, #00b5fd 0%, #3587df 100%);

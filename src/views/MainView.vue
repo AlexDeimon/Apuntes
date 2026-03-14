@@ -133,7 +133,6 @@ import '@fortawesome/fontawesome-free/css/all.css'
 
 .link {
   color: var(--color-html);
-  transition: color 0.3s ease;
 }
 
 .list li {
@@ -168,10 +167,6 @@ import '@fortawesome/fontawesome-free/css/all.css'
 
 .list .fab {
   color: #ff0000;
-}
-
-.link:hover {
-  color: #fff;
 }
 
 .list .fa-github {
