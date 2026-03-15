@@ -80,6 +80,11 @@ const router = createRouter({
       component: () => import('@/views/JavaScript/CondicionalesJS.vue'),
     },
     {
+      path: '/js/bucles',
+      name: 'js-bucles',
+      component: () => import('@/views/JavaScript/BuclesJS.vue'),
+    },
+    {
       path: '/bootstrap/inicio',
       name: 'bootstrap-inicio',
       component: () => import('@/views/Bootstrap/InicioBootstrap.vue'),
