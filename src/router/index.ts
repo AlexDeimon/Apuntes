@@ -105,6 +105,11 @@ const router = createRouter({
       component: () => import('@/views/Bootstrap/BotonesBootstrap.vue'),
     },
     {
+      path: '/bootstrap/listgroup',
+      name: 'bootstrap-listgroup',
+      component: () => import('@/views/Bootstrap/ListGroupBootstrap.vue'),
+    },
+    {
       path: '/typescript/inicio',
       name: 'typescript-inicio',
       component: () => import('@/views/TypeScript/InicioTS.vue'),
