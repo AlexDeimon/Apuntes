@@ -50,6 +50,11 @@ const router = createRouter({
       component: () => import('@/views/CSS/BoxModelCSS.vue'),
     },
     {
+      path: '/css/boxalignment',
+      name: 'css-boxalignment',
+      component: () => import('@/views/CSS/BoxAlignmentCSS.vue'),
+    },
+    {
       path: '/css/position',
       name: 'css-position',
       component: () => import('@/views/CSS/PositionCSS.vue'),
