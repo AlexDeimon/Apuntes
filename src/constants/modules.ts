@@ -38,6 +38,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'inferencia', name: 'Inferencia', icon: '/Apuntes/v2/icons/visual.png' },
     { id: 'tipos', name: 'Tipos de Datos', icon: '/Apuntes/v2/icons/datos.png' },
     { id: 'funciones', name: 'Funciones', icon: '/Apuntes/v2/icons/funciones.png' },
+    { id: 'arrays', name: 'Arrays & Tuplas', icon: '/Apuntes/v2/icons/arrays.png' },
   ],
   nodejs: [
     { id: 'inicio', name: '¿Qué es Node.js?', icon: '/Apuntes/v2/icons/node.svg' },
