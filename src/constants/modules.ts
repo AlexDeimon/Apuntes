@@ -45,5 +45,6 @@ export const modules: Record<string, Module[]> = {
     { id: 'filesystem', name: 'File System', icon: '/Apuntes/v2/icons/file.png' },
     { id: 'path', name: 'Path', icon: '/Apuntes/v2/icons/path.png' },
     { id: 'process', name: 'Objeto Process', icon: '/Apuntes/v2/icons/process.png' },
+    { id: 'npm', name: 'NPM', icon: '/Apuntes/v2/icons/NPM.png' },
   ],
 }
