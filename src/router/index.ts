@@ -35,6 +35,11 @@ const router = createRouter({
       component: () => import('@/views/HTML/EnlacesHTML.vue'),
     },
     {
+      path: '/html/listas',
+      name: 'html-listas',
+      component: () => import('@/views/HTML/ListasHTML.vue'),
+    },
+    {
       path: '/css/fundamentos',
       name: 'css-fundamentos',
       component: () => import('@/views/CSS/FundamentosCSS.vue'),
