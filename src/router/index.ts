@@ -65,6 +65,11 @@ const router = createRouter({
       component: () => import('@/views/CSS/PositionCSS.vue'),
     },
     {
+      path: '/css/texto',
+      name: 'css-texto',
+      component: () => import('@/views/CSS/TextoCSS.vue'),
+    },
+    {
       path: '/js/fundamentos',
       name: 'js-fundamentos',
       component: () => import('@/views/JavaScript/FundamentosJS.vue'),
