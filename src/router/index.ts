@@ -95,6 +95,11 @@ const router = createRouter({
       component: () => import('@/views/JavaScript/BuclesJS.vue'),
     },
     {
+      path: '/js/arrays',
+      name: 'js-arrays',
+      component: () => import('@/views/JavaScript/ArraysJS.vue'),
+    },
+    {
       path: '/bootstrap/inicio',
       name: 'bootstrap-inicio',
       component: () => import('@/views/Bootstrap/InicioBootstrap.vue'),
