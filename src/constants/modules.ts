@@ -35,6 +35,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'tablas', name: 'Tablas', icon: '/Apuntes/v2/icons/tabla.png' },
     { id: 'botones', name: 'Botones', icon: '/Apuntes/v2/icons/botones.png' },
     { id: 'listgroup', name: 'List Group', icon: '/Apuntes/v2/icons/lista.png' },
+    { id: 'cards', name: 'Cards', icon: '/Apuntes/v2/icons/card.png' },
   ],
   typescript: [
     { id: 'inicio', name: '¿Qué es TS?', icon: '/Apuntes/v2/icons/typescript.svg' },

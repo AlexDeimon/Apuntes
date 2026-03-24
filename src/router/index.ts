@@ -125,6 +125,11 @@ const router = createRouter({
       component: () => import('@/views/Bootstrap/ListGroupBootstrap.vue'),
     },
     {
+      path: '/bootstrap/cards',
+      name: 'bootstrap-cards',
+      component: () => import('@/views/Bootstrap/CardsBootstrap.vue'),
+    },
+    {
       path: '/typescript/inicio',
       name: 'typescript-inicio',
       component: () => import('@/views/TypeScript/InicioTS.vue'),
