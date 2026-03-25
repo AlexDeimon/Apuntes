@@ -155,6 +155,11 @@ const router = createRouter({
       component: () => import('@/views/TypeScript/ArraysTS.vue'),
     },
     {
+      path: '/typescript/enums',
+      name: 'typescript-enums',
+      component: () => import('@/views/TypeScript/EnumsTS.vue'),
+    },
+    {
       path: '/nodejs/inicio',
       name: 'nodejs-inicio',
       component: () => import('@/views/Node/InicioNode.vue'),
