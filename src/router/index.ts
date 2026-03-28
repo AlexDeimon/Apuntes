@@ -184,6 +184,11 @@ const router = createRouter({
       name: 'nodejs-npm',
       component: () => import('@/views/Node/NPMNode.vue'),
     },
+    {
+      path: '/nodejs/envvars',
+      name: 'nodejs-envvars',
+      component: () => import('@/views/Node/EnvVarsNode.vue'),
+    },
   ],
 })
 

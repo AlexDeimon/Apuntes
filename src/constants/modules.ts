@@ -51,5 +51,6 @@ export const modules: Record<string, Module[]> = {
     { id: 'path', name: 'Path', icon: '/Apuntes/v2/icons/path.png' },
     { id: 'process', name: 'Objeto Process', icon: '/Apuntes/v2/icons/process.png' },
     { id: 'npm', name: 'NPM', icon: '/Apuntes/v2/icons/NPM.png' },
+    { id: 'envvars', name: 'Variables de Entorno', icon: '/Apuntes/v2/icons/enviroment.png' },
   ],
 }
