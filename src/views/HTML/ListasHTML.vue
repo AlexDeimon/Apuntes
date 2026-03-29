@@ -1,7 +1,7 @@
 <template>
   <div class="module-content">
     <div class="header-section">
-      <h1 class="main-title html">Listas en HTML</h1>
+      <h1 class="main-title html">Listas</h1>
       <p class="subtitle">Organizando el contenido de forma jerárquica y secuencial.</p>
     </div>
     <section class="topic-section">

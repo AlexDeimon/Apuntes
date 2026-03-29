@@ -40,6 +40,11 @@ const router = createRouter({
       component: () => import('@/views/HTML/ListasHTML.vue'),
     },
     {
+      path: '/html/tablas',
+      name: 'html-tablas',
+      component: () => import('@/views/HTML/TablasHTML.vue'),
+    },
+    {
       path: '/css/fundamentos',
       name: 'css-fundamentos',
       component: () => import('@/views/CSS/FundamentosCSS.vue'),

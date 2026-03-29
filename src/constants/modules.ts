@@ -12,6 +12,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'bloqueLinea', name: 'Bloque vs Línea', icon: '/Apuntes/v2/icons/webpage.png' },
     { id: 'enlaces', name: 'Enlaces', icon: '/Apuntes/v2/icons/enlace.png' },
     { id: 'listas', name: 'Listas', icon: '/Apuntes/v2/icons/lista.png' },
+    { id: 'tablas', name: 'Tablas', icon: '/Apuntes/v2/icons/tabla.png' },
   ],
   css: [
     { id: 'fundamentos', name: 'Fundamentos CSS', icon: '/Apuntes/v2/icons/css.svg' },
