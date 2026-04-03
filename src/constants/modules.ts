@@ -21,6 +21,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'position', name: 'Posicionamiento', icon: '/Apuntes/v2/icons/position.png' },
     { id: 'boxalignment', name: 'Alineación', icon: '/Apuntes/v2/icons/alineacion.png' },
     { id: 'texto', name: 'Texto', icon: '/Apuntes/v2/icons/strings.png' },
+    { id: 'visual', name: 'Efectos Visuales', icon: '/Apuntes/v2/icons/visual.png' },
   ],
   js: [
     { id: 'fundamentos', name: 'Fundamentos JS', icon: '/Apuntes/v2/icons/javascript.svg' },
