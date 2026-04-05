@@ -30,6 +30,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'condicionales', name: 'Condicionales', icon: '/Apuntes/v2/icons/condicionales.png' },
     { id: 'bucles', name: 'Bucles', icon: '/Apuntes/v2/icons/bucle.png' },
     { id: 'arrays', name: 'Arrays', icon: '/Apuntes/v2/icons/ArraysJS.png' },
+    { id: 'spreadrest', name: 'Spread & Rest', icon: '/Apuntes/v2/icons/Spread.png' },
   ],
   bootstrap: [
     { id: 'inicio', name: 'Iniciando con Bootstrap', icon: '/Apuntes/v2/icons/bootstrap.svg' },

@@ -110,6 +110,11 @@ const router = createRouter({
       component: () => import('@/views/JavaScript/ArraysJS.vue'),
     },
     {
+      path: '/js/spreadrest',
+      name: 'js-spreadrest',
+      component: () => import('@/views/JavaScript/SpreadRestJS.vue'),
+    },
+    {
       path: '/bootstrap/inicio',
       name: 'bootstrap-inicio',
       component: () => import('@/views/Bootstrap/InicioBootstrap.vue'),
