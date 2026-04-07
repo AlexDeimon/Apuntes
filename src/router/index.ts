@@ -145,6 +145,11 @@ const router = createRouter({
       component: () => import('@/views/Bootstrap/CardsBootstrap.vue'),
     },
     {
+      path: '/bootstrap/carrusel',
+      name: 'bootstrap-carrusel',
+      component: () => import('@/views/Bootstrap/CarruselBootstrap.vue'),
+    },
+    {
       path: '/typescript/inicio',
       name: 'typescript-inicio',
       component: () => import('@/views/TypeScript/InicioTS.vue'),
