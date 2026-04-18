@@ -180,6 +180,11 @@ const router = createRouter({
       component: () => import('@/views/TypeScript/EnumsTS.vue'),
     },
     {
+      path: '/typescript/poo',
+      name: 'typescript-poo',
+      component: () => import('@/views/TypeScript/POOTS.vue'),
+    },
+    {
       path: '/nodejs/inicio',
       name: 'nodejs-inicio',
       component: () => import('@/views/Node/InicioNode.vue'),
