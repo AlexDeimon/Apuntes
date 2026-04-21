@@ -214,6 +214,11 @@ const router = createRouter({
       name: 'nodejs-envvars',
       component: () => import('@/views/Node/EnvVarsNode.vue'),
     },
+    {
+      path: '/nodejs/http',
+      name: 'nodejs-http',
+      component: () => import('@/views/Node/HTTPNode.vue'),
+    },
   ],
 })
 
