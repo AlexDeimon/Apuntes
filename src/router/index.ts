@@ -45,6 +45,11 @@ const router = createRouter({
       component: () => import('@/views/HTML/TablasHTML.vue'),
     },
     {
+      path: '/html/formularios',
+      name: 'html-formularios',
+      component: () => import('@/views/HTML/FormulariosHTML.vue'),
+    },
+    {
       path: '/css/fundamentos',
       name: 'css-fundamentos',
       component: () => import('@/views/CSS/FundamentosCSS.vue'),

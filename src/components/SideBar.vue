@@ -48,6 +48,9 @@ const openModule = (module: { id: string, name: string }) => {
 <style scoped>
 .sidebar {
   width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   border-right: 1px solid #3c3c3c;
   background-color: var(--sidebar);
 }
@@ -66,7 +69,11 @@ const openModule = (module: { id: string, name: string }) => {
 }
 
 .sidebar-content {
+  flex: 1;
   padding: 8px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
 }
 
 .module-item {

@@ -19,6 +19,7 @@ const { selectedTech, activeTech } = storeToRefs(store)
 .workspace {
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 .workspace[data-tech="html"] {
