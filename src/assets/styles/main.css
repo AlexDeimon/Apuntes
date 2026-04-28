@@ -299,6 +299,11 @@ p {
   color: #448cff;
 }
 
+.def-list .def-list {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
 .button-link:hover {
   filter: brightness(1.1);
 }

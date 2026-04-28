@@ -137,9 +137,3 @@ server.listen(PORT, () => {
 import CodeBlock from '@/components/CodeBlock.vue'
 import ReferenceSection from '@/components/ReferenceSection.vue'
 </script>
-<style scoped>
-.def-list .def-list {
-  list-style-type: disc;
-  padding-left: 2rem;
-}
-</style>
