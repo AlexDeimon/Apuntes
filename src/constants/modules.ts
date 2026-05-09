@@ -33,6 +33,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'bucles', name: 'Bucles', icon: '/Apuntes/v2/icons/bucle.png' },
     { id: 'arrays', name: 'Arrays', icon: '/Apuntes/v2/icons/ArraysJS.png' },
     { id: 'spreadrest', name: 'Spread & Rest', icon: '/Apuntes/v2/icons/Spread.png' },
+    { id: 'regex', name: 'Expresiones Regulares', icon: '/Apuntes/v2/icons/RegEx.png' },
   ],
   bootstrap: [
     { id: 'inicio', name: 'Iniciando con Bootstrap', icon: '/Apuntes/v2/icons/bootstrap.svg' },

@@ -125,6 +125,11 @@ const router = createRouter({
       component: () => import('@/views/JavaScript/SpreadRestJS.vue'),
     },
     {
+      path: '/js/regex',
+      name: 'js-regex',
+      component: () => import('@/views/JavaScript/RegexJS.vue'),
+    },
+    {
       path: '/bootstrap/inicio',
       name: 'bootstrap-inicio',
       component: () => import('@/views/Bootstrap/InicioBootstrap.vue'),
