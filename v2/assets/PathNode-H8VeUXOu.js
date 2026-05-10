@@ -1,0 +1,27 @@
+import{C as a}from"./CodeBlock-DiIRJ6lH.js";import{d as i,c as n,a as d,b as e,e as o,f as t,o as l}from"./index-Bn5NyT--.js";const r={class:"module-content"},u={class:"topic-section"},p={class:"cards-grid"},c={class:"card info"},m={class:"card info"},v={class:"card info"},f={class:"card info"},h={class:"card info"},g={class:"card info"},x={class:"card info"},j={class:"card info"},b={class:"topic-section"},P={class:"card recommended"},M=i({__name:"PathNode",setup(S){return(U,s)=>(l(),n("div",r,[s[23]||(s[23]=d('<div class="header-section"><h1 class="main-title node">Módulo Path</h1><p class="subtitle">Utilidades para el manejo y transformación de rutas de archivos.</p></div><section class="topic-section"><h2 class="section-title node">¿Por qué usar Path?</h2><p class="section-desc">Node.js se ejecuta en diferentes sistemas operativos (Windows, macOS, Linux). Cada sistema tiene su propia forma de representar las rutas de archivos. El módulo <code>path</code> abstrae estas diferencias para que el código sea multiplataforma.</p><div class="cards-grid"><div class="card info"><div class="card-header"><h3>Windows</h3></div><p>Usa barras invertidas (<code>\\</code>) como separador: <code>C:\\Users\\admin\\archivo.txt</code></p></div><div class="card info"><div class="card-header"><h3>Posix (Linux/Mac)</h3></div><p>Usa barras inclinadas (<code>/</code>) como separador: <code>/home/user/archivo.txt</code></p></div></div></section><hr class="divider">',3)),e("section",u,[s[16]||(s[16]=e("h2",{class:"section-title node"},"Métodos Principales",-1)),s[17]||(s[17]=e("p",{class:"section-desc"},"Para utilizar este módulo, primero debemos importarlo:",-1)),o(a,{language:"javascript",code:`const path = require('path'); // CommonJS
+import path from 'path'; // ES Modules`}),s[18]||(s[18]=e("br",null,null,-1)),s[19]||(s[19]=e("br",null,null,-1)),e("div",p,[e("div",c,[s[0]||(s[0]=e("div",{class:"card-header"},[e("h3",null,"path.join()")],-1)),s[1]||(s[1]=e("p",null,"Une todos los fragmentos de ruta usando el separador específico del sistema operativo.",-1)),o(a,{language:"javascript",code:`path.join('/folder', 'subfolder', 'file.txt');
+// Windows: \\folder\\subfolder\\file.txt
+// Linux: /folder/subfolder/file.txt`})]),e("div",m,[s[2]||(s[2]=e("div",{class:"card-header"},[e("h3",null,"path.resolve()")],-1)),s[3]||(s[3]=e("p",null,[t("Resuelve una secuencia de rutas en una "),e("strong",null,"ruta absoluta"),t(" desde el directorio actual.")],-1)),o(a,{language:"javascript",code:`path.resolve('src', 'app.js');
+// Salida: /Users/diego/project/src/app.js (ejemplo)`})]),e("div",v,[s[4]||(s[4]=e("div",{class:"card-header"},[e("h3",null,"path.basename()")],-1)),s[5]||(s[5]=e("p",null,"Retorna la última porción de una ruta (generalmente el nombre del archivo).",-1)),o(a,{language:"javascript",code:`path.basename('/src/js/index.js'); // 'index.js'
+path.basename('/src/js/index.js', '.js'); // 'index'`})]),e("div",f,[s[6]||(s[6]=e("div",{class:"card-header"},[e("h3",null,"path.dirname()")],-1)),s[7]||(s[7]=e("p",null,"Retorna el nombre del directorio de una ruta.",-1)),o(a,{language:"javascript",code:"path.dirname('/src/js/index.js'); // '/src/js'"})]),e("div",h,[s[8]||(s[8]=e("div",{class:"card-header"},[e("h3",null,"path.extname()")],-1)),s[9]||(s[9]=e("p",null,"Retorna la extensión del archivo, incluido el punto.",-1)),o(a,{language:"javascript",code:"path.extname('image.png'); // '.png'"})]),e("div",g,[s[10]||(s[10]=e("div",{class:"card-header"},[e("h3",null,"path.parse()")],-1)),s[11]||(s[11]=e("p",null,"Retorna un objeto cuyas propiedades representan elementos significativos de la ruta.",-1)),o(a,{language:"javascript",code:`path.parse('/home/user/dir/file.txt');
+/* {
+  root: '/',
+  dir: '/home/user/dir',
+  base: 'file.txt',
+  ext: '.txt',
+  name: 'file'
+} */`})]),e("div",x,[s[12]||(s[12]=e("div",{class:"card-header"},[e("h3",null,"path.format()")],-1)),s[13]||(s[13]=e("p",null,"Convierte un objeto de ruta en una cadena de texto.",-1)),o(a,{language:"javascript",code:`path.format({
+  root: '/',
+  dir: '/home/user/dir',
+  base: 'file.txt',
+  ext: '.txt',
+  name: 'file'
+});
+// Salida: /home/user/dir/file.txt`})]),e("div",j,[s[14]||(s[14]=e("div",{class:"card-header"},[e("h3",null,"path.normalize()")],-1)),s[15]||(s[15]=e("p",null,[t("Normaliza una ruta, resolviendo "),e("code",null,".."),t(" y "),e("code",null,"."),t(" automáticamente. También elimina los separadores duplicados.")],-1)),o(a,{language:"javascript",code:`path.normalize('/home/user/dir/../file.txt');
+/* /home/user/file.txt */`})])])]),s[24]||(s[24]=e("hr",{class:"divider"},null,-1)),e("section",b,[s[21]||(s[21]=e("h2",{class:"section-title node"},"Path en ES Modules (ESM)",-1)),s[22]||(s[22]=e("p",{class:"section-desc"},[t("En los módulos modernos (ESM), las variables globales "),e("code",null,"__dirname"),t(" y "),e("code",null,"__filename"),t(" no están disponibles. Debemos recrearlas.")],-1)),e("div",P,[s[20]||(s[20]=e("ul",{class:"def-list"},[e("li",null,[e("span",{class:"def-term"},"__filename"),t(": es la ruta absoluta del archivo actual.")]),e("li",null,[e("span",{class:"def-term"},"__dirname"),t(": es el directorio del archivo actual.")])],-1)),o(a,{language:"javascript",code:`import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+console.log(__dirname);`})])])]))}});export{M as default};
