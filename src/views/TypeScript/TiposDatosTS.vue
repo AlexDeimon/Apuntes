@@ -93,13 +93,11 @@ let persona1: Persona = {
         </div>
         <div class="card info">
           <h3>Objetos</h3>
-          <p>Se definen mediante el nombre del objeto seguido de llaves {}.</p>
-          <CodeBlock language="typescript" code='let persona: {
+          <p>Se definen mediante llaves {} conteniendo los nombres de las propiedades y sus tipos de datos esperados.</p>
+          <CodeBlock language="typescript" code='let persona1: {
   nombre: string;
   edad: number
-}
-
-let persona1: persona = {
+} = {
   nombre: "Luis",
   edad: 22,
 };' />
@@ -144,11 +142,12 @@ id = "ABC";' />
       <div class="cards-grid">
         <div class="card info">
           <h3>Type Assertions (as)</h3>
-          <p>Cuando tú sabes más sobre el tipo de un valor que TypeScript, puedes "forzar" el tipo.</p>
+          <p>Cuando tú sabes más sobre el tipo de un valor que TypeScript, puedes "forzar" el tipo. Aunque existe una sintaxis alternativa con <code>&lt;Tipo&gt;</code>, el estándar de la industria es usar <code>as Tipo</code> porque la primera es incompatible con TSX/React.</p>
           <CodeBlock language="typescript" code='// canvas es un HTMLElement por defecto
 const canvas = document.getElementById("main") as HTMLCanvasElement;
 
-// Tambien se puede usar: <HTMLCanvasElement>canvas' />
+// Sintaxis antigua (No usar en proyectos con React/TSX):
+// const canvas = <HTMLCanvasElement>document.getElementById("main");' />
         </div>
         <div class="card info">
           <h3>Narrowing</h3>

@@ -68,14 +68,14 @@ function sumar(a: number, b: number) {
         </div>
         <div class="card warning">
           <div class="card-header">
-            <h3>Any</h3>
+            <h3>Any (Implícito)</h3>
           </div>
-          <p>Si no se le asigna el tipo de dato, implicitámente se le asignara un tipo <code>Any</code>, por lo cual no podrá inferir posteriormente que tipo de dato es o son los parámetros.</p>
-          <CodeBlock language="typescript" code="function saludar(nombre) {
+          <p>Si no se le asigna el tipo de dato explícitamente, TypeScript intentará asignarle <code>any</code>. Sin embargo, bajo el modo estricto actual (<code>strict: true</code> o <code>noImplicitAny: true</code>), esto <strong>lanzará un error de compilación</strong> indicando que el parámetro tiene un tipo <code>any</code> implícito.</p>
+          <CodeBlock language="typescript" code="function saludar(nombre) { // Error: Parameter 'nombre' implicitly has an 'any' type.
   console.log(`Hola ${nombre}`);
 }
 
-saludar(123); // Actualmente nombre es any, por lo que no inferirá que es un string" />
+saludar(123);" />
         </div>
       </div>
     </section>
