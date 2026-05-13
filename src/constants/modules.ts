@@ -62,5 +62,6 @@ export const modules: Record<string, Module[]> = {
     { id: 'npm', name: 'NPM', icon: '/Apuntes/v2/icons/NPM.png' },
     { id: 'envvars', name: 'Variables de Entorno', icon: '/Apuntes/v2/icons/enviroment.png' },
     { id: 'http', name: 'Módulo HTTP', icon: '/Apuntes/v2/icons/http.png' },
+    { id: 'express', name: 'Express', icon: '/Apuntes/v2/icons/Framework.png' },
   ],
 }

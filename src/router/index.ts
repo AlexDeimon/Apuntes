@@ -239,6 +239,11 @@ const router = createRouter({
       name: 'nodejs-http',
       component: () => import('@/views/Node/HTTPNode.vue'),
     },
+    {
+      path: '/nodejs/express',
+      name: 'nodejs-express',
+      component: () => import('@/views/Node/ExpressNode.vue'),
+    },
   ],
 })
 
