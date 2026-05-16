@@ -14,6 +14,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'listas', name: 'Listas', icon: '/Apuntes/v2/icons/lista.png' },
     { id: 'tablas', name: 'Tablas', icon: '/Apuntes/v2/icons/tabla.png' },
     { id: 'formularios', name: 'Formularios', icon: '/Apuntes/v2/icons/formulario.png' },
+    { id: 'embebido', name: 'Contenido Embebido', icon: '/Apuntes/v2/icons/contenidoEmbebido.png' },
   ],
   css: [
     { id: 'fundamentos', name: 'Fundamentos CSS', icon: '/Apuntes/v2/icons/css.svg' },

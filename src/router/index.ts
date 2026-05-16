@@ -50,6 +50,11 @@ const router = createRouter({
       component: () => import('@/views/HTML/FormulariosHTML.vue'),
     },
     {
+      path: '/html/embebido',
+      name: 'html-embebido',
+      component: () => import('@/views/HTML/EmbebidoHTML.vue'),
+    },
+    {
       path: '/css/fundamentos',
       name: 'css-fundamentos',
       component: () => import('@/views/CSS/FundamentosCSS.vue'),
