@@ -40,7 +40,7 @@
           <p>Usa <code>&lt;figure&gt;</code> para agrupar semánticamente una imagen con una descripción debajo.</p>
           <p>Un título puede estar asociado con el elemento &lt;figure&gt; mediante la inserción de un &lt;figcaption&gt; en su interior.</p>
           <CodeBlock language="html" code='<!-- Imágen adaptable -->
-<img srcset="../../assets/images/portada-small.webp 3x, ../assets/images/portada-medium.webp" alt="Imagen de prueba">
+<img srcset="../../assets/images/portada-small.webp 3x, ../../assets/images/portada-medium.webp" alt="Imagen de prueba">
 
 <!-- Figura semántica -->
 <figure>
@@ -56,7 +56,7 @@
           <div class="card-header">
             <h3>Imágen adaptable según el Device pixel ratio (srcset)</h3>
           </div>
-          <img srcset="../../assets/images/portada-small.webp 3x, ../assets/images/portada-medium.webp" alt="Imagen de prueba">
+          <img srcset="../../assets/images/portada-small.webp 3x, ../../assets/images/portada-medium.webp" alt="Imagen de prueba">
           <div class="card-header">
             <h3>Figura con descripción</h3>
           </div>
