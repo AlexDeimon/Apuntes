@@ -95,6 +95,11 @@ const router = createRouter({
       component: () => import('@/views/CSS/BackgroundCSS.vue'),
     },
     {
+      path: '/css/pseudo',
+      name: 'css-pseudo',
+      component: () => import('@/views/CSS/PseudoCSS.vue'),
+    },
+    {
       path: '/js/fundamentos',
       name: 'js-fundamentos',
       component: () => import('@/views/JavaScript/FundamentosJS.vue'),
