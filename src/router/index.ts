@@ -140,6 +140,11 @@ const router = createRouter({
       component: () => import('@/views/JavaScript/RegexJS.vue'),
     },
     {
+      path: '/js/poo',
+      name: 'js-poo',
+      component: () => import('@/views/JavaScript/POOJS.vue'),
+    },
+    {
       path: '/bootstrap/inicio',
       name: 'bootstrap-inicio',
       component: () => import('@/views/Bootstrap/InicioBootstrap.vue'),
