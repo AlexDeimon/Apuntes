@@ -185,6 +185,11 @@ const router = createRouter({
       component: () => import('@/views/Bootstrap/CollapseBootstrap.vue'),
     },
     {
+      path: '/bootstrap/dropdown',
+      name: 'bootstrap-dropdown',
+      component: () => import('@/views/Bootstrap/DropdownBootstrap.vue'),
+    },
+    {
       path: '/typescript/inicio',
       name: 'typescript-inicio',
       component: () => import('@/views/TypeScript/InicioTS.vue'),

@@ -47,6 +47,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'cards', name: 'Cards', icon: '/Apuntes/v2/icons/card.png' },
     { id: 'carrusel', name: 'Carrusel', icon: '/Apuntes/v2/icons/carrusel.png' },
     { id: 'collapse', name: 'Collapse', icon: '/Apuntes/v2/icons/Collapse.png' },
+    { id: 'dropdown', name: 'Dropdown', icon: '/Apuntes/v2/icons/dropdown.png' },
   ],
   typescript: [
     { id: 'inicio', name: '¿Qué es TS?', icon: '/Apuntes/v2/icons/typescript.svg' },
