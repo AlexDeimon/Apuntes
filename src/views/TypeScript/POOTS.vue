@@ -156,29 +156,11 @@ interface Persona extends Direccion {
       </div>
     </section>
     <hr class="divider" />
-    <section class="topic-section">
-      <h2 class="section-title typescript">Genéricos (Generics)</h2>
-      <p class="section-desc">Permiten crear componentes y clases que funcionan con diferentes tipos dinámicos sin perder el tipado fuerte.</p>
-      <div class="card info">
-        <CodeBlock language="typescript" code="class Caja<T> {
-  contenido: T;
-  constructor(valor: T) {
-    this.contenido = valor;
-  }
-  obtenerContenido(): T {
-    return this.contenido;
-  }
-}
-
-const cajaNumeros = new Caja<number>(100);
-const cajaTextos = new Caja<string>('Hola');" />
-      </div>
-    </section>
-    <hr class="divider" />
     <ReferenceSection :references="[
       { techId: 'typescript', moduleId: 'inferencia', text: 'Inferencia de Tipos' },
       { techId: 'typescript', moduleId: 'tipos', text: 'Tipos de Datos' },
-      { techId: 'typescript', moduleId: 'enums', text: 'Enums en TS' }
+      { techId: 'typescript', moduleId: 'enums', text: 'Enums en TS' },
+      { techId: 'typescript', moduleId: 'genericos', text: 'Genéricos en TS' }
     ]" />
   </div>
 </template>

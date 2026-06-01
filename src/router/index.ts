@@ -225,6 +225,11 @@ const router = createRouter({
       component: () => import('@/views/TypeScript/POOTS.vue'),
     },
     {
+      path: '/typescript/genericos',
+      name: 'typescript-genericos',
+      component: () => import('@/views/TypeScript/GenericosTS.vue'),
+    },
+    {
       path: '/nodejs/inicio',
       name: 'nodejs-inicio',
       component: () => import('@/views/Node/InicioNode.vue'),
