@@ -200,10 +200,30 @@ p {
   transition: color 0.3s ease;
 }
 
-.card .link{
-  margin-top: 1rem;
-  display: block;
-  text-align: center;
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.custom-table th, .custom-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.custom-table th {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .def-list li {
@@ -312,7 +332,17 @@ p {
   text-decoration: underline;
 }
 
+.card .link{
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+}
+
 .def-list li:last-child {
+  border-bottom: none;
+}
+
+.custom-table tr:last-child td {
   border-bottom: none;
 }
 

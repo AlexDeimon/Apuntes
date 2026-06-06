@@ -269,6 +269,11 @@ const router = createRouter({
       name: 'nodejs-express',
       component: () => import('@/views/Node/ExpressNode.vue'),
     },
+    {
+      path: '/nodejs/apirest',
+      name: 'nodejs-apirest',
+      component: () => import('@/views/Node/ApiRestNode.vue'),
+    },
   ],
 })
 
