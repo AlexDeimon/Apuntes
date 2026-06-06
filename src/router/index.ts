@@ -55,6 +55,11 @@ const router = createRouter({
       component: () => import('@/views/HTML/EmbebidoHTML.vue'),
     },
     {
+      path: '/html/meta',
+      name: 'html-meta',
+      component: () => import('@/views/HTML/MetaHTML.vue'),
+    },
+    {
       path: '/css/fundamentos',
       name: 'css-fundamentos',
       component: () => import('@/views/CSS/FundamentosCSS.vue'),
