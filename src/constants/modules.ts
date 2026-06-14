@@ -39,6 +39,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'spreadrest', name: 'Spread & Rest', icon: '/Apuntes/v2/icons/Spread.png' },
     { id: 'regex', name: 'Expresiones Regulares', icon: '/Apuntes/v2/icons/RegEx.png' },
     { id: 'poo', name: 'POO', icon: '/Apuntes/v2/icons/poo.png' },
+    { id: 'dom', name: 'DOM', icon: '/Apuntes/v2/icons/web.png' },
   ],
   bootstrap: [
     { id: 'inicio', name: 'Iniciando con Bootstrap', icon: '/Apuntes/v2/icons/bootstrap.svg' },

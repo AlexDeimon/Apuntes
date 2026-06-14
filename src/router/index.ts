@@ -155,6 +155,11 @@ const router = createRouter({
       component: () => import('@/views/JavaScript/POOJS.vue'),
     },
     {
+      path: '/js/dom',
+      name: 'js-dom',
+      component: () => import('@/views/JavaScript/DOMJS.vue'),
+    },
+    {
       path: '/bootstrap/inicio',
       name: 'bootstrap-inicio',
       component: () => import('@/views/Bootstrap/InicioBootstrap.vue'),
