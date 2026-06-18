@@ -51,6 +51,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'carrusel', name: 'Carrusel', icon: '/Apuntes/v2/icons/carrusel.png' },
     { id: 'collapse', name: 'Collapse', icon: '/Apuntes/v2/icons/Collapse.png' },
     { id: 'dropdown', name: 'Dropdown', icon: '/Apuntes/v2/icons/dropdown.png' },
+    { id: 'formularios', name: 'Formularios', icon: '/Apuntes/v2/icons/formulario.png' },
   ],
   typescript: [
     { id: 'inicio', name: '¿Qué es TS?', icon: '/Apuntes/v2/icons/typescript.svg' },

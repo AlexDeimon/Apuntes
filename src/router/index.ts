@@ -205,6 +205,11 @@ const router = createRouter({
       component: () => import('@/views/Bootstrap/DropdownBootstrap.vue'),
     },
     {
+      path: '/bootstrap/formularios',
+      name: 'bootstrap-formularios',
+      component: () => import('@/views/Bootstrap/FormulariosBootstrap.vue'),
+    },
+    {
       path: '/typescript/inicio',
       name: 'typescript-inicio',
       component: () => import('@/views/TypeScript/InicioTS.vue'),
