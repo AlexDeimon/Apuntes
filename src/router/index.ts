@@ -250,6 +250,11 @@ const router = createRouter({
       component: () => import('@/views/TypeScript/GenericosTS.vue'),
     },
     {
+      path: '/typescript/utilidad',
+      name: 'typescript-utilidad',
+      component: () => import('@/views/TypeScript/TiposUtilidadTS.vue'),
+    },
+    {
       path: '/nodejs/inicio',
       name: 'nodejs-inicio',
       component: () => import('@/views/Node/InicioNode.vue'),

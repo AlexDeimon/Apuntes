@@ -62,6 +62,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'enums', name: 'Enums', icon: '/Apuntes/v2/icons/funciones.png' },
     { id: 'poo', name: 'POO', icon: '/Apuntes/v2/icons/poo.png' },
     { id: 'genericos', name: 'Genéricos', icon: '/Apuntes/v2/icons/visual.png' },
+    { id: 'utilidad', name: 'Tipos de Utilidad', icon: '/Apuntes/v2/icons/visual.png' },
   ],
   nodejs: [
     { id: 'inicio', name: '¿Qué es Node.js?', icon: '/Apuntes/v2/icons/node.svg' },
