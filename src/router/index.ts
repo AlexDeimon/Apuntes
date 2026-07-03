@@ -299,6 +299,11 @@ const router = createRouter({
       name: 'nodejs-apirest',
       component: () => import('@/views/Node/ApiRestNode.vue'),
     },
+    {
+      path: '/nodejs/zod',
+      name: 'nodejs-zod',
+      component: () => import('@/views/Node/ZodNode.vue'),
+    },
   ],
 })
 
