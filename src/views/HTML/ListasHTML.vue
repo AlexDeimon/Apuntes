@@ -69,8 +69,8 @@
             <h3>Tipos de Marcador</h3>
           </div>
           <p>El atributo <code>type</code> permite cambiar entre números, letras o números romanos.</p>
-          <CodeBlock language="html" code='<Ul type="A"> <!-- A, B, C... -->
-<Ul type="i"> <!-- i, ii, iii... -->' />
+          <CodeBlock language="html" code='<ul type="A"> <!-- A, B, C... -->
+<ul type="i"> <!-- i, ii, iii... -->' />
         </div>
       </div>
     </section>

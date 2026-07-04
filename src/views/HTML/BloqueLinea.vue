@@ -89,7 +89,6 @@
             <li><span class="def-term">&lt;var&gt;: </span><var>Variable</var>.</li>
             <li><span class="def-term">&lt;samp&gt;: </span><samp>Salida de programa</samp>.</li>
             <li><span class="def-term">&lt;kbd&gt;: </span><kbd>Entrada de teclado</kbd>.</li>
-            <li><span class="def-term">&lt;samp&gt;: </span><samp>Salida de programa</samp>.</li>
           </ul>
         </div>
       </div>

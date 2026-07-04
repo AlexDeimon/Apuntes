@@ -134,21 +134,21 @@
             <h3>Select (Desplegable)</h3>
           </div>
           <p>Crea una lista cerrada de opciones. Usa <code>&lt;optgroup&gt;</code> para categorizar.</p>
-          <CodeBlock language="html" code='<select name="lenuajes" id="lenuajes">
+          <CodeBlock language="html" code='<select name="lenguajes" id="lenguajes">
   <option value="" disabled selected>Selecciona un lenguaje</option>
   <option value="js">JavaScript</option>
   ...
 </select>
 
 // Seleccionar varias opciones
-<select name="lenuajes" id="lenuajes" multiple>
+<select name="lenguajes" id="lenguajes" multiple>
   <option value="" disabled selected>Selecciona un lenguaje</option>
   <option value="js">JavaScript</option>
   ...
 </select>
 
 // categorias
-<select name="lenuajes" id="lenuajes">
+<select name="lenguajes" id="lenguajes">
   <option value="" disabled selected>Selecciona un lenguaje</option>
   <optgroup label="Frontend">
     <option value="js">JavaScript</option>
@@ -156,21 +156,21 @@
   </optgroup>
   ...
 </select>' /><br>
-<select name="lenuajes" id="lenuajes">
+<select name="lenguajes" id="lenguajes">
   <option value="" disabled selected>Selecciona un lenguaje</option>
   <option value="js">JavaScript</option>
   <option value="ts">TypeScript</option>
   <option value="py">Python</option>
   <option value="java">Java</option>
 </select><br><br>
-<select name="lenuajes" id="lenuajes" multiple>
+<select name="lenguajes" id="lenguajes" multiple>
   <option value="" disabled selected>Selecciona los lenguajes</option>
   <option value="js">JavaScript</option>
   <option value="ts">TypeScript</option>
   <option value="py">Python</option>
   <option value="java">Java</option>
 </select><br><br>
-<select name="lenuajes" id="lenuajes">
+<select name="lenguajes" id="lenguajes">
   <option value="" disabled selected>Selecciona un lenguaje</option>
   <optgroup label="Frontend">
     <option value="js">JavaScript</option>
@@ -199,7 +199,7 @@
   <option value="html"></option>
   <option value="css"></option>
   <option value="javascript"></option>
-  <option value="boostrap"></option>
+  <option value="bootstrap"></option>
   <option value="Vue"></option>
   <option value="python"></option>
   <option value="java"></option>
@@ -257,7 +257,7 @@
           <li><span class="def-term">action:</span> Define la url donde se enviaran los datos.</li>
           <li><span class="def-term">method:</span> Define el método HTTP a utilizar para enviar los datos.</li>
           <li><span class="def-term">name:</span> Nombre del campo</li>
-          <li><span class="def-term">target:</span> Especifica dónde mostrar la respuesta de la acción (url).</li>
+          <li><span class="def-term">target:</span> Especifica en qué contexto de navegación (pestaña nueva _blank, misma ventana _self) se mostrará la respuesta del formulario.</li>
           <li><span class="def-term">enctype:</span> Define el tipo de codificación que se utilizará para enviar los datos.</li>
           <li><span class="def-term">autocomplete:</span> Activa o desactiva el autocompletado.</li>
           <li><span class="def-term">novalidate:</span> Evita que el navegador valide el formulario.</li>

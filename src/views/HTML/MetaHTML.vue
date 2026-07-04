@@ -20,11 +20,18 @@
           <li><span class="def-term">&lt;meta name="author" content="Autor de la página"&gt;</span>: Especifica el autor de la página.</li>
           <li><span class="def-term">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span>: Especifica la configuración de la vista móvil de la página.</li>
           <li><span class="def-term">&lt;meta name="theme-color" content="#000000"&gt;</span>: Especifica Color en formato hexadecimal de la barra de navegación del navegador.</li>
-          <li><span class="def-term">&lt;link&gt;</span>: Especifica la relación entre el documento actual y un recurso externo, usualemte son archivos CSS y favicons.</li>
-          <li><span class="def-term">&lt;script&gt;</span>: Especifica recursos de JavaScript, usualmente utilizados para agregar funcionalidades interactivas a la página web.</li>
-          <li><span class="def-term">&lt;style&gt;</span>: Especifica estilos CSS internos, usualmente utilizados para agregar estilos a la página web.</li>
-          <li><span class="def-term">&lt;html lang="es"&gt;</span>: Especifica el idioma de la página.</li>
          </ul>
+        </div>
+        <div class="card recommended">
+          <div class="card-header">
+            <h3>Otras etiquetas importantes de configuración</h3>
+          </div>
+          <ul class="def-list">
+            <li><span class="def-term">&lt;link&gt;</span>: Especifica la relación entre el documento actual y un recurso externo, usualemte son archivos CSS y favicons.</li>
+            <li><span class="def-term">&lt;script&gt;</span>: Especifica recursos de JavaScript, usualmente utilizados para agregar funcionalidades interactivas a la página web.</li>
+            <li><span class="def-term">&lt;style&gt;</span>: Especifica estilos CSS internos, usualmente utilizados para agregar estilos a la página web.</li>
+            <li><span class="def-term">&lt;html lang="es"&gt;</span>: Especifica el idioma de la página.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -60,9 +67,6 @@
       <p class="section-desc">Los iconos son imágenes pequeñas que se utilizan para representar visualmente información o acciones. En HTML, los iconos se utilizan para representar enlaces, botones, imágenes y otros elementos. Los iconos se pueden utilizar en una variedad de formatos, incluyendo PNG, SVG, JPG y GIF.</p>
       <ul>
         <li><a class="link-external" href="https://fontawesome.com/v5.15/icons?d=gallery&p=2">Font Awesome</a></li>
-        <li><a class="link-external" href="https://www.iconfinder.com/">Iconfinder</a></li>
-        <li><a class="link-external" href="https://www.flaticon.com/">Flaticon</a></li>
-        <li><a class="link-external" href="https://thenounproject.com/">The Noun Project</a></li>
         <li><a class="link-external" href="https://www.iconfinder.com/">Iconfinder</a></li>
         <li><a class="link-external" href="https://www.flaticon.com/">Flaticon</a></li>
         <li><a class="link-external" href="https://thenounproject.com/">The Noun Project</a></li>
