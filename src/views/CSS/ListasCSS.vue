@@ -242,7 +242,6 @@ nav ul {
 }" />
       </div>
     </section>
-
     <hr class="divider" />
     <ReferenceSection :references="[
       { techId: 'html', moduleId: 'listas', text: 'Etiquetas de Listas en HTML' },
@@ -250,19 +249,15 @@ nav ul {
     ]" />
   </div>
 </template>
-
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import CodeBlock from '@/components/CodeBlock.vue'
 import ReferenceSection from '@/components/ReferenceSection.vue'
 
-// --- States for list-style-type simulator ---
 const selectedStyleType = ref('disc')
 
-// --- States for list-style-position comparison ---
-const selectedPosition = ref('outside')
+const selectedPosition = ref<'outside' | 'inside'>('outside')
 
-// --- States for ::marker customizer ---
 const markerColor = ref('#3b82f6')
 const markerSize = ref(1.2)
 
@@ -273,7 +268,6 @@ const customMarkerStyle = computed(() => {
   }
 })
 </script>
-
 <style scoped>
 .demo-list-wrapper {
   padding: 1.2rem;
@@ -283,7 +277,6 @@ const customMarkerStyle = computed(() => {
   margin-bottom: 1.2rem;
 }
 
-/* Position simulation style */
 .btn-toggle-group {
   display: flex;
   gap: 0.5rem;
