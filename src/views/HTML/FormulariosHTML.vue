@@ -156,31 +156,31 @@
   </optgroup>
   ...
 </select>' /><br>
-<select name="lenguajes" id="lenguajes">
-  <option value="" disabled selected>Selecciona un lenguaje</option>
-  <option value="js">JavaScript</option>
-  <option value="ts">TypeScript</option>
-  <option value="py">Python</option>
-  <option value="java">Java</option>
-</select><br><br>
-<select name="lenguajes" id="lenguajes" multiple>
-  <option value="" disabled selected>Selecciona los lenguajes</option>
-  <option value="js">JavaScript</option>
-  <option value="ts">TypeScript</option>
-  <option value="py">Python</option>
-  <option value="java">Java</option>
-</select><br><br>
-<select name="lenguajes" id="lenguajes">
-  <option value="" disabled selected>Selecciona un lenguaje</option>
-  <optgroup label="Frontend">
-    <option value="js">JavaScript</option>
-    <option value="ts">TypeScript</option>
-  </optgroup>
-  <optgroup label="Backend">
-    <option value="py">Python</option>
-    <option value="java">Java</option>
-  </optgroup>
-</select>
+          <select name="lenguajes" id="lenguajes">
+            <option value="" disabled selected>Selecciona un lenguaje</option>
+            <option value="js">JavaScript</option>
+            <option value="ts">TypeScript</option>
+            <option value="py">Python</option>
+            <option value="java">Java</option>
+          </select><br>
+          <select name="lenguajes" id="lenguajes" multiple>
+            <option value="" disabled selected>Selecciona los lenguajes</option>
+            <option value="js">JavaScript</option>
+            <option value="ts">TypeScript</option>
+            <option value="py">Python</option>
+            <option value="java">Java</option>
+          </select><br>
+          <select name="lenguajes" id="lenguajes">
+            <option value="" disabled selected>Selecciona un lenguaje</option>
+            <optgroup label="Frontend">
+              <option value="js">JavaScript</option>
+              <option value="ts">TypeScript</option>
+            </optgroup>
+            <optgroup label="Backend">
+              <option value="py">Python</option>
+              <option value="java">Java</option>
+            </optgroup>
+          </select>
         </div>
         <div class="card info">
           <div class="card-header">
@@ -194,19 +194,19 @@
   <option value="Safari">
 </datalist>' />
 <br><br>
-<input type="text" list="lenguajes">
-<datalist id="lenguajes">
-  <option value="html"></option>
-  <option value="css"></option>
-  <option value="javascript"></option>
-  <option value="bootstrap"></option>
-  <option value="Vue"></option>
-  <option value="python"></option>
-  <option value="java"></option>
-  <option value="mysql"></option>
-  <option value="postgresql"></option>
-  <option value="mongo"></option>
-</datalist>
+          <input type="text" list="lenguajes" placeholder="Selecciona un lenguaje">
+          <datalist id="lenguajes">
+            <option value="html"></option>
+            <option value="css"></option>
+            <option value="javascript"></option>
+            <option value="bootstrap"></option>
+            <option value="Vue"></option>
+            <option value="python"></option>
+            <option value="java"></option>
+            <option value="mysql"></option>
+            <option value="postgresql"></option>
+            <option value="mongo"></option>
+          </datalist>
         </div>
       </div>
     </section>
@@ -227,12 +227,12 @@
         <CodeBlock language="html" code='<form>
   <fieldset>
     <legend>Otros elementos</legend>
-    <input type="file"><br>
+    <input type="file">
     <label for="fuel">Combustible</label>
-    <meter id="fuel" min="0" max="100" value="60" low="30" high="75" optimum="50"></meter><br>
+    <meter id="fuel" min="0" max="100" value="60" low="30" high="75" optimum="50"></meter>
     <label for="task">Tarea 1</label>
-    <progress id="task" max="100" value="30"></progress><br>
-    <label for="message">Mensaje:</label><br>
+    <progress id="task" max="100" value="30"></progress>
+    <label for="message">Mensaje:</label>
     <textarea id="message" cols="30" rows="10"></textarea>
   </fieldset>
 </form>' />
@@ -240,9 +240,9 @@
           <fieldset>
             <legend>Otros elementos</legend>
             <input type="file"><br>
-            <label for="fuel">Combustible</label>
+            <label for="fuel">Combustible </label>
             <meter id="fuel" min="0" max="100" value="60" low="30" high="75" optimum="50"></meter><br>
-            <label for="task">Tarea 1</label>
+            <label for="task">Tarea 1 </label>
             <progress id="task" max="100" value="30"></progress><br>
             <label for="message">Mensaje:</label><br>
             <textarea id="message" cols="30" rows="10"></textarea>
@@ -282,7 +282,6 @@
     </section>
   </div>
 </template>
-
 <script setup lang="ts">
 import CodeBlock from '@/components/CodeBlock.vue'
 </script>
@@ -299,68 +298,16 @@ import CodeBlock from '@/components/CodeBlock.vue'
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .form-group.inline {
   flex-direction: row;
   align-items: center;
-}
-
-label {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="url"],
-input[type="color"],
-select,
-textarea {
-  padding: 0.75rem;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(0, 0, 0, 0.2);
-  color: var(--text-primary);
-  font-family: inherit;
-  transition: border-color 0.3s;
-}
-
-select option:checked{
-  background-color: var(--color-html);
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--color-html);
-}
-
-textarea {
-  resize: vertical;
-}
-
-input[type="checkbox"] {
-  width: 1.2rem;
-  height: 1.2rem;
-  cursor: pointer;
-  accent-color: var(--color-html);
+  margin-bottom: 1.2rem;
 }
 </style>

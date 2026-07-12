@@ -110,6 +110,11 @@ const router = createRouter({
       component: () => import('@/views/CSS/EnlacesCSS.vue'),
     },
     {
+      path: '/css/listas',
+      name: 'css-listas',
+      component: () => import('@/views/CSS/ListasCSS.vue'),
+    },
+    {
       path: '/js/fundamentos',
       name: 'js-fundamentos',
       component: () => import('@/views/JavaScript/FundamentosJS.vue'),
