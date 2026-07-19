@@ -165,6 +165,11 @@ const router = createRouter({
       component: () => import('@/views/JavaScript/DOMJS.vue'),
     },
     {
+      path: '/js/eventos',
+      name: 'js-eventos',
+      component: () => import('@/views/JavaScript/EventosJS.vue'),
+    },
+    {
       path: '/bootstrap/inicio',
       name: 'bootstrap-inicio',
       component: () => import('@/views/Bootstrap/InicioBootstrap.vue'),

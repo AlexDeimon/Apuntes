@@ -41,6 +41,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'regex', name: 'Expresiones Regulares', icon: '/Apuntes/v2/icons/RegEx.png' },
     { id: 'poo', name: 'POO', icon: '/Apuntes/v2/icons/poo.png' },
     { id: 'dom', name: 'DOM', icon: '/Apuntes/v2/icons/web.png' },
+    { id: 'eventos', name: 'Eventos', icon: '/Apuntes/v2/icons/eventos.png' },
   ],
   bootstrap: [
     { id: 'inicio', name: 'Iniciando con Bootstrap', icon: '/Apuntes/v2/icons/bootstrap.svg' },
