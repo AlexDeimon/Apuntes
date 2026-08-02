@@ -220,6 +220,11 @@ const router = createRouter({
       component: () => import('@/views/Bootstrap/FormulariosBootstrap.vue'),
     },
     {
+      path: '/bootstrap/modal',
+      name: 'bootstrap-modal',
+      component: () => import('@/views/Bootstrap/ModalBootstrap.vue'),
+    },
+    {
       path: '/typescript/inicio',
       name: 'typescript-inicio',
       component: () => import('@/views/TypeScript/InicioTS.vue'),
