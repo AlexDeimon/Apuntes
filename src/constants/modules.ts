@@ -79,5 +79,6 @@ export const modules: Record<string, Module[]> = {
     { id: 'express', name: 'Express', icon: '/Apuntes/v2/icons/Framework.png' },
     { id: 'apirest', name: 'API REST', icon: '/Apuntes/v2/icons/http.png' },
     { id: 'zod', name: 'Zod', icon: '/Apuntes/v2/icons/zod.webp' },
+    { id: 'cors', name: 'CORS', icon: '/Apuntes/v2/icons/CORS.png' },
   ],
 }

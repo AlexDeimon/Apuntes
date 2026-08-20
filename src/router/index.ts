@@ -324,6 +324,11 @@ const router = createRouter({
       name: 'nodejs-zod',
       component: () => import('@/views/Node/ZodNode.vue'),
     },
+    {
+      path: '/nodejs/cors',
+      name: 'nodejs-cors',
+      component: () => import('@/views/Node/CORSNode.vue'),
+    },
   ],
 })
 
