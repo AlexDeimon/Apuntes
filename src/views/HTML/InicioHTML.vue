@@ -26,7 +26,7 @@
     <section class="topic-section">
       <h2 class="section-title html">Estructura Básica de un Documento</h2>
       <p class="section-desc">Todo archivo HTML5 válido debe seguir la siguiente estructura mínima.</p>
-      <div class="card">
+      <div class="card info">
         <div class="card-header">
           <h3>index.html</h3>
         </div>
@@ -36,6 +36,7 @@
             <li><strong class="def-term">&lt;html&gt;</strong>: El elemento raíz que envuelve todo el contenido.</li>
             <li><strong class="def-term">&lt;head&gt;</strong>: Contenedor de "metadatos" (cosas que no se ven en la página: título, estilos, scripts).</li>
             <li><strong class="def-term">&lt;body&gt;</strong>: Contiene todo el contenido visible para el usuario (texto, imágenes, videos).</li>
+            <li><strong class="def-term">&lt;!-- comentario --&gt;</strong>: Se utiliza para agregar comentarios al código HTML. No se muestra en la página.</li>
           </ul>
         </div>
         <CodeBlock language="html" code='<!DOCTYPE html>
@@ -48,6 +49,7 @@
     <h1>¡Hola Mundo!</h1>
     <p>Este es el contenido visible.</p>
   </body>
+  <!-- Este es un comentario -->
 </html>' />
       </div>
     </section>
@@ -77,6 +79,22 @@
 <br>
 <hr>
 <input type="text">' />
+        </div>
+        <div class="card recommended">
+          <div class="card-header">
+            <h3>Atributos globales</h3>
+          </div>
+          <p>Todos los elementos HTML pueden tener atributos globales. Algunos de los más comunes son:</p>
+          <ul class="def-list">
+            <li><strong class="def-term">class</strong>: Clase CSS.</li>
+            <li><strong class="def-term">id</strong>: Identificador único.</li>
+            <li><strong class="def-term">style</strong>: Estilos CSS en línea.</li>
+            <li><strong class="def-term">title</strong>: Título del elemento.</li>
+            <li><strong class="def-term">hidden</strong>: Oculta el elemento.</li>
+            <li><strong class="def-term">tabindex</strong>: Orden de tabulación.</li>
+            <li><strong class="def-term">data-*</strong>: Datos personalizados. Se usan para guardar datos que no se ven en la página, pero se pueden usar con JavaScript</li>
+          </ul>
+          <CodeBlock language="html" code='<div class="info-box" id="box1" style="color: red;" data-role="info" title="Informacion">Info</div>' />
         </div>
       </div>
     </section>

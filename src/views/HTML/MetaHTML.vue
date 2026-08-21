@@ -28,7 +28,13 @@
           </div>
           <ul class="def-list">
             <li><span class="def-term">&lt;link&gt;</span>: Especifica la relación entre el documento actual y un recurso externo, usualemte son archivos CSS y favicons.</li>
-            <li><span class="def-term">&lt;script&gt;</span>: Especifica recursos de JavaScript, usualmente utilizados para agregar funcionalidades interactivas a la página web.</li>
+            <li><span class="def-term">&lt;script&gt;</span>: Especifica recursos de JavaScript, usualmente utilizados para agregar funcionalidades interactivas a la página web.
+              <ul class="def-list">
+                <li><span class="def-term">&lt;script&gt;</span>: normal (bloquea el renderizado del HTML mientras se ejecuta).</li>
+                <li><span class="def-term">&lt;script defer&gt;</span>: hace que el script se ejecute después de que el HTML se ha parseado.</li>
+                <li><span class="def-term">&lt;script async&gt;</span>: hace que el script se ejecute tan pronto como se descarga.</li>
+              </ul>
+            </li>
             <li><span class="def-term">&lt;style&gt;</span>: Especifica estilos CSS internos, usualmente utilizados para agregar estilos a la página web.</li>
             <li><span class="def-term">&lt;html lang="es"&gt;</span>: Especifica el idioma de la página.</li>
           </ul>

@@ -39,6 +39,9 @@
           <p>Usa <code>srcset</code> para que el navegador elija la mejor imagen según la densidad de píxeles (ej. pantallas Retina).</p>
           <p>Usa <code>&lt;figure&gt;</code> para agrupar semánticamente una imagen con una descripción debajo.</p>
           <p>Un título puede estar asociado con el elemento &lt;figure&gt; mediante la inserción de un &lt;figcaption&gt; en su interior.</p>
+          <p>La etiqueta &lt;picture&gt; permite especificar múltiples fuentes de imagen y dejar que el navegador elija la más adecuada.</p>
+          <p>La etiqueta &lt;picture&gt; es un elemento contenedor, y cada fuente de imagen se especifica mediante un elemento &lt;source&gt;.</p>
+          <p>La etiqueta &lt;source&gt; puede tener atributos como media (para especificar condiciones de visualización) y type (para especificar el tipo MIME del archivo).</p>
           <CodeBlock language="html" code='<!-- Imágen adaptable -->
 <img srcset="../../assets/images/portada-small.webp 3x, ../../assets/images/portada-medium.webp" alt="Imagen de prueba">
 
@@ -46,7 +49,20 @@
 <figure>
   <img src="diagrama.png" alt="Diagrama de flujo">
   <figcaption>Figura 1: Diagrama de flujo de la aplicación.</figcaption>
-</figure>' />
+</figure>
+
+<!-- Picture para múltiples fuentes -->
+<picture>
+  <source srcset="../../assets/images/portada-small.webp 3x, ../../assets/images/portada-medium.webp" media="(max-width: 600px)">
+  <img src="../../assets/images/portada-large.webp" alt="Imagen de prueba">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../../assets/images/portada-small.webp">
+  <source media="(prefers-color-scheme: light)" srcset="../../assets/images/portada.webp">
+  <img src="../../assets/images/portada.webp" alt="Imagen de prueba">
+</picture>
+' />
         </div>
         <div class="card info">
           <div class="card-header">
@@ -56,7 +72,7 @@
           <div class="card-header">
             <h3>Imágen adaptable según el Device pixel ratio (srcset)</h3>
           </div>
-          <img srcset="../../assets/images/portada-small.webp 3x, ../../assets/images/portada-medium.webp" alt="Imagen de prueba">
+          <img srcset="../../assets/images/portada-small.webp 2x, ../../assets/images/portada-medium.webp 3x" alt="Imagen de prueba">
           <div class="card-header">
             <h3>Figura con descripción</h3>
           </div>
@@ -64,6 +80,16 @@
             <img src="../../../public/icons/html.svg" alt="Logo de html">
             <figcaption>Figura 1: Logo de html.</figcaption>
           </figure>
+          <div class="card-header">
+            <h3>Imágen adaptable según el modo claro u oscuro (media). Si cambias el modo de tu sistema operativo verás como cambia la imagen.</h3>
+          </div>
+          <div>
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="../../assets/images/portada-small.webp 2x">
+              <source media="(prefers-color-scheme: light)" srcset="../../assets/images/portada.webp 3x">
+              <img src="../../assets/images/portada-small.webp 3x" alt="Imagen de prueba">
+            </picture>
+          </div>
         </div>
       </div>
     </section>
@@ -110,14 +136,29 @@
     <section class="topic-section">
       <h2 class="section-title html">Iframes</h2>
       <p class="section-desc">La etiqueta <code>&lt;iframe&gt;</code> permite incrustar otro documento HTML dentro de la página actual (ej: mapas de Google, videos de YouTube).</p>
-      <div class="card warning">
-        <div class="card-header">
-          <h3>Consideraciones de Rendimiento</h3>
-          <span class="badge danger">Cuidado</span>
+      <div class="cards-grid">
+        <div class="card warning">
+          <div class="card-header">
+            <h3>Consideraciones de Rendimiento</h3>
+            <span class="badge danger">Cuidado</span>
+          </div>
+          <p>No abuses de los iframes, ya que cada iframe carga un entorno completo (scripts, CSS, etc.) afectando el rendimiento de tu página. Usa <code>loading="lazy"</code> para diferir su carga.</p>
+          <div class="card-header">
+            <h3>Seguridad</h3>
+          </div>
+          <p>Para evitar ataques de seguridad, es importante usar atributos de seguridad como:</p>
+          <ul class="def-list">
+            <li><span class="def-term">sandbox</span>: Restringe las acciones que el iframe puede realizar.</li>
+            <li><span class="def-term">referrerpolicy</span>: Especifica la política de referencia.</li>
+          </ul>
         </div>
-        <p>No abuses de los iframes, ya que cada iframe carga un entorno completo (scripts, CSS, etc.) afectando el rendimiento de tu página. Usa <code>loading="lazy"</code> para diferir su carga.</p>
-        <CodeBlock language="html" code='<iframe width="560" height="315" src="https://www.youtube.com/embed/hF_rU3vdajE?si=0n6HwpIgnoVaxEKS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' /><br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/hF_rU3vdajE?si=0n6HwpIgnoVaxEKS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="card info">
+          <div class="card-header">
+            <h3>Ejemplo</h3>
+          </div>
+          <CodeBlock language="html" code='<iframe width="560" height="315" src="https://www.youtube.com/embed/hF_rU3vdajE?si=0n6HwpIgnoVaxEKS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' /><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/hF_rU3vdajE?si=0n6HwpIgnoVaxEKS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
     <hr class="divider" />
