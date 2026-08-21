@@ -43,7 +43,7 @@
           <p>La etiqueta &lt;picture&gt; es un elemento contenedor, y cada fuente de imagen se especifica mediante un elemento &lt;source&gt;.</p>
           <p>La etiqueta &lt;source&gt; puede tener atributos como media (para especificar condiciones de visualización) y type (para especificar el tipo MIME del archivo).</p>
           <CodeBlock language="html" code='<!-- Imágen adaptable -->
-<img srcset="../../assets/images/portada-small.webp 3x, ../../assets/images/portada-medium.webp" alt="Imagen de prueba">
+<img srcset="../../assets/images/portada-small.webp 3x, ../../assets/images/portada-medium.webp 1x" alt="Imagen de prueba">
 
 <!-- Figura semántica -->
 <figure>
@@ -87,7 +87,7 @@
             <picture>
               <source media="(prefers-color-scheme: dark)" srcset="../../assets/images/portada-small.webp 2x">
               <source media="(prefers-color-scheme: light)" srcset="../../assets/images/portada.webp 3x">
-              <img src="../../assets/images/portada-small.webp 3x" alt="Imagen de prueba">
+              <img src="../../assets/images/portada-small.webp" alt="Imagen de prueba">
             </picture>
           </div>
         </div>
