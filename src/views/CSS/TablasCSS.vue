@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="module-content">
     <div class="header-section">
       <h1 class="main-title css">Tablas en CSS</h1>
@@ -143,7 +143,7 @@ table { margin: 0 auto; }" />
           <div class="preview-header">Demo: text-align y vertical-align en celdas</div>
           <div class="preview-content">
             <div class="btn-toggle-group">
-              <button v-for="v in ['left', 'center', 'right']" :key="v" :class="['demo-btn', { active: textAlign === v }]" @click="textAlign = v">{{ v }}</button>
+              <button v-for="v in (['left', 'center', 'right'] as const)" :key="v" :class="['demo-btn', { active: textAlign === v }]" @click="textAlign = v">{{ v }}</button>
             </div>
             <div class="btn-toggle-group">
               <button v-for="v in ['top', 'middle', 'bottom']" :key="v" :class="['demo-btn', { active: verticalAlign === v }]" @click="verticalAlign = v">{{ v }}</button>
@@ -369,7 +369,7 @@ import ReferenceSection from '@/components/ReferenceSection.vue'
 
 const borderCollapse = ref<'collapse' | 'separate'>('collapse')
 const verticalAlign = ref<CSSProperties['verticalAlign']>('middle')
-const textAlign = ref<CSSProperties['textAlign']>('left')
+const textAlign = ref<'left' | 'center' | 'right'>('left')
 </script>
 <style scoped>
 .btn-toggle-group {
