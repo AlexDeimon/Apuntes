@@ -115,6 +115,11 @@ const router = createRouter({
       component: () => import('@/views/CSS/ListasCSS.vue'),
     },
     {
+      path: '/css/tablas',
+      name: 'css-tablas',
+      component: () => import('@/views/CSS/TablasCSS.vue'),
+    },
+    {
       path: '/js/fundamentos',
       name: 'js-fundamentos',
       component: () => import('@/views/JavaScript/FundamentosJS.vue'),

@@ -29,6 +29,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'pseudo', name: 'Pseudo Clases & Elementos', icon: '/Apuntes/v2/icons/pseudo.png' },
     { id: 'enlaces', name: 'Enlaces', icon: '/Apuntes/v2/icons/enlace.png' },
     { id: 'listas', name: 'Listas', icon: '/Apuntes/v2/icons/lista.png' },
+    { id: 'tablas', name: 'Tablas', icon: '/Apuntes/v2/icons/tabla.png' },
   ],
   js: [
     { id: 'fundamentos', name: 'Fundamentos JS', icon: '/Apuntes/v2/icons/javascript.svg' },
