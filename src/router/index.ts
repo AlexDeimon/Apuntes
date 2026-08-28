@@ -235,6 +235,11 @@ const router = createRouter({
       component: () => import('@/views/Bootstrap/ModalBootstrap.vue'),
     },
     {
+      path: '/bootstrap/navbar',
+      name: 'bootstrap-navbar',
+      component: () => import('@/views/Bootstrap/NavbarBootstrap.vue'),
+    },
+    {
       path: '/typescript/inicio',
       name: 'typescript-inicio',
       component: () => import('@/views/TypeScript/InicioTS.vue'),
