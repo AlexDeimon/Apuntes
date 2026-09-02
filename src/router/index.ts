@@ -290,6 +290,11 @@ const router = createRouter({
       component: () => import('@/views/TypeScript/NarrowingTS.vue'),
     },
     {
+      path: '/typescript/tiposavanzados',
+      name: 'typescript-tiposavanzados',
+      component: () => import('@/views/TypeScript/TiposAvanzadosTS.vue'),
+    },
+    {
       path: '/nodejs/inicio',
       name: 'nodejs-inicio',
       component: () => import('@/views/Node/InicioNode.vue'),

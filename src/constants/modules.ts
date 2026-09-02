@@ -70,6 +70,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'genericos', name: 'Genéricos', icon: '/Apuntes/v2/icons/visual.png' },
     { id: 'utilidad', name: 'Tipos de Utilidad', icon: '/Apuntes/v2/icons/visual.png' },
     { id: 'narrowing', name: 'Narrowing', icon: '/Apuntes/v2/icons/condicionales.png' },
+    { id: 'tiposavanzados', name: 'Tipos Avanzados', icon: '/Apuntes/v2/icons/datos.png' },
   ],
   nodejs: [
     { id: 'inicio', name: '¿Qué es Node.js?', icon: '/Apuntes/v2/icons/node.svg' },
