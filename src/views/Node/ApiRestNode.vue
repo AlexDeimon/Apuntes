@@ -437,9 +437,6 @@ const getStatusClass = (code: number) => {
 .badge-verb.patch { background-color: #abb2bf; }
 .badge-verb.delete { background-color: #e06c75; }
 
-.text-success { color: #98c379; }
-.text-danger { color: #e06c75; }
-
 .simulator-container {
   display: grid;
   grid-template-columns: 1fr 1fr;

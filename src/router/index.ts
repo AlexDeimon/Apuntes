@@ -349,6 +349,11 @@ const router = createRouter({
       name: 'nodejs-cors',
       component: () => import('@/views/Node/CORSNode.vue'),
     },
+    {
+      path: '/nodejs/websocket',
+      name: 'nodejs-websocket',
+      component: () => import('@/views/Node/WebSocketNode.vue'),
+    },
   ],
 })
 
