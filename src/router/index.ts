@@ -60,6 +60,11 @@ const router = createRouter({
       component: () => import('@/views/HTML/MetaHTML.vue'),
     },
     {
+      path: '/html/interactivos',
+      name: 'html-interactivos',
+      component: () => import('@/views/HTML/ElementosInteractivosHTML.vue'),
+    },
+    {
       path: '/css/fundamentos',
       name: 'css-fundamentos',
       component: () => import('@/views/CSS/FundamentosCSS.vue'),
