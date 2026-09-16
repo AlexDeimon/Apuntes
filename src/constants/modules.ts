@@ -31,6 +31,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'enlaces', name: 'Enlaces', icon: '/Apuntes/v2/icons/enlace.png' },
     { id: 'listas', name: 'Listas', icon: '/Apuntes/v2/icons/lista.png' },
     { id: 'tablas', name: 'Tablas', icon: '/Apuntes/v2/icons/tabla.png' },
+    { id: 'formularios', name: 'Formularios', icon: '/Apuntes/v2/icons/formulario.png' },
   ],
   js: [
     { id: 'fundamentos', name: 'Fundamentos JS', icon: '/Apuntes/v2/icons/javascript.svg' },

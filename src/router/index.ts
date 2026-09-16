@@ -120,6 +120,11 @@ const router = createRouter({
       component: () => import('@/views/CSS/ListasCSS.vue'),
     },
     {
+      path: '/css/formularios',
+      name: 'css-formularios',
+      component: () => import('@/views/CSS/FormulariosCSS.vue'),
+    },
+    {
       path: '/css/tablas',
       name: 'css-tablas',
       component: () => import('@/views/CSS/TablasCSS.vue'),
