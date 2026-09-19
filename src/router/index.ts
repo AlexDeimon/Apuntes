@@ -190,6 +190,11 @@ const router = createRouter({
       component: () => import('@/views/JavaScript/ObjetosNativosJS.vue'),
     },
     {
+      path: '/js/callbacks',
+      name: 'js-callbacks',
+      component: () => import('@/views/JavaScript/CallbacksJS.vue'),
+    },
+    {
       path: '/bootstrap/inicio',
       name: 'bootstrap-inicio',
       component: () => import('@/views/Bootstrap/InicioBootstrap.vue'),

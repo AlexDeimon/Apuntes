@@ -46,6 +46,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'dom', name: 'DOM', icon: '/Apuntes/v2/icons/web.png' },
     { id: 'eventos', name: 'Eventos', icon: '/Apuntes/v2/icons/bucle.png' },
     { id: 'objetosNativos', name: 'Objetos Nativos & Timers', icon: '/Apuntes/v2/icons/objetosJS.png' },
+    { id: 'callbacks', name: 'Callbacks', icon: '/Apuntes/v2/icons/funcionesJS.png' },
   ],
   bootstrap: [
     { id: 'inicio', name: 'Iniciando con Bootstrap', icon: '/Apuntes/v2/icons/bootstrap.svg' },
