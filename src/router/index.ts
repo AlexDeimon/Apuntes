@@ -255,6 +255,11 @@ const router = createRouter({
       component: () => import('@/views/Bootstrap/NavbarBootstrap.vue'),
     },
     {
+      path: '/bootstrap/progress',
+      name: 'bootstrap-progress',
+      component: () => import('@/views/Bootstrap/ProgressBootstrap.vue'),
+    },
+    {
       path: '/typescript/inicio',
       name: 'typescript-inicio',
       component: () => import('@/views/TypeScript/InicioTS.vue'),
