@@ -178,15 +178,15 @@ img { filter: none; }" />
             <div class="preview-header">Demo: icono SVG transparente</div>
             <div class="preview-content shadow-demo">
               <figure class="shadow-item">
-                <img class="shadow-icon sh-box" src="/Apuntes/v2/icons/css.svg" alt="Icono con box-shadow" />
+                <img class="shadow-icon sh-box" src="/icons/css.svg" alt="Icono con box-shadow" />
                 <figcaption>box-shadow</figcaption>
               </figure>
               <figure class="shadow-item">
-                <img class="shadow-icon sh-drop" src="/Apuntes/v2/icons/css.svg" alt="Icono con drop-shadow" />
+                <img class="shadow-icon sh-drop" src="/icons/css.svg" alt="Icono con drop-shadow" />
                 <figcaption>drop-shadow()</figcaption>
               </figure>
               <figure class="shadow-item">
-                <img class="shadow-icon sh-neon" src="/Apuntes/v2/icons/css.svg" alt="Icono con sombra neón" />
+                <img class="shadow-icon sh-neon" src="/icons/css.svg" alt="Icono con sombra neón" />
                 <figcaption>neón</figcaption>
               </figure>
             </div>
