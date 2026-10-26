@@ -130,6 +130,11 @@ const router = createRouter({
       component: () => import('@/views/CSS/TablasCSS.vue'),
     },
     {
+      path: '/css/filtros',
+      name: 'css-filtros',
+      component: () => import('@/views/CSS/FiltrosCSS.vue'),
+    },
+    {
       path: '/js/fundamentos',
       name: 'js-fundamentos',
       component: () => import('@/views/JavaScript/FundamentosJS.vue'),
