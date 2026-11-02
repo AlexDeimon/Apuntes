@@ -200,6 +200,11 @@ const router = createRouter({
       component: () => import('@/views/JavaScript/CallbacksJS.vue'),
     },
     {
+      path: '/js/promesas',
+      name: 'js-promesas',
+      component: () => import('@/views/JavaScript/PromesasJS.vue'),
+    },
+    {
       path: '/bootstrap/inicio',
       name: 'bootstrap-inicio',
       component: () => import('@/views/Bootstrap/InicioBootstrap.vue'),
