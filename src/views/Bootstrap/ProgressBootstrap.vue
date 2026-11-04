@@ -277,7 +277,7 @@
             <div class="bs-progress bs-progress-4px" role="progressbar">
               <div class="bs-progress-bar bs-bg-success" style="width: 70%"></div>
             </div>
-            <p class="bs-demo-label mt">10px (default)</p>
+            <p class="bs-demo-label mt">16px (default)</p>
             <div class="bs-progress" role="progressbar">
               <div class="bs-progress-bar bs-bg-info" style="width: 55%"></div>
             </div>
@@ -479,7 +479,7 @@ onUnmounted(() => {
 
 .bs-progress {
   width: 100%;
-  height: 10px;
+  height: 1rem;
   background: rgba(255,255,255,0.1);
   border-radius: 999px;
   overflow: hidden;

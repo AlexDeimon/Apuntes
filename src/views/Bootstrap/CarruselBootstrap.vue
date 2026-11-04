@@ -9,7 +9,7 @@
       <div class="cards-grid">
         <div class="card info">
           <p class="section-desc">El carrusel requiere una estructura específica de clases: <code>.carousel</code> para el contenedor, <code>.carousel-inner</code> para agrupar los ítems y <code>.carousel-item</code> para cada diapositiva.</p>
-          <p class="section-desc">Cada item debe tener la clase <code>.w-100</code> para que ocupe el 100% del ancho del carrusel y la clase <code>.d-block</code> para que sea un elemento de bloque.</p>
+          <p class="section-desc">Cada imagen dentro de un <code>.carousel-item</code> debe llevar la clase <code>.w-100</code> para que ocupe el 100% del ancho del carrusel y la clase <code>.d-block</code> para que sea un elemento de bloque.</p>
           <p class="section-desc">La clase <code>.active</code> debe estar en el primer item para que sea visible al cargar el carrusel.</p>
         </div>
         <div>
@@ -42,14 +42,14 @@
     </section>
     <hr class="divider" />
     <section class="topic-section">
-      <h2 class="section-title bootstrap">Controles, Indicadores y Etiquetas</h2>
+      <h2 class="section-title bootstrap">Controles, Indicadores y Leyendas</h2>
       <div class="cards-grid">
         <div class="card info">
           <p class="section-desc">Permiten al usuario navegar manualmente por las diapositivas usando botones o pequeños puntos indicadores.</p>
           <p class="section-desc">Los controles se crean con las clases <code>.carousel-control-prev</code> y <code>.carousel-control-next</code>. Para que funcionen, deben tener un atributo <code>data-bs-target</code> que apunte al id del carrusel y un atributo <code>data-bs-slide</code> que indique la dirección del slide (prev o next).</p>
           <p class="section-desc">Tambien se deben agregar las clases de los iconos, <code>.carousel-control-prev-icon</code> y <code>.carousel-control-next-icon</code>, dentro de los botones.</p>
           <p class="section-desc">Los indicadores se crean con la clase <code>.carousel-indicators</code>.</p>
-          <p class="section-desc">Las etiquetas se crean con la clase <code>.carousel-caption</code>.</p>
+          <p class="section-desc">Las leyendas se crean con la clase <code>.carousel-caption</code>.</p>
         </div>
         <CodeBlock language="html" code='<div id="carruselFull" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -76,7 +76,7 @@
 </div>' />
       </div><br><br>
       <div class="preview-container">
-        <div class="preview-header">Demo: Con Controles, Indicadores y Etiquetas</div>
+        <div class="preview-header">Demo: Con Controles, Indicadores y Leyendas</div>
         <div class="preview-content bootstrap-demo p-5">
           <div id="carouselExampleIndicators" class="carousel slide position-relative">
             <div class="carousel-indicators">
@@ -93,7 +93,7 @@
                 <div class="slide-placeholder" :style="{ backgroundColor: slide.color }">
                   <span>{{ slide.text }}</span>
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Etiqueta {{ index + 1 }}</h5>
+                    <h5>Leyenda {{ index + 1 }}</h5>
                     <p>Texto descriptivo del slide.</p>
                   </div>
                 </div>

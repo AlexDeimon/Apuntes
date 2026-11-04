@@ -90,7 +90,7 @@
     <hr class="divider" />
     <section class="topic-section">
       <h2 class="section-title bootstrap">Botones "Block" (Ancho Completo)</h2>
-      <p class="section-desc">En Bootstrap 5, los botones de bloque se crean con utilidades de red o displays en el contenedor padre, reemplazando la antigua clase <code>.btn-block</code>.</p>
+      <p class="section-desc">En Bootstrap 5, los botones de bloque se crean con las utilidades de display y grid en el contenedor padre (<code>.d-grid</code> junto con <code>.gap-*</code>), reemplazando la antigua clase <code>.btn-block</code> de Bootstrap 4.</p>
       <div class="card recommended">
         <div class="card-header">
           <h3>Ejemplo con d-grid</h3>

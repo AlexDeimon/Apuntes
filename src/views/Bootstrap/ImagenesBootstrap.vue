@@ -32,7 +32,7 @@
           <div class="card-header">
             <h3>Thumbnail</h3>
           </div>
-          <p><code>.img-thumbnail</code> añade un borde redondeado de 1px y un poco de relleno ,dando apariencia de fotografía impresa.</p>
+          <p><code>.img-thumbnail</code> añade un borde redondeado de 1px y un poco de relleno, dando apariencia de fotografía impresa.</p>
           <CodeBlock language="html" code='<img src="..." class="img-thumbnail" alt="Miniatura">' />
           <div class="demo-box">
             <img :src="demoImage" class="img-thumbnail" alt="Thumbnail">

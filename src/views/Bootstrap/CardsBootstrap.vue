@@ -24,7 +24,7 @@
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue nec tortor sit amet, maximus mattis dui. </p>
             <a href="#" class="card-link">Enlace 1</a>
             <a href="#" class="card-link">Enlace 2</a><br><br>
-            <a href="#" class="card-link btn btn-primary">Boton</a>
+            <a href="#" class="btn btn-primary">Boton</a>
           </div>
         </div>
         <CodeBlock language="html" code='<div class="card text-center" style="width: 18rem;">
@@ -49,7 +49,7 @@
           <div class="card-body">
             <h4 class="card-title">Titulo de la tarjeta 2</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue nec tortor sit amet, maximus mattis dui.</p>
-            <a href="#" class="card-link btn btn-primary">Entrar</a>
+            <a href="#" class="btn btn-primary">Entrar</a>
           </div>
         </div>
         <CodeBlock language="html" code='<div class="card">
@@ -62,7 +62,7 @@
           <div class="card-body">
             <h4 class="card-title">Titulo de la tarjeta 3</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue nec tortor sit amet, maximus mattis dui.</p>
-            <a href="#" class="card-link btn btn-primary">Entrar</a>
+            <a href="#" class="btn btn-primary">Entrar</a>
           </div>
           <img class="card-img-bottom" src="@/assets/images/GZ01.webp" alt="game zone">
         </div>
@@ -77,7 +77,7 @@
           <div class="card-img-overlay">
             <h4 class="card-title">Titulo de la tarjeta 4</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, tempor vitae mattis malesuada.</p>
-            <a href="#" class="card-link btn btn-primary">Entrar</a>
+            <a href="#" class="btn btn-primary">Entrar</a>
           </div>
         </div>
         <CodeBlock language="html" code='<div class="card">
@@ -97,7 +97,7 @@
           </div>
           <div class="card-body">
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue nec tortor sit amet, maximus mattis dui.</p>
-            <a href="#" class="card-link btn btn-primary">Entrar</a>
+            <a href="#" class="btn btn-primary">Entrar</a>
           </div>
           <div class="card-footer">
             <h4 class="card-title">Pie de la tarjeta</h4>
@@ -137,7 +137,7 @@
           </div>
           <div class="card-body">
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue nec tortor sit amet, maximus mattis dui.</p>
-            <a href="#" class="card-link btn btn-primary">Entrar</a>
+            <a href="#" class="btn btn-primary">Entrar</a>
           </div>
         </div>
         <CodeBlock language="html" code='<div class="card">
@@ -169,7 +169,7 @@
           </div>
           <div class="card-body">
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue nec tortor sit amet, maximus mattis dui.</p>
-            <a href="#" class="card-link btn btn-primary">Entrar</a>
+            <a href="#" class="btn btn-primary">Entrar</a>
           </div>
         </div>
         <CodeBlock language="html" code='<div class="card">
@@ -226,8 +226,8 @@
         <div class="card text-white bg-warning" style="max-width: 18rem;">
           <div class="card-header">Clase: bg-warning</div>
           <div class="card-body">
-            <h5 class="card-title p">Warning card title</h5>
-            <p class="card-text p">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title">Warning card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
         </div>
         <div class="card text-white bg-info" style="max-width: 18rem;">
@@ -241,7 +241,7 @@
           <div class="card-header">Clase: bg-light</div>
           <div class="card-body">
             <h5 class="card-title">Light card title</h5>
-            <p class="card-text p">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
         </div>
         <div class="card text-white bg-dark" style="max-width: 18rem;">
@@ -358,22 +358,26 @@
     </div>
   </div>
 </div>'/>
-      <p class="section-desc">Para separar las tarjetas, se utiliza la clase .card-deck:</p>
-      <div class="cards-grid">
-        <div class="card-deck">
-          <div class="card">
+      <p class="section-desc">Para mostrar varias tarjetas de igual altura y separadas entre sí se usa el sistema de grid: un contenedor <code>.row</code> con <code>.row-cols-*</code> y <code>.g-*</code> para el espaciado, y <code>.h-100</code> en cada tarjeta para igualar su altura:</p>
+      <div class="cards-row row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Titulo tarjeta 9</h5>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
             </div>
           </div>
-          <div class="card">
+        </div>
+        <div class="col">
+          <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Titulo tarjeta 10</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Texto algo más largo para comprobar que todas las tarjetas mantienen la misma altura.</p>
             </div>
           </div>
-          <div class="card">
+        </div>
+        <div class="col">
+          <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Titulo tarjeta 11</h5>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
@@ -381,6 +385,22 @@
           </div>
         </div>
       </div>
+      <CodeBlock language="html" code='<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Titulo tarjeta 9</h5>
+        <p class="card-text">Contenido de la tarjeta...</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">...</div>
+  </div>
+  <div class="col">
+    <div class="card h-100">...</div>
+  </div>
+</div>' />
     </section>
     <hr class="divider">
     <ReferenceSection :references="[
@@ -453,6 +473,7 @@ import ReferenceSection from '@/components/ReferenceSection.vue'
   display: inline-block;
   font-weight: 400;
   text-align: center;
+  text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
@@ -628,24 +649,26 @@ import ReferenceSection from '@/components/ReferenceSection.vue'
   flex-direction: row;
 }
 
-.card-deck {
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  flex-flow: row wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+.cards-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.card-deck .card {
-  display: flex;
-  -webkit-box-flex: 1;
-  flex: 1 0 0%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  margin-right: 15px;
+@media (min-width: 768px) {
+  .cards-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cards-row .col {
+  min-width: 0;
+}
+
+.cards-row .card.h-100 {
+  width: auto;
+  height: 100%;
   margin-bottom: 0;
-  margin-left: 15px;
 }
 </style>

@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="module-content">
     <div class="header-section">
       <h1 class="main-title bootstrap">Navbar</h1>
@@ -274,7 +274,7 @@
         <div class="card info">
           <div class="card-header"><h3>.container vs .container-fluid</h3></div>
           <ul class="def-list">
-            <li><span class="def-term">.container-fluid:</span> El contenido de la navbar ocupa el 100% del ancho. Es el valor por defecto cuando no se especifica contenedor.</li>
+            <li><span class="def-term">.container-fluid:</span> El contenido de la navbar ocupa el 100% del ancho.</li>
             <li><span class="def-term">.container:</span> El contenido de la navbar se limita al ancho maximo del breakpoint actual y se centra. Recomendado para sitios con layout centrado.</li>
             <li><span class="def-term">.container-{bp}:</span> Fluido hasta el breakpoint indicado, luego se comporta como <code>.container</code>.</li>
           </ul>
@@ -363,19 +363,27 @@
           <p>La navbar usa el componente Collapse de Bootstrap internamente. Puedes manipularlo via JS:</p>
           <CodeBlock language="javascript" code='// Obtener la instancia del collapse
 const navCollapse = document.getElementById("navMenu");
-const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navCollapse);
+const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navCollapse, {
+  toggle: false,
+});
 
 // Metodos
 bsCollapse.show();    // Abrir el menu
 bsCollapse.hide();    // Cerrar el menu
 bsCollapse.toggle();  // Alternar
 
-// Cerrar el menu al hacer click en un link (util en SPAs)
-document.querySelectorAll(".nav-link").forEach((link) => {
-  link.addEventListener("click", () => {
-    bsCollapse.hide();
+// Cerrar el menu al hacer click en un link (util en SPAs).
+// Se usan solo los enlaces reales, no los toggles de dropdown.
+document
+  .querySelectorAll(".navbar-nav .nav-link:not(.dropdown-toggle)")
+  .forEach((link) => {
+    link.addEventListener("click", () => {
+      // Solo si el menu esta desplegado (vista movil)
+      if (navCollapse.classList.contains("show")) {
+        bsCollapse.hide();
+      }
+    });
   });
-});
 
 // Eventos del collapse
 navCollapse.addEventListener("show.bs.collapse", () => {

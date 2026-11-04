@@ -180,17 +180,30 @@
           <div class="card-header">
             <h3>Sintaxis y Clases</h3>
           </div>
-          <p>Al enviar un formulario, puedes añadir la clase <code>.was-validated</code> al elemento <code>&lt;form&gt;</code>. Esto activará de forma automática los estilos de validación del navegador (como campos requeridos vacíos).</p>
-          <CodeBlock language="html" code='<form class="needs-validation was-validated" novalidate>
+          <p>Bootstrap se apoya en la API de validación nativa del navegador (<code>:valid</code> / <code>:invalid</code>). El formulario lleva <code>.needs-validation</code> y el atributo <code>novalidate</code> (que desactiva los globos de error del navegador). La clase <code>.was-validated</code> <strong>no se escribe en el HTML</strong>: se añade con JavaScript al enviar el formulario, una vez comprobado <code>checkValidity()</code>, y es lo que activa los estilos de campos válidos e inválidos.</p>
+          <CodeBlock language="html" code='<form class="needs-validation" novalidate>
   <div class="mb-3">
     <label for="valName" class="form-label">Nombre</label>
-    <input type="text" class="form-control is-invalid" id="valName" required>
+    <input type="text" class="form-control" id="valName" required>
     <div class="invalid-feedback">
       Por favor introduce tu nombre.
     </div>
   </div>
   <button class="btn btn-primary" type="submit">Enviar</button>
 </form>' />
+          <CodeBlock language="javascript" code='const forms = document.querySelectorAll(".needs-validation");
+
+forms.forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    // Activa los estilos de validación (válido / inválido)
+    form.classList.add("was-validated");
+  });
+});' />
+          <p>Como alternativa, puedes controlar el estado manualmente añadiendo <code>.is-valid</code> o <code>.is-invalid</code> a cada campo. Eso es lo que hace el simulador.</p>
         </div>
         <div class="preview-container">
           <div class="preview-header">Simulador: Validación de Formulario</div>

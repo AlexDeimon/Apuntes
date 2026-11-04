@@ -13,14 +13,14 @@
             <h3>Versión Actual (v5.3.x)</h3>
             <span class="badge success">Recomendado</span>
           </div>
-          <p>La versión 5 es la más moderna. A diferencia de la v4, <strong>ya no depende de jQuery</strong>, utiliza JavaScript vainilla para sus componentes interactivos y ofrece soporte nativo para modo oscuro.</p>
+          <p>La versión 5 es la más moderna. A diferencia de la v4, <strong>ya no depende de jQuery</strong> y utiliza JavaScript vainilla para sus componentes interactivos. A partir de la <strong>5.3</strong> incluye además soporte nativo para modo oscuro mediante el atributo <code>data-bs-theme</code> (no existe en 5.0, 5.1 ni 5.2).</p>
         </div>
         <div class="card warning">
           <div class="card-header">
             <h3>Versiones Anteriores (v4.x)</h3>
             <span class="badge danger">Legacy</span>
           </div>
-          <p>Versiones antiguas (como la que usaba jQuery) siguen siendo mantenidas pero no se recomiendan para proyectos nuevos.</p>
+          <p>Las versiones antiguas (v3 y v4, que dependían de jQuery) llegaron al fin de su vida útil y ya no reciben correcciones ni parches de seguridad. No se recomiendan para proyectos nuevos y solo conviene mantenerlas en proyectos heredados.</p>
         </div>
       </div>
     </section>
