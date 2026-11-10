@@ -135,6 +135,11 @@ const router = createRouter({
       component: () => import('@/views/CSS/FiltrosCSS.vue'),
     },
     {
+      path: '/css/clippath',
+      name: 'css-clippath',
+      component: () => import('@/views/CSS/ClipPathCSS.vue'),
+    },
+    {
       path: '/js/fundamentos',
       name: 'js-fundamentos',
       component: () => import('@/views/JavaScript/FundamentosJS.vue'),
