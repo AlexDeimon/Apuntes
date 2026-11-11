@@ -372,7 +372,7 @@
                 </tbody>
               </table>
             </div>
-            <small class="text-muted d-block">Intenta hacer scroll horizontal si la pantalla es pequeña.</small>
+            <small class="text-body-secondary d-block">Intenta hacer scroll horizontal si la pantalla es pequeña.</small>
           </div>
         </div>
       </div>
@@ -404,7 +404,7 @@ import CodeBlock from '@/components/CodeBlock.vue'
   -webkit-overflow-scrolling: touch;
 }
 
-.text-muted {
+.text-body-secondary {
   color: #888;
   font-size: 0.9em;
 }

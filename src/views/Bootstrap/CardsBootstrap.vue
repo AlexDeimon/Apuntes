@@ -30,7 +30,7 @@
         <CodeBlock language="html" code='<div class="card text-center" style="width: 18rem;">
   <div class="card-body">
     <h4 class="card-title">Título de la tarjeta 1</h4>
-    <h5 class="card-subtitle mb-2 text-muted">Subtítulo de la tarjeta</h5>
+    <h5 class="card-subtitle mb-2 text-body-secondary">Subtítulo de la tarjeta</h5>
     <p class="card-text">Contenido de la tarjeta...</p>
     <a href="#" class="card-link">Enlace 1</a>
     <a href="#" class="card-link">Enlace 2</a>
@@ -193,59 +193,69 @@
     <hr class="divider" />
     <section class="topic-section">
       <h2 class="section-title bootstrap">Estilos</h2>
-      <p class="section-desc">Para el color de fondo disponemos de diferentes clases:</p>
+      <p class="section-desc">Para el color de fondo se usan las clases <code>.text-bg-*</code>. Aplican el color de fondo y, automáticamente, un color de texto con buen contraste (blanco u oscuro según el color).</p>
+      <CodeBlock language="html" code='<div class="card text-bg-primary" style="max-width: 18rem;">
+  <div class="card-header">Encabezado</div>
+  <div class="card-body">
+    <h5 class="card-title">Primary card title</h5>
+    <p class="card-text">Contenido de la tarjeta.</p>
+  </div>
+</div>
+
+<!-- Variantes: text-bg-secondary, text-bg-success, text-bg-danger,
+     text-bg-warning, text-bg-info, text-bg-light, text-bg-dark -->' /><br><br>
       <div class="cards-grid">
-        <div class="card text-white bg-primary" style="max-width: 18rem;">
-          <div class="card-header">Clase: bg-primary</div>
+        <div class="card text-bg-primary" style="max-width: 18rem;">
+          <div class="card-header">Clase: text-bg-primary</div>
           <div class="card-body">
             <h5 class="card-title">Primary card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
         </div>
-        <div class="card text-white bg-secondary" style="max-width: 18rem;">
-          <div class="card-header">Clase: bg-secondary</div>
+        <div class="card text-bg-secondary" style="max-width: 18rem;">
+          <div class="card-header">Clase: text-bg-secondary</div>
           <div class="card-body">
             <h5 class="card-title">Secondary card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
         </div>
-        <div class="card text-white bg-success" style="max-width: 18rem;">
-          <div class="card-header">Clase: bg-success</div>
+        <div class="card text-bg-success" style="max-width: 18rem;">
+          <div class="card-header">Clase: text-bg-success</div>
           <div class="card-body">
             <h5 class="card-title">Success card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
         </div>
-        <div class="card text-white bg-danger" style="max-width: 18rem;">
-          <div class="card-header">Clase: bg-danger</div>
+        <div class="card text-bg-danger" style="max-width: 18rem;">
+          <div class="card-header">Clase: text-bg-danger</div>
           <div class="card-body">
             <h5 class="card-title">Danger card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
         </div>
-        <div class="card text-white bg-warning" style="max-width: 18rem;">
-          <div class="card-header">Clase: bg-warning</div>
+        <div class="card text-bg-warning" style="max-width: 18rem;">
+          <div class="card-header">Clase: text-bg-warning</div>
           <div class="card-body">
             <h5 class="card-title">Warning card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
         </div>
-        <div class="card text-white bg-info" style="max-width: 18rem;">
-          <div class="card-header">Clase: bg-info</div>
+        <div class="card text-bg-info" style="max-width: 18rem;">
+          <div class="card-header">Clase: text-bg-info</div>
           <div class="card-body">
             <h5 class="card-title">Info card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
         </div>
-        <div class="card bg-light" style="max-width: 18rem;">
-          <div class="card-header">Clase: bg-light</div>
+        <div class="card text-bg-light" style="max-width: 18rem;">
+          <div class="card-header">Clase: text-bg-light</div>
           <div class="card-body">
             <h5 class="card-title">Light card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
         </div>
-        <div class="card text-white bg-dark" style="max-width: 18rem;">
-          <div class="card-header">Clase: bg-dark</div>
+        <div class="card text-bg-dark" style="max-width: 18rem;">
+          <div class="card-header">Clase: text-bg-dark</div>
           <div class="card-body">
             <h5 class="card-title">Dark card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -572,40 +582,44 @@ import ReferenceSection from '@/components/ReferenceSection.vue'
   border-radius: .25rem;
 }
 
-.text-white {
+.text-bg-primary {
   color: #fff;
+  background-color: #0d6efd;
 }
 
-.bg-primary {
-  background-color: #007bff;
-}
-
-.bg-secondary {
+.text-bg-secondary {
+  color: #fff;
   background-color: #6c757d;
 }
 
-.bg-success {
-  background-color: #28a745;
+.text-bg-success {
+  color: #fff;
+  background-color: #198754;
 }
 
-.bg-danger {
+.text-bg-danger {
+  color: #fff;
   background-color: #dc3545;
 }
 
-.bg-warning {
+.text-bg-warning {
+  color: #000;
   background-color: #ffc107;
 }
 
-.bg-info {
-  background-color: #17a2b8;
+.text-bg-info {
+  color: #000;
+  background-color: #0dcaf0;
 }
 
-.bg-light {
+.text-bg-light {
+  color: #000;
   background-color: #f8f9fa;
 }
 
-.bg-dark {
-  background-color: #343a40;
+.text-bg-dark {
+  color: #fff;
+  background-color: #212529;
 }
 
 .border-primary {

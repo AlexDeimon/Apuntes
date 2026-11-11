@@ -22,7 +22,7 @@
         </div>
         <div class="card recommended">
           <div class="card-header"><h3>Navbar Minima Funcional</h3></div>
-          <CodeBlock language="html" code='<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+          <CodeBlock language="html" code='<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
   <div class="container-fluid">
     <!-- Logotipo / Nombre del sitio -->
     <a class="navbar-brand" href="#">MiSitio</a>
@@ -57,7 +57,7 @@
     <hr class="divider" />
     <section class="topic-section">
       <h2 class="section-title bootstrap">Temas de Color</h2>
-      <p class="section-desc">Bootstrap 5.3 introduce el atributo <code>data-bs-theme</code> como la forma moderna de controlar el color de la navbar. Las clases legacy <code>.navbar-light</code> y <code>.navbar-dark</code> siguen funcionando pero el nuevo sistema es mas flexible.</p>
+      <p class="section-desc">Bootstrap 5.3 introduce el atributo <code>data-bs-theme</code> como la forma moderna de controlar el color de la navbar. Las clases <code>.navbar-light</code> y <code>.navbar-dark</code> están <strong>deprecadas desde la 5.3</strong>: todavía funcionan, pero se recomienda migrar al nuevo sistema, que es más flexible.</p>
       <div class="cards-grid">
         <div class="card info">
           <div class="card-header"><h3>Con data-bs-theme (BS 5.3+)</h3></div>
@@ -72,14 +72,16 @@
   ...
 </nav>
 
-<!-- Metodo clasico (aun valido) -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">...</nav>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">...</nav>
+<!-- Con color de utilidad: el texto se ajusta con data-bs-theme -->
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">...</nav>
+<nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">...</nav>
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">...</nav>
+<nav class="navbar navbar-expand-lg bg-success" data-bs-theme="dark">...</nav>
+<nav class="navbar navbar-expand-lg bg-danger" data-bs-theme="dark">...</nav>
 
-<!-- Con color de utilidad -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">...</nav>
-<nav class="navbar navbar-expand-lg navbar-dark bg-success">...</nav>
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger">...</nav>' />
+<!-- Metodo antiguo (DEPRECADO en 5.3, evitar en proyectos nuevos) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">...</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">...</nav>' />
         </div>
         <div class="preview-container">
           <div class="preview-header">Demo: Variantes de Color</div>
@@ -436,27 +438,27 @@ const themes: Record<string, { containerClass: string; brandText: string; code: 
   dark: {
     containerClass: 'nb-dark',
     brandText: 'MiSitio',
-    code: '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">',
+    code: '<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">',
   },
   primary: {
     containerClass: 'nb-primary',
     brandText: 'MiSitio',
-    code: '<nav class="navbar navbar-expand-lg navbar-dark bg-primary">',
+    code: '<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">',
   },
   success: {
     containerClass: 'nb-success',
     brandText: 'MiSitio',
-    code: '<nav class="navbar navbar-expand-lg navbar-dark bg-success">',
+    code: '<nav class="navbar navbar-expand-lg bg-success" data-bs-theme="dark">',
   },
   light: {
     containerClass: 'nb-light',
     brandText: 'MiSitio',
-    code: '<nav class="navbar navbar-expand-lg navbar-light bg-light">',
+    code: '<nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">',
   },
   danger: {
     containerClass: 'nb-danger',
     brandText: 'MiSitio',
-    code: '<nav class="navbar navbar-expand-lg navbar-dark bg-danger">',
+    code: '<nav class="navbar navbar-expand-lg bg-danger" data-bs-theme="dark">',
   },
 }
 

@@ -104,10 +104,10 @@
           <button class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between">
               <h5>Segundo elemento de lista</h5>
-              <small class="text-muted">La semana pasada</small>
+              <small class="text-body-secondary">La semana pasada</small>
             </div>
             <p>Otro ejemplo de contenido personalizado.</p>
-            <small class="text-muted">Más metadatos aquí.</small>
+            <small class="text-body-secondary">Más metadatos aquí.</small>
           </button>
         </div>
         <CodeBlock language="html" code='<button class="list-group-item list-group-item-action active">
@@ -212,5 +212,11 @@ import CodeBlock from '@/components/CodeBlock.vue'
 :deep(.list-group-item-warning) {
   color: #664d03;
   background-color: #fff3cd;
+}
+
+.text-body-secondary {
+  color: #6c757d;
+  font-size: 0.8rem;
+  margin: 5px 0;
 }
 </style>

@@ -81,11 +81,11 @@
     <hr class="divider" />
     <section class="topic-section">
       <h2 class="section-title bootstrap">Dropdown Oscuro</h2>
-      <p class="section-desc">En Bootstrap 5, puedes cambiar fácilmente el estilo de la lista desplegable agregando la clase <code>.dropdown-menu-dark</code> al elemento <code>.dropdown-menu</code>.</p>
+      <p class="section-desc">Desde Bootstrap 5.3 puedes oscurecer el menú agregando el atributo <code>data-bs-theme="dark"</code> al elemento <code>.dropdown-menu</code> (o a un contenedor padre como <code>.dropdown</code>).</p>
       <div class="cards-grid">
         <CodeBlock language="html" code='<div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Tema Oscuro</button>
-  <ul class="dropdown-menu dropdown-menu-dark">
+  <ul class="dropdown-menu" data-bs-theme="dark">
     <li><a class="dropdown-item" href="#">Perfil</a></li>
     <li><a class="dropdown-item" href="#">Ajustes</a></li>
     <li><hr class="dropdown-divider"></li>

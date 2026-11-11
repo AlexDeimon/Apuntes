@@ -18,7 +18,7 @@
             <div>
               <img :src="demoImage" class="img-fluid" alt="Imagen responsive">
             </div>
-            <small class="text-muted">Contenedor limitado a 300px</small>
+            <small class="text-body-secondary">Contenedor limitado a 300px</small>
           </div>
         </div>
       </div>
@@ -198,5 +198,11 @@ import demoImage from '@/assets/images/portada.webp'
 
 .demo-box div {
   width: 300px;
+}
+
+.text-body-secondary {
+  color: #6c757d;
+  font-size: 0.8rem;
+  margin: 5px 0;
 }
 </style>

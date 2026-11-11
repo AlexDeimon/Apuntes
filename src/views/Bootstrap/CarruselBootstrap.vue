@@ -133,8 +133,8 @@
           <div class="card-header">
             <h3>Dark Variant</h3>
           </div>
-          <p>Usa <code>.carousel-dark</code> para controles, indicadores y etiquetas oscuras (útil para fondos claros).</p>
-          <CodeBlock language="html" code='<div class="carousel carousel-dark slide">...</div>' />
+          <p>Agrega <code>data-bs-theme="dark"</code> al elemento <code>.carousel</code> para obtener controles, indicadores y leyendas oscuras (útil para fondos claros).</p>
+          <CodeBlock language="html" code='<div class="carousel slide" data-bs-theme="dark">...</div>' />
         </div>
       </div>
     </section>
