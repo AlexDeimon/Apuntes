@@ -210,6 +210,11 @@ const router = createRouter({
       component: () => import('@/views/JavaScript/PromesasJS.vue'),
     },
     {
+      path: '/js/asyncawait',
+      name: 'js-asyncawait',
+      component: () => import('@/views/JavaScript/AsyncAwaitJS.vue'),
+    },
+    {
       path: '/bootstrap/inicio',
       name: 'bootstrap-inicio',
       component: () => import('@/views/Bootstrap/InicioBootstrap.vue'),

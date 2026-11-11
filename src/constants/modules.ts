@@ -50,6 +50,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'objetosNativos', name: 'Objetos Nativos & Timers', icon: '/Apuntes/v2/icons/objetosJS.png' },
     { id: 'callbacks', name: 'Callbacks', icon: '/Apuntes/v2/icons/funcionesJS.png' },
     { id: 'promesas', name: 'Promesas', icon: '/Apuntes/v2/icons/funcionesJS.png' },
+    { id: 'asyncawait', name: 'Async / Await', icon: '/Apuntes/v2/icons/async-await.png' },
   ],
   bootstrap: [
     { id: 'inicio', name: 'Iniciando con Bootstrap', icon: '/Apuntes/v2/icons/bootstrap.svg' },
