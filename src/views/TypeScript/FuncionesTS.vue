@@ -167,6 +167,100 @@ lenguajes.forEach((s) => {
 });' />
       </div>
     </section>
+    <hr class="divider" />
+    <section class="topic-section">
+      <h2 class="section-title typescript">Sobrecarga de Funciones (Overloads)</h2>
+      <p class="section-desc">Algunas funciones pueden llamarse con distintas combinaciones de argumentos y devolver un tipo diferente según cada caso. La sobrecarga permite declarar <strong>varias firmas</strong> para una misma función, seguidas de una única implementación.</p>
+      <div class="cards-grid">
+        <div class="card info">
+          <div class="card-header">
+            <h3>Sintaxis</h3>
+          </div>
+          <p>Se escriben primero las <strong>firmas de sobrecarga</strong> (sin cuerpo) y al final la <strong>firma de implementación</strong>, que debe ser compatible con todas las anteriores.</p>
+          <CodeBlock language="typescript" code='// Firmas de sobrecarga (visibles para quien llama la función)
+function convertir(valor: string): number;
+function convertir(valor: number): string;
+
+// Firma de implementación (NO es visible desde afuera)
+function convertir(valor: string | number): number | string {
+  if (typeof valor === "string") {
+    return parseInt(valor, 10);
+  }
+  return valor.toString();
+}
+
+const a = convertir("42"); // Tipo: number
+const b = convertir(42);   // Tipo: string
+// convertir(true);        // Error: ninguna sobrecarga coincide' />
+        </div>
+        <div class="card warning">
+          <div class="card-header">
+            <h3>La implementación no cuenta</h3>
+          </div>
+          <p>Solo las firmas de sobrecarga se pueden usar al llamar la función. La firma de implementación queda oculta, por eso debe ser más general que todas las demás.</p>
+          <CodeBlock language="typescript" code='function f(x: string): void;
+function f(x: number): void;
+function f(x: string | number) {}
+
+f("hola"); // OK
+f(10);     // OK
+// f(Math.random() > 0.5 ? "a" : 1);
+// Error: la union string | number no coincide con ninguna
+// sobrecarga individual (aunque la implementacion si la acepte)' />
+        </div>
+      </div><br><br>
+      <div class="cards-grid">
+        <div class="card info">
+          <div class="card-header">
+            <h3>Distinto número de parámetros</h3>
+          </div>
+          <p>Un caso típico: la cantidad de argumentos determina cómo se interpretan.</p>
+          <CodeBlock language="typescript" code='function crearFecha(timestamp: number): Date;
+function crearFecha(anio: number, mes: number, dia: number): Date;
+function crearFecha(a: number, m?: number, d?: number): Date {
+  if (m !== undefined && d !== undefined) {
+    return new Date(a, m, d);
+  }
+  return new Date(a);
+}
+
+crearFecha(1700000000000); // OK
+crearFecha(2025, 0, 15);   // OK
+// crearFecha(2025, 0);    // Error: no existe sobrecarga con 2 argumentos' />
+        </div>
+        <div class="card recommended">
+          <div class="card-header">
+            <h3>Orden de las sobrecargas</h3>
+            <span class="badge success">Buena práctica</span>
+          </div>
+          <p>TS evalúa las sobrecargas <strong>de arriba hacia abajo</strong> y usa la primera que coincide. Coloca las firmas más específicas primero y las más generales al final.</p>
+          <CodeBlock language="typescript" code='function procesar(x: "texto"): string;
+function procesar(x: string): number;
+function procesar(x: string): string | number {
+  return x === "texto" ? "literal" : x.length;
+}
+
+procesar("texto"); // string (primera sobrecarga)
+procesar("otro");  // number (segunda sobrecarga)' />
+        </div>
+      </div><br><br>
+      <div class="card recommended">
+        <div class="card-header">
+          <h3>¿Sobrecarga o unión / opcionales?</h3>
+          <span class="badge success">Recomendación</span>
+        </div>
+        <p>Si las firmas solo difieren en un parámetro opcional o en un tipo que se puede expresar con una unión, <strong>prefiere esas alternativas</strong>: son más simples y permiten pasar valores de tipo unión. Reserva la sobrecarga para cuando el <strong>tipo de retorno depende del tipo de los argumentos</strong>.</p>
+        <CodeBlock language="typescript" code='// Innecesaria: se resuelve con una union
+function largo(x: string): number;
+function largo(x: any[]): number;
+function largo(x: string | any[]) { return x.length; }
+
+// Mejor:
+function largo2(x: string | any[]): number {
+  return x.length;
+}' />
+      </div>
+    </section>
     <ReferenceSection :references="[
       { techId: 'js', moduleId: 'fundamentos', text: 'Fundamentos de JS' }
     ]" />
