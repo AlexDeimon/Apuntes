@@ -34,6 +34,7 @@ export const modules: Record<string, Module[]> = {
     { id: 'formularios', name: 'Formularios', icon: '/Apuntes/v2/icons/formulario.png' },
     { id: 'filtros', name: 'Filtros', icon: '/Apuntes/v2/icons/filtros.png' },
     { id: 'clippath', name: 'Clip-path', icon: '/Apuntes/v2/icons/clip-path.png' },
+    { id: 'transform', name: 'Transform', icon: '/Apuntes/v2/icons/Transform.png' },
   ],
   js: [
     { id: 'fundamentos', name: 'Fundamentos JS', icon: '/Apuntes/v2/icons/javascript.svg' },

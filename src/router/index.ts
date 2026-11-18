@@ -140,6 +140,11 @@ const router = createRouter({
       component: () => import('@/views/CSS/ClipPathCSS.vue'),
     },
     {
+      path: '/css/transform',
+      name: 'css-transform',
+      component: () => import('@/views/CSS/TransformCSS.vue'),
+    },
+    {
       path: '/js/fundamentos',
       name: 'js-fundamentos',
       component: () => import('@/views/JavaScript/FundamentosJS.vue'),
